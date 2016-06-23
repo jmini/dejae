@@ -1,106 +1,66 @@
 <html>
-<head>
-<title>Partie 4 : le d&eacute;veloppement avanc&eacute; avec Java</title>
-<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
-<meta name="description" content="">
-<meta name="keywords" content="java tutorial cours dejae eclipse">
-<meta name="robots" content="all">
-<meta name="revisit-after" content="2 months">
-<meta http-equiv="Content-Language" content="fr-FX">
-<meta name="author" content="Jean Michel DOUDOUX">
-<meta http-equiv="Reply-to" content="jean-michel.doudoux@wanadoo.fr">
-<link rev=made href="mailto:jean-michel.doudoux@wanadoo.fr">
-<link href="dej_style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-<!--ENTETE-->
-<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="chap015.htm" ALT="15. Subversion et Eclipse">
-<img src="FlecheG.gif" alt="15. Subversion et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="chap016.htm" ALT="16.  Des plug-ins pour le d&eacute;veloppement avec Java">
-<img src="FlecheD.gif" alt="16.  Des plug-ins pour le d&eacute;veloppement avec Java" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
-<HR>
-
-<p>&nbsp;</p>
-<h1><!--resumetitre value="" -->Partie 4 : le d&eacute;veloppement avanc&eacute; avec Java</h1>
-<p>&nbsp;</p>
-<p align="center"><img src="images/partie4.png" width="600" height="423"></p>
-<p>&nbsp;</p>
-<p>Cette quatri&egrave;me partie pr&eacute;sente le d&eacute;veloppement avec Java n&eacute;cessitant quelques param&eacute;trage ou l'utilisation de plug-ins tiers.</p>
-<p>Elle comporte les chapitres suivants : </p>
-<!--listechapitredeb-->
-  <ul>
-    <li type="square">Des plug-ins pour le d&eacute;veloppement avec Java</a> : pr&eacute;sente quelques plug-ins tiers facilitant le d&eacute;veloppement avec Java.</li>
-    <li type="square">Le d&eacute;veloppement d'interfaces graphiques</a> : pr&eacute;sente plusieurs plug-ins pour faciliter le d&eacute;veloppement d'applications graphiques utilisant AWT, Swing ou SWT.</li>
-    <li type="square">Le plug-in TPTP (Test &amp; Performance Tools Platform)</a> : pr&eacute;sente le plug-in TPTP (Test &amp; Performance Tools Platform) a pour but de proposer un framework permettant de fournir des services de mesures de performance et d'automatisation de tests.</li>
-    <li type="square">Hibernate et Eclipse</a> : Pr&eacute;sente le plug-in Hibernate Synchronizer qui facilite la mise en oeuvre de l'outil de mapping Hibernate.</li>
-  </ul>
-<!--listechapitrefin-->
-<p>&nbsp;</p>
-<!--PIED--><HR>
-<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="chap015.htm" ALT="15. Subversion et Eclipse">
-<img src="FlecheG.gif" alt="15. Subversion et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="chap016.htm" ALT="16.  Des plug-ins pour le d&eacute;veloppement avec Java">
-<img src="FlecheD.gif" alt="16.  Des plug-ins pour le d&eacute;veloppement avec Java" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-<td  rowspan="2" align="center" valign="middle">
-        <script language="JavaScript1.1">
+ <head> 
+  <title>Partie 4 : le d&eacute;veloppement avanc&eacute; avec Java</title> 
+  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1"> 
+  <meta name="description" content=""> 
+  <meta name="keywords" content="java tutorial cours dejae eclipse"> 
+  <meta name="robots" content="all"> 
+  <meta name="revisit-after" content="2 months"> 
+  <meta http-equiv="Content-Language" content="fr-FX"> 
+  <meta name="author" content="Jean Michel DOUDOUX"> 
+  <meta http-equiv="Reply-to" content="jean-michel.doudoux@wanadoo.fr"> 
+  <link rev="made" href="mailto:jean-michel.doudoux@wanadoo.fr"> 
+  <link href="dej_style.css" rel="stylesheet" type="text/css"> 
+ </head> 
+ <body> 
+  <!--ENTETE--> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
+    <tr> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="chap015.htm" alt="15. Subversion et Eclipse"> <img src="FlecheG.gif" alt="15. Subversion et Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap016.htm" alt="16.  Des plug-ins pour le d&eacute;veloppement avec Java"> <img src="FlecheD.gif" alt="16.  Des plug-ins pour le d&eacute;veloppement avec Java" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
+    </tr> 
+    <tr> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
+    </tr> 
+   </tbody> 
+  </table> 
+  <hr> 
+  <p>&nbsp;</p> 
+  <h1>
+   <!--resumetitre value="" -->Partie 4 : le d&eacute;veloppement avanc&eacute; avec Java</h1> 
+  <p>&nbsp;</p> 
+  <p align="center"><img src="images/partie4.png" width="600" height="423"></p> 
+  <p>&nbsp;</p> 
+  <p>Cette quatri&egrave;me partie pr&eacute;sente le d&eacute;veloppement avec Java n&eacute;cessitant quelques param&eacute;trage ou l'utilisation de plug-ins tiers.</p> 
+  <p>Elle comporte les chapitres suivants : </p> 
+  <!--listechapitredeb--> 
+  <ul> 
+   <li type="square">Des plug-ins pour le d&eacute;veloppement avec Java : pr&eacute;sente quelques plug-ins tiers facilitant le d&eacute;veloppement avec Java.</li> 
+   <li type="square">Le d&eacute;veloppement d'interfaces graphiques : pr&eacute;sente plusieurs plug-ins pour faciliter le d&eacute;veloppement d'applications graphiques utilisant AWT, Swing ou SWT.</li> 
+   <li type="square">Le plug-in TPTP (Test &amp; Performance Tools Platform) : pr&eacute;sente le plug-in TPTP (Test &amp; Performance Tools Platform) a pour but de proposer un framework permettant de fournir des services de mesures de performance et d'automatisation de tests.</li> 
+   <li type="square">Hibernate et Eclipse : Pr&eacute;sente le plug-in Hibernate Synchronizer qui facilite la mise en oeuvre de l'outil de mapping Hibernate.</li> 
+  </ul> 
+  <!--listechapitrefin--> 
+  <p>&nbsp;</p> 
+  <!--PIED-->
+  <hr> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
+    <tr> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="chap015.htm" alt="15. Subversion et Eclipse"> <img src="FlecheG.gif" alt="15. Subversion et Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap016.htm" alt="16.  Des plug-ins pour le d&eacute;veloppement avec Java"> <img src="FlecheD.gif" alt="16.  Des plug-ins pour le d&eacute;veloppement avec Java" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
+     <td rowspan="2" align="center" valign="middle"> <script language="JavaScript1.1">
 <!--
 hsh = new Date();
 hsd = document;
@@ -115,22 +75,16 @@ if(parseFloat(navigator.appVersion)>=4)
 {Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
 hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
 //-->
-</script>
-        <noscript>
-        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
-        </noscript>
-        <!--//-->
-      </td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
-
-</body>
+</script> 
+      <noscript> 
+       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience"></a> 
+      </noscript> 
+      <!--//--> </td> 
+    </tr> 
+    <tr> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
+    </tr> 
+   </tbody> 
+  </table>   
+ </body>
 </html>
-
-
-
-

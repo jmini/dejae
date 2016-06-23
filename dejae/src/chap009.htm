@@ -1,828 +1,745 @@
 <html>
-<head>
-<title>Le refactoring</title>
-<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
-<meta name="description" content="">
-<meta name="keywords" content="java tutorial cours dej eclipse">
-<meta name="robots" content="all">
-<meta name="revisit-after" content="2 months">
-<meta http-equiv="Content-Language" content="fr-FX">
-<meta name="author" content="Jean Michel DOUDOUX">
-<link href="dej_style.css" rel="stylesheet" type="text/css">
-<body>
-<!--ENTETE-->
-<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="chap008.htm" ALT="8. D&eacute;boguer du code Java">
-<img src="FlecheG.gif" alt="8. D&eacute;boguer du code Java" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="chap010.htm" ALT="10. Ant et Eclipse">
-<img src="FlecheD.gif" alt="10. Ant et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
-<HR>
-
-<p>&nbsp;</p>
-<h1><!--idrefpage value="refactoring" --><!--resumetitre value="d&eacute;taille les puissantes fonctionnalit&eacute;s de refactoring propos&eacute;es par Eclipse" --><!--nchpdeb--><a name="chap_9">9. <!--nchpfin-->Le refactoring</a></h1>
-<p>&nbsp;</p>
-<!--chapitredeb-->
-<div align="right">
-  <table border="0" cellspacing="0" summary="titre">
-    <tr>
-      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td>
-<td width="50">&nbsp;</td>
-<td width="50" valign="top"><img src="images/9.gif" alt="9" width="62" height="83" border="0"></td>
-    </tr>
-  </table>
-  <br>
-</div>
-<!--chapitrefin-->
-<p>&nbsp;</p>
-<div align="justify">
-  <p>Eclipse int&egrave;gre de puissantes fonctionnalit&eacute;s pour faciliter le refactoring. Le refactoring consiste &agrave; modifier la structure d'un fichier source et si n&eacute;cessaire &agrave; propager ces modifications dans les autres fichiers sources pour maintenir autant que possible l'int&eacute;grit&eacute; du code existant.  </p>
-  <table width="100%"  border="0" cellspacing="0" cellpadding="4">
-    <tr>
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse20.png" width="64" height="32" hspace="5"></td>
-      <td><p>Un menu nomm&eacute; «&nbsp;Propager les modifications&nbsp;» permet d'utiliser certaines de ces fonctionnalit&eacute;s&nbsp;: il est pr&eacute;sent dans le menu principal et dans de nombreux menus contextuels. Chacune de ces fonctionnalit&eacute;s est applicable sur un ou plusieurs types d'entit&eacute;s selon le cas : projets, classes et membres d'une classe. Certaines de ces fonctionnalit&eacute;s poss&egrave;dent un raccourci clavier. </p></td>
-    </tr>
-  </table><br>
-  <table width="95%"  border="1" cellspacing="0" cellpadding="4" align="center">
-    <tr>
-      <td>Type de modification </td>
-      <td>Fonctionnalit&eacute;s</td>
-      <td>Entit&eacute;(s) concern&eacute;e(s)</td>
-      <td>Raccourci clavier </td>
-    </tr>
-    <tr>
-      <td rowspan="5">Structure du code </td>
-      <td>Renommer</td>
-      <td>projets, packages, classes, champs, m&eacute;thodes, variables locales, param&egrave;tres </td>
-      <td>Alt+Maj+R</td>
-    </tr>
-    <tr>
-      <td>D&eacute;placer</td>
-      <td>projets, packages, classes, m&eacute;thodes et champs statiques </td>
-      <td>Alt+Maj+V</td>
-    </tr>
-    <tr>
-      <td>Changer la signature de la m&eacute;thode </td>
-      <td>m&eacute;thodes</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>Convertir une classe anonyme en classe imbriqu&eacute;e </td>
-      <td>classes anonymes </td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>Convertir un type imbriqu&eacute; au niveau sup&eacute;rieur </td>
-      <td>classes imbriqu&eacute;es</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td rowspan="4">Structure au niveau de la classe </td>
-      <td>Transf&eacute;rer</td>
-      <td>m&eacute;thodes ou champs </td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>Extraire</td>
-      <td>m&eacute;thodes ou champs </td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>Extraire une interface </td>
-      <td>classes</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>Utiliser le supertype si possible </td>
-      <td>classes</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td rowspan="6">Structure &agrave; l'int&eacute;rieure d'une classe </td>
-      <td>Int&eacute;grer</td>
-      <td>m&eacute;thodes, constantes et variable locales </td>
-      <td>Alt+Maj+I</td>
-    </tr>
-    <tr>
-      <td>Extraire la m&eacute;thode </td>
-      <td>morceau de code s&eacute;lectionn&eacute;</td>
-      <td>Alt+Maj+M</td>
-    </tr>
-    <tr>
-      <td>Extraire la variable locale </td>
-      <td>morceau de code s&eacute;lectionn&eacute; pouvant &ecirc;tre transform&eacute; en variable </td>
-      <td>Alt+Maj+L</td>
-    </tr>
-    <tr>
-      <td>Extraire une constante </td>
-      <td>morceau de code s&eacute;lectionn&eacute; pouvant &ecirc;tre transform&eacute; en constante </td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>Convertir la variable locale en zone </td>
-      <td>variables locales </td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>Encapsuler la zone </td>
-      <td>champs</td>
-      <td>&nbsp;</td>
-    </tr>
-  </table>
-<br>
-  <table width="100%"  border="0" cellspacing="0" cellpadding="4">
-    <tr>
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse31.png" width="64" height="32" align="center"></td>
-      <td>Le menu «&nbsp;Propager les modifications&nbsp;» permetant d'utiliser les fonctionnalit&eacute; de refactoring a &eacute;t&eacute; renomm&eacute; en «Restructurer».</p></td>
-    </tr>
-  </table>
-<br>
-  <table width="100%"  border="0" cellspacing="0" cellpadding="4">
-    <tr>
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td>
-      <td><p>L'acc&egrave;s aux fonctions de refactoring est contextuel : seules les fonctions applicables dans le contexte courant peuvent &ecirc;tre activ&eacute;es. </p>
-        <p>L'&eacute;diteur propose un menu contextuel pour acc&eacute;der rapidement aux fonctions de refactoring en utilisant la combinaison de touche Alt+Maj+T </p>
-        <p align="center"><img src="images/refact068.png" width="357" height="146"></p>
-        <p>Les fonctions propos&eacute;es le sont en fonction du contexte (le type d'entit&eacute; sur lequel le curseur est plac&eacute;). </p></td>
-    </tr>
-  </table>
-<br>
-  <p>Avant de pouvoir utiliser ces fonctionnalit&eacute;s, il faut sauvegarder l'&eacute;l&eacute;ment qui sera modifi&eacute; sinon un message d'erreur est affich&eacute;.</p>
-  <p align="center"><img width=567 height=161 src="images/refact001.png"></p>
-  <p>L'usage de ces fonctions utilise toujours le m&ecirc;me principe de fonctionnement&nbsp;: </p>
-  <ol start=1 type=1>
-    <li>s&eacute;lection de l'&eacute;l&eacute;ment concern&eacute; par la fonction de refactoring</li>
-    <li>appel de la fonction en utilisant l'option du menu «&nbsp;Propager les modifications&nbsp;»</li>
-    <li>renseigner les informations utiles &agrave; la fonction dans la bo&icirc;te de dialogue</li>
-    <li>pr&eacute;-visualiser et valider individuellement les modifications qui seront apport&eacute;es</li>
-    <li>demander la mise en oeuvre des modifications en cliquant sur «&nbsp;Ok&nbsp;» (ceci peut &ecirc;tre fait sans demander la pr&eacute;visualisation)</li>
-  </ol>
-  <p>Les fonctionnalit&eacute;s du refactoring sont accessibles &agrave; partir des vues &quot;Packages&quot; et &quot;Structure&quot; ou de l'&eacute;diteur de code Java selon l'entit&eacute; concern&eacute;e par la modification. Dans les vues, il suffit de s&eacute;lectionner le ou les &eacute;l&eacute;ments concern&eacute;s. Dans l'&eacute;diteur de code, il faut s&eacute;lectionner le nom de l'&eacute;lement ou de positionner le curseur dessus avant d'appeler la fonctionnalit&eacute;.</p>
-  <p>Toutes les fonctionnalit&eacute;s utilisent un assistant qui propose toujours &agrave; la fin un bouton «&nbsp;Apercu &gt;&nbsp;» permettant d'ouvrir une bo&icirc;te de dialogue qui permet de pr&eacute;-visualiser chacune des modifications r&eacute;sultant de l'usage de la fonction.</p>
-  <p align="center"><img width=600 height=286 src="images/refact002.png"></p>
-  <p>Une arborescence permet d'afficher chacun des &eacute;l&eacute;ments qui sera modifi&eacute; ainsi que toutes les modifications pour ces &eacute;l&eacute;ments. Il est possible de cocher ou non tout ou partie des modifications pour qu'elles soient appliqu&eacute;es ou non.</p>
-  <p>La partie inf&eacute;rieure pr&eacute;sente, pour l'&eacute;l&eacute;ment s&eacute;lectionn&eacute;, le code source actuel &agrave; gauche et le code source tel qu'il sera apr&egrave;s l'application de la fonction &agrave; droite.</p>
-  <p>Un clic sur le bouton «&nbsp;OK&nbsp;» permet de mettre en oeuvre toutes les modifications qui sont coch&eacute;es. </p>
-  <p>&nbsp;</p>  
-  <h2><!--nchpdeb--><a name="chap_9_1">9.1. <!--nchpfin-->Extraction d'une m&eacute;thode</a></h2>
-  <p>Cette fonction permet de transf&eacute;rer un morceau de code dans une m&eacute;thode qui sera cr&eacute;&eacute;e pour l'occasion.</p>
-  <p>Pour l'utiliser, il faut s&eacute;lectionner le morceau de code.</p>
-  <p align="center"><img width=494 height=171 src="images/refact003.png"></p>
-  <p>Il faut s&eacute;lectionner l'option «&nbsp;Extraire la m&eacute;thode ... &nbsp;» du menu principal ou du menu contextuel «&nbsp;Propager les modifications&nbsp;». Une boite de dialogue permet de saisir le nom de la m&eacute;thode et de s&eacute;lectionner le modificateur d'acc&egrave;s.</p>
-  <p align="center"><img width=408 height=180 src="images/refact004.png"></p>
-  <p>Un clic sur le bouton «&nbsp;OK&nbsp;» permet de mettre en oeuvre automatiquement les modifications.</p>
-  <p align="center"><img width=494 height=222 src="images/refact005.png"></p>
-  <p>Dans le cas ou le code s&eacute;lectionn&eacute; contient une ou plusieurs variables, la bo&icirc;te de dialogue contient en plus la liste des variables d&eacute;tect&eacute;es dans le code.</p>
-  <p align="center"><img width=400 height=220 src="images/refact006.png"></p>
-  <p align="center"><img width=408 height=287 src="images/refact007.png"></p>
-  <p>Il faut saisir le nom de la m&eacute;thode, s&eacute;lectionner son modificateur d'acc&egrave;s et &eacute;ventuellement modifier les param&egrave;tres puis cliquer sur le bouton &quot;OK&quot;.</p>
-  <p>La liste des variables d&eacute;tect&eacute;es dans le code est affich&eacute;e dans la liste des param&egrave;tres. Pour modifier le nom d'un des param&egrave;tres, il suffit de le s&eacute;lectionner et de cliquer sur le bouton «&nbsp;Editer...&nbsp;».</p>
-  <p align="center"><img width=256 height=126 src="images/refact008.png"></p>
-  <p>Le bouton «&nbsp;Aper&ccedil;u&nbsp;» permet de voir et de valider les modifications qui seront apport&eacute;es.</p>
-  <p align="center"><img width=400 height=292 src="images/refact009.png"></p>
-  <p>&nbsp;</p>  
-  <h2><!--nchpdeb--><a name="chap_9_2">9.2. <!--nchpfin-->Int&eacute;grer</a></h2>
-  <p>L'int&eacute;gration permet de remplacer l'appel d'une m&eacute;thode par le code contenu dans cette m&eacute;thode.</p>
-  <p align="center"><img width=417 height=289 src="images/refact010.png"></p>
-  <p>Puis il faut utiliser l'option «&nbsp;Propager les modifications/Int&eacute;grer...&nbsp;» du menu principal ou contextuel.</p>
-  <p align="center"><img width=408 height=172 src="images/refact011.png"></p>
-  <p>En fonction du contexte d'appel, une bo&icirc;te de dialogue permet de s&eacute;lectionner la port&eacute;e des modifications.</p>
-  <p>Si le code s&eacute;lectionn&eacute; ne correspond pas &agrave; une m&eacute;thode, un message d'erreur est affich&eacute;.</p>
-  <p align="center"><img width=441 height=139 src="images/refact012.png"></p>
-  <p>&nbsp;</p>  
-  <h2><!--nchpdeb--><a name="chap_9_3">9.3. <!--nchpfin-->Renommer</a></h2>
-  <p>La fonction &quot;Renommer&quot; permet d'attribuer un nouveau nom &agrave; une entit&eacute; pr&eacute;sente dans l'espace de travail. La grand int&eacute;r&ecirc;t de r&eacute;aliser une telle op&eacute;ration via cette fonctionnalit&eacute; plut&ocirc;t que de le faire &agrave; la &quot;main&quot; et qu'elle automatise la recherche et la mise &agrave; jour de toute les r&eacute;f&eacute;rences &agrave; l'&eacute;lement dans l'espace de travail.</p>
-  <p>Les exemples de cette section utilisent les deux classes suivantes&nbsp;:</p>
-  <p align="center"><img width=446 height=207 src="images/refact013.png"></p>
-  <p align="center"><img width=445 height=176 src="images/refact014.png"></p>
-  <p>Le renommage concerne l'entit&eacute; s&eacute;lectionn&eacute;e dans la vue &quot;Package&quot; ou &quot;Structure&quot; ou sous le curseur dans l'&eacute;diteur de code Java.</p>
-  <p>Par exemple, pour renommer une m&eacute;thode, il suffit de positioner le curseur sur le nom de la d&eacute;claration d'une m&eacute;thode dans le code source et s&eacute;lectionner l'option « Propager les modifications&nbsp;/ Renommer&nbsp;» du menu contextuel.</p>
-  <p align="center"><img width=408 height=132 src="images/refact015.png"></p>
-  <p>Il suffit alors de saisir le nouveau nom. Eclipse permet de renommer la m&eacute;thode dans sa classe de d&eacute;finition mais remplace aussi tous les appels de la m&eacute;thode contenue dans l'espace de travail.</p>
-  <p align="center"><img width=500 height=265 src="images/refact016.png"></p>
-  <p>Pour renommer une classe, il y a deux possibilit&eacute;s&nbsp;: selectionner la classe dans la vue «&nbsp;Packages&nbsp;» ou positionner le curseur sur la d&eacute;finition du nom de la classe dans l'&eacute;diteur. Puis il faut utiliser l'option «&nbsp;Renommer&nbsp;» du menu contextuel «&nbsp;Propager les modifications&nbsp;».</p>
-  <p align="center"><img width=434 height=277 src="images/refact017.png" ></p>
-  <p>Il est possible de pr&eacute;ciser les types d'entit&eacute;s qui doivent &ecirc;tre mise &agrave; jour.</p>
-  <p>A la validation, Eclipse effectue toutes les modifications n&eacute;cessaires suite au renommage de la classe, notamment le remplacement &agrave; tous les endroits dans l'espace de travail ou la classe est utilis&eacute;e.</p>
-  <p align="center"><img width=500 height=257 src="images/refact018.png"></p>
-  <p>Le principe est le m&ecirc;me pour renommer un package.</p>
-  <p align="center"><img width=434 height=274 src="images/refact019.png"></p>
-  <p>Si Eclipse d&eacute;tecte des probl&egrave;mes potenciels lors de l'analyse de la demande, il affiche dans une boite de dialogue la liste de ces probl&egrave;mes et demande un confirmation avant de poursuivre les traitements.</p>
-  <p align="center"><img width=400 height=206 src="images/refact020.png"></p>
-  <p>Si la s&eacute;lection ne correspond &agrave; aucun &eacute;l&eacute;ment renommable, un message d'erreur est affich&eacute;.</p>
-  <p align="center"><img width=441 height=129 src="images/refact021.png"></p>
-<p>&nbsp;</p>
-  <table width="100%"  border="0" cellspacing="0" cellpadding="4">
-    <tr>
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse32.png" width="64" height="32" align="center"></td>
-      <td>  <p>Lors d'une op&eacute;ration de refactoring de renommage, l'assistant propose de mettre en oeuvre un d&eacute;l&eacute;gu&eacute;.</p>
-  <p>Exemple&nbsp;: </p>
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>package fr.jmdoudoux.test;
+ <head> 
+  <title>Le refactoring</title> 
+  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1"> 
+  <meta name="description" content=""> 
+  <meta name="keywords" content="java tutorial cours dej eclipse"> 
+  <meta name="robots" content="all"> 
+  <meta name="revisit-after" content="2 months"> 
+  <meta http-equiv="Content-Language" content="fr-FX"> 
+  <meta name="author" content="Jean Michel DOUDOUX"> 
+  <link href="dej_style.css" rel="stylesheet" type="text/css"> 
+ </head>
+ <body> 
+  <!--ENTETE--> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
+    <tr> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="chap008.htm" alt="8. D&eacute;boguer du code Java"> <img src="FlecheG.gif" alt="8. D&eacute;boguer du code Java" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap010.htm" alt="10. Ant et Eclipse"> <img src="FlecheD.gif" alt="10. Ant et Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
+    </tr> 
+    <tr> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
+    </tr> 
+   </tbody> 
+  </table> 
+  <hr> 
+  <p>&nbsp;</p> 
+  <h1>
+   <!--idrefpage value="refactoring" -->
+   <!--resumetitre value="d&eacute;taille les puissantes fonctionnalit&eacute;s de refactoring propos&eacute;es par Eclipse" -->
+   <!--nchpdeb--><a name="chap_9">9. 
+    <!--nchpfin-->Le refactoring</a></h1> 
+  <p>&nbsp;</p> 
+  <!--chapitredeb--> 
+  <div align="right"> 
+   <table border="0" cellspacing="0" summary="titre"> 
+    <tbody>
+     <tr> 
+      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td> 
+      <td width="50">&nbsp;</td> 
+      <td width="50" valign="top"><img src="images/9.gif" alt="9" width="62" height="83" border="0"></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+  </div> 
+  <!--chapitrefin--> 
+  <p>&nbsp;</p> 
+  <div align="justify"> 
+   <p>Eclipse int&egrave;gre de puissantes fonctionnalit&eacute;s pour faciliter le refactoring. Le refactoring consiste &agrave; modifier la structure d'un fichier source et si n&eacute;cessaire &agrave; propager ces modifications dans les autres fichiers sources pour maintenir autant que possible l'int&eacute;grit&eacute; du code existant.&nbsp; </p> 
+   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse20.png" width="64" height="32" hspace="5"></td> 
+      <td><p>Un menu nomm&eacute; &laquo;&nbsp;Propager les modifications&nbsp;&raquo; permet d'utiliser certaines de ces fonctionnalit&eacute;s&nbsp;: il est pr&eacute;sent dans le menu principal et dans de nombreux menus contextuels. Chacune de ces fonctionnalit&eacute;s est applicable sur un ou plusieurs types d'entit&eacute;s selon le cas : projets, classes et membres d'une classe. Certaines de ces fonctionnalit&eacute;s poss&egrave;dent un raccourci clavier. </p></td> 
+     </tr> 
+    </tbody>
+   </table>
+   <br> 
+   <table width="95%" border="1" cellspacing="0" cellpadding="4" align="center"> 
+    <tbody>
+     <tr> 
+      <td>Type de modification </td> 
+      <td>Fonctionnalit&eacute;s</td> 
+      <td>Entit&eacute;(s) concern&eacute;e(s)</td> 
+      <td>Raccourci clavier </td> 
+     </tr> 
+     <tr> 
+      <td rowspan="5">Structure du code </td> 
+      <td>Renommer</td> 
+      <td>projets, packages, classes, champs, m&eacute;thodes, variables locales, param&egrave;tres </td> 
+      <td>Alt+Maj+R</td> 
+     </tr> 
+     <tr> 
+      <td>D&eacute;placer</td> 
+      <td>projets, packages, classes, m&eacute;thodes et champs statiques </td> 
+      <td>Alt+Maj+V</td> 
+     </tr> 
+     <tr> 
+      <td>Changer la signature de la m&eacute;thode </td> 
+      <td>m&eacute;thodes</td> 
+      <td>&nbsp;</td> 
+     </tr> 
+     <tr> 
+      <td>Convertir une classe anonyme en classe imbriqu&eacute;e </td> 
+      <td>classes anonymes </td> 
+      <td>&nbsp;</td> 
+     </tr> 
+     <tr> 
+      <td>Convertir un type imbriqu&eacute; au niveau sup&eacute;rieur </td> 
+      <td>classes imbriqu&eacute;es</td> 
+      <td>&nbsp;</td> 
+     </tr> 
+     <tr> 
+      <td rowspan="4">Structure au niveau de la classe </td> 
+      <td>Transf&eacute;rer</td> 
+      <td>m&eacute;thodes ou champs </td> 
+      <td>&nbsp;</td> 
+     </tr> 
+     <tr> 
+      <td>Extraire</td> 
+      <td>m&eacute;thodes ou champs </td> 
+      <td>&nbsp;</td> 
+     </tr> 
+     <tr> 
+      <td>Extraire une interface </td> 
+      <td>classes</td> 
+      <td>&nbsp;</td> 
+     </tr> 
+     <tr> 
+      <td>Utiliser le supertype si possible </td> 
+      <td>classes</td> 
+      <td>&nbsp;</td> 
+     </tr> 
+     <tr> 
+      <td rowspan="6">Structure &agrave; l'int&eacute;rieure d'une classe </td> 
+      <td>Int&eacute;grer</td> 
+      <td>m&eacute;thodes, constantes et variable locales </td> 
+      <td>Alt+Maj+I</td> 
+     </tr> 
+     <tr> 
+      <td>Extraire la m&eacute;thode </td> 
+      <td>morceau de code s&eacute;lectionn&eacute;</td> 
+      <td>Alt+Maj+M</td> 
+     </tr> 
+     <tr> 
+      <td>Extraire la variable locale </td> 
+      <td>morceau de code s&eacute;lectionn&eacute; pouvant &ecirc;tre transform&eacute; en variable </td> 
+      <td>Alt+Maj+L</td> 
+     </tr> 
+     <tr> 
+      <td>Extraire une constante </td> 
+      <td>morceau de code s&eacute;lectionn&eacute; pouvant &ecirc;tre transform&eacute; en constante </td> 
+      <td>&nbsp;</td> 
+     </tr> 
+     <tr> 
+      <td>Convertir la variable locale en zone </td> 
+      <td>variables locales </td> 
+      <td>&nbsp;</td> 
+     </tr> 
+     <tr> 
+      <td>Encapsuler la zone </td> 
+      <td>champs</td> 
+      <td>&nbsp;</td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse31.png" width="64" height="32" align="center"></td> 
+      <td>Le menu &laquo;&nbsp;Propager les modifications&nbsp;&raquo; permetant d'utiliser les fonctionnalit&eacute; de refactoring a &eacute;t&eacute; renomm&eacute; en &laquo;Restructurer&raquo;.<p></p></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td> 
+      <td><p>L'acc&egrave;s aux fonctions de refactoring est contextuel : seules les fonctions applicables dans le contexte courant peuvent &ecirc;tre activ&eacute;es. </p> <p>L'&eacute;diteur propose un menu contextuel pour acc&eacute;der rapidement aux fonctions de refactoring en utilisant la combinaison de touche Alt+Maj+T </p> <p align="center"><img src="images/refact068.png" width="357" height="146"></p> <p>Les fonctions propos&eacute;es le sont en fonction du contexte (le type d'entit&eacute; sur lequel le curseur est plac&eacute;). </p></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>Avant de pouvoir utiliser ces fonctionnalit&eacute;s, il faut sauvegarder l'&eacute;l&eacute;ment qui sera modifi&eacute; sinon un message d'erreur est affich&eacute;.</p> 
+   <p align="center"><img width="567" height="161" src="images/refact001.png"></p> 
+   <p>L'usage de ces fonctions utilise toujours le m&ecirc;me principe de fonctionnement&nbsp;: </p> 
+   <ol start="1" type="1"> 
+    <li>s&eacute;lection de l'&eacute;l&eacute;ment concern&eacute; par la fonction de refactoring</li> 
+    <li>appel de la fonction en utilisant l'option du menu &laquo;&nbsp;Propager les modifications&nbsp;&raquo;</li> 
+    <li>renseigner les informations utiles &agrave; la fonction dans la bo&icirc;te de dialogue</li> 
+    <li>pr&eacute;-visualiser et valider individuellement les modifications qui seront apport&eacute;es</li> 
+    <li>demander la mise en oeuvre des modifications en cliquant sur &laquo;&nbsp;Ok&nbsp;&raquo; (ceci peut &ecirc;tre fait sans demander la pr&eacute;visualisation)</li> 
+   </ol> 
+   <p>Les fonctionnalit&eacute;s du refactoring sont accessibles &agrave; partir des vues "Packages" et "Structure" ou de l'&eacute;diteur de code Java selon l'entit&eacute; concern&eacute;e par la modification. Dans les vues, il suffit de s&eacute;lectionner le ou les &eacute;l&eacute;ments concern&eacute;s. Dans l'&eacute;diteur de code, il faut s&eacute;lectionner le nom de l'&eacute;lement ou de positionner le curseur dessus avant d'appeler la fonctionnalit&eacute;.</p> 
+   <p>Toutes les fonctionnalit&eacute;s utilisent un assistant qui propose toujours &agrave; la fin un bouton &laquo;&nbsp;Apercu &gt;&nbsp;&raquo; permettant d'ouvrir une bo&icirc;te de dialogue qui permet de pr&eacute;-visualiser chacune des modifications r&eacute;sultant de l'usage de la fonction.</p> 
+   <p align="center"><img width="600" height="286" src="images/refact002.png"></p> 
+   <p>Une arborescence permet d'afficher chacun des &eacute;l&eacute;ments qui sera modifi&eacute; ainsi que toutes les modifications pour ces &eacute;l&eacute;ments. Il est possible de cocher ou non tout ou partie des modifications pour qu'elles soient appliqu&eacute;es ou non.</p> 
+   <p>La partie inf&eacute;rieure pr&eacute;sente, pour l'&eacute;l&eacute;ment s&eacute;lectionn&eacute;, le code source actuel &agrave; gauche et le code source tel qu'il sera apr&egrave;s l'application de la fonction &agrave; droite.</p> 
+   <p>Un clic sur le bouton &laquo;&nbsp;OK&nbsp;&raquo; permet de mettre en oeuvre toutes les modifications qui sont coch&eacute;es. </p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_1">9.1. 
+     <!--nchpfin-->Extraction d'une m&eacute;thode</a></h2> 
+   <p>Cette fonction permet de transf&eacute;rer un morceau de code dans une m&eacute;thode qui sera cr&eacute;&eacute;e pour l'occasion.</p> 
+   <p>Pour l'utiliser, il faut s&eacute;lectionner le morceau de code.</p> 
+   <p align="center"><img width="494" height="171" src="images/refact003.png"></p> 
+   <p>Il faut s&eacute;lectionner l'option &laquo;&nbsp;Extraire la m&eacute;thode ... &nbsp;&raquo; du menu principal ou du menu contextuel &laquo;&nbsp;Propager les modifications&nbsp;&raquo;. Une boite de dialogue permet de saisir le nom de la m&eacute;thode et de s&eacute;lectionner le modificateur d'acc&egrave;s.</p> 
+   <p align="center"><img width="408" height="180" src="images/refact004.png"></p> 
+   <p>Un clic sur le bouton &laquo;&nbsp;OK&nbsp;&raquo; permet de mettre en oeuvre automatiquement les modifications.</p> 
+   <p align="center"><img width="494" height="222" src="images/refact005.png"></p> 
+   <p>Dans le cas ou le code s&eacute;lectionn&eacute; contient une ou plusieurs variables, la bo&icirc;te de dialogue contient en plus la liste des variables d&eacute;tect&eacute;es dans le code.</p> 
+   <p align="center"><img width="400" height="220" src="images/refact006.png"></p> 
+   <p align="center"><img width="408" height="287" src="images/refact007.png"></p> 
+   <p>Il faut saisir le nom de la m&eacute;thode, s&eacute;lectionner son modificateur d'acc&egrave;s et &eacute;ventuellement modifier les param&egrave;tres puis cliquer sur le bouton "OK".</p> 
+   <p>La liste des variables d&eacute;tect&eacute;es dans le code est affich&eacute;e dans la liste des param&egrave;tres. Pour modifier le nom d'un des param&egrave;tres, il suffit de le s&eacute;lectionner et de cliquer sur le bouton &laquo;&nbsp;Editer...&nbsp;&raquo;.</p> 
+   <p align="center"><img width="256" height="126" src="images/refact008.png"></p> 
+   <p>Le bouton &laquo;&nbsp;Aper&ccedil;u&nbsp;&raquo; permet de voir et de valider les modifications qui seront apport&eacute;es.</p> 
+   <p align="center"><img width="400" height="292" src="images/refact009.png"></p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_2">9.2. 
+     <!--nchpfin-->Int&eacute;grer</a></h2> 
+   <p>L'int&eacute;gration permet de remplacer l'appel d'une m&eacute;thode par le code contenu dans cette m&eacute;thode.</p> 
+   <p align="center"><img width="417" height="289" src="images/refact010.png"></p> 
+   <p>Puis il faut utiliser l'option &laquo;&nbsp;Propager les modifications/Int&eacute;grer...&nbsp;&raquo; du menu principal ou contextuel.</p> 
+   <p align="center"><img width="408" height="172" src="images/refact011.png"></p> 
+   <p>En fonction du contexte d'appel, une bo&icirc;te de dialogue permet de s&eacute;lectionner la port&eacute;e des modifications.</p> 
+   <p>Si le code s&eacute;lectionn&eacute; ne correspond pas &agrave; une m&eacute;thode, un message d'erreur est affich&eacute;.</p> 
+   <p align="center"><img width="441" height="139" src="images/refact012.png"></p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_3">9.3. 
+     <!--nchpfin-->Renommer</a></h2> 
+   <p>La fonction "Renommer" permet d'attribuer un nouveau nom &agrave; une entit&eacute; pr&eacute;sente dans l'espace de travail. La grand int&eacute;r&ecirc;t de r&eacute;aliser une telle op&eacute;ration via cette fonctionnalit&eacute; plut&ocirc;t que de le faire &agrave; la "main" et qu'elle automatise la recherche et la mise &agrave; jour de toute les r&eacute;f&eacute;rences &agrave; l'&eacute;lement dans l'espace de travail.</p> 
+   <p>Les exemples de cette section utilisent les deux classes suivantes&nbsp;:</p> 
+   <p align="center"><img width="446" height="207" src="images/refact013.png"></p> 
+   <p align="center"><img width="445" height="176" src="images/refact014.png"></p> 
+   <p>Le renommage concerne l'entit&eacute; s&eacute;lectionn&eacute;e dans la vue "Package" ou "Structure" ou sous le curseur dans l'&eacute;diteur de code Java.</p> 
+   <p>Par exemple, pour renommer une m&eacute;thode, il suffit de positioner le curseur sur le nom de la d&eacute;claration d'une m&eacute;thode dans le code source et s&eacute;lectionner l'option &laquo; Propager les modifications&nbsp;/ Renommer&nbsp;&raquo; du menu contextuel.</p> 
+   <p align="center"><img width="408" height="132" src="images/refact015.png"></p> 
+   <p>Il suffit alors de saisir le nouveau nom. Eclipse permet de renommer la m&eacute;thode dans sa classe de d&eacute;finition mais remplace aussi tous les appels de la m&eacute;thode contenue dans l'espace de travail.</p> 
+   <p align="center"><img width="500" height="265" src="images/refact016.png"></p> 
+   <p>Pour renommer une classe, il y a deux possibilit&eacute;s&nbsp;: selectionner la classe dans la vue &laquo;&nbsp;Packages&nbsp;&raquo; ou positionner le curseur sur la d&eacute;finition du nom de la classe dans l'&eacute;diteur. Puis il faut utiliser l'option &laquo;&nbsp;Renommer&nbsp;&raquo; du menu contextuel &laquo;&nbsp;Propager les modifications&nbsp;&raquo;.</p> 
+   <p align="center"><img width="434" height="277" src="images/refact017.png"></p> 
+   <p>Il est possible de pr&eacute;ciser les types d'entit&eacute;s qui doivent &ecirc;tre mise &agrave; jour.</p> 
+   <p>A la validation, Eclipse effectue toutes les modifications n&eacute;cessaires suite au renommage de la classe, notamment le remplacement &agrave; tous les endroits dans l'espace de travail ou la classe est utilis&eacute;e.</p> 
+   <p align="center"><img width="500" height="257" src="images/refact018.png"></p> 
+   <p>Le principe est le m&ecirc;me pour renommer un package.</p> 
+   <p align="center"><img width="434" height="274" src="images/refact019.png"></p> 
+   <p>Si Eclipse d&eacute;tecte des probl&egrave;mes potenciels lors de l'analyse de la demande, il affiche dans une boite de dialogue la liste de ces probl&egrave;mes et demande un confirmation avant de poursuivre les traitements.</p> 
+   <p align="center"><img width="400" height="206" src="images/refact020.png"></p> 
+   <p>Si la s&eacute;lection ne correspond &agrave; aucun &eacute;l&eacute;ment renommable, un message d'erreur est affich&eacute;.</p> 
+   <p align="center"><img width="441" height="129" src="images/refact021.png"></p> 
+   <p>&nbsp;</p> 
+   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse32.png" width="64" height="32" align="center"></td> 
+      <td> <p>Lors d'une op&eacute;ration de refactoring de renommage, l'assistant propose de mettre en oeuvre un d&eacute;l&eacute;gu&eacute;.</p> <p>Exemple&nbsp;: </p> 
+       <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+        <tbody>
+         <tr bgcolor="#A6A5C2"> 
+          <td>Exemple :</td> 
+         </tr> 
+         <tr> 
+          <td> <pre><code>package fr.jmdoudoux.test;
 
 public class MaClasse1 extends MaSousClasseMere {
-  public MaClasse1(int valeur) {
-    this.valeur = valeur;
-  }
+&nbsp; public MaClasse1(int valeur) {
+&nbsp;&nbsp;&nbsp; this.valeur = valeur;
+&nbsp; }
 
-  public int additionner(int val) {
-    return valeur+val;
-  }
-}</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
+&nbsp; public int additionner(int val) {
+&nbsp;&nbsp;&nbsp; return valeur+val;
+&nbsp; }
+}</code></pre> </td> 
+         </tr> 
+        </tbody>
+       </table> <br> <p>S&eacute;lectionnez une m&eacute;thode et utiliser l'option &laquo;&nbsp;Restructurer / Renommer ...&nbsp;&raquo; du menu contextuel.</p> <p align="center"><img width="422" height="227" src="images/refact083.png"></p> <p>Saisissez le nouveau nom de la m&eacute;thode et cochez la case &laquo;&nbsp;Conserver la m&eacute;thode originale en tant que d&eacute;l&eacute;gu&eacute; de la m&eacute;thode renomm&eacute;e&nbsp;&raquo;.</p> <p align="center"><img width="422" height="227" src="images/refact084.png"></p> <p>Par d&eacute;faut la case &agrave; cocher &laquo;&nbsp;Marquer comme &eacute;tant d&eacute;pr&eacute;ci&eacute;&nbsp;&raquo; est coch&eacute;e.</p> <p>Cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;</p> 
+       <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+        <tbody>
+         <tr bgcolor="#A6A5C2"> 
+          <td>Exemple :</td> 
+         </tr> 
+         <tr> 
+          <td> <pre><code>package fr.jmdoudoux.test;
 
-  <p>S&eacute;lectionnez une m&eacute;thode et utiliser l'option
-    «&nbsp;Restructurer / Renommer ...&nbsp;» du menu contextuel.</p>
-  <p align="center"><img width=422 height=227 src="images/refact083.png"></p>
-  <p>Saisissez le nouveau nom de la m&eacute;thode et cochez la case
-    «&nbsp;Conserver la m&eacute;thode originale en tant que d&eacute;l&eacute;gu&eacute; de la m&eacute;thode
-    renomm&eacute;e&nbsp;».</p>
-  <p align="center"><img width=422 height=227 src="images/refact084.png"></p>
-  <p>Par d&eacute;faut la case &agrave; cocher «&nbsp;Marquer comme &eacute;tant
-    d&eacute;pr&eacute;ci&eacute;&nbsp;» est coch&eacute;e.</p>
-  <p>Cliquez sur le bouton «&nbsp;OK&nbsp;»</p>
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>package fr.jmdoudoux.test;
+public class MaClasse1&nbsp;extends MaSousClasseMere {
 
-public class MaClasse1 extends MaSousClasseMere {
+&nbsp; public MaClasse1(int valeur) {
+&nbsp;&nbsp;&nbsp; this.valeur   = valeur;
+&nbsp; }
 
-  public MaClasse1(int valeur) {
-    this.valeur   = valeur;
-  }
-
-  /**
-   * @deprecated Utilisez {@link#additionnerRenomme(int)} &agrave; la place
-   */
-  public int additionner(int val) {
-    return   additionnerRenomme(val);
+&nbsp; /**
+&nbsp;&nbsp; * @deprecated Utilisez {@link#additionnerRenomme(int)} &agrave; la place
+&nbsp;&nbsp; */
+&nbsp; public int additionner(int val) {
+&nbsp;&nbsp;&nbsp; return   additionnerRenomme(val);
   }
 
-  public int additionnerRenomme(int val) {
-    return   valeur+val;
-  }
-}</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <p>La nouvelle est renomm&eacute;e avec le nom fournie et l'ancienne
-    m&eacute;thode est d&eacute;finie avec l'attribut   deprecated  &nbsp;:
-    elle appelle simplement la nouvelle m&eacute;thode.</p>
-  <p>Cette fonctionnalit&eacute; permet de garder une compatibilit&eacute;
-    ascendante.</p>
-  <p>Elle est mise en oeuvre dans plusieurs outils de   refactoring   tel que Renommer, Changer la signature de la
-    m&eacute;thode ou Introduire le param&egrave;tre.</p>
-  <p>&nbsp;</p>
-  <p>Lors d'une op&eacute;ration de   refactoring   de type Renommer, il est possible de demander le   renommage   des entit&eacute;s dont le nom est similaire &agrave; l'entit&eacute; renomm&eacute;e.</p>
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>package fr.jmdoudoux.test  ;
+&nbsp; public int additionnerRenomme(int val) {
+&nbsp;&nbsp;&nbsp; return   valeur+val;
+&nbsp; }
+}</code></pre> </td> 
+         </tr> 
+        </tbody>
+       </table> <br> <p>La nouvelle est renomm&eacute;e avec le nom fournie et l'ancienne m&eacute;thode est d&eacute;finie avec l'attribut deprecated &nbsp;: elle appelle simplement la nouvelle m&eacute;thode.</p> <p>Cette fonctionnalit&eacute; permet de garder une compatibilit&eacute; ascendante.</p> <p>Elle est mise en oeuvre dans plusieurs outils de refactoring tel que Renommer, Changer la signature de la m&eacute;thode ou Introduire le param&egrave;tre.</p> <p>&nbsp;</p> <p>Lors d'une op&eacute;ration de refactoring de type Renommer, il est possible de demander le renommage des entit&eacute;s dont le nom est similaire &agrave; l'entit&eacute; renomm&eacute;e.</p> 
+       <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+        <tbody>
+         <tr bgcolor="#A6A5C2"> 
+          <td>Exemple :</td> 
+         </tr> 
+         <tr> 
+          <td> <pre><code>package fr.jmdoudoux.test  ;
 
 public class Fenetre   {
 
-  public Fenetre() {}
+&nbsp; public Fenetre() {}
 
-  public Fenetre creerFenetre() {
-    Fenetre    fenetre   = new Fenetre();
-    return     fenetre  ;
-  }
+&nbsp; public Fenetre creerFenetre() {
+&nbsp;&nbsp;&nbsp; Fenetre    fenetre   = new Fenetre();
+&nbsp;&nbsp;&nbsp; return     fenetre  ;
+&nbsp; }
 
-  public void testerFenetre(Fenetre fenetre) {
-    System.out.println(&quot;  Fenetre  =&quot;+  fenetre);
-  }
-}</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <p>S&eacute;lectionnez la classe et utilisez l'option
-    «&nbsp;Restructurer / Renommer&nbsp;» du menu contextuel.</p>
-  <p>Saisissez le nouveau nom et cochez la case «&nbsp;Mettre &agrave;
-    jour les m&eacute;thode et les variables nomm&eacute;es de mani&egrave;res identiques&nbsp;».</p>
-  <p align="center"><img width=488 height=297 src="images/refact085.png"></p>
-  <p>Cliquez sur le lien «&nbsp;Configurer ...&nbsp;» pour pr&eacute;ciser
-    les param&egrave;tres de recherche et de remplacement.</p>
-  <p align="center"><img width=479 height=250 src="images/refact086.png"></p>
-  <p>S&eacute;lectionnez l'option d&eacute;sir&eacute;e et cliquez sur le bouton
-    «&nbsp;OK&nbsp;».</p>
-  <p>Voici le r&eacute;sultat avec l'option par d&eacute;faut&nbsp;: </p>
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>package fr.jmdoudoux.test  ;  
+&nbsp; public void testerFenetre(Fenetre fenetre) {
+&nbsp;&nbsp;  System.out.println("  Fenetre  ="+  fenetre);
+&nbsp; }
+}</code></pre> </td> 
+         </tr> 
+        </tbody>
+       </table> <br> <p>S&eacute;lectionnez la classe et utilisez l'option &laquo;&nbsp;Restructurer / Renommer&nbsp;&raquo; du menu contextuel.</p> <p>Saisissez le nouveau nom et cochez la case &laquo;&nbsp;Mettre &agrave; jour les m&eacute;thode et les variables nomm&eacute;es de mani&egrave;res identiques&nbsp;&raquo;.</p> <p align="center"><img width="488" height="297" src="images/refact085.png"></p> <p>Cliquez sur le lien &laquo;&nbsp;Configurer ...&nbsp;&raquo; pour pr&eacute;ciser les param&egrave;tres de recherche et de remplacement.</p> <p align="center"><img width="479" height="250" src="images/refact086.png"></p> <p>S&eacute;lectionnez l'option d&eacute;sir&eacute;e et cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;.</p> <p>Voici le r&eacute;sultat avec l'option par d&eacute;faut&nbsp;: </p> 
+       <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+        <tbody>
+         <tr bgcolor="#A6A5C2"> 
+          <td>Exemple :</td> 
+         </tr> 
+         <tr> 
+          <td> <pre><code>package fr.jmdoudoux.test  ;  
 
 public class Window {  
 
-  public   Window() {}  
+&nbsp; public   Window() {}  
 
-  public   Window   creerFenetre  () {  
-    Window   window   =    new Window(  );  
-    return window;  
-  }  
+&nbsp; public   Window   creerFenetre  () {  
+&nbsp;&nbsp;&nbsp; Window   window   =    new Window(  );  
+&nbsp;&nbsp;&nbsp; return window;  
+&nbsp; }  
 
-  public   Window   creerFenetreModale  () {  
-    Window   window   =    new Window(  );  
-    return window;  
-  }  
+&nbsp; public   Window   creerFenetreModale  () {  
+&nbsp;&nbsp;&nbsp; Window   window   =    new Window(  );  
+&nbsp;&nbsp;&nbsp; return window;  
+&nbsp; }  
 
-  public   void   testerFenetre  (Window   window) {  
-      System.out.println(&quot;  Fenetre  =&quot;+window);  
-    }
-}</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <p>Voici le r&eacute;sultat avec l'option «&nbsp;Rechercher &eacute;galement
-    les noms imbriqu&eacute;s »&nbsp;:</p>
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>package fr.jmdoudoux.test;  
+&nbsp; public   void   testerFenetre  (Window   window) {  
+&nbsp;&nbsp;&nbsp;   System.out.println("  Fenetre  ="+window);  
+&nbsp;   }
+}</code></pre> </td> 
+         </tr> 
+        </tbody>
+       </table> <br> <p>Voici le r&eacute;sultat avec l'option &laquo;&nbsp;Rechercher &eacute;galement les noms imbriqu&eacute;s &raquo;&nbsp;:</p> 
+       <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+        <tbody>
+         <tr bgcolor="#A6A5C2"> 
+          <td>Exemple :</td> 
+         </tr> 
+         <tr> 
+          <td> <pre><code>package fr.jmdoudoux.test;  
 
 public class Window {  
 
-  public   Window() {}  
+&nbsp; public   Window() {}  
 
-  public   Window   creerWindow  () {  
-    Window   window   =     new Window();  
-    return window;  
-  }  
-  public   Window   creerWindowModale  () {  
-    Window   window   =     new Window();  
-    return window;  
-  }  
+&nbsp; public   Window   creerWindow  () {  
+&nbsp;&nbsp;&nbsp; Window   window   =     new Window();  
+&nbsp;&nbsp;&nbsp; return window;  
+&nbsp; }  
+&nbsp; public   Window   creerWindowModale  () {  
+&nbsp;&nbsp;&nbsp; Window   window   =     new Window();  
+&nbsp;&nbsp;&nbsp; return window;  
+&nbsp; }  
 
-  public   void   testerWindow  (Window window) {  
-    System.out.println(&quot;  Fenetre  =&quot;+window);  
-  }
-}</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <p>Lors du   renommage   d'un package, il
-    est possible de demander le   renommage   des sous
-    packages</p>
-  <p align="center"><img width=488 height=297 src="images/refact087.png"></p>
-  <p>Il suffit de cocher la case «&nbsp;Renommer les sous
-    packages&nbsp;» pour que tous les sous packages soient automatiquement renomm&eacute;s
-    lors de l'op&eacute;ration.</p></td>
-    </tr>
-  </table>
-  <p>&nbsp;</p>  
-  <h2><!--nchpdeb--><a name="chap_9_4">9.4. <!--nchpfin-->D&eacute;placer</a></h2>
-<p>La fonction &quot;D&eacute;placer&quot; permet de d&eacute;placer certains &eacute;l&eacute;ments pr&eacute;cis notamment une classe  dans l'espace de travail pour la d&eacute;placer dans un autre package. La grand int&eacute;r&ecirc;t de r&eacute;aliser une telle op&eacute;ration via cette fonctionnalit&eacute; est d'automatiser la recherche et la mise &agrave; jour de toute les r&eacute;f&eacute;rences &agrave; l'&eacute;lement dans l'espace de travail.</p>
-  <p align="justify">Par exemple, pour d&eacute;placer une classe dans un autre package, il faut s&eacute;lectionner la classe dans la vue &quot;Packages&quot; et de s&eacute;lectionner l'option &quot;d&eacute;placer&quot; du menu &quot;Propager les modifications&quot;</p>
-  <p align="center"><img src="images/refact047.png" width="426" height="281"> </p>
-  <p align="justify">En plus du d&eacute;placement de la classe, les clauses import correspondantes sont modifi&eacute;es dans les classes qui utilisent la classe d&eacute;plac&eacute;e.</p>
-  <p align="center"><img src="images/refact048.png" width="550" height="407"> </p>
-  <p align="justify">Si le code s&eacute;lectionn&eacute; dans l'&eacute;diteur de code Java ne correspond pas &agrave; une entit&eacute; concern&eacute;e par cet action, un message d'erreur est affich&eacute;.</p>
-  <p align="center"><img width=441 height=111 src="images/refact022.png"></p>
-  <p>Dans l'&eacute;diteur de code il faut s&eacute;lectionner ou mettre le curseur sur un &eacute;l&eacute;ment statique, avant d'utiliser la fonctionnalit&eacute;.</p>
-  <p>Une boite de dialogue permet de s&eacute;lectionner la classe dans laquelle la m&eacute;thode va &ecirc;tre transf&eacute;r&eacute;e.</p>
-  <p align="center"><img src="images/refact049.png" width="408" height="110"></p>
-  <p>Le bouton &quot;Parcourir&quot; permet d'ouvrir une bo&icirc;te de dialogue pour s&eacute;lectionner la classe de destination. </p>  
-  <p>&nbsp;</p>  
-  <h2><!--nchpdeb--><a name="chap_9_5">9.5. <!--nchpfin-->Changer la signature de la m&eacute;thode</a></h2>
-  <p>Cette fonction permet de modifier la signature d'une m&eacute;thode : changer les attributs de visibilit&eacute;s, les param&egrave;tres (ajouter/supprimer un param&egrave;tre ou modifier le nom, le type ou l'ordre des param&egrave;tres) ou le type de retour de la m&eacute;thode.</p>
-  <p>Pour utiliser cette fonction, il faut s&eacute;lectionner dans l'&eacute;diteur le nom d'une m&eacute;thode et appeler la fonction par le menu contextuel. Une bo&icirc;te de dialogue permet de modifier les &eacute;l&eacute;ments qui constituent la signature de la m&eacute;thode.</p>
-  <p align="center"><img src="images/refact050.png" width="408" height="361"> </p>
-  <p>Les actions r&eacute;alis&eacute;es par les boutons &quot;Ajouter&quot; et &quot;Supprimer&quot; sont assez explicite. Le bouton &quot;Editer&quot; permet de modifier le param&egrave;tre s&eacute;lectionn&eacute;.</p>
-  <p align="center"><img src="images/refact051.png" width="291" height="133"></p>
-  <p>Les boutons &quot;Haut&quot; et &quot;Bas&quot; permettent de modifier l'ordre du param&egrave;tre s&eacute;lectionn&eacute;. </p>
-  <p>La valeur par d&eacute;faut est importante car elle sera utilis&eacute;e lors de la modification de l'utilisation de la m&eacute;thode, pour &eacute;viter les erreurs de compilation.</p>
-  <p>Si le code s&eacute;lectionn&eacute; dans l'&eacute;diteur de code lors de l'appel de la fonction ne correspond pas &agrave; une entit&eacute; concern&eacute;e par cet action, un message d'erreur est affich&eacute;.</p>
-  <p align="center"></p>
-  <p align="center"><img width=441 height=108 src="images/refact023.png"></p>
-  <p></p>
-  <table width="100%"  border="0" cellspacing="0" cellpadding="4">
-    <tr>
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td>
-      <td><p>Cette fonction a &eacute;t&eacute; am&eacute;lior&eacute;e avec plusieurs fonctionnalit&eacute;s.</p>
-        <p align="center"><img src="images/refact080.png" width="444" height="393"> </p>
-        <p>La bo&icirc;te de dialogue permet maintenant aussi de renommer le nom de la m&eacute;thode. </p>
-        <p>Le type peut &ecirc;tre recherch&eacute; gr&acirc;ce &agrave; un assistant en utilisant la combinaison de touche Ctrl+Espace. </p>
-        <p align="center"><img src="images/refact081.png" width="442" height="191"></p>
-        <p>L'onglet &quot;Exceptions&quot; permet de modifier les exceptions propager par la m&eacute;thode </p>
-        <p>Lors des mises &agrave; jours li&eacute;es &agrave; cette fonctionnalit&eacute;, la documentation Javadoc de la m&eacute;thode sera mise &agrave; jour. </p></td>
-    </tr>
-  </table>
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_9_6">9.6. <!--nchpfin-->Convertir une classe anonyme en classe imbriqu&eacute;e</a></h2>
-  <p>Cette fonction permet de transformer une classe anonyme souvent utilis&eacute;e pour cr&eacute;er des listeners en une classe imbriqu&eacute;e. </p>  
-  <p>Pour utiliser cette fonction, il faut placer le curseur dans le code de la classe anonyme. Si tel n'est pas le cas lors de l'appel de la fonction, une message d'erreur est affich&eacute;.</p>
-  <p align="center"><img src="images/refact052.png" width="441" height="108"> </p>
-  <p>Une bo&icirc;te de dialogue permet de saisir les informations concernant la classe qui sera g&eacute;n&eacute;r&eacute;e.</p>
-  <p align="center"><img src="images/refact053.png" width="408" height="179"> </p>
-  <p>La nouvelle classe imbriqu&eacute;e est cr&eacute;e en tenant compte des informations saisies.</p>
-  <p align="center"><img src="images/refact054.png" width="658" height="428"> </p>
-  <p>&nbsp;</p>  
-  <h2><!--nchpdeb--><a name="chap_9_7">9.7. <!--nchpfin-->Convertir un type imbriqu&eacute; au niveau sup&eacute;rieur</a></h2>
-  <p>Cette fonction permet de convertir une classe imbriqu&eacute;e en une classe d&eacute;finie dans un fichier particulier.</p>  
-  <p>Pour utiliser cette fonction, il faut s&eacute;lectionner une classe imbriqu&eacute;e dans la vue &quot;Packages&quot; ou &quot;Structure&quot; ou s&eacute;lectionner dans l'&eacute;diteur de code le nom d'une classe imbriqu&eacute;e.</p>  
-  <p align="justify">Si le code s&eacute;lectionn&eacute; ne correspond pas &agrave; une entit&eacute; concern&eacute;e par cet action, un message d'erreur est affich&eacute;.</p>
-  <p align="center"></p>
-  <p align="center"><img width=441 height=139 src="images/refact025.png" ></p>
-  <p>Lors de la l'appel de la fonction, une boite de dialogue permet de pr&eacute;ciser des informations sur la classe qui va &ecirc;tre d&eacute;plac&eacute;e.</p>
-  <p align="center"><img src="images/refact055.png" width="408" height="132"> </p>
-  <p>Voici un exemple de l'aper&ccedil;u de l'utilisation de cet fonction</p>
-  <p align="center"><img src="images/refact056.png" width="658" height="432"></p>
-  <p>Le nom pour l'instance de d&eacute;limitation permet de stocker une instance de la classe englobante si la classe avait besoin de l'acc&egrave;s &agrave; des membres de l'ancienne classe englobante. </p>
-  <p>&nbsp; </p>
-  <h2><!--nchpdeb--><a name="chap_9_8">9.8. <!--nchpfin-->Extraire</a></h2>
-  <p>Cette fonction permet de d&eacute;placer la d&eacute;claration d'un membre d'une classe fille dans une de ces classes meres. </p>  
-  <p>Pour utiliser cette fonction, il faut s&eacute;lectionner un membre d'une classe fille ou positionner le curseur sur un de ces membres sinon un message d'erreur est affich&eacute;.</p>
-  <p align="center"><img src="images/refact060.png" width="441" height="139"> </p>
-  <p>Une bo&icirc;te de dialogue permet de s&eacute;lectionner le ou les membres concern&eacute;s dont celui &agrave; partir duquel la fonction a &eacute;t&eacute; appel&eacute;e.</p>
-  <p align="center"><img src="images/refact058.png" width="555" height="304"> </p>
-  <p>Il suffit de cocher le ou les membres concern&eacute;es et de s&eacute;lectionner la classe m&egrave;re dans la liste d&eacute;roulante.</p>
-  <p>Pour les m&eacute;thodes, le bouton &quot;Editer&quot; permet de s&eacute;lectionner l'action qui sera r&eacute;alis&eacute;e.</p>
-  <p align="center"><img src="images/refact057.png" width="471" height="123"></p>
-  <p>L'action &quot;extraire&quot; permet de d&eacute;placer la d&eacute;claration et le code de la m&eacute;thode dans la classe m&egrave;re s&eacute;lectionn&eacute;e. L'action &quot;d&eacute;clarer abstrait dans la d&eacute;claration&quot; permet de d&eacute;clarer la classe choisie abstraite avec une d&eacute;claration de la m&eacute;thode elle aussi abstraite. Dans ce dernier cas, le code de la m&eacute;thode est laiss&eacute; dans la classe fille en tant que r&eacute;d&eacute;finition.</p>
-  <p align="center"><img src="images/refact059.png" width="553" height="374"> </p>
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_9_9">9.9. <!--nchpfin-->Transferer</a></h2>
-  <p>Cette fonction permet de transferer une m&eacute;thode dans les classes filles. </p>  
-  <p>Pour utiliser cette fonction il faut s&eacute;lectionner un membre d'une classe poss&egrave;dant au moins une classe fille ou mettre le curseur sur un de ces membres dans l'&eacute;diteur de code. Si la fonction est appel&eacute;e sur une classe qui ne poss&egrave;de pas de classe fille, un message d'erreur est affich&eacute;.</p>
-  <p align="center"><img src="images/refact062.png" width="441" height="114"></p>
-  <p>Une bo&icirc;te de dialogue permet de s&eacute;lectionner le ou les membres concern&eacute;s par le transfert. </p>
-  <p align="center"><img src="images/refact061.png" width="408" height="186"> </p>
-  <p>Pour une m&eacute;thode, le bouton &quot;Editer&quot; permet de s&eacute;lectionner l'action qui sera r&eacute;aliser.</p>
-  <p align="center"><img src="images/refact063.png" width="446" height="123"> </p>
-  <p>L'action &quot;transfert&quot; permet de d&eacute;placer la d&eacute;claration et le code de la m&eacute;thode dans la ou les classes filles. L'action &quot;laisser la d&eacute;claration abstraite&quot; permet de laisser la d&eacute;claration abstraite de la m&eacute;thode dans la classe m&egrave;re.</p>
-  <p>&nbsp;</p>  
-  <h2><!--nchpdeb--><a name="chap_9_10">9.10. <!--nchpfin-->Extraire une interface</a></h2>
-  <p>Cette fonction permet de d&eacute;finir &agrave; post&eacute;riori une interface &agrave; partir d'une ou plusieurs m&eacute;thodes d&eacute;finies dans une classe. Il faut s&eacute;lectionner dans le code le nom d'une classe.</p>
-  <p align="center"><img width=400 height=225 src="images/refact026.png"></p>
-  <p>Si la partie s&eacute;lectionn&eacute;e ne correspond pas &agrave; un nom de classe, un message d'erreur est affich&eacute;.</p>
-  <p align="center"><img width=441 height=107 src="images/refact027.png"></p>
-  <p>Il suffit ensuite d'utiliser l'option «&nbsp;Extraire une interface&nbsp;» du menu «&nbsp;Propager les modifications&nbsp;». Une boite de dialogue permet de pr&eacute;ciser le nom de l'interface et de s&eacute;lectionner les membres &agrave; d&eacute;clarer dans l'interface.</p>
-  <p align="center"><img width=476 height=193 src="images/refact028.png"></p>
-  <p>Pour respecter les sp&eacute;cifications du langage Java, les membres qu'il est possible d'int&eacute;grer dans l'interface sont des m&eacute;thodes et des constantes publiques, par exemple : </p>
-  <p align="center"><img width=476 height=239 src="images/refact031.png"></p>
-  <p>Le r&eacute;sultat est la cr&eacute;ation de l'interface et son impl&eacute;mentation par la classe s&eacute;lectionn&eacute;e.</p>
-  <p align="center"><img width=466 height=135 src="images/refact029.png"> </p>
-  <p align="center"><img width=464 height=222 src="images/refact030.png"></p>
-  <p>&nbsp;</p>  
-  <h2><!--nchpdeb--><a name="chap_9_11">9.11. <!--nchpfin-->Utiliser le supertype si possible</a></h2>
-  <p>Cette fonction permet de remplacer l'utilisation d'un type par un de ces super types si celui ci en poss&egrave;de. </p>  
-  <p>Pour utiliser cette fonction, il faut s&eacute;lectionner un type dans le code de l'&eacute;diteur ou mettre le curseur sur ce dernier sinon un message d'erreur est affich&eacute; : </p>
-  <p align="center"><img src="images/refact064.png" width="441" height="111"></p>
-  <p>Lors de l'appel de cette fonction, une bo&icirc;te de dialogue permet de s&eacute;lectionner une des classes m&egrave;re du type s&eacute;lectionn&eacute;.</p>
-  <p align="center"><img src="images/refact082.png" width="408" height="164"></p>
-  <p>La pr&eacute;-visualisation permet de voir les modifications qui seront apport&eacute;es dans le code. </p>
-  <p align="center"><img src="images/refact065.png" width="558" height="373"> </p>
-  <p>Si l'utilisation du super type s&eacute;lectionn&eacute; n'est pas possible (par exemple car une m&eacute;thode utilis&eacute;e n'est pas d&eacute;finie dans le type s&eacute;lectionn&eacute;), aucune modification n'est faite dans le code et l'aper&ccedil;u affiche le message suivant : </p>
-  <p align="center"><img src="images/refact066.png" width="408" height="134"></p>
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_9_12">9.12. <!--nchpfin-->Convertir la variable locale en zone</a></h2>
-  <p>La fonction «&nbsp;Convertir la variable locale en zone&nbsp;» permet de transformer une variable locale &agrave; une m&eacute;thode en un champ de la classe.</p>
-  <p>Pour utiliser cette fonction, il faut s&eacute;lectionner dans le code une variable locale, puis utiliser l'option &laquo;&nbsp;Convertir la variable locale en zone&nbsp;&raquo; du menu &laquo;&nbsp;Propager les modifications&nbsp;&raquo;.</p>
-  <p align="center"><img width=311 height=173 src="images/refact032.png"></p>
-  <p>Si la s&eacute;lection ne correspond pas &agrave; une variable locale, un message d'erreur est affich&eacute;.</p>
-  <p align="center"><img width=441 height=109 src="images/refact033.png"></p>
-  <p>Une bo&icirc;te de dialogue permet de pr&eacute;ciser le nom du champ, le modificateur d'acc&egrave;s et l'endroit dans le code o&ugrave; le champ sera initialis&eacute;.</p>
-  <p align="center"><img width=408 height=292 src="images/refact034.png"></p>
-  <p>Le r&eacute;sultat de l'ex&eacute;cution de la fonction est le suivant&nbsp;: </p>
-  <p align="center"><img width=312 height=207 src="images/refact035.png"></p>
-  <p>&nbsp;</p>  
-  <h2><!--nchpdeb--><a name="chap_9_13">9.13. <!--nchpfin-->Encapsuler la zone</a></h2>
-  <p>Cette fonction permet d'encapsuler un attribut en g&eacute;n&eacute;rant un getter et &eacute;ventuellement un setter. </p>
-  <p>Il faut s&eacute;lectionner dans le code un champ de la classe.</p>
-  <p align="center"><img width=464 height=159 src="images/refact036.png"></p>
-  <p>Il faut ensuite utiliser l'option «&nbsp;Encapsuler la zone&nbsp;» du menu «&nbsp;Propager les modifications&nbsp;».</p>
-  <p>Si la s&eacute;lection dans le code ne correspond pas &agrave; un champ de la classe, un message d'erreur est affich&eacute;.</p>
-  <p align="center"><img width=441 height=109 src="images/refact037.png"></p>
-  <p>Une boite de dialogue permet de pr&eacute;ciser les options pour la g&eacute;n&eacute;ration du getter et du setter</p>
-  <p align="center"><img width=500 height=169 src="images/refact038.png"></p>
-  <p>Le r&eacute;sultat de l'ex&eacute;cution g&eacute;n&egrave;re le getter et le setter et remplace l'utilisation du champ par ces m&eacute;thodes.</p>
-  <p align="center"><img width=470 height=273 src="images/refact039.png"></p>
-  <p>En s&eacute;lectionnant l'option «&nbsp;conserver les r&eacute;f&eacute;rences de zones&nbsp;», ces m&eacute;thodes ne sont pas utilis&eacute;es dans la classe o&ugrave; le champ est utilis&eacute;.</p>
-  <p>&nbsp;</p>  
-  <h2><!--nchpdeb--><a name="chap_9_14">9.14. <!--nchpfin-->Extraire la variable locale</a></h2>
-  <p>Cette fonction permet de d&eacute;finir une constante &agrave; partir d'une expression.</p>
-  <p>Il faut s&eacute;lectionner une expression dans le code source.</p>
-  <p align="center"><img width=289 height=194 src="images/refact040.png"></p>
-  <p>Puis utiliser l'option «&nbsp;Extraire la variable locale&nbsp;» du menu «&nbsp;Propager les modifications&nbsp;».</p>
-  <p align="center"><img width=527 height=171 src="images/refact041.png"></p>
-  <p>Une bo&icirc;te de dialogue permet de saisir le nom de la variable, de pr&eacute;ciser si toutes les occurrences doivent &ecirc;tre modifi&eacute;es et si la variable doit &ecirc;tre une constante.</p>
-  <p>Si la s&eacute;lection dans le code source est incorecte, un message d'erreur est affich&eacute;.</p>
-  <p align="center"><img width=441 height=111 src="images/refact042.png"></p>
-  <p>Le r&eacute;sultat de l'ex&eacute;cution de cette fonction est le suivant&nbsp;: </p>
-  <p align="center"><img width=339 height=204 src="images/refact043.png"></p>
-  <p>&nbsp;</p>  
-  <h2><!--nchpdeb--><a name="chap_9_15">9.15. <!--nchpfin-->Extraire une constante</a></h2>
-  <p>Cette fonction permet de d&eacute;finir une constante &agrave; partir d'une valeur en dur utilis&eacute;e dans le code. Il suffit de s&eacute;lectionner cette valeur dans le code source.</p>
-  <p align="center"><img width=400 height=189 src="images/refact044.png"></p>
-  <p>Puis d'utiliser l'option «&nbsp;Extraire une constante ... &nbsp;» du menu «&nbsp;Propager les modifications&nbsp;». Une boite de dialogue appara&icirc;t pour pr&eacute;ciser le nom de la constante &agrave; cr&eacute;er et son modificateur d'acc&egrave;s.</p>
-  <p align="center"><img width=506 height=217 src="images/refact045.png"></p>
-  <p>Il est possible de pr&eacute;ciser si toutes les occurrences de la valeur doivent &ecirc;tre remplac&eacute;es dans le code source.</p>
-  <p>Il est aussi possible de pr&eacute;ciser l'utilisation de la qualification de la constante avec le nom de la classe dans laquelle elle est d&eacute;finie.</p>
-  <p align="center"><img width=399 height=214 src="images/refact046.png"></p>
-  <p>&nbsp;</p>  
-  <h2><!--nchpdeb--><a name="chap_9_16">9.16. <!--nchpfin-->G&eacute;n&eacute;raliser le type</a></h2>
-  <table width="100%"  border="0" cellspacing="0" cellpadding="4">
-    <tr>
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td>
-      <td><p>Cette fonction permet de remplacer le type d'une variable par un de ces super types. Il faut positionner le curseur sur la d&eacute;claration d'une variable, d'un champ, d'un param&egrave;tre ou d'une valeur de retour.</p>
-        <p align="center"><img src="images/refact069.png" width="477" height="170"></p>
-        <p>Une boite de dialogue affiche la liste des super types. </p>
-        <p align="center"><img src="images/refact070.png" width="437" height="292"></p>
-        <p>Il suffit de s&eacute;lectionner le type d&eacute;sir&eacute; et de cliquer sur le bouton &laquo;&nbsp;Ok&nbsp;&raquo; pour que le code soit mise &agrave; jour. </p>
-        <p align="center"><img src="images/refact071.png" width="476" height="189"></p>
-        <p>Cette fonctionnalit&eacute; est tr&egrave;s utile car elle facilite la mise en oeuvre d'une bonne pratique de programmation consistant &agrave; utiliser un super type comme type d'une variable lorsque cela est possible. </p></td>
-    </tr>
-  </table>
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_9_17">9.17. <!--nchpfin-->Introduire une fabrique</a></h2>
-  <table width="100%"  border="0" cellspacing="0" cellpadding="4">
-    <tr>
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td>
-      <td><p> Cette fonction permet d'obliger l'utilisation d'une fabrique pour cr&eacute;er une occurrence de la classe. </p>
-        <p align="center"><img src="images/refact072.png" width="475" height="159"></p>
-        <p>Il faut positionner le curseur sur un constructeur puis appeler la fonction. </p>
-        <p align="center"><img src="images/refact073.png" width="408" height="150"></p>
-        <p>Le code est modifi&eacute; en cr&eacute;ant la m&eacute;thode de fabrication et en rendant le constructeur priv&eacute;. </p>
-        <p align="center"><img src="images/refact074.png" width="478" height="218"></p>        </td>
-    </tr>
-  </table>
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_9_18">9.18. <!--nchpfin-->Introduire un param&egrave;tre</a></h2>
-  <table width="100%"  border="0" cellspacing="0" cellpadding="4">
-    <tr>
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td>
-      <td><p> Cette fonction permet de remplacer une expression utilis&eacute;e dans une m&eacute;thode par un param&egrave;tre fourni &agrave; cette m&eacute;thode.</p>
-      <p>Il faut positionner le curseur sur une expression litt&eacute;rale et appeler la fonction.</p>
-      <p align="center"><img src="images/refact075.png" width="478" height="63"></p>
-      <p>Une bo&icirc;te de dialogue permet de saisie le nom du param&egrave;tres </p>
-      <p align="center"><img src="images/refact076.png" width="408" height="105"></p>
-      <p>En cliquant sur le bouton &laquo;&nbsp;Ok&nbsp;&raquo;, le param&egrave;tre est ajout&eacute; dans la signature de la m&eacute;thode et la valeur litt&eacute;rale est remplac&eacute;e par le param&egrave;tre. </p>
-      <p align="center"><img src="images/refact079.png" width="477" height="51"></p></td>
-    </tr>
-  </table>
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_9_19">9.19. <!--nchpfin-->Introduction de l'adressage indirect</a></h2>
-  <table width="100%"  border="0" cellspacing="0" cellpadding="4">
-    <tr>
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse32.png" width="64" height="32" align="center"></td>
-      <td>  <p>Ce   refactoring   permet de rediriger
-    l'appel d'une m&eacute;thode vers une nouvelle m&eacute;thode qui appel elle-m&ecirc;me la m&eacute;thode
-    courante. Tous les appels actuels sont remplac&eacute;s par un appel &agrave; la nouvelle
-    m&eacute;thode.</p>
-  <p align="center"><img width=383 height=299 src="images/refact088.png"></p>
-  <p>S&eacute;lectionnez une m&eacute;thode dans le code et utilisez l'option
-    «&nbsp;Restructurer / Introduction de l'adressage indirect ...&nbsp;»</p>
-  <p align="center"><img width=415 height=207 src="images/refact089.png"></p>
-  <p>Saisissez le nouveau de la m&eacute;thode et cliquez sur le bouton
-    «&nbsp;OK&nbsp;».</p>
-  <p align="center"><img width=580 height=449 src="images/refact090.png"></p>
-  <p>Cliquez sur le bouton «&nbsp;OK&nbsp;» pour ex&eacute;cuter le   refactoring  .</p>
-  <p align="center"><img width=532 height=447 src="images/refact091.png"></p></td>
-    </tr>
-  </table>
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_9_20">9.20. <!--nchpfin-->Extraire une super classe</a></h2>
-  <table width="100%"  border="0" cellspacing="0" cellpadding="4">
-    <tr>
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse32.png" width="64" height="32" align="center"></td>
-      <td>  <p>Ce   refactoring   permet de cr&eacute;er une super classe &agrave; partir de plusieurs classes sous r&eacute;serve que ces classes poss&egrave;dent des membres communs. </p>
-        <p>Les classes utilis&eacute;es dans cette section sont les suivantes&nbsp;: </p>
-        <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>package fr.jmdoudoux.test;
+&nbsp; public   void   testerWindow  (Window window) {  
+&nbsp;&nbsp;  System.out.println("  Fenetre  ="+window);  
+&nbsp; }
+}</code></pre> </td> 
+         </tr> 
+        </tbody>
+       </table> <br> <p>Lors du renommage d'un package, il est possible de demander le renommage des sous packages</p> <p align="center"><img width="488" height="297" src="images/refact087.png"></p> <p>Il suffit de cocher la case &laquo;&nbsp;Renommer les sous packages&nbsp;&raquo; pour que tous les sous packages soient automatiquement renomm&eacute;s lors de l'op&eacute;ration.</p></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_4">9.4. 
+     <!--nchpfin-->D&eacute;placer</a></h2> 
+   <p>La fonction "D&eacute;placer" permet de d&eacute;placer certains &eacute;l&eacute;ments pr&eacute;cis notamment une classe dans l'espace de travail pour la d&eacute;placer dans un autre package. La grand int&eacute;r&ecirc;t de r&eacute;aliser une telle op&eacute;ration via cette fonctionnalit&eacute; est d'automatiser la recherche et la mise &agrave; jour de toute les r&eacute;f&eacute;rences &agrave; l'&eacute;lement dans l'espace de travail.</p> 
+   <p align="justify">Par exemple, pour d&eacute;placer une classe dans un autre package, il faut s&eacute;lectionner la classe dans la vue "Packages" et de s&eacute;lectionner l'option "d&eacute;placer" du menu "Propager les modifications"</p> 
+   <p align="center"><img src="images/refact047.png" width="426" height="281"> </p> 
+   <p align="justify">En plus du d&eacute;placement de la classe, les clauses import correspondantes sont modifi&eacute;es dans les classes qui utilisent la classe d&eacute;plac&eacute;e.</p> 
+   <p align="center"><img src="images/refact048.png" width="550" height="407"> </p> 
+   <p align="justify">Si le code s&eacute;lectionn&eacute; dans l'&eacute;diteur de code Java ne correspond pas &agrave; une entit&eacute; concern&eacute;e par cet action, un message d'erreur est affich&eacute;.</p> 
+   <p align="center"><img width="441" height="111" src="images/refact022.png"></p> 
+   <p>Dans l'&eacute;diteur de code il faut s&eacute;lectionner ou mettre le curseur sur un &eacute;l&eacute;ment statique, avant d'utiliser la fonctionnalit&eacute;.</p> 
+   <p>Une boite de dialogue permet de s&eacute;lectionner la classe dans laquelle la m&eacute;thode va &ecirc;tre transf&eacute;r&eacute;e.</p> 
+   <p align="center"><img src="images/refact049.png" width="408" height="110"></p> 
+   <p>Le bouton "Parcourir" permet d'ouvrir une bo&icirc;te de dialogue pour s&eacute;lectionner la classe de destination. </p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_5">9.5. 
+     <!--nchpfin-->Changer la signature de la m&eacute;thode</a></h2> 
+   <p>Cette fonction permet de modifier la signature d'une m&eacute;thode : changer les attributs de visibilit&eacute;s, les param&egrave;tres (ajouter/supprimer un param&egrave;tre ou modifier le nom, le type ou l'ordre des param&egrave;tres) ou le type de retour de la m&eacute;thode.</p> 
+   <p>Pour utiliser cette fonction, il faut s&eacute;lectionner dans l'&eacute;diteur le nom d'une m&eacute;thode et appeler la fonction par le menu contextuel. Une bo&icirc;te de dialogue permet de modifier les &eacute;l&eacute;ments qui constituent la signature de la m&eacute;thode.</p> 
+   <p align="center"><img src="images/refact050.png" width="408" height="361"> </p> 
+   <p>Les actions r&eacute;alis&eacute;es par les boutons "Ajouter" et "Supprimer" sont assez explicite. Le bouton "Editer" permet de modifier le param&egrave;tre s&eacute;lectionn&eacute;.</p> 
+   <p align="center"><img src="images/refact051.png" width="291" height="133"></p> 
+   <p>Les boutons "Haut" et "Bas" permettent de modifier l'ordre du param&egrave;tre s&eacute;lectionn&eacute;. </p> 
+   <p>La valeur par d&eacute;faut est importante car elle sera utilis&eacute;e lors de la modification de l'utilisation de la m&eacute;thode, pour &eacute;viter les erreurs de compilation.</p> 
+   <p>Si le code s&eacute;lectionn&eacute; dans l'&eacute;diteur de code lors de l'appel de la fonction ne correspond pas &agrave; une entit&eacute; concern&eacute;e par cet action, un message d'erreur est affich&eacute;.</p> 
+   <p align="center"></p> 
+   <p align="center"><img width="441" height="108" src="images/refact023.png"></p> 
+   <p></p> 
+   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td> 
+      <td><p>Cette fonction a &eacute;t&eacute; am&eacute;lior&eacute;e avec plusieurs fonctionnalit&eacute;s.</p> <p align="center"><img src="images/refact080.png" width="444" height="393"> </p> <p>La bo&icirc;te de dialogue permet maintenant aussi de renommer le nom de la m&eacute;thode. </p> <p>Le type peut &ecirc;tre recherch&eacute; gr&acirc;ce &agrave; un assistant en utilisant la combinaison de touche Ctrl+Espace. </p> <p align="center"><img src="images/refact081.png" width="442" height="191"></p> <p>L'onglet "Exceptions" permet de modifier les exceptions propager par la m&eacute;thode </p> <p>Lors des mises &agrave; jours li&eacute;es &agrave; cette fonctionnalit&eacute;, la documentation Javadoc de la m&eacute;thode sera mise &agrave; jour. </p></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_6">9.6. 
+     <!--nchpfin-->Convertir une classe anonyme en classe imbriqu&eacute;e</a></h2> 
+   <p>Cette fonction permet de transformer une classe anonyme souvent utilis&eacute;e pour cr&eacute;er des listeners en une classe imbriqu&eacute;e. </p> 
+   <p>Pour utiliser cette fonction, il faut placer le curseur dans le code de la classe anonyme. Si tel n'est pas le cas lors de l'appel de la fonction, une message d'erreur est affich&eacute;.</p> 
+   <p align="center"><img src="images/refact052.png" width="441" height="108"> </p> 
+   <p>Une bo&icirc;te de dialogue permet de saisir les informations concernant la classe qui sera g&eacute;n&eacute;r&eacute;e.</p> 
+   <p align="center"><img src="images/refact053.png" width="408" height="179"> </p> 
+   <p>La nouvelle classe imbriqu&eacute;e est cr&eacute;e en tenant compte des informations saisies.</p> 
+   <p align="center"><img src="images/refact054.png" width="658" height="428"> </p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_7">9.7. 
+     <!--nchpfin-->Convertir un type imbriqu&eacute; au niveau sup&eacute;rieur</a></h2> 
+   <p>Cette fonction permet de convertir une classe imbriqu&eacute;e en une classe d&eacute;finie dans un fichier particulier.</p> 
+   <p>Pour utiliser cette fonction, il faut s&eacute;lectionner une classe imbriqu&eacute;e dans la vue "Packages" ou "Structure" ou s&eacute;lectionner dans l'&eacute;diteur de code le nom d'une classe imbriqu&eacute;e.</p> 
+   <p align="justify">Si le code s&eacute;lectionn&eacute; ne correspond pas &agrave; une entit&eacute; concern&eacute;e par cet action, un message d'erreur est affich&eacute;.</p> 
+   <p align="center"></p> 
+   <p align="center"><img width="441" height="139" src="images/refact025.png"></p> 
+   <p>Lors de la l'appel de la fonction, une boite de dialogue permet de pr&eacute;ciser des informations sur la classe qui va &ecirc;tre d&eacute;plac&eacute;e.</p> 
+   <p align="center"><img src="images/refact055.png" width="408" height="132"> </p> 
+   <p>Voici un exemple de l'aper&ccedil;u de l'utilisation de cet fonction</p> 
+   <p align="center"><img src="images/refact056.png" width="658" height="432"></p> 
+   <p>Le nom pour l'instance de d&eacute;limitation permet de stocker une instance de la classe englobante si la classe avait besoin de l'acc&egrave;s &agrave; des membres de l'ancienne classe englobante. </p> 
+   <p>&nbsp; </p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_8">9.8. 
+     <!--nchpfin-->Extraire</a></h2> 
+   <p>Cette fonction permet de d&eacute;placer la d&eacute;claration d'un membre d'une classe fille dans une de ces classes meres. </p> 
+   <p>Pour utiliser cette fonction, il faut s&eacute;lectionner un membre d'une classe fille ou positionner le curseur sur un de ces membres sinon un message d'erreur est affich&eacute;.</p> 
+   <p align="center"><img src="images/refact060.png" width="441" height="139"> </p> 
+   <p>Une bo&icirc;te de dialogue permet de s&eacute;lectionner le ou les membres concern&eacute;s dont celui &agrave; partir duquel la fonction a &eacute;t&eacute; appel&eacute;e.</p> 
+   <p align="center"><img src="images/refact058.png" width="555" height="304"> </p> 
+   <p>Il suffit de cocher le ou les membres concern&eacute;es et de s&eacute;lectionner la classe m&egrave;re dans la liste d&eacute;roulante.</p> 
+   <p>Pour les m&eacute;thodes, le bouton "Editer" permet de s&eacute;lectionner l'action qui sera r&eacute;alis&eacute;e.</p> 
+   <p align="center"><img src="images/refact057.png" width="471" height="123"></p> 
+   <p>L'action "extraire" permet de d&eacute;placer la d&eacute;claration et le code de la m&eacute;thode dans la classe m&egrave;re s&eacute;lectionn&eacute;e. L'action "d&eacute;clarer abstrait dans la d&eacute;claration" permet de d&eacute;clarer la classe choisie abstraite avec une d&eacute;claration de la m&eacute;thode elle aussi abstraite. Dans ce dernier cas, le code de la m&eacute;thode est laiss&eacute; dans la classe fille en tant que r&eacute;d&eacute;finition.</p> 
+   <p align="center"><img src="images/refact059.png" width="553" height="374"> </p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_9">9.9. 
+     <!--nchpfin-->Transferer</a></h2> 
+   <p>Cette fonction permet de transferer une m&eacute;thode dans les classes filles. </p> 
+   <p>Pour utiliser cette fonction il faut s&eacute;lectionner un membre d'une classe poss&egrave;dant au moins une classe fille ou mettre le curseur sur un de ces membres dans l'&eacute;diteur de code. Si la fonction est appel&eacute;e sur une classe qui ne poss&egrave;de pas de classe fille, un message d'erreur est affich&eacute;.</p> 
+   <p align="center"><img src="images/refact062.png" width="441" height="114"></p> 
+   <p>Une bo&icirc;te de dialogue permet de s&eacute;lectionner le ou les membres concern&eacute;s par le transfert. </p> 
+   <p align="center"><img src="images/refact061.png" width="408" height="186"> </p> 
+   <p>Pour une m&eacute;thode, le bouton "Editer" permet de s&eacute;lectionner l'action qui sera r&eacute;aliser.</p> 
+   <p align="center"><img src="images/refact063.png" width="446" height="123"> </p> 
+   <p>L'action "transfert" permet de d&eacute;placer la d&eacute;claration et le code de la m&eacute;thode dans la ou les classes filles. L'action "laisser la d&eacute;claration abstraite" permet de laisser la d&eacute;claration abstraite de la m&eacute;thode dans la classe m&egrave;re.</p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_10">9.10. 
+     <!--nchpfin-->Extraire une interface</a></h2> 
+   <p>Cette fonction permet de d&eacute;finir &agrave; post&eacute;riori une interface &agrave; partir d'une ou plusieurs m&eacute;thodes d&eacute;finies dans une classe. Il faut s&eacute;lectionner dans le code le nom d'une classe.</p> 
+   <p align="center"><img width="400" height="225" src="images/refact026.png"></p> 
+   <p>Si la partie s&eacute;lectionn&eacute;e ne correspond pas &agrave; un nom de classe, un message d'erreur est affich&eacute;.</p> 
+   <p align="center"><img width="441" height="107" src="images/refact027.png"></p> 
+   <p>Il suffit ensuite d'utiliser l'option &laquo;&nbsp;Extraire une interface&nbsp;&raquo; du menu &laquo;&nbsp;Propager les modifications&nbsp;&raquo;. Une boite de dialogue permet de pr&eacute;ciser le nom de l'interface et de s&eacute;lectionner les membres &agrave; d&eacute;clarer dans l'interface.</p> 
+   <p align="center"><img width="476" height="193" src="images/refact028.png"></p> 
+   <p>Pour respecter les sp&eacute;cifications du langage Java, les membres qu'il est possible d'int&eacute;grer dans l'interface sont des m&eacute;thodes et des constantes publiques, par exemple : </p> 
+   <p align="center"><img width="476" height="239" src="images/refact031.png"></p> 
+   <p>Le r&eacute;sultat est la cr&eacute;ation de l'interface et son impl&eacute;mentation par la classe s&eacute;lectionn&eacute;e.</p> 
+   <p align="center"><img width="466" height="135" src="images/refact029.png">&nbsp;</p> 
+   <p align="center"><img width="464" height="222" src="images/refact030.png"></p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_11">9.11. 
+     <!--nchpfin-->Utiliser le supertype si possible</a></h2> 
+   <p>Cette fonction permet de remplacer l'utilisation d'un type par un de ces super types si celui ci en poss&egrave;de. </p> 
+   <p>Pour utiliser cette fonction, il faut s&eacute;lectionner un type dans le code de l'&eacute;diteur ou mettre le curseur sur ce dernier sinon un message d'erreur est affich&eacute; : </p> 
+   <p align="center"><img src="images/refact064.png" width="441" height="111"></p> 
+   <p>Lors de l'appel de cette fonction, une bo&icirc;te de dialogue permet de s&eacute;lectionner une des classes m&egrave;re du type s&eacute;lectionn&eacute;.</p> 
+   <p align="center"><img src="images/refact082.png" width="408" height="164"></p> 
+   <p>La pr&eacute;-visualisation permet de voir les modifications qui seront apport&eacute;es dans le code. </p> 
+   <p align="center"><img src="images/refact065.png" width="558" height="373"> </p> 
+   <p>Si l'utilisation du super type s&eacute;lectionn&eacute; n'est pas possible (par exemple car une m&eacute;thode utilis&eacute;e n'est pas d&eacute;finie dans le type s&eacute;lectionn&eacute;), aucune modification n'est faite dans le code et l'aper&ccedil;u affiche le message suivant : </p> 
+   <p align="center"><img src="images/refact066.png" width="408" height="134"></p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_12">9.12. 
+     <!--nchpfin-->Convertir la variable locale en zone</a></h2> 
+   <p>La fonction &laquo;&nbsp;Convertir la variable locale en zone&nbsp;&raquo; permet de transformer une variable locale &agrave; une m&eacute;thode en un champ de la classe.</p> 
+   <p>Pour utiliser cette fonction, il faut s&eacute;lectionner dans le code une variable locale, puis utiliser l'option &laquo;&nbsp;Convertir la variable locale en zone&nbsp;&raquo; du menu &laquo;&nbsp;Propager les modifications&nbsp;&raquo;.</p> 
+   <p align="center"><img width="311" height="173" src="images/refact032.png"></p> 
+   <p>Si la s&eacute;lection ne correspond pas &agrave; une variable locale, un message d'erreur est affich&eacute;.</p> 
+   <p align="center"><img width="441" height="109" src="images/refact033.png"></p> 
+   <p>Une bo&icirc;te de dialogue permet de pr&eacute;ciser le nom du champ, le modificateur d'acc&egrave;s et l'endroit dans le code o&ugrave; le champ sera initialis&eacute;.</p> 
+   <p align="center"><img width="408" height="292" src="images/refact034.png"></p> 
+   <p>Le r&eacute;sultat de l'ex&eacute;cution de la fonction est le suivant&nbsp;: </p> 
+   <p align="center"><img width="312" height="207" src="images/refact035.png"></p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_13">9.13. 
+     <!--nchpfin-->Encapsuler la zone</a></h2> 
+   <p>Cette fonction permet d'encapsuler un attribut en g&eacute;n&eacute;rant un getter et &eacute;ventuellement un setter. </p> 
+   <p>Il faut s&eacute;lectionner dans le code un champ de la classe.</p> 
+   <p align="center"><img width="464" height="159" src="images/refact036.png"></p> 
+   <p>Il faut ensuite utiliser l'option &laquo;&nbsp;Encapsuler la zone&nbsp;&raquo; du menu &laquo;&nbsp;Propager les modifications&nbsp;&raquo;.</p> 
+   <p>Si la s&eacute;lection dans le code ne correspond pas &agrave; un champ de la classe, un message d'erreur est affich&eacute;.</p> 
+   <p align="center"><img width="441" height="109" src="images/refact037.png"></p> 
+   <p>Une boite de dialogue permet de pr&eacute;ciser les options pour la g&eacute;n&eacute;ration du getter et du setter</p> 
+   <p align="center"><img width="500" height="169" src="images/refact038.png"></p> 
+   <p>Le r&eacute;sultat de l'ex&eacute;cution g&eacute;n&egrave;re le getter et le setter et remplace l'utilisation du champ par ces m&eacute;thodes.</p> 
+   <p align="center"><img width="470" height="273" src="images/refact039.png"></p> 
+   <p>En s&eacute;lectionnant l'option &laquo;&nbsp;conserver les r&eacute;f&eacute;rences de zones&nbsp;&raquo;, ces m&eacute;thodes ne sont pas utilis&eacute;es dans la classe o&ugrave; le champ est utilis&eacute;.</p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_14">9.14. 
+     <!--nchpfin-->Extraire la variable locale</a></h2> 
+   <p>Cette fonction permet de d&eacute;finir une constante &agrave; partir d'une expression.</p> 
+   <p>Il faut s&eacute;lectionner une expression dans le code source.</p> 
+   <p align="center"><img width="289" height="194" src="images/refact040.png"></p> 
+   <p>Puis utiliser l'option &laquo;&nbsp;Extraire la variable locale&nbsp;&raquo; du menu &laquo;&nbsp;Propager les modifications&nbsp;&raquo;.</p> 
+   <p align="center"><img width="527" height="171" src="images/refact041.png"></p> 
+   <p>Une bo&icirc;te de dialogue permet de saisir le nom de la variable, de pr&eacute;ciser si toutes les occurrences doivent &ecirc;tre modifi&eacute;es et si la variable doit &ecirc;tre une constante.</p> 
+   <p>Si la s&eacute;lection dans le code source est incorecte, un message d'erreur est affich&eacute;.</p> 
+   <p align="center"><img width="441" height="111" src="images/refact042.png"></p> 
+   <p>Le r&eacute;sultat de l'ex&eacute;cution de cette fonction est le suivant&nbsp;: </p> 
+   <p align="center"><img width="339" height="204" src="images/refact043.png"></p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_15">9.15. 
+     <!--nchpfin-->Extraire une constante</a></h2> 
+   <p>Cette fonction permet de d&eacute;finir une constante &agrave; partir d'une valeur en dur utilis&eacute;e dans le code. Il suffit de s&eacute;lectionner cette valeur dans le code source.</p> 
+   <p align="center"><img width="400" height="189" src="images/refact044.png"></p> 
+   <p>Puis d'utiliser l'option &laquo;&nbsp;Extraire une constante ... &nbsp;&raquo; du menu &laquo;&nbsp;Propager les modifications&nbsp;&raquo;. Une boite de dialogue appara&icirc;t pour pr&eacute;ciser le nom de la constante &agrave; cr&eacute;er et son modificateur d'acc&egrave;s.</p> 
+   <p align="center"><img width="506" height="217" src="images/refact045.png"></p> 
+   <p>Il est possible de pr&eacute;ciser si toutes les occurrences de la valeur doivent &ecirc;tre remplac&eacute;es dans le code source.</p> 
+   <p>Il est aussi possible de pr&eacute;ciser l'utilisation de la qualification de la constante avec le nom de la classe dans laquelle elle est d&eacute;finie.</p> 
+   <p align="center"><img width="399" height="214" src="images/refact046.png"></p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_16">9.16. 
+     <!--nchpfin-->G&eacute;n&eacute;raliser le type</a></h2> 
+   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td> 
+      <td><p>Cette fonction permet de remplacer le type d'une variable par un de ces super types. Il faut positionner le curseur sur la d&eacute;claration d'une variable, d'un champ, d'un param&egrave;tre ou d'une valeur de retour.</p> <p align="center"><img src="images/refact069.png" width="477" height="170"></p> <p>Une boite de dialogue affiche la liste des super types. </p> <p align="center"><img src="images/refact070.png" width="437" height="292"></p> <p>Il suffit de s&eacute;lectionner le type d&eacute;sir&eacute; et de cliquer sur le bouton &laquo;&nbsp;Ok&nbsp;&raquo; pour que le code soit mise &agrave; jour. </p> <p align="center"><img src="images/refact071.png" width="476" height="189"></p> <p>Cette fonctionnalit&eacute; est tr&egrave;s utile car elle facilite la mise en oeuvre d'une bonne pratique de programmation consistant &agrave; utiliser un super type comme type d'une variable lorsque cela est possible. </p></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_17">9.17. 
+     <!--nchpfin-->Introduire une fabrique</a></h2> 
+   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td> 
+      <td><p> Cette fonction permet d'obliger l'utilisation d'une fabrique pour cr&eacute;er une occurrence de la classe. </p> <p align="center"><img src="images/refact072.png" width="475" height="159"></p> <p>Il faut positionner le curseur sur un constructeur puis appeler la fonction. </p> <p align="center"><img src="images/refact073.png" width="408" height="150"></p> <p>Le code est modifi&eacute; en cr&eacute;ant la m&eacute;thode de fabrication et en rendant le constructeur priv&eacute;. </p> <p align="center"><img src="images/refact074.png" width="478" height="218"></p> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_18">9.18. 
+     <!--nchpfin-->Introduire un param&egrave;tre</a></h2> 
+   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td> 
+      <td><p> Cette fonction permet de remplacer une expression utilis&eacute;e dans une m&eacute;thode par un param&egrave;tre fourni &agrave; cette m&eacute;thode.</p> <p>Il faut positionner le curseur sur une expression litt&eacute;rale et appeler la fonction.</p> <p align="center"><img src="images/refact075.png" width="478" height="63"></p> <p>Une bo&icirc;te de dialogue permet de saisie le nom du param&egrave;tres </p> <p align="center"><img src="images/refact076.png" width="408" height="105"></p> <p>En cliquant sur le bouton &laquo;&nbsp;Ok&nbsp;&raquo;, le param&egrave;tre est ajout&eacute; dans la signature de la m&eacute;thode et la valeur litt&eacute;rale est remplac&eacute;e par le param&egrave;tre. </p> <p align="center"><img src="images/refact079.png" width="477" height="51"></p></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_19">9.19. 
+     <!--nchpfin-->Introduction de l'adressage indirect</a></h2> 
+   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse32.png" width="64" height="32" align="center"></td> 
+      <td> <p>Ce refactoring permet de rediriger l'appel d'une m&eacute;thode vers une nouvelle m&eacute;thode qui appel elle-m&ecirc;me la m&eacute;thode courante. Tous les appels actuels sont remplac&eacute;s par un appel &agrave; la nouvelle m&eacute;thode.</p> <p align="center"><img width="383" height="299" src="images/refact088.png"></p> <p>S&eacute;lectionnez une m&eacute;thode dans le code et utilisez l'option &laquo;&nbsp;Restructurer / Introduction de l'adressage indirect ...&nbsp;&raquo;</p> <p align="center"><img width="415" height="207" src="images/refact089.png"></p> <p>Saisissez le nouveau de la m&eacute;thode et cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;.</p> <p align="center"><img width="580" height="449" src="images/refact090.png"></p> <p>Cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo; pour ex&eacute;cuter le refactoring .</p> <p align="center"><img width="532" height="447" src="images/refact091.png"></p></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_20">9.20. 
+     <!--nchpfin-->Extraire une super classe</a></h2> 
+   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse32.png" width="64" height="32" align="center"></td> 
+      <td> <p>Ce refactoring permet de cr&eacute;er une super classe &agrave; partir de plusieurs classes sous r&eacute;serve que ces classes poss&egrave;dent des membres communs. </p> <p>Les classes utilis&eacute;es dans cette section sont les suivantes&nbsp;: </p> 
+       <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+        <tbody>
+         <tr bgcolor="#A6A5C2"> 
+          <td>Exemple :</td> 
+         </tr> 
+         <tr> 
+          <td> <pre><code>package fr.jmdoudoux.test;
 
-public class MaClasse1 extends MaClasseMere{
-  private int valeur = 100;
-  
+public class MaClasse1&nbsp;extends MaClasseMere{
+&nbsp; private int valeur = 100;
+&nbsp; 
   public MaClasse1(int valeur) {
-    this.valeur = valeur;
-  }
-  
+&nbsp;&nbsp;&nbsp; this.valeur = valeur;
+&nbsp; }
+&nbsp; 
   public void afficher() {
-    System.out.println(&quot;valeur=&quot;+valeur);
-  }
+&nbsp;&nbsp;&nbsp; System.out.println("valeur="+valeur);
+&nbsp; }
 
-  public int additionner(int val) {
-    return valeur+val;
-  }
+&nbsp; public int additionner(int val) {
+&nbsp;&nbsp;&nbsp; return valeur+val;
+&nbsp; }
 }
 package fr.jmdoudoux.test;
 
 public class MaClasse2 extends MaClasseMere{
-  private int valeur = 200;
+&nbsp; private int valeur = 200;
 
-  public MaClasse2(int valeur) {
-    this.valeur = valeur;
-  }
+&nbsp; public MaClasse2(int valeur) {
+&nbsp;&nbsp;&nbsp; this.valeur = valeur;
+&nbsp; }
 
-  public void afficher() {
-    System.out.println(&quot;valeur=&quot;+valeur);
-  }
+&nbsp; public void afficher() {
+&nbsp;&nbsp;&nbsp; System.out.println("valeur="+valeur);
+&nbsp; }
 
-  public int Calculer() {
-    return valeur + 10;
-  }
-}</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <p>S&eacute;lectionnez la premi&egrave;re classe (MaClasse1 par exemple) et
-    utilisez l'option «&nbsp;Restructurer / Extraire une super classe&nbsp;» du
-    menu contextuel</p>
-  <p>Saisissez le nom de la super classe &agrave; cr&eacute;er puis cliquez sur
-    le bouton «&nbsp;Ajouter&nbsp;» </p>
-  <p align="center"><img width=439 height=127 src="images/refact092.png"></p>
-  <p>S&eacute;lectionnez la ou les classes concern&eacute;es par ce   refactoring   et cliquez sur le bouton «&nbsp;OK&nbsp;»</p>
-  <p>Cochez les membres de la premi&egrave;re classe &agrave; int&eacute;grer dans la
-    classe m&egrave;re.</p>
-  <p align="center"><img width=495 height=499 src="images/refact093.png"></p>
-  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p>
-  <p align="center"><img width=580 height=291 src="images/refact094.png"></p>
-  <p>Cette page de l'assistant permet de s&eacute;lectionner les
-    m&eacute;thodes &agrave; supprimer dans les classes filles issues du   refactoring  .</p>
-  <p>La partie source permet de voir le code source de la m&eacute;thode
-    et ainsi de s&eacute;lectionner les m&eacute;thodes concern&eacute;es par le   refactoring  .</p>
-  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;» pour avoir un
-    aper&ccedil;u des modifications</p>
-  <p align="center"><img width=580 height=435 src="images/refact095.png"></p>
-  <p>Cliquez sur le bouton «&nbsp;Terminer&nbsp;»</p>
-  <p>La super classe est cr&eacute;&eacute;e :</p>
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>package fr.jmdoudoux.test;
+&nbsp; public int Calculer() {
+&nbsp;&nbsp;&nbsp; return valeur + 10;
+&nbsp; }
+}</code></pre> </td> 
+         </tr> 
+        </tbody>
+       </table> <br> <p>S&eacute;lectionnez la premi&egrave;re classe (MaClasse1 par exemple) et utilisez l'option &laquo;&nbsp;Restructurer / Extraire une super classe&nbsp;&raquo; du menu contextuel</p> <p>Saisissez le nom de la super classe &agrave; cr&eacute;er puis cliquez sur le bouton &laquo;&nbsp;Ajouter&nbsp;&raquo; </p> <p align="center"><img width="439" height="127" src="images/refact092.png"></p> <p>S&eacute;lectionnez la ou les classes concern&eacute;es par ce refactoring et cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;</p> <p>Cochez les membres de la premi&egrave;re classe &agrave; int&eacute;grer dans la classe m&egrave;re.</p> <p align="center"><img width="495" height="499" src="images/refact093.png"></p> <p>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;</p> <p align="center"><img width="580" height="291" src="images/refact094.png"></p> <p>Cette page de l'assistant permet de s&eacute;lectionner les m&eacute;thodes &agrave; supprimer dans les classes filles issues du refactoring .</p> <p>La partie source permet de voir le code source de la m&eacute;thode et ainsi de s&eacute;lectionner les m&eacute;thodes concern&eacute;es par le refactoring .</p> <p>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo; pour avoir un aper&ccedil;u des modifications</p> <p align="center"><img width="580" height="435" src="images/refact095.png"></p> <p>Cliquez sur le bouton &laquo;&nbsp;Terminer&nbsp;&raquo;</p> <p>La super classe est cr&eacute;&eacute;e :</p> 
+       <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+        <tbody>
+         <tr bgcolor="#A6A5C2"> 
+          <td>Exemple :</td> 
+         </tr> 
+         <tr> 
+          <td> <pre><code>package fr.jmdoudoux.test;
 
 public class MaSousClasseMere extends MaClasseMere {
-  protected int valeur = 100;
-  
+&nbsp; protected int valeur = 100;
+&nbsp; 
   public MaSousClasseMere() {
-    super();
-  }
+&nbsp;&nbsp;&nbsp; super();
+&nbsp; }
 
-  public void afficher() {
-    System.out.println(&quot;valeur=&quot;+valeur);
-  }
-}</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <p>et   les classes filles sont modifi&eacute;es</p>
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>package fr.jmdoudoux.test;
+&nbsp; public void afficher() {
+&nbsp;&nbsp;&nbsp; System.out.println("valeur="+valeur);
+&nbsp; }
+}</code></pre> </td> 
+         </tr> 
+        </tbody>
+       </table> <br> <p>et les classes filles sont modifi&eacute;es</p> 
+       <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+        <tbody>
+         <tr bgcolor="#A6A5C2"> 
+          <td>Exemple :</td> 
+         </tr> 
+         <tr> 
+          <td> <pre><code>package fr.jmdoudoux.test;
 
-public class MaClasse1 extends MaSousClasseMere {  
+public class MaClasse1&nbsp;extends MaSousClasseMere {  
 
-  public MaClasse1(int valeur) {
-    this.valeur = valeur;
-  }
+&nbsp; public MaClasse1(int valeur) {
+&nbsp;&nbsp;&nbsp; this.valeur = valeur;
+&nbsp; }
 
-  public int additionner(int val) {
-    return valeur+val;
-  }
+&nbsp; public int additionner(int val) {
+&nbsp;&nbsp;&nbsp; return valeur+val;
+&nbsp; }
 }
 
 package fr.jmdoudoux.test;
 
 public class MaClasse2 extends MaSousClasseMere {  
 
-  public MaClasse2(int valeur) {
-    this.valeur = valeur;
-  }
+&nbsp; public MaClasse2(int valeur) {
+&nbsp;&nbsp;&nbsp; this.valeur = valeur;
+&nbsp; }
 
-  public int Calculer(  ) {
-    return valeur + 10;
-  }
-}</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-</td>
-    </tr>
-  </table>
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_9_21">9.21. <!--nchpfin-->Annuler ou refaire une op&eacute;ration de refactoring</a></h2>
-  <p>Le menu &quot;Propager les modifications&quot; poss&egrave;de deux options &quot;Annuler&quot; et &quot;R&eacute;tablir&quot; qui ont un r&ocirc;le similaire aux deux options du m&ecirc;me nom dans le menu &quot;Edition&quot;. L'utilisation de ces deux options est cependant d&eacute;di&eacute;es &agrave; l'annulation ou le r&eacute;tablissement des modifications op&eacute;r&eacute;es par la derni&egrave;re op&eacute;ration de refactoring.</p>
-  <p>Ces deux options ne sont plus disponibles d&egrave;s que des modifications suppl&eacute;mentaires sont effectu&eacute;s et sauvegard&eacute;es dans au moins un des fichiers modifi&eacute;s par l'op&eacute;ration de refactoring.</p>
-  <p>Si un des fichiers modifi&eacute;s par l'op&eacute;ration de refactoring est modifi&eacute; sans &ecirc;tre sauvegard&eacute; avant l'utilisation d'une de ces deux options, un message d'erreur est affich&eacute;.</p>
-  <p align="center"><img src="images/refact067.png" width="443" height="206"> </p>
-  <p>&nbsp;</p>  
-  <h2><!--nchpdeb--><a name="chap_9_22">9.22. <!--nchpfin-->L'historique de restructuration</a></a></h2>
-  <table width="100%"  border="0" cellspacing="0" cellpadding="4">
-    <tr>
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse32.png" width="64" height="32" align="center"></td>
-      <td>  <p>L'option historique du menu principal
-    «&nbsp;Restructurer&nbsp;» permet d'avoir acc&egrave;s &agrave; l'historique des
-    restructurations effectu&eacute;es dans l'espace de travail.</p>
-  <p align="center"><img width=480 height=403 src="images/refact096.png"></p>
-  <p>S&eacute;lectionnez la restructuration et cliquez sur le bouton
-    «&nbsp;Supprimer&nbsp;».</p>
-  <p align="center"><img width=441 height=180 src="images/refact097.png"></p>
-  <p>Cliquez sur le bouton «&nbsp;Oui&nbsp;»</p></td>
-    </tr>
-  </table>
-</div>
-<!--PIED--><HR>
-<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="chap008.htm" ALT="8. D&eacute;boguer du code Java">
-<img src="FlecheG.gif" alt="8. D&eacute;boguer du code Java" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="chap010.htm" ALT="10. Ant et Eclipse">
-<img src="FlecheD.gif" alt="10. Ant et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-<td  rowspan="2" align="center" valign="middle">
-        <script language="JavaScript1.1">
+&nbsp; public int Calculer(  ) {
+&nbsp;&nbsp;&nbsp; return valeur + 10;
+&nbsp; }
+}</code></pre> </td> 
+         </tr> 
+        </tbody>
+       </table> <br> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_21">9.21. 
+     <!--nchpfin-->Annuler ou refaire une op&eacute;ration de refactoring</a></h2> 
+   <p>Le menu "Propager les modifications" poss&egrave;de deux options "Annuler" et "R&eacute;tablir" qui ont un r&ocirc;le similaire aux deux options du m&ecirc;me nom dans le menu "Edition". L'utilisation de ces deux options est cependant d&eacute;di&eacute;es &agrave; l'annulation ou le r&eacute;tablissement des modifications op&eacute;r&eacute;es par la derni&egrave;re op&eacute;ration de refactoring.</p> 
+   <p>Ces deux options ne sont plus disponibles d&egrave;s que des modifications suppl&eacute;mentaires sont effectu&eacute;s et sauvegard&eacute;es dans au moins un des fichiers modifi&eacute;s par l'op&eacute;ration de refactoring.</p> 
+   <p>Si un des fichiers modifi&eacute;s par l'op&eacute;ration de refactoring est modifi&eacute; sans &ecirc;tre sauvegard&eacute; avant l'utilisation d'une de ces deux options, un message d'erreur est affich&eacute;.</p> 
+   <p align="center"><img src="images/refact067.png" width="443" height="206"> </p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_9_22">9.22. 
+     <!--nchpfin-->L'historique de restructuration</a></h2> 
+   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse32.png" width="64" height="32" align="center"></td> 
+      <td> <p>L'option historique du menu principal &laquo;&nbsp;Restructurer&nbsp;&raquo; permet d'avoir acc&egrave;s &agrave; l'historique des restructurations effectu&eacute;es dans l'espace de travail.</p> <p align="center"><img width="480" height="403" src="images/refact096.png"></p> <p>S&eacute;lectionnez la restructuration et cliquez sur le bouton &laquo;&nbsp;Supprimer&nbsp;&raquo;.</p> <p align="center"><img width="441" height="180" src="images/refact097.png"></p> <p>Cliquez sur le bouton &laquo;&nbsp;Oui&nbsp;&raquo;</p></td> 
+     </tr> 
+    </tbody>
+   </table> 
+  </div> 
+  <!--PIED-->
+  <hr> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
+    <tr> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="chap008.htm" alt="8. D&eacute;boguer du code Java"> <img src="FlecheG.gif" alt="8. D&eacute;boguer du code Java" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap010.htm" alt="10. Ant et Eclipse"> <img src="FlecheD.gif" alt="10. Ant et Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
+     <td rowspan="2" align="center" valign="middle"> <script language="JavaScript1.1">
 <!--
 hsh = new Date();
 hsd = document;
@@ -837,18 +754,16 @@ if(parseFloat(navigator.appVersion)>=4)
 {Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
 hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
 //-->
-</script>
-        <noscript>
-        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
-        </noscript>
-        <!--//-->
-      </td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
-
-</body>
+</script> 
+      <noscript> 
+       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience"></a> 
+      </noscript> 
+      <!--//--> </td> 
+    </tr> 
+    <tr> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
+    </tr> 
+   </tbody> 
+  </table>   
+ </body>
 </html>

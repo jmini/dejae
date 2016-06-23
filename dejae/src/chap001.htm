@@ -1,356 +1,305 @@
 <html>
-<head>
-<title>Introduction</title>
-<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
-<meta name="description" content="">
-<meta name="keywords" content="java tutorial cours dej eclipse">
-<meta name="robots" content="all">
-<meta name="revisit-after" content="2 months">
-<meta http-equiv="Content-Language" content="fr-FX">
-<meta name="author" content="Jean Michel DOUDOUX">
-<link href="dej_style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-<!--ENTETE-->
-<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="partie1.htm" ALT="Partie 1 : les bases pour l'utilisation d'Eclipse">
-<img src="FlecheG.gif" alt="Partie 1 : les bases pour l'utilisation d'Eclipse" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="chap002.htm" ALT="2.  Installation et ex&eacute;cution">
-<img src="FlecheD.gif" alt="2.  Installation et ex&eacute;cution" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
-<HR>
-
-<p>&nbsp;</p>
-<h1><!--idrefpage value="intro" --><!--resumetitre value="pr&eacute;sentation g&eacute;n&eacute;rale d'Eclipse" --><!--nchpdeb--><a name="chap_1">1. <!--nchpfin--> Introduction</a></h1>
-<p>&nbsp;</p>
-<!--chapitredeb-->
-<div align="right">
-  <table border="0" cellspacing="0" summary="titre">
-    <tr>
-      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td>
-<td width="50">&nbsp;</td>
-<td width="50" valign="top"><img src="images/1.gif" alt="1" width="62" height="83" border="0"></td>
-    </tr>
-  </table>
-  <br>
-</div>
-<!--chapitrefin-->
-<p>&nbsp;</p>
-<div align="justify"> 
-
-<p>Eclipse est un environnement de d&eacute;veloppement int&eacute;gr&eacute; (Integrated Development Environment) dont le but est de fournir une plate-forme modulaire pour permettre de r&eacute;aliser des d&eacute;veloppements informatiques. </p>
-  <p>I.B.M. est &agrave; l'origine du d&eacute;veloppement d'Eclipse qui est d'ailleurs toujours le coeur de son outil Websphere Studio Workbench (WSW), lui m&ecirc;me &agrave; la base de la famille des derniers outils de d&eacute;veloppement
-  en Java d'I.B.M. Tout le code d'Eclipse a &eacute;t&eacute; donn&eacute; &agrave; la communaut&eacute; par I.B.M afin de poursuivre son d&eacute;veloppement.</p>
-  <p>Eclipse utilise &eacute;norm&eacute;ment le concept de modules nomm&eacute;s &quot;plug-ins&quot; dans
-    son architecture. D'ailleurs, hormis le noyau de la plate-forme
-    nomm&eacute; &quot;Runtime&quot;,
-    tout le reste de la plate-forme est d&eacute;velopp&eacute; sous la forme de plug-ins.
-    Ce concept permet de fournir un m&eacute;canisme pour l'extension de la plate-forme
-    et ainsi
-    fournir
-    la possiblit&eacute;
-    &agrave; des tiers
-    de d&eacute;velopper
-    des fonctionnalit&eacute;s qui ne sont pas fournies en standard par Eclipse.</p>
-  <p>Les principaux modules  fournis en standard avec Eclipse  concernent Java mais
-    des modules sont en cours de d&eacute;veloppement pour d'autres langages notamment
-    C++, Cobol, mais aussi pour d'autres aspects du d&eacute;veloppement (base de donn&eacute;es,
-    conception avec UML, 
-  ... ). Ils sont tous d&eacute;velopp&eacute;s en Java soit par le projet Eclipse soit par des tiers commerciaux ou en open source.</p>
-  <p>Les modules agissent sur des fichiers qui sont inclus dans l'espace de travail (Workspace). L'espace de travail regroupe les projets qui contiennent une arborescence de fichiers.</p>
-  <p>Bien que d&eacute;velopp&eacute; en Java, les performances &agrave; l'ex&eacute;cution d'Eclipse sont
-    tr&egrave;s bonnes car il n'utilise pas Swing pour l'interface homme-machine mais
-    un toolkit particulier nomm&eacute; SWT associ&eacute; &agrave; la biblioth&egrave;que JFace. SWT (Standard Widget Toolkit)
-    est d&eacute;velopp&eacute; en Java par IBM en utilisant au maximum les composants natifs
-    fournis par le syst&egrave;me d'exploitation sous jacent. JFace utilise SWT et propose
-    une API pour faciliter le d&eacute;veloppement d'interfaces graphiques.</p>
-  <p> Eclipse ne peut donc fonctionner que sur les plate-formes pour lesquelles
-    SWT a &eacute;t&eacute; port&eacute;. Ainsi, Eclipse 1.0 fonctionne uniquement sur les plate-formes
-    Windows 98/NT/2000/XP et Linux.</p>
-  <p>SWT et JFace sont utilis&eacute;s par Eclipse pour d&eacute;velopper le plan de travail (Workbench) qui
-     organise la structure de la plate-forme et les int&eacute;ractions entre les outils
-    et  l'utilisateur. Cette structure repose sur trois concepts : la perspective,
-    la vue et l'&eacute;diteur. La perspective regoupe des vues et des &eacute;diteurs pour
-    offrir une vision particuli&egrave;re des d&eacute;veloppements. En standard, Eclipse propose
-    huit perspectives. </p>
-  <p>Les vues permettent de visualiser et de s&eacute;lectionner des &eacute;l&eacute;ments. Les &eacute;diteurs
-    permettent de visualiser et de modifier le contenu d'un &eacute;lement de l'espace de travail.</p>
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_1_1">1.1. <!--nchpfin--> Les points forts d'Eclipse</a></h2>
-  <p>Eclipse poss&egrave;de de nombreux points forts qui sont &agrave; l'origine de son &eacute;norme succ&egrave;s dont les principaux sont : </p>
-  <ul>
-    <li>Une plate-forme ouverte pour le d&eacute;veloppement d'applications et extensible gr&acirc;ce &agrave; un m&eacute;canisme de plug-ins </li>
-    <li>Plusieurs versions d'un m&ecirc;me plug-in peuvent cohabiter sur une m&ecirc;me plate-forme. </li>
-    <li>Un support multi langage gr&acirc;ce &agrave; des plug-ins d&eacute;di&eacute;s&nbsp;: Cobol, C, PHP, C# , ... </li>
-    <li>Support de plusieurs plate-formes d'ex&eacute;cution&nbsp;: Windows, Linux, Mac OS X, ... </li>
-    <li>Malgr&eacute; son &eacute;criture en Java, Eclipse est tr&egrave;s rapide &agrave; l'ex&eacute;cution gr&acirc;ce &agrave; l'utilisation de la biblioth&egrave;que SWT </li>
-    <li>Les nombreuses fonctionnalit&eacute;s de d&eacute;veloppement propos&eacute;es par le JDT (refactoring tr&egrave;s puissant, compl&eacute;tion de code, nombreux assistants, ...) </li>
-    <li>Une ergonomie enti&egrave;rement configurable qui propose selon les activit&eacute;s &agrave; r&eacute;aliser diff&eacute;rentes &laquo;&nbsp;perspectives&nbsp;&raquo; </li>
-    <li>Un historique local des derni&egrave;re modifications </li>
-    <li>La construction incr&eacute;mentale des projets Java gr&acirc;ce &agrave; son propre compilateur qui permet en plus de compiler le code m&ecirc;me avec des erreurs, de g&eacute;n&eacute;rer des messages d'erreurs personnalis&eacute;s, de s&eacute;lectionner la cible (java 1.3 ou 1.4) et de mettre
-      en oeuvre le scrapbook (permet des tests de code &agrave; la vol&eacute;e) </li>
-    <li>Une ex&eacute;cution des applications dans une JVM d&eacute;di&eacute;e s&eacute;lectionnable avec possibilit&eacute; d'utiliser un d&eacute;bogueur complet (points d'arr&ecirc;ts conditionnels, visualiser et modifier des variables, &eacute;valuation d'expression dans le contexte d'ex&eacute;cution,
-      changement du code &agrave; chaud avec l'utilisation d'une JVM 1.4, ...) </li>
-    <li>Propose le n&eacute;cessaire pour d&eacute;velopper de nouveaux plug-ins </li>
-    <li>Possibilit&eacute; d'utiliser des outils open source&nbsp;: CVS, Ant, Junit </li>
-    <li>La plate-forme est enti&egrave;rement internationalis&eacute;e dans une dizaine de langue sous la forme d'un plug-in t&eacute;l&eacute;chargeable s&eacute;par&eacute;ment </li>
-    <li>Le gestionnaire de mise &agrave; jour permet de t&eacute;l&eacute;charger de nouveaux plug-ins ou nouvelles versions d'un plug-in d&eacute;j&agrave; install&eacute;es &agrave; partir de sites web d&eacute;di&eacute;s (Eclipse 2.0). </li>
-    <li>...</li>
-  </ul>
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_1_2">1.2. <!--nchpfin--> Les diff&eacute;rentes versions d'Eclipse</a></h2>
-  <p>Pour chaque version d'Eclipse poss&egrave;de un nombre plus ou moins important de types nomm&eacute;s &quot;build&quot; : </p>
-</div>
-<ul>
-  <li>
-    <div align="justify">&quot;Nightly Builds&quot; : version en cours de d&eacute;veloppement cr&eacute;&eacute;e de fa&ccedil;on journali&egrave;re contenant les modifications de la journ&eacute;e. </div>
-  </li>
-  <li>
-    <div align="justify">      &quot;Integration Builds&quot; : assemblage des sous-projets pour la r&eacute;alisation de tests</div>
-  </li>
-  <li>
-    <div align="justify">      &quot;Stable Builds&quot; : version test&eacute;e </div>
-  </li>
-  <li>
-    <div align="justify">      &quot;Releases&quot; : version diffus&eacute;e et &quot;fiable&quot;</div>
-  </li>
-</ul>
-<div align="justify">
-  <p>Il existe plusieurs versions de type &quot;Release&quot; d'Eclipse : </p>
-  <table width="80%" border="1" align="center" cellpadding="4" cellspacing="0">
-    <tr>
-      <td>Date</td>
-      <td>Version</td>
-    </tr>
-    <tr>
-      <td>Septembre 2006 </td>
-      <td>3.2.1</td>
-    </tr>
-    <tr>
-      <td><p>Juin 2006<br>
-        <a href="http://download3.eclipse.org/eclipse/downloads/drops/R-3.2-200606291905/new_noteworthy/eclipse-news.html">La liste des nouvelles fonctionnalit&eacute;s de la version 3.2 sur le site d'Eclipse </a></p>      </td>
-      <td>3.2</td>
-    </tr>
-    <tr>
-      <td>Janvier 2006</td>
-      <td>3.1.2</td>
-    </tr>
-    <tr>
-      <td>Septembre 2005</td>
-      <td>3.1.1</td>
-    </tr>
-    <tr>
-      <td>Juin 2005<br>
-      <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.1-200506271435/eclipse-news-all.html">La liste des nouvelles fonctionnalit&eacute;s de la version 3.1 sur le site d'Eclipse</a></td>
-      <td>3.1</td>
-    </tr>
-    <tr>
-      <td>Mars 2005</td>
-      <td>3.0.2</td>
-    </tr>
-    <tr>
-      <td>Septembre 2004 </td>
-      <td>3.0.1</td>
-    </tr>
-    <tr>
-      <td><p>Juin 2004 <br>
-      <a href="http://archive.eclipse.org/eclipse/downloads/drops/R-3.0-200406251208/eclipse-news-R3.html">La liste des nouvelles fonctionnalit&eacute;s de la version 3.0 sur le site d'Eclipse</a>      </p>      </td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <td>Mars 2004 </td>
-      <td>2.1.3</td>
-    </tr>
-    <tr>
-      <td>Novembre 2003 </td>
-      <td>2.1.2</td>
-    </tr>
-    <tr>
-      <td>Juillet 2003</td>
-      <td>2.1.1</td>
-    </tr>
-    <tr>
-      <td>Avril 2003<br>
-      <a href="http://archive.eclipse.org/eclipse/downloads/drops/R-2.1-200303272130/whats-new.html">La liste des nouvelles fonctionnalit&eacute;s de la version 2.1 sur le site d'Eclipse</a></td>
-      <td>2.1</td>
-    </tr>
-    <tr>
-      <td>Novembre 2002</td>
-      <td>2.0.2</td>
-    </tr>
-    <tr>
-      <td>Septembre 2002</td>
-      <td>2.0.1</td>
-    </tr>
-    <tr>
-      <td>Juillet 2002</td>
-      <td>2.0</td>
-    </tr>
-    <tr>
-      <td>Novembre 2001</td>
-      <td>1.0</td>
-    </tr>
-  </table>
-  <br>
-  <p>Ce document couvre essentiellement les versions 2.x et 3.x d'Eclipse. Diff&eacute;rents pictogrammes sont utilis&eacute;s pour signaler des fonctionnalit&eacute;s apport&eacute;es par une version particuli&egrave;re d'Eclipse : </p>
-  <table border="0" cellspacing="0" cellpadding="4">
-    <tr>
-      <td><img src="images/eclipse20.png" width="64" height="32" align="absmiddle"></td>
-      <td>: pour la version 2.0.x d'Eclipse</td>
-    </tr>
-    <tr>
-      <td><img src="images/eclipse21.png" width="64" height="32" align="absmiddle"></td>
-      <td>: pour la version 2.1.x d'Eclipse</td>
-    </tr>
-    <tr>
-      <td><img src="images/eclipse30.png" width="64" height="32" align="absmiddle"></td>
-      <td>: pour la version 3.0.x d'Eclipse</td>
-    </tr>
-    <tr>
-      <td><img src="images/eclipse31.png" width="64" height="32" align="absmiddle"></td>
-      <td>: pour la version 3.1.x d'Eclipse</td>
-    </tr>
-    <tr>
-      <td><img src="images/eclipse32.png" width="64" height="32" align="absmiddle"></td>
-      <td>: pour la version 3.2.x d'Eclipse</td>
-    </tr>
-  </table><br>
-  <p>Par d&eacute;faut, les fonctionnalit&eacute;s d&eacute;crites le sont pour la version 2.x d'Eclipse. </p>
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_1_3">1.3. <!--nchpfin--> Les diff&eacute;rents sous projets d'Eclipse</a></h2>
-  <p>Le projet Eclipse est divis&eacute; en plusieurs sous projets.</p>
-  <table width="100%" border="1" cellpadding="4" cellspacing="0">
-    <tr>
-      <td nowrap>Projet</td>
-      <td>Description</td>
-    </tr>
-    <tr>
-      <td nowrap>Eclipse</td>
-      <td>ce projet d&eacute;veloppe l'architecture et la structure de la plate-forme Eclipse. </td>
-    </tr>
-    <tr>
-      <td nowrap>Eclipse Tools</td>
-      <td>ce projet d&eacute;veloppe  ou int&egrave;gre des outils &agrave; la plate-forme pour permettre &agrave; des tiers d'enrichir la plate-forme. Il poss&egrave;de plusieurs sous projets tel que CDT (plug-in pour le developpeemnt en C/C++), AspectJ (AOP), GEF (Graphical Editing Framework ), PHP (plug-in pour le d&eacute;veloppement en PHP), Cobol (plug-in pour le d&eacute;veloppement en Cobol), VE (Visual Editor) pour la cr&eacute;ation d'IHM.</td>
-    </tr>
-    <tr>
-      <td nowrap>Eclipse Technology</td>
-      <td>ce projet, divis&eacute; en trois cat&eacute;gories, propose d'effectuer des recherches sur des &eacute;volutions de la plate-forme et des technologies qu'elle met en oeuvre.</td>
-    </tr>
-    <tr>
-      <td nowrap>Web Tools Platform (WTP) </td>
-      <td>ce projet a pour but d'enrichir la plate-forme enfin de proposer un framework et des services pour la cr&eacute;ation d'outils de d&eacute;veloppement d'applications web. Il est compos&eacute; de plusieurs sous projets : WST (Web Standard Tools) , JST (J2EE Standard Tools) , ATF (Ajax Toolkit Framework), Dali (mapping avec JPA) et JSF (Java Server Faces) </td>
-    </tr>
-    <tr>
-      <td nowrap>Test and Performance Tools Platform (TPTP) </td>
-      <td> ce projet a pour but de d&eacute;velopper une plate-forme servant de support &agrave; la cr&eacute;ation d'outils de tests et d'analyses</td>
-    </tr>
-    <tr>
-      <td nowrap>Business Intelligence and Reporting Tools (BIRT)</td>
-      <td> ce projet a pour but de d&eacute;velopper une plate-forme facilitant l'int&eacute;gration de g&eacute;n&eacute;rateur d'&eacute;tats. Il est compos&eacute; de 4 sous projets : ERD (Eclipse Report Designer), WRD (Web based Report Designer), ERE (Eclipse Report Engine) et ECE (Eclipse Charting Engine). </td>
-    </tr>
-    <tr>
-      <td nowrap>Eclipse Modeling</td>
-      <td> ce projet contient plusieurs sous projet dont EMF (Eclipse Modeling Framework) et  UML2 pour une impl&eacute;mentation d'UML reposant sur EMF</td>
-    </tr>
-    <tr>
-      <td nowrap>Data Tools Platform (DTP) </td>
-      <td> ce projet a pour but de manipuler des sources de donn&eacute;es (bases de donn&eacute;es relationnelles) </td>
-    </tr>
-    <tr>
-      <td nowrap>Device Software Development Platform</td>
-      <td>ce projet a pour but de cr&eacute;er des plug-ins pour faciliter le d&eacute;veloppement d'applications sur appareils mobiles</td>
-    </tr>
-    <tr>
-      <td nowrap>Eclipse SOA Tools Platform</td>
-      <td> ce projet a pour pour but de d&eacute;velopper des outils pour faciliter la mise en d'architecture de type SOA</td>
-    </tr>
-  </table>
-  <p>&nbsp;</p>
-<p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_1_4">1.4. <!--nchpfin--> Callisto</a></h2>
-  <p>Le but du projet Callisto est de proposer la mise &agrave; disposition simultan&eacute;e d'une nouvelle version de 1O des principaux sous projets du projet Eclipse : </p>
-  <ul>
-    <li><a href="http://www.eclipse.org/eclipse/">Eclipse Platform</a> v3.2 </li>
-    <li><a href="http://www.eclipse.org/emf/">Eclipse Modeling Framework (EMF)</a> v2.2 </li>
-    <li><a href="http://www.eclipse.org/gef/">Graphical Editor Framework (GEF)</a> v3.2 </li>
-    <li><a href="http://www.eclipse.org/gmf/">Graphical Modeling Framewor (GMF)</a> v1.0 </li>
-    <li><a href="http://www.eclipse.org/ve/">Visual Editor (VE)</a> v1.2</li>
-    <li><a href="http://www.eclipse.org/webtools/">Web Tools Platform (WTP)</a> v1.5 </li>
-    <li><a href="http://www.eclipse.org/datatools/">Data Tools Platform (DTP)</a> v1.0</li>
-    <li><a href="http://www.eclipse.org/tptp/">Test and Performance Tools Platform (TPTP)</a> v4.2</li>
-    <li><a href="http://www.eclipse.org/birt/">Business Intelligence and Reporting Tools (BIRT)</a> v2.1 </li>
-    <li><a href="http://www.eclipse.org/cdt/">C/C++ IDE (CDT)</a></li>
-  </ul>
-  <p>Callisto ne propose pas de rassembler les diff&eacute;rents sous projets mais simplement de coordonner la diffusion d'une nouvelle version de chacun des sous projets qui poss&egrave;de par ailleurs leur propre cycle de vie. </p>
-  <p>Callisto facilite la vie de tous les intervenant de la communaut&eacute; Java pour les d&eacute;veloppeurs de chaque sous projet, pour tiers qui propose des outils bas&eacute;s sur Eclipse mais aussi pour les utilisateurs d'Eclipse puisque Callisto assure une compatibilit&eacute; des version des sous projets qui le compose. </p>
-  <p>Pour pouvoir utiliser calliston, il faut au pr&eacute;alable t&eacute;l&eacute;charger et installer la version 3.2 d'Eclipse sur laquelle repose Callisto. Via le gestionnaire de mise &agrave; jour, Callisto propose un site de mise &agrave; jour d&eacute;di&eacute; qui permet un acc&egrave;s au site de mise &agrave; jour des diff&eacute;rents sous projet qui le compose : chaque sous projet peut &ecirc;tre t&eacute;l&eacute;charg&eacute; s&eacute;par&eacute;ment. Le site &quot;Site des recherches Callisto&quot; est propos&eacute; par d&eacute;faut par le gestionnaire de mise &agrave; jour : il permet pour chaque sous projet d'acc&eacute;der aux sites mirroir.</p>
-  <p>Callisto a &eacute;t&eacute; diffus&eacute; &agrave; partir du 30 juin 2006. </p>
-  <p>Le prochain projet de synchronisation de la sortie de plusieurs projets simultan&eacute;e porte le nom de code Europa et sera publi&eacute; fin juin 2007.</p>
-  <p>&nbsp;</p>
-</div>
-<!--PIED--><HR>
-<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="partie1.htm" ALT="Partie 1 : les bases pour l'utilisation d'Eclipse">
-<img src="FlecheG.gif" alt="Partie 1 : les bases pour l'utilisation d'Eclipse" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="chap002.htm" ALT="2.  Installation et ex&eacute;cution">
-<img src="FlecheD.gif" alt="2.  Installation et ex&eacute;cution" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-<td  rowspan="2" align="center" valign="middle">
-        <script language="JavaScript1.1">
+ <head> 
+  <title>Introduction</title> 
+  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1"> 
+  <meta name="description" content=""> 
+  <meta name="keywords" content="java tutorial cours dej eclipse"> 
+  <meta name="robots" content="all"> 
+  <meta name="revisit-after" content="2 months"> 
+  <meta http-equiv="Content-Language" content="fr-FX"> 
+  <meta name="author" content="Jean Michel DOUDOUX"> 
+  <link href="dej_style.css" rel="stylesheet" type="text/css"> 
+ </head> 
+ <body> 
+  <!--ENTETE--> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
+    <tr> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="partie1.htm" alt="Partie 1 : les bases pour l'utilisation d'Eclipse"> <img src="FlecheG.gif" alt="Partie 1 : les bases pour l'utilisation d'Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap002.htm" alt="2.  Installation et ex&eacute;cution"> <img src="FlecheD.gif" alt="2.  Installation et ex&eacute;cution" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
+    </tr> 
+    <tr> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
+    </tr> 
+   </tbody> 
+  </table> 
+  <hr> 
+  <p>&nbsp;</p> 
+  <h1>
+   <!--idrefpage value="intro" -->
+   <!--resumetitre value="pr&eacute;sentation g&eacute;n&eacute;rale d'Eclipse" -->
+   <!--nchpdeb--><a name="chap_1">1. 
+    <!--nchpfin--> Introduction</a></h1> 
+  <p>&nbsp;</p> 
+  <!--chapitredeb--> 
+  <div align="right"> 
+   <table border="0" cellspacing="0" summary="titre"> 
+    <tbody>
+     <tr> 
+      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td> 
+      <td width="50">&nbsp;</td> 
+      <td width="50" valign="top"><img src="images/1.gif" alt="1" width="62" height="83" border="0"></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+  </div> 
+  <!--chapitrefin--> 
+  <p>&nbsp;</p> 
+  <div align="justify"> 
+   <p>Eclipse est un environnement de d&eacute;veloppement int&eacute;gr&eacute; (Integrated Development Environment) dont le but est de fournir une plate-forme modulaire pour permettre de r&eacute;aliser des d&eacute;veloppements informatiques. </p> 
+   <p>I.B.M. est &agrave; l'origine du d&eacute;veloppement d'Eclipse qui est d'ailleurs toujours le coeur de son outil Websphere Studio Workbench (WSW), lui m&ecirc;me &agrave; la base de la famille des derniers outils de d&eacute;veloppement en Java d'I.B.M. Tout le code d'Eclipse a &eacute;t&eacute; donn&eacute; &agrave; la communaut&eacute; par I.B.M afin de poursuivre son d&eacute;veloppement.</p> 
+   <p>Eclipse utilise &eacute;norm&eacute;ment le concept de modules nomm&eacute;s "plug-ins" dans son architecture. D'ailleurs, hormis le noyau de la plate-forme nomm&eacute; "Runtime", tout le reste de la plate-forme est d&eacute;velopp&eacute; sous la forme de plug-ins. Ce concept permet de fournir un m&eacute;canisme pour l'extension de la plate-forme et ainsi fournir la possiblit&eacute; &agrave; des tiers de d&eacute;velopper des fonctionnalit&eacute;s qui ne sont pas fournies en standard par Eclipse.</p> 
+   <p>Les principaux modules fournis en standard avec Eclipse concernent Java mais des modules sont en cours de d&eacute;veloppement pour d'autres langages notamment C++, Cobol, mais aussi pour d'autres aspects du d&eacute;veloppement (base de donn&eacute;es, conception avec UML, ... ). Ils sont tous d&eacute;velopp&eacute;s en Java soit par le projet Eclipse soit par des tiers commerciaux ou en open source.</p> 
+   <p>Les modules agissent sur des fichiers qui sont inclus dans l'espace de travail (Workspace). L'espace de travail regroupe les projets qui contiennent une arborescence de fichiers.</p> 
+   <p>Bien que d&eacute;velopp&eacute; en Java, les performances &agrave; l'ex&eacute;cution d'Eclipse sont tr&egrave;s bonnes car il n'utilise pas Swing pour l'interface homme-machine mais un toolkit particulier nomm&eacute; SWT associ&eacute; &agrave; la biblioth&egrave;que JFace. SWT (Standard Widget Toolkit) est d&eacute;velopp&eacute; en Java par IBM en utilisant au maximum les composants natifs fournis par le syst&egrave;me d'exploitation sous jacent. JFace utilise SWT et propose une API pour faciliter le d&eacute;veloppement d'interfaces graphiques.</p> 
+   <p> Eclipse ne peut donc fonctionner que sur les plate-formes pour lesquelles SWT a &eacute;t&eacute; port&eacute;. Ainsi, Eclipse 1.0 fonctionne uniquement sur les plate-formes Windows 98/NT/2000/XP et Linux.</p> 
+   <p>SWT et JFace sont utilis&eacute;s par Eclipse pour d&eacute;velopper le plan de travail (Workbench) qui organise la structure de la plate-forme et les int&eacute;ractions entre les outils et l'utilisateur. Cette structure repose sur trois concepts : la perspective, la vue et l'&eacute;diteur. La perspective regoupe des vues et des &eacute;diteurs pour offrir une vision particuli&egrave;re des d&eacute;veloppements. En standard, Eclipse propose huit perspectives. </p> 
+   <p>Les vues permettent de visualiser et de s&eacute;lectionner des &eacute;l&eacute;ments. Les &eacute;diteurs permettent de visualiser et de modifier le contenu d'un &eacute;lement de l'espace de travail.</p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_1_1">1.1. 
+     <!--nchpfin--> Les points forts d'Eclipse</a></h2> 
+   <p>Eclipse poss&egrave;de de nombreux points forts qui sont &agrave; l'origine de son &eacute;norme succ&egrave;s dont les principaux sont : </p> 
+   <ul> 
+    <li>Une plate-forme ouverte pour le d&eacute;veloppement d'applications et extensible gr&acirc;ce &agrave; un m&eacute;canisme de plug-ins </li> 
+    <li>Plusieurs versions d'un m&ecirc;me plug-in peuvent cohabiter sur une m&ecirc;me plate-forme. </li> 
+    <li>Un support multi langage gr&acirc;ce &agrave; des plug-ins d&eacute;di&eacute;s&nbsp;: Cobol, C, PHP, C# , ... </li> 
+    <li>Support de plusieurs plate-formes d'ex&eacute;cution&nbsp;: Windows, Linux, Mac OS X, ... </li> 
+    <li>Malgr&eacute; son &eacute;criture en Java, Eclipse est tr&egrave;s rapide &agrave; l'ex&eacute;cution gr&acirc;ce &agrave; l'utilisation de la biblioth&egrave;que SWT </li> 
+    <li>Les nombreuses fonctionnalit&eacute;s de d&eacute;veloppement propos&eacute;es par le JDT (refactoring tr&egrave;s puissant, compl&eacute;tion de code, nombreux assistants, ...) </li> 
+    <li>Une ergonomie enti&egrave;rement configurable qui propose selon les activit&eacute;s &agrave; r&eacute;aliser diff&eacute;rentes &laquo;&nbsp;perspectives&nbsp;&raquo; </li> 
+    <li>Un historique local des derni&egrave;re modifications </li> 
+    <li>La construction incr&eacute;mentale des projets Java gr&acirc;ce &agrave; son propre compilateur qui permet en plus de compiler le code m&ecirc;me avec des erreurs, de g&eacute;n&eacute;rer des messages d'erreurs personnalis&eacute;s, de s&eacute;lectionner la cible (java 1.3 ou 1.4) et de mettre en oeuvre le scrapbook (permet des tests de code &agrave; la vol&eacute;e) </li> 
+    <li>Une ex&eacute;cution des applications dans une JVM d&eacute;di&eacute;e s&eacute;lectionnable avec possibilit&eacute; d'utiliser un d&eacute;bogueur complet (points d'arr&ecirc;ts conditionnels, visualiser et modifier des variables, &eacute;valuation d'expression dans le contexte d'ex&eacute;cution, changement du code &agrave; chaud avec l'utilisation d'une JVM 1.4, ...) </li> 
+    <li>Propose le n&eacute;cessaire pour d&eacute;velopper de nouveaux plug-ins </li> 
+    <li>Possibilit&eacute; d'utiliser des outils open source&nbsp;: CVS, Ant, Junit </li> 
+    <li>La plate-forme est enti&egrave;rement internationalis&eacute;e dans une dizaine de langue sous la forme d'un plug-in t&eacute;l&eacute;chargeable s&eacute;par&eacute;ment </li> 
+    <li>Le gestionnaire de mise &agrave; jour permet de t&eacute;l&eacute;charger de nouveaux plug-ins ou nouvelles versions d'un plug-in d&eacute;j&agrave; install&eacute;es &agrave; partir de sites web d&eacute;di&eacute;s (Eclipse 2.0). </li> 
+    <li>...</li> 
+   </ul> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_1_2">1.2. 
+     <!--nchpfin--> Les diff&eacute;rentes versions d'Eclipse</a></h2> 
+   <p>Pour chaque version d'Eclipse poss&egrave;de un nombre plus ou moins important de types nomm&eacute;s "build" : </p> 
+  </div> 
+  <ul> 
+   <li> 
+    <div align="justify">
+     "Nightly Builds" : version en cours de d&eacute;veloppement cr&eacute;&eacute;e de fa&ccedil;on journali&egrave;re contenant les modifications de la journ&eacute;e. 
+    </div> </li> 
+   <li> 
+    <div align="justify">
+      "Integration Builds" : assemblage des sous-projets pour la r&eacute;alisation de tests
+    </div> </li> 
+   <li> 
+    <div align="justify">
+      "Stable Builds" : version test&eacute;e 
+    </div> </li> 
+   <li> 
+    <div align="justify">
+      "Releases" : version diffus&eacute;e et "fiable"
+    </div> </li> 
+  </ul> 
+  <div align="justify"> 
+   <p>Il existe plusieurs versions de type "Release" d'Eclipse : </p> 
+   <table width="80%" border="1" align="center" cellpadding="4" cellspacing="0"> 
+    <tbody>
+     <tr> 
+      <td>Date</td> 
+      <td>Version</td> 
+     </tr> 
+     <tr> 
+      <td>Septembre 2006 </td> 
+      <td>3.2.1</td> 
+     </tr> 
+     <tr> 
+      <td><p>Juin 2006<br> <a href="http://download3.eclipse.org/eclipse/downloads/drops/R-3.2-200606291905/new_noteworthy/eclipse-news.html">La liste des nouvelles fonctionnalit&eacute;s de la version 3.2 sur le site d'Eclipse </a></p> </td> 
+      <td>3.2</td> 
+     </tr> 
+     <tr> 
+      <td>Janvier 2006</td> 
+      <td>3.1.2</td> 
+     </tr> 
+     <tr> 
+      <td>Septembre 2005</td> 
+      <td>3.1.1</td> 
+     </tr> 
+     <tr> 
+      <td>Juin 2005<br> <a href="http://download.eclipse.org/eclipse/downloads/drops/R-3.1-200506271435/eclipse-news-all.html">La liste des nouvelles fonctionnalit&eacute;s de la version 3.1 sur le site d'Eclipse</a></td> 
+      <td>3.1</td> 
+     </tr> 
+     <tr> 
+      <td>Mars 2005</td> 
+      <td>3.0.2</td> 
+     </tr> 
+     <tr> 
+      <td>Septembre 2004 </td> 
+      <td>3.0.1</td> 
+     </tr> 
+     <tr> 
+      <td><p>Juin 2004 <br> <a href="http://archive.eclipse.org/eclipse/downloads/drops/R-3.0-200406251208/eclipse-news-R3.html">La liste des nouvelles fonctionnalit&eacute;s de la version 3.0 sur le site d'Eclipse</a> </p> </td> 
+      <td>3.0</td> 
+     </tr> 
+     <tr> 
+      <td>Mars 2004 </td> 
+      <td>2.1.3</td> 
+     </tr> 
+     <tr> 
+      <td>Novembre 2003 </td> 
+      <td>2.1.2</td> 
+     </tr> 
+     <tr> 
+      <td>Juillet 2003</td> 
+      <td>2.1.1</td> 
+     </tr> 
+     <tr> 
+      <td>Avril 2003<br> <a href="http://archive.eclipse.org/eclipse/downloads/drops/R-2.1-200303272130/whats-new.html">La liste des nouvelles fonctionnalit&eacute;s de la version 2.1 sur le site d'Eclipse</a></td> 
+      <td>2.1</td> 
+     </tr> 
+     <tr> 
+      <td>Novembre 2002</td> 
+      <td>2.0.2</td> 
+     </tr> 
+     <tr> 
+      <td>Septembre 2002</td> 
+      <td>2.0.1</td> 
+     </tr> 
+     <tr> 
+      <td>Juillet 2002</td> 
+      <td>2.0</td> 
+     </tr> 
+     <tr> 
+      <td>Novembre 2001</td> 
+      <td>1.0</td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>Ce document couvre essentiellement les versions 2.x et 3.x d'Eclipse. Diff&eacute;rents pictogrammes sont utilis&eacute;s pour signaler des fonctionnalit&eacute;s apport&eacute;es par une version particuli&egrave;re d'Eclipse : </p> 
+   <table border="0" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td><img src="images/eclipse20.png" width="64" height="32" align="absmiddle"></td> 
+      <td>: pour la version 2.0.x d'Eclipse</td> 
+     </tr> 
+     <tr> 
+      <td><img src="images/eclipse21.png" width="64" height="32" align="absmiddle"></td> 
+      <td>: pour la version 2.1.x d'Eclipse</td> 
+     </tr> 
+     <tr> 
+      <td><img src="images/eclipse30.png" width="64" height="32" align="absmiddle"></td> 
+      <td>: pour la version 3.0.x d'Eclipse</td> 
+     </tr> 
+     <tr> 
+      <td><img src="images/eclipse31.png" width="64" height="32" align="absmiddle"></td> 
+      <td>: pour la version 3.1.x d'Eclipse</td> 
+     </tr> 
+     <tr> 
+      <td><img src="images/eclipse32.png" width="64" height="32" align="absmiddle"></td> 
+      <td>: pour la version 3.2.x d'Eclipse</td> 
+     </tr> 
+    </tbody>
+   </table>
+   <br> 
+   <p>Par d&eacute;faut, les fonctionnalit&eacute;s d&eacute;crites le sont pour la version 2.x d'Eclipse. </p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_1_3">1.3. 
+     <!--nchpfin--> Les diff&eacute;rents sous projets d'Eclipse</a></h2> 
+   <p>Le projet Eclipse est divis&eacute; en plusieurs sous projets.</p> 
+   <table width="100%" border="1" cellpadding="4" cellspacing="0"> 
+    <tbody>
+     <tr> 
+      <td nowrap>Projet</td> 
+      <td>Description</td> 
+     </tr> 
+     <tr> 
+      <td nowrap>Eclipse</td> 
+      <td>ce projet d&eacute;veloppe l'architecture et la structure de la plate-forme Eclipse. </td> 
+     </tr> 
+     <tr> 
+      <td nowrap>Eclipse Tools</td> 
+      <td>ce projet d&eacute;veloppe ou int&egrave;gre des outils &agrave; la plate-forme pour permettre &agrave; des tiers d'enrichir la plate-forme. Il poss&egrave;de plusieurs sous projets tel que CDT (plug-in pour le developpeemnt en C/C++), AspectJ (AOP), GEF (Graphical Editing Framework ), PHP (plug-in pour le d&eacute;veloppement en PHP), Cobol (plug-in pour le d&eacute;veloppement en Cobol), VE (Visual Editor) pour la cr&eacute;ation d'IHM.</td> 
+     </tr> 
+     <tr> 
+      <td nowrap>Eclipse Technology</td> 
+      <td>ce projet, divis&eacute; en trois cat&eacute;gories, propose d'effectuer des recherches sur des &eacute;volutions de la plate-forme et des technologies qu'elle met en oeuvre.</td> 
+     </tr> 
+     <tr> 
+      <td nowrap>Web Tools Platform (WTP) </td> 
+      <td>ce projet a pour but d'enrichir la plate-forme enfin de proposer un framework et des services pour la cr&eacute;ation d'outils de d&eacute;veloppement d'applications web. Il est compos&eacute; de plusieurs sous projets : WST (Web Standard Tools) , JST (J2EE Standard Tools) , ATF (Ajax Toolkit Framework), Dali (mapping avec JPA) et JSF (Java Server Faces) </td> 
+     </tr> 
+     <tr> 
+      <td nowrap>Test and Performance Tools Platform (TPTP) </td> 
+      <td> ce projet a pour but de d&eacute;velopper une plate-forme servant de support &agrave; la cr&eacute;ation d'outils de tests et d'analyses</td> 
+     </tr> 
+     <tr> 
+      <td nowrap>Business Intelligence and Reporting Tools (BIRT)</td> 
+      <td> ce projet a pour but de d&eacute;velopper une plate-forme facilitant l'int&eacute;gration de g&eacute;n&eacute;rateur d'&eacute;tats. Il est compos&eacute; de 4 sous projets : ERD (Eclipse Report Designer), WRD (Web based Report Designer), ERE (Eclipse Report Engine) et ECE (Eclipse Charting Engine). </td> 
+     </tr> 
+     <tr> 
+      <td nowrap>Eclipse Modeling</td> 
+      <td> ce projet contient plusieurs sous projet dont EMF (Eclipse Modeling Framework) et UML2 pour une impl&eacute;mentation d'UML reposant sur EMF</td> 
+     </tr> 
+     <tr> 
+      <td nowrap>Data Tools Platform (DTP) </td> 
+      <td> ce projet a pour but de manipuler des sources de donn&eacute;es (bases de donn&eacute;es relationnelles) </td> 
+     </tr> 
+     <tr> 
+      <td nowrap>Device Software Development Platform</td> 
+      <td>ce projet a pour but de cr&eacute;er des plug-ins pour faciliter le d&eacute;veloppement d'applications sur appareils mobiles</td> 
+     </tr> 
+     <tr> 
+      <td nowrap>Eclipse SOA Tools Platform</td> 
+      <td> ce projet a pour pour but de d&eacute;velopper des outils pour faciliter la mise en d'architecture de type SOA</td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <p>&nbsp;</p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_1_4">1.4. 
+     <!--nchpfin--> Callisto</a></h2> 
+   <p>Le but du projet Callisto est de proposer la mise &agrave; disposition simultan&eacute;e d'une nouvelle version de 1O des principaux sous projets du projet Eclipse : </p> 
+   <ul> 
+    <li><a href="http://www.eclipse.org/eclipse/">Eclipse Platform</a> v3.2 </li> 
+    <li><a href="http://www.eclipse.org/emf/">Eclipse Modeling Framework (EMF)</a> v2.2 </li> 
+    <li><a href="http://www.eclipse.org/gef/">Graphical Editor Framework (GEF)</a> v3.2 </li> 
+    <li><a href="http://www.eclipse.org/gmf/">Graphical Modeling Framewor (GMF)</a> v1.0 </li> 
+    <li><a href="http://www.eclipse.org/ve/">Visual Editor (VE)</a> v1.2</li> 
+    <li><a href="http://www.eclipse.org/webtools/">Web Tools Platform (WTP)</a> v1.5 </li> 
+    <li><a href="http://www.eclipse.org/datatools/">Data Tools Platform (DTP)</a> v1.0</li> 
+    <li><a href="http://www.eclipse.org/tptp/">Test and Performance Tools Platform (TPTP)</a> v4.2</li> 
+    <li><a href="http://www.eclipse.org/birt/">Business Intelligence and Reporting Tools (BIRT)</a> v2.1 </li> 
+    <li><a href="http://www.eclipse.org/cdt/">C/C++ IDE (CDT)</a></li> 
+   </ul> 
+   <p>Callisto ne propose pas de rassembler les diff&eacute;rents sous projets mais simplement de coordonner la diffusion d'une nouvelle version de chacun des sous projets qui poss&egrave;de par ailleurs leur propre cycle de vie. </p> 
+   <p>Callisto facilite la vie de tous les intervenant de la communaut&eacute; Java pour les d&eacute;veloppeurs de chaque sous projet, pour tiers qui propose des outils bas&eacute;s sur Eclipse mais aussi pour les utilisateurs d'Eclipse puisque Callisto assure une compatibilit&eacute; des version des sous projets qui le compose. </p> 
+   <p>Pour pouvoir utiliser calliston, il faut au pr&eacute;alable t&eacute;l&eacute;charger et installer la version 3.2 d'Eclipse sur laquelle repose Callisto. Via le gestionnaire de mise &agrave; jour, Callisto propose un site de mise &agrave; jour d&eacute;di&eacute; qui permet un acc&egrave;s au site de mise &agrave; jour des diff&eacute;rents sous projet qui le compose : chaque sous projet peut &ecirc;tre t&eacute;l&eacute;charg&eacute; s&eacute;par&eacute;ment. Le site "Site des recherches Callisto" est propos&eacute; par d&eacute;faut par le gestionnaire de mise &agrave; jour : il permet pour chaque sous projet d'acc&eacute;der aux sites mirroir.</p> 
+   <p>Callisto a &eacute;t&eacute; diffus&eacute; &agrave; partir du 30 juin 2006. </p> 
+   <p>Le prochain projet de synchronisation de la sortie de plusieurs projets simultan&eacute;e porte le nom de code Europa et sera publi&eacute; fin juin 2007.</p> 
+   <p>&nbsp;</p> 
+  </div> 
+  <!--PIED-->
+  <hr> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
+    <tr> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="partie1.htm" alt="Partie 1 : les bases pour l'utilisation d'Eclipse"> <img src="FlecheG.gif" alt="Partie 1 : les bases pour l'utilisation d'Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap002.htm" alt="2.  Installation et ex&eacute;cution"> <img src="FlecheD.gif" alt="2.  Installation et ex&eacute;cution" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
+     <td rowspan="2" align="center" valign="middle"> <script language="JavaScript1.1">
 <!--
 hsh = new Date();
 hsd = document;
@@ -365,18 +314,16 @@ if(parseFloat(navigator.appVersion)>=4)
 {Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
 hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
 //-->
-</script>
-        <noscript>
-        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
-        </noscript>
-        <!--//-->
-      </td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
-
-</body>
+</script> 
+      <noscript> 
+       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience"></a> 
+      </noscript> 
+      <!--//--> </td> 
+    </tr> 
+    <tr> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
+    </tr> 
+   </tbody> 
+  </table>   
+ </body>
 </html>

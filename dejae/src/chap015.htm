@@ -1,137 +1,130 @@
-<HTML>
-<HEAD>
-<TITLE>Subversion et Eclipse</TITLE>
-<META http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
-<META name="description" content="">
-<META name="keywords" content="java tutorial cours dej eclipse">
-<META name="robots" content="all">
-<META name="revisit-after" content="2 months">
-<META http-equiv="Content-Language" content="fr-FX">
-<META name="author" content="Jean Michel DOUDOUX">
-<link href="dej_style.css" rel="stylesheet" type="text/css">
-<BODY> 
-<!--ENTETE--> <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="chap014.htm" ALT="14.  CVS 2.5 et Eclipse 3.0">
-<img src="FlecheG.gif" alt="14.  CVS 2.5 et Eclipse 3.0" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="partie4.htm" ALT="Partie 4 : le d&eacute;veloppement avanc&eacute; avec Java">
-<img src="FlecheD.gif" alt="Partie 4 : le d&eacute;veloppement avanc&eacute; avec Java" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
-<HR>
-
-<p>&nbsp;</p> 
-<H1><!--idrefpage value="svn" --><!--resumetitre value="d&eacute;taille l'utilisation de subversion avec Eclipse 3.0." --><!--nchpdeb--><a name="chap_15">15. <!--nchpfin-->Subversion et Eclipse</A></H1> 
-<p>&nbsp;</p> 
-<!--chapitredeb-->
-<div align="right">
-  <table border="0" cellspacing="0" summary="titre">
-    <tr>
-      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td>
-<td width="50" valign="top"><img src="images/1.gif" alt="1" width="62" height="83" border="0"></td>
-<td width="50" valign="top"><img src="images/5.gif" alt="5" width="62" height="83" border="0"></td>
-    </tr>
-  </table>
-  <br>
-</div>
-<!--chapitrefin--> 
-<p>&nbsp;</p> 
-<DIV ALIGN="justify"> 
-  <p>SubVersion (SVN) est un syst&egrave;me de control de versions open source plus r&eacute;cent que CVS et qui propose des fonctionnalit&eacute;s manquantes dans l'historique syst&egrave;me de contrôle de versions open source.</p> 
-  <p>Ce chapitre propose </p> 
-  <ul type=disc> 
+<html>
+ <head> 
+  <title>Subversion et Eclipse</title> 
+  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1"> 
+  <meta name="description" content=""> 
+  <meta name="keywords" content="java tutorial cours dej eclipse"> 
+  <meta name="robots" content="all"> 
+  <meta name="revisit-after" content="2 months"> 
+  <meta http-equiv="Content-Language" content="fr-FX"> 
+  <meta name="author" content="Jean Michel DOUDOUX"> 
+  <link href="dej_style.css" rel="stylesheet" type="text/css"> 
+ </head>
+ <body> 
+  <!--ENTETE--> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
+    <tr> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="chap014.htm" alt="14.  CVS 2.5 et Eclipse 3.0"> <img src="FlecheG.gif" alt="14.  CVS 2.5 et Eclipse 3.0" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="partie4.htm" alt="Partie 4 : le d&eacute;veloppement avanc&eacute; avec Java"> <img src="FlecheD.gif" alt="Partie 4 : le d&eacute;veloppement avanc&eacute; avec Java" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
+    </tr> 
+    <tr> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
+    </tr> 
+   </tbody> 
+  </table> 
+  <hr> 
+  <p>&nbsp;</p> 
+  <h1>
+   <!--idrefpage value="svn" -->
+   <!--resumetitre value="d&eacute;taille l'utilisation de subversion avec Eclipse 3.0." -->
+   <!--nchpdeb--><a name="chap_15">15. 
+    <!--nchpfin-->Subversion et Eclipse</a></h1> 
+  <p>&nbsp;</p> 
+  <!--chapitredeb--> 
+  <div align="right"> 
+   <table border="0" cellspacing="0" summary="titre"> 
+    <tbody>
+     <tr> 
+      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td> 
+      <td width="50" valign="top"><img src="images/1.gif" alt="1" width="62" height="83" border="0"></td> 
+      <td width="50" valign="top"><img src="images/5.gif" alt="5" width="62" height="83" border="0"></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+  </div> 
+  <!--chapitrefin--> 
+  <p>&nbsp;</p> 
+  <div align="justify"> 
+   <p>SubVersion (SVN) est un syst&egrave;me de control de versions open source plus r&eacute;cent que CVS et qui propose des fonctionnalit&eacute;s manquantes dans l'historique syst&egrave;me de contr&ocirc;le de versions open source.</p> 
+   <p>Ce chapitre propose </p> 
+   <ul type="disc"> 
     <li>d'installer et param&eacute;trer subversion sous Windows</li> 
     <li>d'installer le plug-in subclipse</li> 
     <li>de mettre en oeuvre le plug-in subclipse</li> 
-  </ul> 
-    <table border="1" cellspacing="0" cellpadding="4"> 
-    <tr> 
+   </ul> 
+   <table border="1" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
       <td>&nbsp; </td> 
       <td> <p>Version utilis&eacute;e dans cette section</p></td> 
-    </tr> 
-    <tr> 
+     </tr> 
+     <tr> 
       <td>SubVersion</td> 
       <td>1.3</td> 
-    </tr> 
-    <tr> 
+     </tr> 
+     <tr> 
       <td>Eclipse</td> 
       <td>3.0.1</td> 
-    </tr> 
-    <tr> 
+     </tr> 
+     <tr> 
       <td>J2RE</td> 
       <td>1.5.0_07</td> 
-    </tr> 
-    <tr> 
+     </tr> 
+     <tr> 
       <td>Plug-in Subclipse</td> 
       <td>1.0.1 </td> 
-    </tr> 
-  </table><br> 
-<p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_15_1">15.1. <!--nchpfin-->Installation de subversion sous Windows</a></h2> 
-  <p>T&eacute;l&eacute;chargez le fichier svn-1.3.0-setup.exe sur le site <a href="http://subclipse.tigris.org/">http://subclipse.tigris.org/</a>.</p> 
-  <p>Ex&eacute;cutez le fichier svn-1.3.0-setup.exe</p> 
-  <p align="center"><img width=324 height=119 src="images/svn001.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Oui&nbsp;»</p> 
-  <p align="center"><img width=392 height=300 src="images/svn002.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Next&nbsp;»</p> 
-  <p align="center"><img width=392 height=300 src="images/svn003.png"></p> 
-  <p>Lire la licence et si vous l'acceptez cliquez sur «&nbsp;I accept the agreement&nbsp;» puis sur le bouton «&nbsp;Next&nbsp;»</p> 
-  <p align="center"><img width=392 height=300 src="images/svn004.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Next&nbsp;»</p> 
-  <p align="center"><img width=392 height=300 src="images/svn005.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Next&nbsp;»</p> 
-  <p align="center"><img width=392 height=300 src="images/svn006.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Next&nbsp;»</p> 
-  <p align="center"><img width=392 height=300 src="images/svn007.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Next&nbsp;»</p> 
-  <p align="center"><img width=392 height=300 src="images/svn008.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Install&nbsp;»</p> 
-  <p align="center"><img width=392 height=300 src="images/svn009.png"></p> 
-  <p align="center"><img width=392 height=300 src="images/svn010.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Next&nbsp;»</p> 
-  <p align="center"><img width=392 height=300 src="images/svn011.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Finish&nbsp;»</p> 
-  <p>Ajouter une variable d'environnement SVN_EDITOR avec comme valeur le chemin vers l'outil notepad (c:\windows\notepad.exe)</p> 
-  <p align="center"><img width=359 height=139 src="images/svn012.png"> </p> 
-  <p>Il faut cr&eacute;er un r&eacute;pertoire qui va contenir le repository, par exemple C:\svn\svnrepo</p> 
-  <p>Ouvrez une bo&icirc;te de commande Dos et ex&eacute;cuter la commande svnadmin create c:\svn\svnrepo</p> 
-  <p align="center"><img width=556 height=90 src="images/svn013.png"></p> 
-  <p>Le repository est cr&eacute;e : il est compos&eacute; de plusieurs sous r&eacute;pertoires. </p> 
-  <p align="center"><img width=518 height=227 src="images/svn014.png"></p> 
-  <p>Dans le fichier svnserve.conf du sous r&eacute;pertoire conf, il faut supprimer les commentaires sur les lignes ci dessous</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center > 
-    <tr bgcolor="#A6A5C2"> 
+     </tr> 
+    </tbody>
+   </table>
+   <br> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_15_1">15.1. 
+     <!--nchpfin-->Installation de subversion sous Windows</a></h2> 
+   <p>T&eacute;l&eacute;chargez le fichier svn-1.3.0-setup.exe sur le site <a href="http://subclipse.tigris.org/">http://subclipse.tigris.org/</a>.</p> 
+   <p>Ex&eacute;cutez le fichier svn-1.3.0-setup.exe</p> 
+   <p align="center"><img width="324" height="119" src="images/svn001.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Oui&nbsp;&raquo;</p> 
+   <p align="center"><img width="392" height="300" src="images/svn002.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Next&nbsp;&raquo;</p> 
+   <p align="center"><img width="392" height="300" src="images/svn003.png"></p> 
+   <p>Lire la licence et si vous l'acceptez cliquez sur &laquo;&nbsp;I accept the agreement&nbsp;&raquo; puis sur le bouton &laquo;&nbsp;Next&nbsp;&raquo;</p> 
+   <p align="center"><img width="392" height="300" src="images/svn004.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Next&nbsp;&raquo;</p> 
+   <p align="center"><img width="392" height="300" src="images/svn005.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Next&nbsp;&raquo;</p> 
+   <p align="center"><img width="392" height="300" src="images/svn006.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Next&nbsp;&raquo;</p> 
+   <p align="center"><img width="392" height="300" src="images/svn007.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Next&nbsp;&raquo;</p> 
+   <p align="center"><img width="392" height="300" src="images/svn008.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Install&nbsp;&raquo;</p> 
+   <p align="center"><img width="392" height="300" src="images/svn009.png"></p> 
+   <p align="center"><img width="392" height="300" src="images/svn010.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Next&nbsp;&raquo;</p> 
+   <p align="center"><img width="392" height="300" src="images/svn011.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Finish&nbsp;&raquo;</p> 
+   <p>Ajouter une variable d'environnement SVN_EDITOR avec comme valeur le chemin vers l'outil notepad (c:\windows\notepad.exe)</p> 
+   <p align="center"><img width="359" height="139" src="images/svn012.png">&nbsp;</p> 
+   <p>Il faut cr&eacute;er un r&eacute;pertoire qui va contenir le repository, par exemple C:\svn\svnrepo</p> 
+   <p>Ouvrez une bo&icirc;te de commande Dos et ex&eacute;cuter la commande svnadmin create c:\svn\svnrepo</p> 
+   <p align="center"><img width="556" height="90" src="images/svn013.png"></p> 
+   <p>Le repository est cr&eacute;e : il est compos&eacute; de plusieurs sous r&eacute;pertoires. </p> 
+   <p align="center"><img width="518" height="227" src="images/svn014.png"></p> 
+   <p>Dans le fichier svnserve.conf du sous r&eacute;pertoire conf, il faut supprimer les commentaires sur les lignes ci dessous</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
       <td>Exemple :</td> 
-    </tr> 
-    <tr> 
+     </tr> 
+     <tr> 
       <td> <pre><code>  ...
   # [general]
   ...
@@ -140,202 +133,206 @@
   ...
   # password-db = passwd
   ...</code></pre> </td> 
-    </tr> 
-  </table><BR>
-  <p>Pour cela, il faut supprimer le caract&egrave;re # en d&eacute;but de chacune des quatre lignes.</p> 
-  <p>Il faut ensuite &eacute;diter le fichier passwd du sous r&eacute;pertoire conf pour supprimer le commentaire sur la ligne ci dessous.</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center > 
-    <tr bgcolor="#A6A5C2"> 
+     </tr> 
+    </tbody>
+   </table>
+   <br> 
+   <p>Pour cela, il faut supprimer le caract&egrave;re # en d&eacute;but de chacune des quatre lignes.</p> 
+   <p>Il faut ensuite &eacute;diter le fichier passwd du sous r&eacute;pertoire conf pour supprimer le commentaire sur la ligne ci dessous.</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
       <td>Exemple :</td> 
-    </tr> 
-    <tr> 
+     </tr> 
+     <tr> 
       <td> <pre><code>  ...
   # [users]
   ...</code></pre> </td> 
-    </tr> 
-  </table><BR>
-  <p>Il faut ensuite ajouter dans cette section le ou les utilisateurs avec leur mot de passe.</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center > 
-    <tr bgcolor="#A6A5C2"> 
+     </tr> 
+    </tbody>
+   </table>
+   <br> 
+   <p>Il faut ensuite ajouter dans cette section le ou les utilisateurs avec leur mot de passe.</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
       <td>Exemple :</td> 
-    </tr> 
-    <tr> 
+     </tr> 
+     <tr> 
       <td> <pre><code>  ...
   [users]
   # harry = harryssecret
   # sally = sallyssecret
   jumbo = jumbomdp
   ...</code></pre> </td> 
-    </tr> 
-  </table><BR>
-  <p>Ouvrez une bo&icirc;te de commandes Dos et ex&eacute;cutez la commande svnserve --daemon --root c:\svn\svnrepo</p> 
-  <p align="center"><img width=652 height=119 src="images/svn015.png"></p> 
-  <p>Avec le service pack 2 de Windows XP, une alerte de s&eacute;curit&eacute; est affich&eacute;e</p> 
-  <p align="center"><img width=434 height=327 src="images/svn016.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;D&eacute;bloquer&nbsp;»</p> 
-  <p>Il faut ensuite cr&eacute;er un projet, nomm&eacute; par exemple test, en ouvrant une bo&icirc;te de commandes Dos pour ex&eacute;cuter la commande ci dessous</p> 
-  <p align="center"><img width=564 height=131 src="images/svn017.png"></p> 
-  <p>L'&eacute;diteur de texte s'ouvre</p> 
-  <p align="center"><img width=571 height=153 src="images/svn018.png"></p> 
-  <p>Saisissez sur la premi&egrave;re ligne un commentaire</p> 
-  <p align="center"><img width=571 height=153 src="images/svn019.png"></p> 
-  <p>Enregistrez le fichier et fermer l'&eacute;diteur</p> 
-  <p align="center"><img width=668 height=187 src="images/svn020.png"></p> 
-  <p>Saisissez le mot de passe indiqu&eacute; dans le fichier passwd.</p> 
-  <p>Par d&eacute;faut, c'est l'utilisateur de Windows qui est utilis&eacute;. Pour utiliser un autre utilisateur, il faut simplement appuyer sur la touche entr&eacute;e lors de la saisie du mot de passe, de saisir le nom de l'utilisateur &agrave; utiliser et son mot de passe.</p> 
-  <p>Si subversion n'est pas correctement configur&eacute;, un message d'erreur est affich&eacute;&nbsp;: </p> 
-  <p>Exemple&nbsp;: la section [header] n'est pas d&eacute;comment&eacute;e</p> 
-  <p align="center"><img width=660 height=179 src="images/svn021.png"></p> 
-  <p>Exemple&nbsp;: les trois lignes ne sont pas d&eacute;comment&eacute;es</p> 
-  <p align="center"><img width=668 height=127 src="images/svn022.png"></p> 
-  <p>Pour obtenir la liste des projets, il faut utiliser la commande svn ls svn://localhost/</p> 
-  <p align="center"><img width=668 height=91 src="images/svn023.png"></p> 
-<p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_15_2">15.2. <!--nchpfin-->Le plug-in Subclipse</a></h2> 
-  <p>Subclipse est un plug-in qui permet des interactions avec Subversion &agrave; partir d'Eclipse.</p> 
-  <p>Le site officiel du plug-in est &agrave; l'url&nbsp;: <a href="http://subclipse.tigris.org/">http://subclipse.tigris.org/</a></p>
-  <p>&nbsp;</p> 
-  <h3><!--nchpdeb--><a name="chap_15_2_1">15.2.1. <!--nchpfin-->Installation de Subclipse</a></h3> 
-  <p>Le plus simple est d'utiliser le gestionnaire de mise &agrave; jour pour installer le plug-in</p> 
-  <p align="center"><img border=0 width=356 height=147 src="images/svn024.png"></p> 
-  <p>Saisissez le nom du site et son url et cliquez sur le bouton «&nbsp;OK&nbsp;».</p> 
-  <p align="center"><img border=0 width=450 height=191 src="images/svn025.png"></p> 
-  <p align="center"><img border=0 width=449 height=363 src="images/svn026.png"></p> 
-  <p>S&eacute;lectionnez la version et cliquez sur le bouton «&nbsp;Suivant&nbsp;».</p> 
-  <p>Lisez et acceptez les termes de la licence en cliquant sur le bouton «&nbsp;Suivant&nbsp;»</p> 
-  <p align="center"><img border=0 width=494 height=335 src="images/svn027.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Fin&nbsp;»</p> 
-  <p>Sur la page de v&eacute;rification du dispositif, cliquez sur le bouton «&nbsp;Installer&nbsp;»</p> 
-  <p align="center"><img border=0 width=494 height=335 src="images/svn028.png"></p> 
-  <p>Les fichiers du plug-in sont t&eacute;l&eacute;charg&eacute;s.</p> 
-  <p align="center"><img border=0 width=463 height=159 src="images/svn029.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Oui&nbsp;» pour relancer Eclipse.</p> 
-  <p>&nbsp;</p>
-  <h3><!--nchpdeb--><a name="chap_15_2_2">15.2.2. <!--nchpfin-->Param&eacute;trage du plug-in</a></h3> 
-  <p>Le plug-in subclipse peut &ecirc;tre configur&eacute; dans les pr&eacute;f&eacute;rences dans la rubrique «&nbsp;Equipe/SVN&nbsp;».</p> 
-  <p align="center"><img border=0 width=628 height=490 src="images/svn030.png"></p> 
-  <p>&nbsp;</p>
-  <h3><!--nchpdeb--><a name="chap_15_2_3">15.2.3. <!--nchpfin-->Utilisation du plug-in</a></h3> 
-  <p>Le plug-in poss&egrave;de sa propre perspective nomm&eacute;e «&nbsp;SVN Repository Exploring&nbsp;»</p> 
-  <p align="center"><img border=0 width=244 height=292 src="images/svn031.png"></p> 
-  <p>Il suffit de demander son affichage</p> 
-  <p align="center"><img border=0 width=600 height=256 src="images/svn032.png"></p> 
-  <p>La perspective se compose de plusieurs vues.</p> 
-  <p align="center"><img border=0 width=294 height=270 src="images/svn033.png"></p> 
-  <p>&nbsp;</p>
-  <h4><!--nchpdeb--><a name="chap_15_2_3_1">15.2.3.1. <!--nchpfin-->La connexion &agrave; un repository</a></h4> 
-  <p>Dans la vue SVN Repository, cliquez sur le bouton <img border=0 width=23 height=24
-src="images/svn034.png"> ou s&eacute;lectionnez l'option «&nbsp;New / Respository Location ...&nbsp;» du menu contextuel.</p> 
-  <p align="center"><img border=0 width=375 height=222 src="images/svn035.png"></p> 
-  <p>Saisissez l'url du repository et cliquez sur le bouton «&nbsp;Fin&nbsp;».</p> 
-  <p>Si l'url saisie n'est pas valide, un message d'erreur est affich&eacute;</p> 
-  <p align="center"><img border=0 width=441 height=276 src="images/svn036.png"></p> 
-  <p>Attention&nbsp;: le protocole <a href="">file:///</a> ne peut pas &ecirc;tre utilis&eacute; avec le protocole JavaSVN. Toute tentative d'utilisation de ces deux protocoles ensemble affichera une erreur</p> 
-  <p align="center"><img border=0 width=441 height=159 src="images/svn037.png"></p> 
-  <p>La vue SVN Repository affiche le repository et les projets qu'il contient</p> 
-  <p align="center"><img border=0 width=402 height=76 src="images/svn038.png"></p> 
-  <p>A sa cr&eacute;ation, un projet est vide&nbsp;: il faut cr&eacute;er les r&eacute;pertoires de base en utilisant l'option «&nbsp;New / Remote Folder&nbsp;» du menu contextuel du projet.</p> 
-  <p align="center"><img border=0 width=346 height=316 src="images/svn039.png"></p> 
-  <p>Saisissez le nom du r&eacute;pertoire et cliquez que le bouton «&nbsp;Fin&nbsp;».</p> 
-  <p>Le bouton suivant permet de saisir un commentaire sur l'op&eacute;ration.</p> 
-  <p align="center"><img border=0 width=346 height=294 src="images/svn040.png"></p> 
-  <p>Dans ce cas, saisissez le commentaire et cliquez sur le bouton «&nbsp;Fin&nbsp;».</p> 
-  <p>Il faut cr&eacute;er les r&eacute;pertoires branches, tags et trunk.</p> 
-  <p>La vue console affiche les commandes subversion ex&eacute;cut&eacute;es.</p> 
-  <p align="center"><img border=0 width=451 height=135 src="images/svn041.png"></p> 
-  <p>&nbsp;</p>
-  <h4><!--nchpdeb--><a name="chap_15_2_3_2">15.2.3.2. <!--nchpfin-->Ajouter un projet au repository</a></h4> 
-  <p>Dans la perspective Java, s&eacute;lectionnez un projet dans la vue «&nbsp;Packages&nbsp;» et utiliser l'option «&nbsp;Equipe / Partager le projet ...&nbsp;».</p> 
-  <p>La premi&egrave;re page de l'assistant permet de s&eacute;lectionner le type de r&eacute;f&eacute;rentiel &agrave; utiliser.</p> 
-  <p align="center"><img border=0 width=341 height=243 src="images/svn042.png"></p> 
-  <p>S&eacute;lectionnez SVN et cliquez sur le bouton &quot;Suivant&quot;. La page suivante permet de s&eacute;lectionner ou de cr&eacute;er le r&eacute;f&eacute;rentiel qui va contenir le projet.</p> 
-  <p align="center"><img border=0 width=458 height=304 src="images/svn043.png"></p> 
-  <p>S&eacute;lectionnez le r&eacute;f&eacute;rentiel &agrave; utiliser et cliquer sur le bouton «&nbsp;Suivant&nbsp;».</p> 
-  <p>La page suivante permet de s&eacute;lectionner le r&eacute;pertoire &agrave; utiliser. Cliquez sur «&nbsp;Use specified folder name&nbsp;» puis sur le bouton «&nbsp;Browse&nbsp;»</p> 
-  <p align="center"><img border=0 width=486 height=160 src="images/svn044.png"></p> 
-  <p>S&eacute;lectionnez le r&eacute;pertoire pr&eacute;c&eacute;demment cr&eacute;&eacute; et cliquez sur le bouton «&nbsp;OK&nbsp;».</p> 
-  <p align="center"><img border=0 width=458 height=335 src="images/svn045.png"></p> 
-  <p>Remplacer «&nbsp;New Folder&nbsp;» par le nom du r&eacute;pertoire &agrave; utiliser puis cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p> 
-  <p align="center"><img border=0 width=458 height=225 src="images/svn046.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Fin&nbsp;». Si le r&eacute;pertoire pr&eacute;cis&eacute; existe d&eacute;j&agrave; alors un message d'erreur est affich&eacute;</p> 
-  <p align="center"><img border=0 width=441 height=139 src="images/svn047.png"></p> 
-  <p>Une bo&icirc;te de dialogue permet saisir les informations de commit de l'op&eacute;ration.</p> 
-  <p align="center"><img border=0 width=650 height=142 src="images/svn048.png"></p> 
-  <p>Les commandes subversion ex&eacute;cut&eacute;es sont affich&eacute;es dans la console, puis la boite de dialogue «&nbsp;Commit&nbsp;» s'affiche.</p> 
-  <p align="center"><img border=0 width=380 height=350 src="images/svn049.png"></p> 
-  <p>Saisissez un commentaire, s&eacute;lectionnez les ressources &agrave; ajouter dans le r&eacute;f&eacute;rentiel et cliquez sur le bouton &quot;OK&quot;</p> 
-  <p align="center"><img border=0 width=450 height=191 src="images/svn050.png"></p> 
-  <p>.La console affiche le d&eacute;tail des op&eacute;rations ex&eacute;cut&eacute;es.</p> 
-  <p align="center"><img border=0 width=453 height=350 src="images/svn051.png"></p> 
-  <p>Dans la vue «&nbsp;Packages&nbsp;», les ressources sont affich&eacute;es de fa&ccedil;on &agrave; indiquer leur connexion avec le r&eacute;f&eacute;rentiel.</p> 
-  <p align="center"><img border=0 width=314 height=136 src="images/svn052.png"></p> 
-  <p>L'option «&nbsp;Equipe&nbsp;» du menu contextuel du projet permet maintenant un acc&egrave;s aux principales commandes de subversion</p> 
-  <p align="center"><img border=0 width=200 height=594 src="images/svn053.png"></p> 
-  <p>Par d&eacute;faut, les nouvelles ressources ne sont pas ajout&eacute;es automatiquement au r&eacute;f&eacute;rentiel.</p> 
-  <p align="center"><img border=0 width=314 height=155 src="images/svn054.png"></p> 
-  <p>Elles apparaissent un point d'interrogation en bas &agrave; droite de leur icône. Elles doivent &ecirc;tre ajout&eacute;es manuellement en utilisant l'option «&nbsp;Equipe /&nbsp;Add to version control» de leur menu contextuel.</p> 
-  <p align="center"><img border=0 width=312 height=153 src="images/svn055.png"></p> 
-  <p>L'icône change en une petite fl&egrave;che bleue indiquant que la ressource est ajout&eacute;e dans le r&eacute;f&eacute;rentiel mais n'est pas commit&eacute;e.</p> 
-  <p>Pour faire un commit des modifications vers le r&eacute;f&eacute;rentiel, il faut utiliser l'option «&nbsp;Equipe / Commit&nbsp;» du menu contextuel.</p> 
-  <p align="center"><img border=0 width=563 height=396 src="images/svn056.png"></p> 
-  <p>Par d&eacute;faut les fichiers ajout&eacute;s sont s&eacute;lectionn&eacute;s. Saisissez un commentaire et cliquez sur le bouton «&nbsp;OK&nbsp;».</p> 
-  <p>Si des modifications sont apport&eacute;es &agrave; une ressource du r&eacute;f&eacute;rentiel, son icône est modifi&eacute;e.</p> 
-  <p align="center"><img border=0 width=316 height=156 src="images/svn057.png"></p> 
-  <p>&nbsp;</p>
-  <h4><!--nchpdeb--><a name="chap_15_2_3_3">15.2.3.3. <!--nchpfin-->Synchroniser l'espace de travail et le r&eacute;f&eacute;rentiel</a></h4> 
-  <p>L'option «&nbsp;Equipe / Synchronise with repository&nbsp;» permet d'acc&eacute;der &agrave; la perspective «&nbsp;Synchronisation de l'&eacute;quipe&nbsp;».</p> 
-  <p align="center"><img border=0 width=441 height=128 src="images/svn058.png"></p> 
-  <p>Cochez la case &agrave; cocher «&nbsp;M&eacute;moriser ma d&eacute;cision&nbsp;» et cliquez sur «&nbsp;Oui&nbsp;» si cette bo&icirc;te de dialogue appara&icirc;t.</p> 
-  <p>&nbsp;</p>
-  <h4><!--nchpdeb--><a name="chap_15_2_3_4">15.2.3.4. <!--nchpfin-->Checkout d'un projet</a></h4> 
-  <p>Dans la perspective «&nbsp;SVN Repository Exploring&nbsp;», il est possible de demander le check out complet d'un projet&nbsp;: dans la vue «&nbsp;SVN Repository&nbsp;», il faut s&eacute;lectionner l'&eacute;l&eacute;ment et utiliser l'option «&nbsp;Checkout&nbsp;» du menu contextuel.</p> 
-  <p align="center"><img border=0 width=420 height=246 src="images/svn059.png"></p> 
-  <p>Pour obtenir les ressources dans un projet existant, s&eacute;lectionnez «&nbsp;check out as project in the workspace&nbsp;» et cliquez sur le bouton «&nbsp;Suivant&nbsp;».</p> 
-  <p>La page suivante permet de s&eacute;lectionner le chemin de l'espace de travail.</p> 
-  <p align="center"><img border=0 width=455 height=197 src="images/svn060.png"></p> 
-  <p>Cliquer sur le bouton «&nbsp;Fin&nbsp;»</p> 
-  <p align="center"><img border=0 width=450 height=149 src="images/svn061.png"></p> 
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_15_3">15.3. <!--nchpfin-->Le plug in Subversive</a></h2> 
-  <p>Ce plug-in est t&eacute;l&eacute;chargeable &agrave; l'url : </p>  
-  <p><a
-href="http://www.polarion.org/index.php?page=overview&amp;project=subversive">http://www.polarion.org/index.php?page=overview&amp;project=subversive</a></p> 
-  <P>&nbsp;</P> 
-  <P>&nbsp;</P> 
-</DIV> 
-<!--PIED--><HR>
-<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="chap014.htm" ALT="14.  CVS 2.5 et Eclipse 3.0">
-<img src="FlecheG.gif" alt="14.  CVS 2.5 et Eclipse 3.0" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="partie4.htm" ALT="Partie 4 : le d&eacute;veloppement avanc&eacute; avec Java">
-<img src="FlecheD.gif" alt="Partie 4 : le d&eacute;veloppement avanc&eacute; avec Java" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-<td  rowspan="2" align="center" valign="middle">
-        <script language="JavaScript1.1">
+     </tr> 
+    </tbody>
+   </table>
+   <br> 
+   <p>Ouvrez une bo&icirc;te de commandes Dos et ex&eacute;cutez la commande svnserve --daemon --root c:\svn\svnrepo</p> 
+   <p align="center"><img width="652" height="119" src="images/svn015.png"></p> 
+   <p>Avec le service pack 2 de Windows XP, une alerte de s&eacute;curit&eacute; est affich&eacute;e</p> 
+   <p align="center"><img width="434" height="327" src="images/svn016.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;D&eacute;bloquer&nbsp;&raquo;</p> 
+   <p>Il faut ensuite cr&eacute;er un projet, nomm&eacute; par exemple test, en ouvrant une bo&icirc;te de commandes Dos pour ex&eacute;cuter la commande ci dessous</p> 
+   <p align="center"><img width="564" height="131" src="images/svn017.png"></p> 
+   <p>L'&eacute;diteur de texte s'ouvre</p> 
+   <p align="center"><img width="571" height="153" src="images/svn018.png"></p> 
+   <p>Saisissez sur la premi&egrave;re ligne un commentaire</p> 
+   <p align="center"><img width="571" height="153" src="images/svn019.png"></p> 
+   <p>Enregistrez le fichier et fermer l'&eacute;diteur</p> 
+   <p align="center"><img width="668" height="187" src="images/svn020.png"></p> 
+   <p>Saisissez le mot de passe indiqu&eacute; dans le fichier passwd.</p> 
+   <p>Par d&eacute;faut, c'est l'utilisateur de Windows qui est utilis&eacute;. Pour utiliser un autre utilisateur, il faut simplement appuyer sur la touche entr&eacute;e lors de la saisie du mot de passe, de saisir le nom de l'utilisateur &agrave; utiliser et son mot de passe.</p> 
+   <p>Si subversion n'est pas correctement configur&eacute;, un message d'erreur est affich&eacute;&nbsp;: </p> 
+   <p>Exemple&nbsp;: la section [header] n'est pas d&eacute;comment&eacute;e</p> 
+   <p align="center"><img width="660" height="179" src="images/svn021.png"></p> 
+   <p>Exemple&nbsp;: les trois lignes ne sont pas d&eacute;comment&eacute;es</p> 
+   <p align="center"><img width="668" height="127" src="images/svn022.png"></p> 
+   <p>Pour obtenir la liste des projets, il faut utiliser la commande svn ls svn://localhost/</p> 
+   <p align="center"><img width="668" height="91" src="images/svn023.png"></p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_15_2">15.2. 
+     <!--nchpfin-->Le plug-in Subclipse</a></h2> 
+   <p>Subclipse est un plug-in qui permet des interactions avec Subversion &agrave; partir d'Eclipse.</p> 
+   <p>Le site officiel du plug-in est &agrave; l'url&nbsp;: <a href="http://subclipse.tigris.org/">http://subclipse.tigris.org/</a></p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_15_2_1">15.2.1. 
+     <!--nchpfin-->Installation de Subclipse</a></h3> 
+   <p>Le plus simple est d'utiliser le gestionnaire de mise &agrave; jour pour installer le plug-in</p> 
+   <p align="center"><img border="0" width="356" height="147" src="images/svn024.png"></p> 
+   <p>Saisissez le nom du site et son url et cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="450" height="191" src="images/svn025.png"></p> 
+   <p align="center"><img border="0" width="449" height="363" src="images/svn026.png"></p> 
+   <p>S&eacute;lectionnez la version et cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.</p> 
+   <p>Lisez et acceptez les termes de la licence en cliquant sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;</p> 
+   <p align="center"><img border="0" width="494" height="335" src="images/svn027.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;</p> 
+   <p>Sur la page de v&eacute;rification du dispositif, cliquez sur le bouton &laquo;&nbsp;Installer&nbsp;&raquo;</p> 
+   <p align="center"><img border="0" width="494" height="335" src="images/svn028.png"></p> 
+   <p>Les fichiers du plug-in sont t&eacute;l&eacute;charg&eacute;s.</p> 
+   <p align="center"><img border="0" width="463" height="159" src="images/svn029.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Oui&nbsp;&raquo; pour relancer Eclipse.</p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_15_2_2">15.2.2. 
+     <!--nchpfin-->Param&eacute;trage du plug-in</a></h3> 
+   <p>Le plug-in subclipse peut &ecirc;tre configur&eacute; dans les pr&eacute;f&eacute;rences dans la rubrique &laquo;&nbsp;Equipe/SVN&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="628" height="490" src="images/svn030.png"></p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_15_2_3">15.2.3. 
+     <!--nchpfin-->Utilisation du plug-in</a></h3> 
+   <p>Le plug-in poss&egrave;de sa propre perspective nomm&eacute;e &laquo;&nbsp;SVN Repository Exploring&nbsp;&raquo;</p> 
+   <p align="center"><img border="0" width="244" height="292" src="images/svn031.png"></p> 
+   <p>Il suffit de demander son affichage</p> 
+   <p align="center"><img border="0" width="600" height="256" src="images/svn032.png"></p> 
+   <p>La perspective se compose de plusieurs vues.</p> 
+   <p align="center"><img border="0" width="294" height="270" src="images/svn033.png"></p> 
+   <p>&nbsp;</p> 
+   <h4>
+    <!--nchpdeb--><a name="chap_15_2_3_1">15.2.3.1. 
+     <!--nchpfin-->La connexion &agrave; un repository</a></h4> 
+   <p>Dans la vue SVN Repository, cliquez sur le bouton <img border="0" width="23" height="24" src="images/svn034.png">&nbsp;ou s&eacute;lectionnez l'option &laquo;&nbsp;New / Respository Location ...&nbsp;&raquo; du menu contextuel.</p> 
+   <p align="center"><img border="0" width="375" height="222" src="images/svn035.png"></p> 
+   <p>Saisissez l'url du repository et cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;.</p> 
+   <p>Si l'url saisie n'est pas valide, un message d'erreur est affich&eacute;</p> 
+   <p align="center"><img border="0" width="441" height="276" src="images/svn036.png"></p> 
+   <p>Attention&nbsp;: le protocole <a href="">file:///</a> ne peut pas &ecirc;tre utilis&eacute; avec le protocole JavaSVN. Toute tentative d'utilisation de ces deux protocoles ensemble affichera une erreur</p> 
+   <p align="center"><img border="0" width="441" height="159" src="images/svn037.png"></p> 
+   <p>La vue SVN Repository affiche le repository et les projets qu'il contient</p> 
+   <p align="center"><img border="0" width="402" height="76" src="images/svn038.png"></p> 
+   <p>A sa cr&eacute;ation, un projet est vide&nbsp;: il faut cr&eacute;er les r&eacute;pertoires de base en utilisant l'option &laquo;&nbsp;New / Remote Folder&nbsp;&raquo; du menu contextuel du projet.</p> 
+   <p align="center"><img border="0" width="346" height="316" src="images/svn039.png"></p> 
+   <p>Saisissez le nom du r&eacute;pertoire et cliquez que le bouton &laquo;&nbsp;Fin&nbsp;&raquo;.</p> 
+   <p>Le bouton suivant permet de saisir un commentaire sur l'op&eacute;ration.</p> 
+   <p align="center"><img border="0" width="346" height="294" src="images/svn040.png"></p> 
+   <p>Dans ce cas, saisissez le commentaire et cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;.</p> 
+   <p>Il faut cr&eacute;er les r&eacute;pertoires branches, tags et trunk.</p> 
+   <p>La vue console affiche les commandes subversion ex&eacute;cut&eacute;es.</p> 
+   <p align="center"><img border="0" width="451" height="135" src="images/svn041.png"></p> 
+   <p>&nbsp;</p> 
+   <h4>
+    <!--nchpdeb--><a name="chap_15_2_3_2">15.2.3.2. 
+     <!--nchpfin-->Ajouter un projet au repository</a></h4> 
+   <p>Dans la perspective Java, s&eacute;lectionnez un projet dans la vue &laquo;&nbsp;Packages&nbsp;&raquo; et utiliser l'option &laquo;&nbsp;Equipe / Partager le projet ...&nbsp;&raquo;.</p> 
+   <p>La premi&egrave;re page de l'assistant permet de s&eacute;lectionner le type de r&eacute;f&eacute;rentiel &agrave; utiliser.</p> 
+   <p align="center"><img border="0" width="341" height="243" src="images/svn042.png"></p> 
+   <p>S&eacute;lectionnez SVN et cliquez sur le bouton "Suivant". La page suivante permet de s&eacute;lectionner ou de cr&eacute;er le r&eacute;f&eacute;rentiel qui va contenir le projet.</p> 
+   <p align="center"><img border="0" width="458" height="304" src="images/svn043.png"></p> 
+   <p>S&eacute;lectionnez le r&eacute;f&eacute;rentiel &agrave; utiliser et cliquer sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.</p> 
+   <p>La page suivante permet de s&eacute;lectionner le r&eacute;pertoire &agrave; utiliser. Cliquez sur &laquo;&nbsp;Use specified folder name&nbsp;&raquo; puis sur le bouton &laquo;&nbsp;Browse&nbsp;&raquo;</p> 
+   <p align="center"><img border="0" width="486" height="160" src="images/svn044.png"></p> 
+   <p>S&eacute;lectionnez le r&eacute;pertoire pr&eacute;c&eacute;demment cr&eacute;&eacute; et cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="458" height="335" src="images/svn045.png"></p> 
+   <p>Remplacer &laquo;&nbsp;New Folder&nbsp;&raquo; par le nom du r&eacute;pertoire &agrave; utiliser puis cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;</p> 
+   <p align="center"><img border="0" width="458" height="225" src="images/svn046.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;. Si le r&eacute;pertoire pr&eacute;cis&eacute; existe d&eacute;j&agrave; alors un message d'erreur est affich&eacute;</p> 
+   <p align="center"><img border="0" width="441" height="139" src="images/svn047.png"></p> 
+   <p>Une bo&icirc;te de dialogue permet saisir les informations de commit de l'op&eacute;ration.</p> 
+   <p align="center"><img border="0" width="650" height="142" src="images/svn048.png"></p> 
+   <p>Les commandes subversion ex&eacute;cut&eacute;es sont affich&eacute;es dans la console, puis la boite de dialogue &laquo;&nbsp;Commit&nbsp;&raquo; s'affiche.</p> 
+   <p align="center"><img border="0" width="380" height="350" src="images/svn049.png"></p> 
+   <p>Saisissez un commentaire, s&eacute;lectionnez les ressources &agrave; ajouter dans le r&eacute;f&eacute;rentiel et cliquez sur le bouton "OK"</p> 
+   <p align="center"><img border="0" width="450" height="191" src="images/svn050.png"></p> 
+   <p>.La console affiche le d&eacute;tail des op&eacute;rations ex&eacute;cut&eacute;es.</p> 
+   <p align="center"><img border="0" width="453" height="350" src="images/svn051.png"></p> 
+   <p>Dans la vue &laquo;&nbsp;Packages&nbsp;&raquo;, les ressources sont affich&eacute;es de fa&ccedil;on &agrave; indiquer leur connexion avec le r&eacute;f&eacute;rentiel.</p> 
+   <p align="center"><img border="0" width="314" height="136" src="images/svn052.png"></p> 
+   <p>L'option &laquo;&nbsp;Equipe&nbsp;&raquo; du menu contextuel du projet permet maintenant un acc&egrave;s aux principales commandes de subversion</p> 
+   <p align="center"><img border="0" width="200" height="594" src="images/svn053.png"></p> 
+   <p>Par d&eacute;faut, les nouvelles ressources ne sont pas ajout&eacute;es automatiquement au r&eacute;f&eacute;rentiel.</p> 
+   <p align="center"><img border="0" width="314" height="155" src="images/svn054.png"></p> 
+   <p>Elles apparaissent un point d'interrogation en bas &agrave; droite de leur ic&ocirc;ne. Elles doivent &ecirc;tre ajout&eacute;es manuellement en utilisant l'option &laquo;&nbsp;Equipe /&nbsp;Add to version control&raquo; de leur menu contextuel.</p> 
+   <p align="center"><img border="0" width="312" height="153" src="images/svn055.png"></p> 
+   <p>L'ic&ocirc;ne change en une petite fl&egrave;che bleue indiquant que la ressource est ajout&eacute;e dans le r&eacute;f&eacute;rentiel mais n'est pas commit&eacute;e.</p> 
+   <p>Pour faire un commit des modifications vers le r&eacute;f&eacute;rentiel, il faut utiliser l'option &laquo;&nbsp;Equipe / Commit&nbsp;&raquo; du menu contextuel.</p> 
+   <p align="center"><img border="0" width="563" height="396" src="images/svn056.png"></p> 
+   <p>Par d&eacute;faut les fichiers ajout&eacute;s sont s&eacute;lectionn&eacute;s. Saisissez un commentaire et cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;.</p> 
+   <p>Si des modifications sont apport&eacute;es &agrave; une ressource du r&eacute;f&eacute;rentiel, son ic&ocirc;ne est modifi&eacute;e.</p> 
+   <p align="center"><img border="0" width="316" height="156" src="images/svn057.png"></p> 
+   <p>&nbsp;</p> 
+   <h4>
+    <!--nchpdeb--><a name="chap_15_2_3_3">15.2.3.3. 
+     <!--nchpfin-->Synchroniser l'espace de travail et le r&eacute;f&eacute;rentiel</a></h4> 
+   <p>L'option &laquo;&nbsp;Equipe / Synchronise with repository&nbsp;&raquo; permet d'acc&eacute;der &agrave; la perspective &laquo;&nbsp;Synchronisation de l'&eacute;quipe&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="441" height="128" src="images/svn058.png"></p> 
+   <p>Cochez la case &agrave; cocher &laquo;&nbsp;M&eacute;moriser ma d&eacute;cision&nbsp;&raquo; et cliquez sur &laquo;&nbsp;Oui&nbsp;&raquo; si cette bo&icirc;te de dialogue appara&icirc;t.</p> 
+   <p>&nbsp;</p> 
+   <h4>
+    <!--nchpdeb--><a name="chap_15_2_3_4">15.2.3.4. 
+     <!--nchpfin-->Checkout d'un projet</a></h4> 
+   <p>Dans la perspective &laquo;&nbsp;SVN Repository Exploring&nbsp;&raquo;, il est possible de demander le check out complet d'un projet&nbsp;: dans la vue &laquo;&nbsp;SVN Repository&nbsp;&raquo;, il faut s&eacute;lectionner l'&eacute;l&eacute;ment et utiliser l'option &laquo;&nbsp;Checkout&nbsp;&raquo; du menu contextuel.</p> 
+   <p align="center"><img border="0" width="420" height="246" src="images/svn059.png"></p> 
+   <p>Pour obtenir les ressources dans un projet existant, s&eacute;lectionnez &laquo;&nbsp;check out as project in the workspace&nbsp;&raquo; et cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.</p> 
+   <p>La page suivante permet de s&eacute;lectionner le chemin de l'espace de travail.</p> 
+   <p align="center"><img border="0" width="455" height="197" src="images/svn060.png"></p> 
+   <p>Cliquer sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;</p> 
+   <p align="center"><img border="0" width="450" height="149" src="images/svn061.png"></p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_15_3">15.3. 
+     <!--nchpfin-->Le plug in Subversive</a></h2> 
+   <p>Ce plug-in est t&eacute;l&eacute;chargeable &agrave; l'url : </p> 
+   <p><a href="http://www.polarion.org/index.php?page=overview&amp;project=subversive">http://www.polarion.org/index.php?page=overview&amp;project=subversive</a></p> 
+   <p>&nbsp;</p> 
+   <p>&nbsp;</p> 
+  </div> 
+  <!--PIED-->
+  <hr> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
+    <tr> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="chap014.htm" alt="14.  CVS 2.5 et Eclipse 3.0"> <img src="FlecheG.gif" alt="14.  CVS 2.5 et Eclipse 3.0" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="partie4.htm" alt="Partie 4 : le d&eacute;veloppement avanc&eacute; avec Java"> <img src="FlecheD.gif" alt="Partie 4 : le d&eacute;veloppement avanc&eacute; avec Java" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
+     <td rowspan="2" align="center" valign="middle"> <script language="JavaScript1.1">
 <!--
 hsh = new Date();
 hsd = document;
@@ -350,18 +347,16 @@ if(parseFloat(navigator.appVersion)>=4)
 {Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
 hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
 //-->
-</script>
-        <noscript>
-        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
-        </noscript>
-        <!--//-->
-      </td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
- 
-</BODY>
-</HTML>
+</script> 
+      <noscript> 
+       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience"></a> 
+      </noscript> 
+      <!--//--> </td> 
+    </tr> 
+    <tr> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
+    </tr> 
+   </tbody> 
+  </table>   
+ </body>
+</html>

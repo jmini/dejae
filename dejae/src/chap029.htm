@@ -1,272 +1,254 @@
 <html>
-<head>
-<title>Le plug-in CDT pour le d&eacute;veloppement en C / C++</title>
-<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
-<meta name="description" content="">
-<meta name="keywords" content="java tutorial cours dej eclipse">
-<meta name="robots" content="all">
-<meta name="revisit-after" content="2 months">
-<meta http-equiv="Content-Language" content="fr-FX">
-<meta name="author" content="Jean Michel DOUDOUX">
-<link href="dej_style.css" rel="stylesheet" type="text/css">
-<body>
-<!--ENTETE-->
-<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="partie7.htm" ALT="Partie 7 : d'autres plug-ins">
-<img src="FlecheG.gif" alt="Partie 7 : d'autres plug-ins" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="chap030.htm" ALT="30. Le plug-in EclipseUML ">
-<img src="FlecheD.gif" alt="30. Le plug-in EclipseUML " align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
-<HR>
-
-<p>&nbsp;</p>
-<h1><!--idrefpage value="cdt" --><!--resumetitre value="pr&eacute;sente le plug-in CDT qui est sous projet officiel du projet Eclipse dont le but est faciliter le d&eacute;veloppement avec les langages C et C++." --><!--nchpdeb--><a name="chap_29">29. <!--nchpfin-->Le plug-in CDT pour le d&eacute;veloppement en C / C++</a></h1>
-<p>&nbsp;</p>
-<!--chapitredeb-->
-<div align="right">
-  <table border="0" cellspacing="0" summary="titre">
-    <tr>
-      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td>
-<td width="50" valign="top"><img src="images/2.gif" alt="2" width="62" height="83" border="0"></td>
-<td width="50" valign="top"><img src="images/9.gif" alt="9" width="62" height="83" border="0"></td>
-    </tr>
-  </table>
-  <br>
-</div>
-<!--chapitrefin-->
-<p>&nbsp;</p>
-<div align="justify"> 
-<p>&nbsp;</p>
-  <p>CDT (C/C++ Development Tools) est un sous projet du projet &quot;Eclipse Tools&quot; dont le but est de fournir un environnement int&eacute;gr&eacute; de d&eacute;veloppement en C /C++ sous la forme de plug-ins pour Eclipse.</p>
-  <p>Le CDT ajoute une perspective nomm&eacute;e &quot;C/C++&quot; au workbench.</p>
-  <p>Le CDT ne fournit pas de compilateur : il est n&eacute;cessaire d'utiliser un compilateur externe. Le seul compilateur actuellement support&eacute; par le CDT est le cel&egrave;bre compilateur GCC du projet GNU. D'autres outils du projet GNU sont aussi n&eacute;cessaires tel que make ou GDB (GNU Debugger). </p>
-  <p>Sous linux, ces outils peuvent &ecirc;tre facilement install&eacute;s en utilisant les packages ad&eacute;quats selon la distribution utilis&eacute;e. </p>
-  <p>Sous Windows, l'utilisation de ces outils peut &ecirc;tre mise en oeuvre gr&acirc;ce &agrave; l'installation d'un des deux outils suivants : </p>
-<ul>
-  <li>
-    <div align="justify">Cygwin : c'est un projet de la soci&eacute;t&eacute; Red Hat (<a href="http://www.redhat.com/software/cygwin/">http://www.redhat.com/software/cygwin/</a>)</div>
-  </li>
-  <li>MinGW (Minimalist GNU for Windows) : c'est un projet open source qui a pour but de fournir un ensemble de fichier en-t&ecirc;te et de biblioth&egrave;ques pour g&eacute;n&eacute;rer des ex&eacute;cutables natifs sous Windows en utilisant des outils du projet GNU. (<a href="http://www.mingw.org/">http://www.mingw.org/</a>)</li>
-</ul>
-<p>Dans ce chapitre, l'installation et l'utilisation de MinGW avec le CDT sera d&eacute;taill&eacute;e pour une utilisation sur une plate-forme Windows.</p>
-<p>Bien qu'&eacute;crit en Java, le CDT est d&eacute;pendant de la plate-forme sur laquelle il s'ex&eacute;cute.</p>
-  <table border=1 cellspacing=0 cellpadding=4> 
+ <head> 
+  <title>Le plug-in CDT pour le d&eacute;veloppement en C / C++</title> 
+  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1"> 
+  <meta name="description" content=""> 
+  <meta name="keywords" content="java tutorial cours dej eclipse"> 
+  <meta name="robots" content="all"> 
+  <meta name="revisit-after" content="2 months"> 
+  <meta http-equiv="Content-Language" content="fr-FX"> 
+  <meta name="author" content="Jean Michel DOUDOUX"> 
+  <link href="dej_style.css" rel="stylesheet" type="text/css"> 
+ </head>
+ <body> 
+  <!--ENTETE--> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
     <tr> 
-      <td width=307 valign=top class="Normal">&nbsp; </td> 
-      <td width=307 valign=top class="Normal"> <p>Version utilis&eacute;e dans cette section</p></td> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="partie7.htm" alt="Partie 7 : d'autres plug-ins"> <img src="FlecheG.gif" alt="Partie 7 : d'autres plug-ins" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap030.htm" alt="30. Le plug-in EclipseUML "> <img src="FlecheD.gif" alt="30. Le plug-in EclipseUML " align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
     </tr> 
     <tr> 
-      <td width=307 valign=top class="Normal"> <p>Eclipse</p></td> 
-      <td width=307 valign=top class="Normal"> <p>2.1</p></td> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
     </tr> 
-    <tr> 
-      <td width=307 valign=top class="Normal"> <p>CDT</p></td> 
-      <td width=307 valign=top class="Normal"> <p>1.1</p></td> 
-    </tr> 
-    <tr> 
-      <td width=307 valign=top class="Normal"> <p>MinGW</p></td> 
-      <td width=307 valign=top class="Normal"> <p>3.1</p></td> 
-    </tr> 
-  </table> <br>
-
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_29_1">29.1. <!--nchpfin--> Installation du CDT</a></h2>
-  <p>Pour installer le CDT, il faut utiliser le m&eacute;canisme de mise &agrave; jour en utilisant l'option &quot;Mise &agrave; jour des logiciels / Gestionnaire des mises &agrave; jour&quot; du menu &quot;Aide&quot;.</p>
-  <p align="center"><img width=500 height=276 src="images/cdt006.png"></p>
-  <p>Dans la vue mise &agrave; jour des dispositifs, utiliser l'option «&nbsp;Nouveau / Signet du site&nbsp;» du menu contextuel.</p>
-  <p align="left">Il faut saisir un nom par exemple &quot;Eclipse CDT&quot; et saisir l'url &quot;http://update.eclipse.org/tools/cdt/updates/release&quot;.</p>
-  <p align="center"><img width=523 height=319 src="images/cdt007.png"></p>
-  <p>Cliquez sur le bouton &quot;Fin&quot; pour permettre &agrave; Eclipse de rechercher les mises &agrave; jour. La vue &quot;Mise &agrave; jour des dispositifs&quot; affiche celles disponibles.</p>
-  <p align="center"><img width=370 height=195 src="images/cdt008.png"></p>
-  <p>S&eacute;lectionnez la mise &agrave; jour «&nbsp;Eclipse C/C++ Development Tools (Windows).&nbsp;»</p>
-  <p align="center"><img width=400 height=327 src="images/cdt009.png"></p>
-  <p>La vue &quot;Aper&ccedil;u&quot; affiche des informations sur le plug-in. Cliquez sur le bouton «&nbsp;Installer Maintenant&nbsp;»</p>
-  <p align="center"><img width=400 height=281 src="images/cdt010.png"></p>
-  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p>
-  <p align="center"><img width=400 height=257 src="images/cdt011.png"></p>
-  <p>Lisez la licence et si vous acceptez les termes du contrat, cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p>
-  <p align="center"><img width=400 height=305 src="images/cdt012.png"></p>
-  <p>Cliquez sur le bouton «&nbsp;Fin&nbsp;»</p>
-  <p align="center"><img width=400 height=303 src="images/cdt013.png"></p>
-  <p>Cliquer sur le bouton «&nbsp;Installer&nbsp;».</p>
-  <p align="center"><img width=400 height=333 src="images/cdt014.jpg"></p>
-  <p>L'installation n&eacute;cessite un red&eacute;marrage de l'application.</p>
-  <p align="center"><img width=441 height=139 src="images/cdt015.png"></p>
-  <p>Cliquez sur le bouton «&nbsp;Oui&nbsp;».</p>
-  <p>Faites la m&ecirc;me op&eacute;ration avec la mise &agrave; jour «&nbsp;Eclipse C/C++ development tools CppUnit support 1.1.0.&nbsp;»</p>
-  <p>Si vous installez cette mise &agrave; jour avant la pr&eacute;c&eacute;dente, le message d'erreur suivant est affich&eacute;.</p>
-  <p align="center"><img width=589 height=223 src="images/cdt016.png"></p>
-  <p align="left">Une fois l'installation termin&eacute;e, l'&eacute;diteur de la prespective ressource affiche des informations sur le CDT.</p>
-  <p align="center"><img width=500 height=306 src="images/cdt017.jpg"></p>
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_29_2">29.2. <!--nchpfin-->Cr&eacute;ation d'un premier projet</a></h2>
-  <p>Pour pouvoir utiliser le CDT, il faut tout d'abord cr&eacute;er un nouveau projet.</p>
-  <p align="center"><img width=500 height=315 src="images/cdt018.png"></p>
-  <p align="left">Pour un projet en C++, s&eacute;lectionnez &quot;C++&quot; dans la liste de gauche puis &quot;Standard Make C++ Project&quot; dans la liste de droite et enfin cliquez sur le bouton &quot;Suivant&quot;.</p>
-  <p align="center"><img width=500 height=262 src="images/cdt019.jpg"></p>
-  <p>Saisissez le nom du projet et cliquez sur «&nbsp;Suivant&nbsp;».</p>
-  <p align="center"><img width=500 height=323 src="images/cdt020.png"></p>
-  <p>Sous Windows, dans l'onglet «&nbsp;Binary Parser&nbsp;», cliquez sur «&nbsp;PE Windows Parser&nbsp;» puis sur le bouton «&nbsp;Fin&nbsp;».</p>
-  <p align="center"><img width=234 height=109 src="images/cdt021.png"></p>
-  <p>Il faut ensuite cr&eacute;ez un nouveau fichier dans le projet. </p>
-  <p align="center"><img width=438 height=429 src="images/cdt022.png"></p>
-  <p>Saisissez le nom du fichier et cliquez sur le bouton «&nbsp;Fin&nbsp;».</p>
-  <p align="center"><img width=239 height=135 src="images/cdt023.png"></p>
-  <p>Il suffit de saisir le code de l'application dans l'&eacute;diteur : </p>
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple : </td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>#include &lt;iostream&gt;
+   </tbody> 
+  </table> 
+  <hr> 
+  <p>&nbsp;</p> 
+  <h1>
+   <!--idrefpage value="cdt" -->
+   <!--resumetitre value="pr&eacute;sente le plug-in CDT qui est sous projet officiel du projet Eclipse dont le but est faciliter le d&eacute;veloppement avec les langages C et C++." -->
+   <!--nchpdeb--><a name="chap_29">29. 
+    <!--nchpfin-->Le plug-in CDT pour le d&eacute;veloppement en C / C++</a></h1> 
+  <p>&nbsp;</p> 
+  <!--chapitredeb--> 
+  <div align="right"> 
+   <table border="0" cellspacing="0" summary="titre"> 
+    <tbody>
+     <tr> 
+      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td> 
+      <td width="50" valign="top"><img src="images/2.gif" alt="2" width="62" height="83" border="0"></td> 
+      <td width="50" valign="top"><img src="images/9.gif" alt="9" width="62" height="83" border="0"></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+  </div> 
+  <!--chapitrefin--> 
+  <p>&nbsp;</p> 
+  <div align="justify"> 
+   <p>&nbsp;</p> 
+   <p>CDT (C/C++ Development Tools) est un sous projet du projet "Eclipse Tools" dont le but est de fournir un environnement int&eacute;gr&eacute; de d&eacute;veloppement en C /C++ sous la forme de plug-ins pour Eclipse.</p> 
+   <p>Le CDT ajoute une perspective nomm&eacute;e "C/C++" au workbench.</p> 
+   <p>Le CDT ne fournit pas de compilateur : il est n&eacute;cessaire d'utiliser un compilateur externe. Le seul compilateur actuellement support&eacute; par le CDT est le cel&egrave;bre compilateur GCC du projet GNU. D'autres outils du projet GNU sont aussi n&eacute;cessaires tel que make ou GDB (GNU Debugger). </p> 
+   <p>Sous linux, ces outils peuvent &ecirc;tre facilement install&eacute;s en utilisant les packages ad&eacute;quats selon la distribution utilis&eacute;e. </p> 
+   <p>Sous Windows, l'utilisation de ces outils peut &ecirc;tre mise en oeuvre gr&acirc;ce &agrave; l'installation d'un des deux outils suivants : </p> 
+   <ul> 
+    <li> 
+     <div align="justify">
+      Cygwin : c'est un projet de la soci&eacute;t&eacute; Red Hat (
+      <a href="http://www.redhat.com/software/cygwin/">http://www.redhat.com/software/cygwin/</a>)
+     </div> </li> 
+    <li>MinGW (Minimalist GNU for Windows) : c'est un projet open source qui a pour but de fournir un ensemble de fichier en-t&ecirc;te et de biblioth&egrave;ques pour g&eacute;n&eacute;rer des ex&eacute;cutables natifs sous Windows en utilisant des outils du projet GNU. (<a href="http://www.mingw.org/">http://www.mingw.org/</a>)</li> 
+   </ul> 
+   <p>Dans ce chapitre, l'installation et l'utilisation de MinGW avec le CDT sera d&eacute;taill&eacute;e pour une utilisation sur une plate-forme Windows.</p> 
+   <p>Bien qu'&eacute;crit en Java, le CDT est d&eacute;pendant de la plate-forme sur laquelle il s'ex&eacute;cute.</p> 
+   <table border="1" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td width="307" valign="top" class="Normal">&nbsp; </td> 
+      <td width="307" valign="top" class="Normal"> <p>Version utilis&eacute;e dans cette section</p></td> 
+     </tr> 
+     <tr> 
+      <td width="307" valign="top" class="Normal"> <p>Eclipse</p></td> 
+      <td width="307" valign="top" class="Normal"> <p>2.1</p></td> 
+     </tr> 
+     <tr> 
+      <td width="307" valign="top" class="Normal"> <p>CDT</p></td> 
+      <td width="307" valign="top" class="Normal"> <p>1.1</p></td> 
+     </tr> 
+     <tr> 
+      <td width="307" valign="top" class="Normal"> <p>MinGW</p></td> 
+      <td width="307" valign="top" class="Normal"> <p>3.1</p></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_29_1">29.1. 
+     <!--nchpfin--> Installation du CDT</a></h2> 
+   <p>Pour installer le CDT, il faut utiliser le m&eacute;canisme de mise &agrave; jour en utilisant l'option "Mise &agrave; jour des logiciels / Gestionnaire des mises &agrave; jour" du menu "Aide".</p> 
+   <p align="center"><img width="500" height="276" src="images/cdt006.png"></p> 
+   <p>Dans la vue mise &agrave; jour des dispositifs, utiliser l'option &laquo;&nbsp;Nouveau / Signet du site&nbsp;&raquo; du menu contextuel.</p> 
+   <p align="left">Il faut saisir un nom par exemple "Eclipse CDT" et saisir l'url "http://update.eclipse.org/tools/cdt/updates/release".</p> 
+   <p align="center"><img width="523" height="319" src="images/cdt007.png"></p> 
+   <p>Cliquez sur le bouton "Fin" pour permettre &agrave; Eclipse de rechercher les mises &agrave; jour. La vue "Mise &agrave; jour des dispositifs" affiche celles disponibles.</p> 
+   <p align="center"><img width="370" height="195" src="images/cdt008.png"></p> 
+   <p>S&eacute;lectionnez la mise &agrave; jour &laquo;&nbsp;Eclipse C/C++ Development Tools (Windows).&nbsp;&raquo;</p> 
+   <p align="center"><img width="400" height="327" src="images/cdt009.png"></p> 
+   <p>La vue "Aper&ccedil;u" affiche des informations sur le plug-in. Cliquez sur le bouton &laquo;&nbsp;Installer Maintenant&nbsp;&raquo;</p> 
+   <p align="center"><img width="400" height="281" src="images/cdt010.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;</p> 
+   <p align="center"><img width="400" height="257" src="images/cdt011.png"></p> 
+   <p>Lisez la licence et si vous acceptez les termes du contrat, cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;</p> 
+   <p align="center"><img width="400" height="305" src="images/cdt012.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;</p> 
+   <p align="center"><img width="400" height="303" src="images/cdt013.png"></p> 
+   <p>Cliquer sur le bouton &laquo;&nbsp;Installer&nbsp;&raquo;.</p> 
+   <p align="center"><img width="400" height="333" src="images/cdt014.jpg"></p> 
+   <p>L'installation n&eacute;cessite un red&eacute;marrage de l'application.</p> 
+   <p align="center"><img width="441" height="139" src="images/cdt015.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Oui&nbsp;&raquo;.</p> 
+   <p>Faites la m&ecirc;me op&eacute;ration avec la mise &agrave; jour &laquo;&nbsp;Eclipse C/C++ development tools CppUnit support 1.1.0.&nbsp;&raquo;</p> 
+   <p>Si vous installez cette mise &agrave; jour avant la pr&eacute;c&eacute;dente, le message d'erreur suivant est affich&eacute;.</p> 
+   <p align="center"><img width="589" height="223" src="images/cdt016.png"></p> 
+   <p align="left">Une fois l'installation termin&eacute;e, l'&eacute;diteur de la prespective ressource affiche des informations sur le CDT.</p> 
+   <p align="center"><img width="500" height="306" src="images/cdt017.jpg"></p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_29_2">29.2. 
+     <!--nchpfin-->Cr&eacute;ation d'un premier projet</a></h2> 
+   <p>Pour pouvoir utiliser le CDT, il faut tout d'abord cr&eacute;er un nouveau projet.</p> 
+   <p align="center"><img width="500" height="315" src="images/cdt018.png"></p> 
+   <p align="left">Pour un projet en C++, s&eacute;lectionnez "C++" dans la liste de gauche puis "Standard Make C++ Project" dans la liste de droite et enfin cliquez sur le bouton "Suivant".</p> 
+   <p align="center"><img width="500" height="262" src="images/cdt019.jpg"></p> 
+   <p>Saisissez le nom du projet et cliquez sur &laquo;&nbsp;Suivant&nbsp;&raquo;.</p> 
+   <p align="center"><img width="500" height="323" src="images/cdt020.png"></p> 
+   <p>Sous Windows, dans l'onglet &laquo;&nbsp;Binary Parser&nbsp;&raquo;, cliquez sur &laquo;&nbsp;PE Windows Parser&nbsp;&raquo; puis sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;.</p> 
+   <p align="center"><img width="234" height="109" src="images/cdt021.png"></p> 
+   <p>Il faut ensuite cr&eacute;ez un nouveau fichier dans le projet. </p> 
+   <p align="center"><img width="438" height="429" src="images/cdt022.png"></p> 
+   <p>Saisissez le nom du fichier et cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;.</p> 
+   <p align="center"><img width="239" height="135" src="images/cdt023.png"></p> 
+   <p>Il suffit de saisir le code de l'application dans l'&eacute;diteur : </p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple : </td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>#include &lt;iostream&gt;
 using namespace std;
 int main () {
-  cout &lt;&lt; &quot;Bonjour&quot; &lt;&lt; endl;
+  cout &lt;&lt; "Bonjour" &lt;&lt; endl;
   char input = '';
   cin &gt;&gt; input;
   exit(0);
-}</code></pre>
-      </td>
-    </tr>
-  </table><br>
-  <p>Il faut ensuite cr&eacute;er un fichier nomm&eacute; makefile pour automatiser la g&eacute;n&eacute;ration de l'ex&eacute;cutable gr&acirc;ce &agrave; l'outil make. </p>
-  <p align="center"><img width=438 height=426 src="images/cdt024.png"></p>
-  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;» puis sur le bouton «&nbsp;Fin&nbsp;».</p>
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_29_3">29.3. <!--nchpfin-->Installation de MinGW</a></h2>
-  <p>Pour pouvoir compiler des fichiers sources avec le CDT, il est n&eacute;cessaire de disposer d'un compilateur externe. Pour l'instant seul le compilateur GCC du projet GNU est support&eacute;. N'&eacute;tant pas directement fourni dans Windows, il faut l'installer grace &agrave; un outil tiers. Cette section d&eacute;crit la proc&eacute;dure d'installation avec l'outil open source Minimalist GNU for Win32 (MinGW).</p>
-  <p>Il faut downloader les fichiers MSYS-1.0.9.exe et MinGW-3.1.0-1.exe sur le site <a href="http://www.mingw.org/">http://www.mingw.org/</a></p>
-  <p>Lancez l'ex&eacute;cution de MinGW-3.1.0-1.exe en premier.</p>
-  <p align="center"><img width=390 height=119 src="images/cdt025.png"></p>
-  <p align="center"><img width=501 height=383 src="images/cdt026.png"></p>
-  <p align="left">L'assistant d'installation se compose de plusieurs pages : </p>
-  <ul>
-    <li>Sur la page d'accueil, cliquez sur le bouton &quot;Next&quot;.</li>
-    <li>La page &quot;License Agreement&quot; apparait : lisez la licence et cliquez sur le bouton &quot;Yes&quot; pour accepter les termes de la licence et poursuivre l'installation.</li>
-    <li>La page &quot;Information&quot; apparait : lisez le texte  et cliquez sur le bouton &quot;Next&quot;.</li>
-    <li>La page &quot;Select destination directory&quot; apparait : s&eacute;lectionnez le r&eacute;pertoire o&ugrave; sera installer MinGW et cliquez sur le bouton &quot;Next&quot;.</li>
-    <li>La page &quot;Ready to install&quot; apparait : cliquez sur le bouton &quot;Install&quot;.</li>
-  </ul>
-  <p align="left">Lancez l'ex&eacute;cution de MSYS-1.0.9.exe. Un script permet de configurer l'environnement.</p>
-  <p align="center"><img width=500 height=391 src="images/cdt031.png"></p>
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_29_4">29.4. <!--nchpfin-->Premi&egrave;re configuration et ex&eacute;cution</a></h2>
-  <p>Il faut modifier les propri&eacute;t&eacute;s du projet pour utiliser les options de la commande make fournie avec MSYS.</p>
-  <p align="center"><img width=500 height=161 src="images/cdt032.png"></p>
-  <p align="left">Il faut d&eacute;cocher l'option &quot;use default&quot; et saisir &quot;make -f makefile&quot; dans le champ &quot;build command&quot;.</p>
-  <p align="center"><img width=500 height=249 src="images/cdt033.png"></p>
-  <p>Il faut ajouter les r&eacute;pertoire suivants dans la variable d'environnement path : C:\msys\1.0\bin;C:\MinGW\bin;</p>
-  <p>Attention : apr&egrave;s la modification, il faut relancer Eclipse si celui ci &eacute;tait en cours d'ex&eacute;cution.</p>
-  <p>Si les outils make et gcc ne sont pas trouv&eacute;s, alors le message suivant est afficher dans la vue «&nbsp;C-Build&nbsp;»</p>
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple : </td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>Build Error
+}</code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table>
+   <br> 
+   <p>Il faut ensuite cr&eacute;er un fichier nomm&eacute; makefile pour automatiser la g&eacute;n&eacute;ration de l'ex&eacute;cutable gr&acirc;ce &agrave; l'outil make. </p> 
+   <p align="center"><img width="438" height="426" src="images/cdt024.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo; puis sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;.</p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_29_3">29.3. 
+     <!--nchpfin-->Installation de MinGW</a></h2> 
+   <p>Pour pouvoir compiler des fichiers sources avec le CDT, il est n&eacute;cessaire de disposer d'un compilateur externe. Pour l'instant seul le compilateur GCC du projet GNU est support&eacute;. N'&eacute;tant pas directement fourni dans Windows, il faut l'installer grace &agrave; un outil tiers. Cette section d&eacute;crit la proc&eacute;dure d'installation avec l'outil open source Minimalist GNU for Win32 (MinGW).</p> 
+   <p>Il faut downloader les fichiers MSYS-1.0.9.exe et MinGW-3.1.0-1.exe sur le site <a href="http://www.mingw.org/">http://www.mingw.org/</a></p> 
+   <p>Lancez l'ex&eacute;cution de MinGW-3.1.0-1.exe en premier.</p> 
+   <p align="center"><img width="390" height="119" src="images/cdt025.png"></p> 
+   <p align="center"><img width="501" height="383" src="images/cdt026.png"></p> 
+   <p align="left">L'assistant d'installation se compose de plusieurs pages : </p> 
+   <ul> 
+    <li>Sur la page d'accueil, cliquez sur le bouton "Next".</li> 
+    <li>La page "License Agreement" apparait : lisez la licence et cliquez sur le bouton "Yes" pour accepter les termes de la licence et poursuivre l'installation.</li> 
+    <li>La page "Information" apparait : lisez le texte et cliquez sur le bouton "Next".</li> 
+    <li>La page "Select destination directory" apparait : s&eacute;lectionnez le r&eacute;pertoire o&ugrave; sera installer MinGW et cliquez sur le bouton "Next".</li> 
+    <li>La page "Ready to install" apparait : cliquez sur le bouton "Install".</li> 
+   </ul> 
+   <p align="left">Lancez l'ex&eacute;cution de MSYS-1.0.9.exe. Un script permet de configurer l'environnement.</p> 
+   <p align="center"><img width="500" height="391" src="images/cdt031.png"></p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_29_4">29.4. 
+     <!--nchpfin-->Premi&egrave;re configuration et ex&eacute;cution</a></h2> 
+   <p>Il faut modifier les propri&eacute;t&eacute;s du projet pour utiliser les options de la commande make fournie avec MSYS.</p> 
+   <p align="center"><img width="500" height="161" src="images/cdt032.png"></p> 
+   <p align="left">Il faut d&eacute;cocher l'option "use default" et saisir "make -f makefile" dans le champ "build command".</p> 
+   <p align="center"><img width="500" height="249" src="images/cdt033.png"></p> 
+   <p>Il faut ajouter les r&eacute;pertoire suivants dans la variable d'environnement path : C:\msys\1.0\bin;C:\MinGW\bin;</p> 
+   <p>Attention : apr&egrave;s la modification, il faut relancer Eclipse si celui ci &eacute;tait en cours d'ex&eacute;cution.</p> 
+   <p>Si les outils make et gcc ne sont pas trouv&eacute;s, alors le message suivant est afficher dans la vue &laquo;&nbsp;C-Build&nbsp;&raquo;</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple : </td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>Build Error
 (Exec error:Launching failed)
-</code></pre>
-      </td>
-    </tr>
-  </table><br>
-  <p>Attention&nbsp;: il est important que le bon programme makefile soit le premier trouv&eacute; dans le classpath. Il est par exemple possible d'avoir des probl&egrave;mes avec l'outil Delphi de Borland qui ajoute dans le classpath un r&eacute;pertoire qui contient un programme Makefile.</p>
-  <p align="center"><img width=574 height=198 src="images/cdt034.png"></p>
-  <p>Dans ce cas, il suffit de d&eacute;placer ou de supprimer la r&eacute;f&eacute;rence sur le r&eacute;pertoire C:\Program Files\Borland\Delphi7\Bin; dans la variable classpath. (il faut le remettre en cas de suppression pour une utilisation correcte de Delphi).</p>
-  <p>Si la g&eacute;n&eacute;ration se passe bien, le vue C-Build affiche les &eacute;tapes de le g&eacute;n&eacute;ration.</p>
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple : </td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>make -f makefile
+</code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table>
+   <br> 
+   <p>Attention&nbsp;: il est important que le bon programme makefile soit le premier trouv&eacute; dans le classpath. Il est par exemple possible d'avoir des probl&egrave;mes avec l'outil Delphi de Borland qui ajoute dans le classpath un r&eacute;pertoire qui contient un programme Makefile.</p> 
+   <p align="center"><img width="574" height="198" src="images/cdt034.png"></p> 
+   <p>Dans ce cas, il suffit de d&eacute;placer ou de supprimer la r&eacute;f&eacute;rence sur le r&eacute;pertoire C:\Program Files\Borland\Delphi7\Bin; dans la variable classpath. (il faut le remettre en cas de suppression pour une utilisation correcte de Delphi).</p> 
+   <p>Si la g&eacute;n&eacute;ration se passe bien, le vue C-Build affiche les &eacute;tapes de le g&eacute;n&eacute;ration.</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple : </td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>make -f makefile
 gcc -c premierTest.cpp
 gcc -o premierTest premierTest.o -L C:/MinGW/lib/gcc-lib/mingw32/3.2.3/ -lstdc++
-</code></pre>
-      </td>
-    </tr>
-  </table><br>
-  <p>Lancer l'ex&eacute;cution, il suffit de s&eacute;lectionner le fichier premierTest.exe et d'utiliser l'option «&nbsp;Ouvrir&nbsp;» du menu contextuel.</p>
-  <p align="center"><img width=500 height=80 src="images/cdt035.png"></p>
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_29_5">29.5. <!--nchpfin-->Utilisation du CDT</a></h2>
-  <p>L'environnement de d&eacute;veloppement propos&eacute; par le CDT &eacute;tant un cours de d&eacute;veloppement, il n'est pas encore aussi complet que l'environnement propos&eacute; par le JDT pour Java.</p>
-  <p>La version 1.1. du CDT propose cependant les fonctionnalit&eacute;s suivantes : </p>
-  <ul>
-  <li>
-    coloration syntaxique dans l'&eacute;diteur de code</li>
-  <li>navigation dans un code source gr&acirc;ce &agrave; la vue outline</li>
-  <li>l'&eacute;diteur poss&egrave;de un assistant de code utilisant des mod&egrave;les (templates)</li>
-  <li>utilisation de l'historique locale pour retrouver en local un certain nombre de version locale du code</li>
-  <li>...</li>
-</ul>
-<p>&nbsp;</p>
-</div>
-<!--PIED--><HR>
-<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="partie7.htm" ALT="Partie 7 : d'autres plug-ins">
-<img src="FlecheG.gif" alt="Partie 7 : d'autres plug-ins" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="chap030.htm" ALT="30. Le plug-in EclipseUML ">
-<img src="FlecheD.gif" alt="30. Le plug-in EclipseUML " align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-<td  rowspan="2" align="center" valign="middle">
-        <script language="JavaScript1.1">
+</code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table>
+   <br> 
+   <p>Lancer l'ex&eacute;cution, il suffit de s&eacute;lectionner le fichier premierTest.exe et d'utiliser l'option &laquo;&nbsp;Ouvrir&nbsp;&raquo; du menu contextuel.</p> 
+   <p align="center"><img width="500" height="80" src="images/cdt035.png"></p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_29_5">29.5. 
+     <!--nchpfin-->Utilisation du CDT</a></h2> 
+   <p>L'environnement de d&eacute;veloppement propos&eacute; par le CDT &eacute;tant un cours de d&eacute;veloppement, il n'est pas encore aussi complet que l'environnement propos&eacute; par le JDT pour Java.</p> 
+   <p>La version 1.1. du CDT propose cependant les fonctionnalit&eacute;s suivantes : </p> 
+   <ul> 
+    <li> coloration syntaxique dans l'&eacute;diteur de code</li> 
+    <li>navigation dans un code source gr&acirc;ce &agrave; la vue outline</li> 
+    <li>l'&eacute;diteur poss&egrave;de un assistant de code utilisant des mod&egrave;les (templates)</li> 
+    <li>utilisation de l'historique locale pour retrouver en local un certain nombre de version locale du code</li> 
+    <li>...</li> 
+   </ul> 
+   <p>&nbsp;</p> 
+  </div> 
+  <!--PIED-->
+  <hr> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
+    <tr> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="partie7.htm" alt="Partie 7 : d'autres plug-ins"> <img src="FlecheG.gif" alt="Partie 7 : d'autres plug-ins" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap030.htm" alt="30. Le plug-in EclipseUML "> <img src="FlecheD.gif" alt="30. Le plug-in EclipseUML " align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
+     <td rowspan="2" align="center" valign="middle"> <script language="JavaScript1.1">
 <!--
 hsh = new Date();
 hsd = document;
@@ -281,18 +263,16 @@ if(parseFloat(navigator.appVersion)>=4)
 {Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
 hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
 //-->
-</script>
-        <noscript>
-        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
-        </noscript>
-        <!--//-->
-      </td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
-
-</body>
+</script> 
+      <noscript> 
+       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience"></a> 
+      </noscript> 
+      <!--//--> </td> 
+    </tr> 
+    <tr> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
+    </tr> 
+   </tbody> 
+  </table>   
+ </body>
 </html>

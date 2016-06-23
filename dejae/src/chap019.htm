@@ -1,126 +1,118 @@
-<HTML>
-<HEAD>
-<TITLE>Hibernate et Eclipse</TITLE>
-<META http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
-<META name="description" content="">
-<META name="keywords" content="java tutorial cours dej eclipse">
-<META name="robots" content="all">
-<META name="revisit-after" content="2 months">
-<META http-equiv="Content-Language" content="fr-FX">
-<META name="author" content="Jean Michel DOUDOUX">
-<link href="dej_style.css" rel="stylesheet" type="text/css">
-<BODY>
-<!--ENTETE-->
-<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="chap018.htm" ALT="18. Le plug-in TPTP (Test &amp; Performance Tools Platform)">
-<img src="FlecheG.gif" alt="18. Le plug-in TPTP (Test &amp; Performance Tools Platform)" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="partie5.htm" ALT="Partie 5 : le d&eacute;veloppement d'applications d'entreprise">
-<img src="FlecheD.gif" alt="Partie 5 : le d&eacute;veloppement d'applications d'entreprise" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
-<HR>
-
-<p>&nbsp;</p>
-<H1><!--idrefpage value="hibernate" --><!--resumetitre value="Pr&eacute;sente le plug-in Hibernate Synchronizer qui facilite la mise en oeuvre de l'outil de mapping Hibernate." --><!--nchpdeb--><a name="chap_19">19. <!--nchpfin-->Hibernate et Eclipse</A></H1>
-<p>&nbsp;</p>
-<!--chapitredeb-->
-<div align="right">
-  <table border="0" cellspacing="0" summary="titre">
-    <tr>
-      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td>
-<td width="50" valign="top"><img src="images/1.gif" alt="1" width="62" height="83" border="0"></td>
-<td width="50" valign="top"><img src="images/9.gif" alt="9" width="62" height="83" border="0"></td>
-    </tr>
-  </table>
-  <br>
-</div>
-<!--chapitrefin-->
-<DIV ALIGN="justify"> 
-<p>&nbsp;</p>
-<p>Hibernate est un projet open source visant &agrave; proposer un outil de mapping entre les objets et des donn&eacute;es stock&eacute;es dans une 
-  base de donn&eacute;es relationnelle. Ce projet ne repose sur aucun standard mais il est tr&egrave;s populaire notamment &agrave; cause de ses 
-  bonnes performances et de son ouverture avec de nombreuses bases de donn&eacute;es.</p>
-<p>Le site officiel http://www.hibernate.org contient beaucoup d'informations sur l'outil et propose de le t&eacute;l&eacute;charger ainsi que sa documentation. </p>
-<p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_19_1">19.1. <!--nchpfin-->Le plug-in Hibernate Synchronizer</a></h2> 
-  <table class=MsoTableGrid border=0 cellspacing=0 cellpadding=0> 
+<html>
+ <head> 
+  <title>Hibernate et Eclipse</title> 
+  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1"> 
+  <meta name="description" content=""> 
+  <meta name="keywords" content="java tutorial cours dej eclipse"> 
+  <meta name="robots" content="all"> 
+  <meta name="revisit-after" content="2 months"> 
+  <meta http-equiv="Content-Language" content="fr-FX"> 
+  <meta name="author" content="Jean Michel DOUDOUX"> 
+  <link href="dej_style.css" rel="stylesheet" type="text/css"> 
+ </head>
+ <body> 
+  <!--ENTETE--> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
     <tr> 
-      <td width=127 valign=top class="Normal"> <p><img width=110 height=60
-  src="images/hibernate001.png"></p></td> 
-      <td width=100% valign=top class="Normal"> <p>Le plug-in Hibernate Synchronizer permet la g&eacute;n&eacute;ration de code utilisant le framework Hibernate. Il permet aussi de re-g&eacute;n&eacute;rer ce code lorsqu'un fichier de mapping est modifi&eacute;.</p></td> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="chap018.htm" alt="18. Le plug-in TPTP (Test &amp; Performance Tools Platform)"> <img src="FlecheG.gif" alt="18. Le plug-in TPTP (Test &amp; Performance Tools Platform)" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="partie5.htm" alt="Partie 5 : le d&eacute;veloppement d'applications d'entreprise"> <img src="FlecheD.gif" alt="Partie 5 : le d&eacute;veloppement d'applications d'entreprise" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
     </tr> 
+    <tr> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
+    </tr> 
+   </tbody> 
   </table> 
-  <p>Le site du plug-in est &agrave; l'url&nbsp;: <a
-href="http://hibernatesynch.sourceforge.net/">http://hibernatesynch.sourceforge.net/</a></p> 
-  <table border=1 cellspacing=0 cellpadding=4> 
-    <tr> 
-      <td width=307 valign=top class="Normal">&nbsp; </td> 
-      <td width=307 valign=top class="Normal"> <p>Version utilis&eacute;e dans cette section</p></td> 
-    </tr> 
-    <tr> 
-      <td width=307 valign=top class="Normal"> <p>Eclipse</p></td> 
-      <td width=307 valign=top class="Normal"> <p>3.0.1</p></td> 
-    </tr> 
-    <tr> 
-      <td width=307 valign=top class="Normal"> <p>J2SE</p></td> 
-      <td width=307 valign=top class="Normal"> <p>1.4.2_03</p></td> 
-    </tr> 
-    <tr> 
-      <td width=307 valign=top class="Normal"> <p>Hibernate Synchronizer</p></td> 
-      <td width=307 valign=top class="Normal"> <p>2.3.1.</p></td> 
-    </tr> 
-  </table> <br>
-<p>&nbsp;</p>
-  <h3><!--nchpdeb--><a name="chap_19_1_1">19.1.1. <!--nchpfin-->Installation</a></h3> 
-  <p>Le plus simple est d'utiliser la fonctionnalit&eacute; de mise &agrave; jour propos&eacute;e par l'option &quot;Rechercher et installer&quot; du menu &quot;Aide&quot;. Cliquez sur le bouton &quot;Rechercher les nouveaux dispositifs &agrave; installer&quot; sur le bouton &quot;Nouveau site distant&quot;, saisissez les informations ci dessous et suivez les instructions pour r&eacute;aliser le t&eacute;l&eacute;chargement et l'installation. </p> 
-  <p align="center"><img border=0 width=356 height=125
-src="images/hibernate002.png"></p> 
+  <hr> 
   <p>&nbsp;</p> 
-  <h3><!--nchpdeb--><a name="chap_19_1_2">19.1.2. <!--nchpfin-->La base de donn&eacute;es utilis&eacute;e</a></h3> 
-  <p>La base de donn&eacute;es utilis&eacute;es dans cette section contient trois tables :</p>
-  <ul>
-    <li>une table qui contient une liste de personnes</li>
-    <li>une table qui contient une liste de groupes</li>
-    <li>une table qui associe une personne &agrave; un groupe   </li>
-  </ul>
-  <p>&nbsp;</p>
-  <p align="center"><img border=0 width=472 height=307 src="images/hibernate003.png"></p> 
-    <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple : le DDL de la base de donn&eacute;es</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>drop table `grppers`; 
+  <h1>
+   <!--idrefpage value="hibernate" -->
+   <!--resumetitre value="Pr&eacute;sente le plug-in Hibernate Synchronizer qui facilite la mise en oeuvre de l'outil de mapping Hibernate." -->
+   <!--nchpdeb--><a name="chap_19">19. 
+    <!--nchpfin-->Hibernate et Eclipse</a></h1> 
+  <p>&nbsp;</p> 
+  <!--chapitredeb--> 
+  <div align="right"> 
+   <table border="0" cellspacing="0" summary="titre"> 
+    <tbody>
+     <tr> 
+      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td> 
+      <td width="50" valign="top"><img src="images/1.gif" alt="1" width="62" height="83" border="0"></td> 
+      <td width="50" valign="top"><img src="images/9.gif" alt="9" width="62" height="83" border="0"></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+  </div> 
+  <!--chapitrefin--> 
+  <div align="justify"> 
+   <p>&nbsp;</p> 
+   <p>Hibernate est un projet open source visant &agrave; proposer un outil de mapping entre les objets et des donn&eacute;es stock&eacute;es dans une base de donn&eacute;es relationnelle. Ce projet ne repose sur aucun standard mais il est tr&egrave;s populaire notamment &agrave; cause de ses bonnes performances et de son ouverture avec de nombreuses bases de donn&eacute;es.</p> 
+   <p>Le site officiel http://www.hibernate.org contient beaucoup d'informations sur l'outil et propose de le t&eacute;l&eacute;charger ainsi que sa documentation. </p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_19_1">19.1. 
+     <!--nchpfin-->Le plug-in Hibernate Synchronizer</a></h2> 
+   <table class="MsoTableGrid" border="0" cellspacing="0" cellpadding="0"> 
+    <tbody>
+     <tr> 
+      <td width="127" valign="top" class="Normal"> <p><img width="110" height="60" src="images/hibernate001.png"></p></td> 
+      <td width="100%" valign="top" class="Normal"> <p>Le plug-in Hibernate Synchronizer permet la g&eacute;n&eacute;ration de code utilisant le framework Hibernate. Il permet aussi de re-g&eacute;n&eacute;rer ce code lorsqu'un fichier de mapping est modifi&eacute;.</p></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <p>Le site du plug-in est &agrave; l'url&nbsp;: <a href="http://hibernatesynch.sourceforge.net/">http://hibernatesynch.sourceforge.net/</a></p> 
+   <table border="1" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td width="307" valign="top" class="Normal">&nbsp; </td> 
+      <td width="307" valign="top" class="Normal"> <p>Version utilis&eacute;e dans cette section</p></td> 
+     </tr> 
+     <tr> 
+      <td width="307" valign="top" class="Normal"> <p>Eclipse</p></td> 
+      <td width="307" valign="top" class="Normal"> <p>3.0.1</p></td> 
+     </tr> 
+     <tr> 
+      <td width="307" valign="top" class="Normal"> <p>J2SE</p></td> 
+      <td width="307" valign="top" class="Normal"> <p>1.4.2_03</p></td> 
+     </tr> 
+     <tr> 
+      <td width="307" valign="top" class="Normal"> <p>Hibernate Synchronizer</p></td> 
+      <td width="307" valign="top" class="Normal"> <p>2.3.1.</p></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_19_1_1">19.1.1. 
+     <!--nchpfin-->Installation</a></h3> 
+   <p>Le plus simple est d'utiliser la fonctionnalit&eacute; de mise &agrave; jour propos&eacute;e par l'option "Rechercher et installer" du menu "Aide". Cliquez sur le bouton "Rechercher les nouveaux dispositifs &agrave; installer" sur le bouton "Nouveau site distant", saisissez les informations ci dessous et suivez les instructions pour r&eacute;aliser le t&eacute;l&eacute;chargement et l'installation. </p> 
+   <p align="center"><img border="0" width="356" height="125" src="images/hibernate002.png"></p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_19_1_2">19.1.2. 
+     <!--nchpfin-->La base de donn&eacute;es utilis&eacute;e</a></h3> 
+   <p>La base de donn&eacute;es utilis&eacute;es dans cette section contient trois tables :</p> 
+   <ul> 
+    <li>une table qui contient une liste de personnes</li> 
+    <li>une table qui contient une liste de groupes</li> 
+    <li>une table qui associe une personne &agrave; un groupe </li> 
+   </ul> 
+   <p>&nbsp;</p> 
+   <p align="center"><img border="0" width="472" height="307" src="images/hibernate003.png"></p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple : le DDL de la base de donn&eacute;es</td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>drop table `grppers`; 
 drop table `groupes`; 
 drop table `personnes`; 
 
@@ -128,387 +120,387 @@ drop table `personnes`;
 # Structure for the `groupes` table :  
 # 
 CREATE TABLE `groupes` ( 
-  `idgroupe` int(4) NOT NULL auto_increment, 
-  `nomgroupe` varchar(50) default NULL, 
-  `commentairegroupe` varchar(150) default NULL, 
-  PRIMARY KEY  (`idgroupe`), 
-  UNIQUE KEY `idgroupe` (`idgroupe`) 
+&nbsp; `idgroupe` int(4) NOT NULL auto_increment, 
+&nbsp; `nomgroupe` varchar(50) default NULL, 
+&nbsp; `commentairegroupe` varchar(150) default NULL, 
+&nbsp; PRIMARY KEY&nbsp; (`idgroupe`), 
+&nbsp; UNIQUE KEY `idgroupe` (`idgroupe`) 
 ) TYPE=InnoDB; 
 
 # 
 # Structure for the `personnes` table :  
 # 
 CREATE TABLE `personnes` ( 
-  `idpersonne` int(11) NOT NULL auto_increment, 
-  `nompersonne` varchar(50) default NULL, 
-  `prenompersonne` varchar(50) default NULL, 
-  `datenaisspersonne` datetime default NULL, 
-  `coeffpersonne` int(11) default NULL, 
-  PRIMARY KEY  (`idpersonne`), 
-  UNIQUE KEY `idpersonne` (`idpersonne`) 
+&nbsp; `idpersonne` int(11) NOT NULL auto_increment, 
+&nbsp; `nompersonne` varchar(50) default NULL, 
+&nbsp; `prenompersonne` varchar(50) default NULL, 
+&nbsp; `datenaisspersonne` datetime default NULL, 
+&nbsp; `coeffpersonne` int(11) default NULL, 
+&nbsp; PRIMARY KEY&nbsp; (`idpersonne`), 
+&nbsp; UNIQUE KEY `idpersonne` (`idpersonne`) 
 ) TYPE=InnoDB; 
 
 # 
 # Structure for the `grppers` table :  
 # 
 CREATE TABLE `grppers` ( 
-  `idgrppers` int(11) NOT NULL auto_increment, 
-  `idgroupe` int(11) default NULL, 
-  `idpersonne` int(11) default NULL, 
-  PRIMARY KEY  (`idgrppers`), 
-  UNIQUE KEY `idgrppers` (`idgrppers`), 
-  KEY `idgroupe` (`idgroupe`), 
-  KEY `idpersonne` (`idpersonne`), 
-  CONSTRAINT `0_48` FOREIGN KEY (`idpersonne`) REFERENCES `personnes` (`idpersonne`), 
-  CONSTRAINT `0_45` FOREIGN KEY (`idgroupe`) REFERENCES `groupes` (`idgroupe`) 
+&nbsp; `idgrppers` int(11) NOT NULL auto_increment, 
+&nbsp; `idgroupe` int(11) default NULL, 
+&nbsp; `idpersonne` int(11) default NULL, 
+&nbsp; PRIMARY KEY&nbsp; (`idgrppers`), 
+&nbsp; UNIQUE KEY `idgrppers` (`idgrppers`), 
+&nbsp; KEY `idgroupe` (`idgroupe`), 
+&nbsp; KEY `idpersonne` (`idpersonne`), 
+&nbsp; CONSTRAINT `0_48` FOREIGN KEY (`idpersonne`) REFERENCES `personnes` (`idpersonne`), 
+&nbsp; CONSTRAINT `0_45` FOREIGN KEY (`idgroupe`) REFERENCES `groupes` (`idgroupe`) 
 ) TYPE=InnoDB; 
 
 INSERT INTO `groupes` (`idgroupe`, `nomgroupe`, `commentairegroupe`) VALUES 
-  (1,'groupe 1',NULL), 
-  (2,'groupe 2',NULL); 
+&nbsp; (1,'groupe 1',NULL), 
+&nbsp; (2,'groupe 2',NULL); 
 
 INSERT INTO `grppers` (`idgrppers`, `idgroupe`, `idpersonne`) VALUES  
-  (1,1,1), 
-  (2,2,2), 
-  (3,2,3), 
-  (4,1,4), 
-  (5,1,5); 
+&nbsp; (1,1,1), 
+&nbsp; (2,2,2), 
+&nbsp; (3,2,3), 
+&nbsp; (4,1,4), 
+&nbsp; (5,1,5); 
 
 INSERT INTO `personnes` (`idpersonne`, `nompersonne`, `prenompersonne`, 
                          `datenaisspersonne`, `coeffpersonne`) VALUES  
-  (1,'nom1','prenom1','1967-01-06',123), 
-  (2,'nom2','prenom2','1973-08-11',34), 
-  (3,'nom3','prenom3','1956-04-28',145), 
-  (4,'nom4','prenom4','1980-12-02',23), 
-  (5,'nom5','prenom5','1966-10-13',119); </code></pre>
-      </td>
-    </tr>
-  </table>
-<p>&nbsp;</p>
-  <h3><!--nchpdeb--><a name="chap_19_1_3">19.1.3. <!--nchpfin-->Cr&eacute;ation des fichiers de mapping</a></h3> 
-  <p>Cr&eacute;er un nouveau projet dont les sources et les binaires sont s&eacute;par&eacute;s et ajouter les fichiers mm.mysql-2.0.14-bin.jar et hibernate2.jar dans les biblioth&egrave;ques.</p> 
-  <p>Il est aussi obligatoire d'ajouter toutes les biblioth&egrave;ques n&eacute;cessaires &agrave; Hibernate lors de son ex&eacute;cution.</p> 
-  <p align="center"><img border=0 width=277 height=286
-src="images/hibernate004.png"></p> 
-  <p>Il faut ensuite cr&eacute;er une entit&eacute; de type «&nbsp;Hibernate / Hibernate Mapping File&nbsp;» dans le r&eacute;pertoire src du projet.</p> 
-  <p align="center"><img border=0 width=371 height=322
-src="images/hibernate005.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;». La page suivante permet de saisir les informations sur la base de donn&eacute;es et sa connexion.</p> 
-  <p align="center"><img border=0 width=500 height=539
-src="images/hibernate006.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Browse&nbsp;» en face de «&nbsp;Driver&nbsp;».</p> 
-  <p align="center"><img border=0 width=296 height=331
-src="images/hibernate007.png"></p> 
-  <p>S&eacute;lectionnez la classe org.gjt.mm.mysql.Driver et cliquez sur le bouton «&nbsp;OK&nbsp;».</p> 
-  <p align="center"><img border=0 width=500 height=536
-src="images/hibernate008.png"></p> 
-  <p>Il faut ensuite saisir les informations concernant la connexion &agrave; la base de donn&eacute;es et cliquer sur le bouton «&nbsp;Refresh&nbsp;».</p> 
-  <p>Si les param&egrave;tres concernant la connexion sont corrects alors la liste des tables est affich&eacute;e. Il suffit alors de s&eacute;lectionner la ou les tables d&eacute;sir&eacute;es.</p> 
-  <p>Enfin, il faut saisir le nom du package qui va contenir les fichiers g&eacute;n&eacute;r&eacute;s.</p> 
-  <p align="center"><img border=0 width=500 height=191
-src="images/hibernate009.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Fin&nbsp;». Trois fichiers sont g&eacute;n&eacute;r&eacute;s&nbsp;: Groupes.hbm, Grppers.hbm et Personnes.hbm</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple : le fichier Personnes.hbm</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>&lt;?xml version=&quot;1.0&quot;?&gt; 
+&nbsp; (1,'nom1','prenom1','1967-01-06',123), 
+&nbsp; (2,'nom2','prenom2','1973-08-11',34), 
+&nbsp; (3,'nom3','prenom3','1956-04-28',145), 
+&nbsp; (4,'nom4','prenom4','1980-12-02',23), 
+&nbsp; (5,'nom5','prenom5','1966-10-13',119); </code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_19_1_3">19.1.3. 
+     <!--nchpfin-->Cr&eacute;ation des fichiers de mapping</a></h3> 
+   <p>Cr&eacute;er un nouveau projet dont les sources et les binaires sont s&eacute;par&eacute;s et ajouter les fichiers mm.mysql-2.0.14-bin.jar et hibernate2.jar dans les biblioth&egrave;ques.</p> 
+   <p>Il est aussi obligatoire d'ajouter toutes les biblioth&egrave;ques n&eacute;cessaires &agrave; Hibernate lors de son ex&eacute;cution.</p> 
+   <p align="center"><img border="0" width="277" height="286" src="images/hibernate004.png"></p> 
+   <p>Il faut ensuite cr&eacute;er une entit&eacute; de type &laquo;&nbsp;Hibernate / Hibernate Mapping File&nbsp;&raquo; dans le r&eacute;pertoire src du projet.</p> 
+   <p align="center"><img border="0" width="371" height="322" src="images/hibernate005.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;. La page suivante permet de saisir les informations sur la base de donn&eacute;es et sa connexion.</p> 
+   <p align="center"><img border="0" width="500" height="539" src="images/hibernate006.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Browse&nbsp;&raquo; en face de &laquo;&nbsp;Driver&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="296" height="331" src="images/hibernate007.png"></p> 
+   <p>S&eacute;lectionnez la classe org.gjt.mm.mysql.Driver et cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="500" height="536" src="images/hibernate008.png"></p> 
+   <p>Il faut ensuite saisir les informations concernant la connexion &agrave; la base de donn&eacute;es et cliquer sur le bouton &laquo;&nbsp;Refresh&nbsp;&raquo;.</p> 
+   <p>Si les param&egrave;tres concernant la connexion sont corrects alors la liste des tables est affich&eacute;e. Il suffit alors de s&eacute;lectionner la ou les tables d&eacute;sir&eacute;es.</p> 
+   <p>Enfin, il faut saisir le nom du package qui va contenir les fichiers g&eacute;n&eacute;r&eacute;s.</p> 
+   <p align="center"><img border="0" width="500" height="191" src="images/hibernate009.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;. Trois fichiers sont g&eacute;n&eacute;r&eacute;s&nbsp;: Groupes.hbm, Grppers.hbm et Personnes.hbm</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple : le fichier Personnes.hbm</td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>&lt;?xml version="1.0"?&gt; 
 &lt;!DOCTYPE hibernate-mapping PUBLIC 
-            &quot;-//Hibernate/Hibernate Mapping DTD//EN&quot; 
-            &quot;http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd&quot; &gt; 
-&lt;hibernate-mapping package=&quot;com.jmd.test.hibernate&quot;&gt; 
-  &lt;class name=&quot;Personnes&quot; table=&quot;personnes&quot;&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "-//Hibernate/Hibernate Mapping DTD//EN" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" &gt; 
+&lt;hibernate-mapping package="com.jmd.test.hibernate"&gt; 
+&nbsp; &lt;class name="Personnes" table="personnes"&gt; 
 
-    &lt;id 
-      column=&quot;idpersonne&quot; 
-      name=&quot;Idpersonne&quot; 
-      type=&quot;integer&quot; 
-    &gt; 
-      &lt;generator class=&quot;vm&quot; /&gt; 
-    &lt;/id&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;id 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column="idpersonne" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name="Idpersonne" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="integer" 
+&nbsp;&nbsp;&nbsp;&nbsp;&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;generator class="vm" /&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/id&gt; 
 
-    &lt;property 
-      column=&quot;datenaisspersonne&quot; 
-      length=&quot;19&quot; 
-      name=&quot;Datenaisspersonne&quot; 
-      not-null=&quot;false&quot; 
-      type=&quot;timestamp&quot; 
-     /&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;property 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column="datenaisspersonne" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;length="19" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name="Datenaisspersonne" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;not-null="false" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="timestamp" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt; 
 
-    &lt;property 
-      column=&quot;prenompersonne&quot; 
-      length=&quot;50&quot; 
-      name=&quot;Prenompersonne&quot; 
-      not-null=&quot;false&quot; 
-      type=&quot;string&quot; 
-     /&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;property 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column="prenompersonne" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;length="50" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name="Prenompersonne" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;not-null="false" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="string" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt; 
 
-    &lt;property 
-      column=&quot;coeffpersonne&quot; 
-      length=&quot;11&quot; 
-      name=&quot;Coeffpersonne&quot; 
-      not-null=&quot;false&quot; 
-      type=&quot;integer&quot; 
-     /&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;property 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column="coeffpersonne" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;length="11" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name="Coeffpersonne" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;not-null="false" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="integer" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt; 
 
-    &lt;property 
-      column=&quot;nompersonne&quot; 
-      length=&quot;50&quot; 
-       name=&quot;Nompersonne&quot; 
-      not-null=&quot;false&quot; 
-      type=&quot;string&quot; 
-     /&gt; 
-  &lt;/class&gt; 
-&lt;/hibernate-mapping&gt;</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple : le fichier Groupes.hbm</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>&lt;?xml version=&quot;1.0&quot;?&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;property 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column="nompersonne" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;length="50" 
+&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; name="Nompersonne" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;not-null="false" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="string" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt; 
+&nbsp; &lt;/class&gt; 
+&lt;/hibernate-mapping&gt;</code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple : le fichier Groupes.hbm</td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>&lt;?xml version="1.0"?&gt; 
 &lt;!DOCTYPE hibernate-mapping PUBLIC 
-            &quot;-//Hibernate/Hibernate Mapping DTD//EN&quot; 
-            &quot;http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd&quot; &gt; 
-&lt;hibernate-mapping package=&quot;com.jmd.test.hibernate&quot;&gt; 
- &lt;class name=&quot;Groupes&quot; table=&quot;groupes&quot;&gt; 
-   &lt;id 
-     column=&quot;idgroupe&quot; 
-     name=&quot;Idgroupe&quot; 
-     type=&quot;integer&quot; 
-   &gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "-//Hibernate/Hibernate Mapping DTD//EN" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" &gt; 
+&lt;hibernate-mapping package="com.jmd.test.hibernate"&gt; 
+ &lt;class name="Groupes" table="groupes"&gt; 
+&nbsp;&nbsp;&nbsp;&lt;id 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column="idgroupe" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name="Idgroupe" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="integer" 
+&nbsp;&nbsp;&nbsp;&gt; 
 
-     &lt;generator class=&quot;vm&quot; /&gt; 
-   &lt;/id&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;generator class="vm" /&gt; 
+&nbsp;&nbsp;&nbsp;&lt;/id&gt; 
 
-   &lt;property 
-     column=&quot;nomgroupe&quot; 
-     length=&quot;50&quot; 
-     name=&quot;Nomgroupe&quot; 
-     not-null=&quot;false&quot; 
-     type=&quot;string&quot; 
-    /&gt; 
-   
+&nbsp;&nbsp;&nbsp;&lt;property 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column="nomgroupe" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;length="50" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name="Nomgroupe" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;not-null="false" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="string" 
+&nbsp;&nbsp;&nbsp;&nbsp;/&gt; 
+&nbsp;&nbsp;&nbsp;
    &lt;property 
-     column=&quot;commentairegroupe&quot; 
-     length=&quot;150&quot; 
-     name=&quot;Commentairegroupe&quot; 
-     not-null=&quot;false&quot; 
-     type=&quot;string&quot; 
-    /&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column="commentairegroupe" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;length="150" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name="Commentairegroupe" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;not-null="false" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="string" 
+&nbsp;&nbsp;&nbsp;&nbsp;/&gt; 
  &lt;/class&gt; 
-&lt;/hibernate-mapping&gt;</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple : le fichier Grppers.hbm</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>&lt;?xml version=&quot;1.0&quot;?&gt; 
+&lt;/hibernate-mapping&gt;</code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple : le fichier Grppers.hbm</td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>&lt;?xml version="1.0"?&gt; 
 &lt;!DOCTYPE hibernate-mapping PUBLIC 
-            &quot;-//Hibernate/Hibernate Mapping DTD//EN&quot; 
-            &quot;http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd&quot; &gt; 
-&lt;hibernate-mapping package=&quot;com.jmd.test.hibernate&quot;&gt; 
-  &lt;class name=&quot;Grppers&quot; table=&quot;grppers&quot;&gt; 
-    &lt;id 
-      column=&quot;idgrppers&quot; 
-      name=&quot;Idgrppers&quot; 
-      type=&quot;integer&quot; 
-    &gt; 
-      &lt;generator class=&quot;vm&quot; /&gt; 
-    &lt;/id&gt; 
-    &lt;many-to-one 
-      class=&quot;Groupes&quot; 
-      name=&quot;Idgroupe&quot; 
-      not-null=&quot;true&quot; 
-    &gt; 
-      &lt;column name=&quot;idgroupe&quot; /&gt; 
-    &lt;/many-to-one&gt; 
-    &lt;many-to-one 
-      class=&quot;Personnes&quot; 
-      name=&quot;Idpersonne&quot; 
-      not-null=&quot;true&quot; 
-    &gt; 
-      &lt;column name=&quot;idpersonne&quot; /&gt; 
-    &lt;/many-to-one&gt; 
-  &lt;/class&gt; 
-&lt;/hibernate-mapping&gt;</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <p>&nbsp;</p>
-  <h3><!--nchpdeb--><a name="chap_19_1_4">19.1.4. <!--nchpfin-->G&eacute;n&eacute;ration des classes Java</a></h3> 
-  <p>La g&eacute;n&eacute;ration des classes correspondantes pour chaque fichier .hbm peut &ecirc;tre demand&eacute;e de deux fa&ccedil;ons&nbsp;:</p> 
-  <ul type=circle> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "-//Hibernate/Hibernate Mapping DTD//EN" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" &gt; 
+&lt;hibernate-mapping package="com.jmd.test.hibernate"&gt; 
+&nbsp; &lt;class name="Grppers" table="grppers"&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;id 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;column="idgrppers" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name="Idgrppers" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="integer" 
+&nbsp;&nbsp;&nbsp;&nbsp;&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;generator class="vm" /&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/id&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;many-to-one 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;class="Groupes" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name="Idgroupe" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;not-null="true" 
+&nbsp;&nbsp;&nbsp;&nbsp;&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;column name="idgroupe" /&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/many-to-one&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;many-to-one 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;class="Personnes" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name="Idpersonne" 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;not-null="true" 
+&nbsp;&nbsp;&nbsp;&nbsp;&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;column name="idpersonne" /&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/many-to-one&gt; 
+&nbsp; &lt;/class&gt; 
+&lt;/hibernate-mapping&gt;</code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_19_1_4">19.1.4. 
+     <!--nchpfin-->G&eacute;n&eacute;ration des classes Java</a></h3> 
+   <p>La g&eacute;n&eacute;ration des classes correspondantes pour chaque fichier .hbm peut &ecirc;tre demand&eacute;e de deux fa&ccedil;ons&nbsp;:</p> 
+   <ul type="circle"> 
     <li>en sauvegardant un fichier .hbm modifi&eacute; dans l'&eacute;diteur</li> 
-    <li>en utilisant l'option «&nbsp;Hibernate Synchronizer / Synchronize Files&nbsp;» du menu contextuel d'un fichier .hbm dans la vue  «&nbsp;Vue packages&nbsp;»</li> 
-  </ul> 
-  <p>Cette g&eacute;n&eacute;ration va cr&eacute;er pour chaque fichier .hbm plusieurs classes.</p> 
-  <p align="center"><img border=0 width=277 height=541
-src="images/hibernate010.png"></p> 
-<p>&nbsp;</p>
-  <h3><!--nchpdeb--><a name="chap_19_1_5">19.1.5. <!--nchpfin-->Cr&eacute;ation du fichier de configuration</a></h3> 
-  <p style='text-align:justify'>Il faut cr&eacute;er une nouvelle entit&eacute; de type «&nbsp;Hibernate / Hibernate Configuration File&nbsp;» dans le r&eacute;pertoire src. Une boite de dialogue permet de saisir les informations qui seront ins&eacute;r&eacute;es dans le fichier de configuration d'Hibernate.</p> 
-  <p align="center"><img border=0 width=567 height=468
-src="images/hibernate011.png"></p> 
-  <p>Une fois les informations saisies, cliquez sur le bouton «&nbsp;Fin&nbsp;»</p> 
-  <p>Il faut rajouter dans ce fichier tous les fichiers de mapping qui seront utilis&eacute;s.</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt; 
+    <li>en utilisant l'option &laquo;&nbsp;Hibernate Synchronizer / Synchronize Files&nbsp;&raquo; du menu contextuel d'un fichier .hbm dans la vue&nbsp; &laquo;&nbsp;Vue packages&nbsp;&raquo;</li> 
+   </ul> 
+   <p>Cette g&eacute;n&eacute;ration va cr&eacute;er pour chaque fichier .hbm plusieurs classes.</p> 
+   <p align="center"><img border="0" width="277" height="541" src="images/hibernate010.png"></p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_19_1_5">19.1.5. 
+     <!--nchpfin-->Cr&eacute;ation du fichier de configuration</a></h3> 
+   <p style="text-align:justify">Il faut cr&eacute;er une nouvelle entit&eacute; de type &laquo;&nbsp;Hibernate / Hibernate Configuration File&nbsp;&raquo; dans le r&eacute;pertoire src. Une boite de dialogue permet de saisir les informations qui seront ins&eacute;r&eacute;es dans le fichier de configuration d'Hibernate.</p> 
+   <p align="center"><img border="0" width="567" height="468" src="images/hibernate011.png"></p> 
+   <p>Une fois les informations saisies, cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;</p> 
+   <p>Il faut rajouter dans ce fichier tous les fichiers de mapping qui seront utilis&eacute;s.</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple :</td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt; 
 &lt;!DOCTYPE hibernate-configuration 
-    PUBLIC &quot;-//Hibernate/Hibernate Configuration DTD//EN&quot; 
-    &quot;http://hibernate.sourceforge.net/hibernate-configuration-2.0.dtd&quot;&gt; 
+&nbsp;&nbsp;&nbsp; PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN" 
+&nbsp;&nbsp;&nbsp; "http://hibernate.sourceforge.net/hibernate-configuration-2.0.dtd"&gt; 
 &lt;hibernate-configuration&gt; 
-  &lt;session-factory &gt; 
-    &lt;!-- local connection properties --&gt; 
-    &lt;property name=&quot;hibernate.connection.url&quot;&gt;jdbc:mysql://localhost/TestDB&lt;/property&gt; 
-    &lt;property name=&quot;hibernate.connection.driver_class&quot;&gt;org.gjt.mm.mysql.Driver
+&nbsp; &lt;session-factory &gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- local connection properties --&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;property name="hibernate.connection.url"&gt;jdbc:mysql://localhost/TestDB&lt;/property&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;property name="hibernate.connection.driver_class"&gt;org.gjt.mm.mysql.Driver
     &lt;/property&gt; 
-    &lt;property name=&quot;hibernate.connection.username&quot;&gt;root&lt;/property&gt; 
-    &lt;property name=&quot;hibernate.connection.password&quot;&gt;&lt;/property&gt; 
-    &lt;!-- property name=&quot;hibernate.connection.pool_size&quot;&gt;&lt;/property --&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;property name="hibernate.connection.username"&gt;root&lt;/property&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;property name="hibernate.connection.password"&gt;&lt;/property&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- property name="hibernate.connection.pool_size"&gt;&lt;/property --&gt; 
 
-    &lt;!-- dialect for MySQL --&gt; 
-    &lt;property name=&quot;dialect&quot;&gt;net.sf.hibernate.dialect.MySQLDialect&lt;/property&gt; 
-    &lt;property name=&quot;hibernate.show_sql&quot;&gt;false&lt;/property&gt; 
-    &lt;property name=&quot;hibernate.use_outer_join&quot;&gt;true&lt;/property&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- dialect for MySQL --&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;property name="dialect"&gt;net.sf.hibernate.dialect.MySQLDialect&lt;/property&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;property name="hibernate.show_sql"&gt;false&lt;/property&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;property name="hibernate.use_outer_join"&gt;true&lt;/property&gt; 
 
-    &lt;mapping resource=&quot;Personnes.hbm&quot;/&gt; 
-    &lt;mapping resource=&quot;Grppers.hbm&quot;/&gt; 
-    &lt;mapping resource=&quot;Groupes.hbm&quot;/&gt; 
-  &lt;/session-factory&gt; 
-&lt;/hibernate-configuration&gt;</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-<p>&nbsp;</p>
-  <h3><!--nchpdeb--><a name="chap_19_1_6">19.1.6. <!--nchpfin-->La mise en oeuvre des classes g&eacute;n&eacute;r&eacute;es</a></h3> 
-  <p>Les diff&eacute;rentes classes qui vont mettre en oeuvre les classes g&eacute;n&eacute;r&eacute;es vont utiliser une classe utilitaire propos&eacute;e dans la documentation de Hibernate pour configurer et obtenir une session.</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>package com.jmd.test.hibernate; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;mapping resource="Personnes.hbm"/&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;mapping resource="Grppers.hbm"/&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;mapping resource="Groupes.hbm"/&gt; 
+&nbsp; &lt;/session-factory&gt; 
+&lt;/hibernate-configuration&gt;</code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_19_1_6">19.1.6. 
+     <!--nchpfin-->La mise en oeuvre des classes g&eacute;n&eacute;r&eacute;es</a></h3> 
+   <p>Les diff&eacute;rentes classes qui vont mettre en oeuvre les classes g&eacute;n&eacute;r&eacute;es vont utiliser une classe utilitaire propos&eacute;e dans la documentation de Hibernate pour configurer et obtenir une session.</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple :</td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>package com.jmd.test.hibernate; 
 
 import net.sf.hibernate.*; 
 import net.sf.hibernate.cfg.*; 
 
 public class HibernateUtil { 
 
-  private static final SessionFactory sessionFactory; 
+&nbsp; private static final SessionFactory sessionFactory; 
 
-  static { 
-    try { 
-      sessionFactory = new Configuration().configure() 
-                              .buildSessionFactory(); 
-    } catch (HibernateException ex) { 
-      throw new RuntimeException(&quot;Exception building SessionFactory: &quot; 
-            + ex.getMessage(), ex); 
-    } 
-  } 
+&nbsp; static { 
+&nbsp;&nbsp;&nbsp;&nbsp;try { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sessionFactory = new Configuration().configure() 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .buildSessionFactory(); 
+&nbsp;&nbsp;&nbsp;&nbsp;} catch (HibernateException ex) { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new RuntimeException("Exception building SessionFactory: " 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      + ex.getMessage(), ex); 
+&nbsp;&nbsp;&nbsp;&nbsp;} 
+&nbsp; } 
 
-  public static final ThreadLocal session = new ThreadLocal(); 
+&nbsp; public static final ThreadLocal session = new ThreadLocal(); 
 
-  public static Session currentSession() throws HibernateException { 
-    Session s = (Session) session.get(); 
-    // Open a new Session, if this Thread has none yet 
-    if (s == null) { 
-      s = sessionFactory.openSession(); 
-      session.set(s); 
-    } 
-    return s; 
-  } 
+&nbsp; public static Session currentSession() throws HibernateException { 
+&nbsp;&nbsp;&nbsp;&nbsp;Session s = (Session) session.get(); 
+&nbsp;&nbsp;&nbsp;&nbsp;// Open a new Session, if this Thread has none yet 
+&nbsp;&nbsp;&nbsp;&nbsp;if (s == null) { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s = sessionFactory.openSession(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;session.set(s); 
+&nbsp;&nbsp;&nbsp;&nbsp;} 
+&nbsp;&nbsp;&nbsp;&nbsp;return s; 
+&nbsp; } 
 
-  public static void closeSession() throws HibernateException { 
-    Session s = (Session) session.get(); 
-    session.set(null); 
-    if (s != null) 
-      s.close(); 
-  } 
-}</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <p>Le premier exemple va simplement afficher le nom de toutes les personnes.</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>import java.util.*;
+&nbsp; public static void closeSession() throws HibernateException { 
+&nbsp;&nbsp;&nbsp;&nbsp;Session s = (Session) session.get(); 
+&nbsp;&nbsp;&nbsp;&nbsp;session.set(null); 
+&nbsp;&nbsp;&nbsp;&nbsp;if (s != null) 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s.close(); 
+&nbsp; } 
+}</code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>Le premier exemple va simplement afficher le nom de toutes les personnes.</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple :</td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>import java.util.*;
 import net.sf.hibernate.*; 
 import com.jmd.test.hibernate.*; 
 
 public class Test1 { 
   
-  public static void main(String[] args) { 
-    try { 
-      Session session = HibernateUtil.currentSession(); 
-      
-      List list = session.find(&quot;from Personnes &quot;); 
-      Iterator it = list.iterator(); 
-      
+&nbsp;&nbsp;public static void main(String[] args) { 
+&nbsp;&nbsp;&nbsp;&nbsp;try { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Session session = HibernateUtil.currentSession(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      List list = session.find("from Personnes "); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Iterator it = list.iterator(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       while(it.hasNext()) 
-      { 
-        Personnes personne = (Personnes)it.next(); 
-        System.out.println(personne.getNompersonne()); 
-      } 
-      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Personnes personne = (Personnes)it.next(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  System.out.println(personne.getNompersonne()); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       HibernateUtil.closeSession(); 
-    } catch (HibernateException e) { 
-      e.printStackTrace(); 
-    } 
-  } 
-}</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>R&eacute;sultat&nbsp;:  
+&nbsp;&nbsp;&nbsp;&nbsp;} catch (HibernateException e) { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); 
+&nbsp;&nbsp;&nbsp;&nbsp;} 
+&nbsp;&nbsp;} 
+}</code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple :</td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>R&eacute;sultat&nbsp;:  
 nom1 
 nom2 
 nom3 
 nom4 
-nom5</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <p>Voici le m&ecirc;me exemple utilisant les classes g&eacute;n&eacute;r&eacute;s mettant en oeuvre le motif de conception DAO.</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>import java.util.Iterator; 
+nom5</code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>Voici le m&ecirc;me exemple utilisant les classes g&eacute;n&eacute;r&eacute;s mettant en oeuvre le motif de conception DAO.</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple :</td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>import java.util.Iterator; 
 import java.util.List; 
 import net.sf.hibernate.HibernateException; 
 import com.jmd.test.hibernate.Personnes; 
@@ -516,202 +508,181 @@ import com.jmd.test.hibernate.dao.PersonnesDAO;
 import com.jmd.test.hibernate.dao._RootDAO; 
 
 public class Test1DAO { 
-  public static void main(String[] args) { 
-    try { 
-      _RootDAO.initialize(); 
-      PersonnesDAO dao = new PersonnesDAO(); 
-      
+&nbsp;&nbsp;public static void main(String[] args) { 
+&nbsp;&nbsp;&nbsp;&nbsp;try { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_RootDAO.initialize(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PersonnesDAO dao = new PersonnesDAO(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       List liste = dao.findAll(); 
-      Iterator it = liste.iterator(); 
-      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Iterator it = liste.iterator(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       while (it.hasNext()) { 
-        Personnes personne = (Personnes) it.next(); 
-        System.out.println(personne.getNompersonne()); 
-      } 
-    } catch (HibernateException e) { 
-      e.printStackTrace(); 
-    } 
-  } 
-}</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <p>Le second exemple va retrouver un groupe, cr&eacute;er une nouvelle personne et l'ajouter au groupe trouv&eacute;.</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>import java.util.*; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Personnes personne = (Personnes) it.next(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(personne.getNompersonne()); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} 
+&nbsp;&nbsp;&nbsp;&nbsp;} catch (HibernateException e) { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); 
+&nbsp;&nbsp;&nbsp;&nbsp;} 
+&nbsp;&nbsp;} 
+}</code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>Le second exemple va retrouver un groupe, cr&eacute;er une nouvelle personne et l'ajouter au groupe trouv&eacute;.</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple :</td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>import java.util.*; 
 import net.sf.hibernate.*; 
 import com.jmd.test.hibernate.*; 
 
 public class Test2 { 
-  public static void main(String[] args) { 
-    try { 
-      Session session = HibernateUtil.currentSession(); 
-      Transaction tx = session.beginTransaction(); 
-      
+&nbsp;&nbsp;public static void main(String[] args) { 
+&nbsp;&nbsp;&nbsp;&nbsp;try { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Session session = HibernateUtil.currentSession(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transaction tx = session.beginTransaction(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       Personnes personne = new Personnes(); 
-      personne.setNompersonne(&quot;nom6&quot;); 
-      personne.setPrenompersonne(&quot;prenom6&quot;); 
-      personne.setCoeffpersonne(new Integer(46)); 
-      personne.setDatenaisspersonne(new Date()); 
-      session.save(personne); 
-      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;personne.setNompersonne("nom6"); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;personne.setPrenompersonne("prenom6"); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;personne.setCoeffpersonne(new Integer(46)); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;personne.setDatenaisspersonne(new Date()); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;session.save(personne); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       Groupes groupe = (Groupes) session.load(Groupes.class, new Integer(1)); 
-      Grppers grppres = new Grppers(); 
-      grppres.setIdpersonne(personne); 
-      grppres.setIdgroupe(groupe); 
-      session.save(grppres); 
-      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grppers grppres = new Grppers(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grppres.setIdpersonne(personne); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grppres.setIdgroupe(groupe); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;session.save(grppres); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       tx.commit(); 
-      HibernateUtil.closeSession(); 
-    } catch (HibernateException e) { 
-      e.printStackTrace(); 
-    } 
-  } 
-}</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <p>Voici le m&ecirc;me exemple utilisant les classes g&eacute;n&eacute;r&eacute;s mettant en oeuvre le motif de conception DAO.</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>import java.util.*; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HibernateUtil.closeSession(); 
+&nbsp;&nbsp;&nbsp;&nbsp;} catch (HibernateException e) { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); 
+&nbsp;&nbsp;&nbsp;&nbsp;} 
+&nbsp;&nbsp;} 
+}</code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>Voici le m&ecirc;me exemple utilisant les classes g&eacute;n&eacute;r&eacute;s mettant en oeuvre le motif de conception DAO.</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple :</td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>import java.util.*; 
 import net.sf.hibernate.*; 
 import com.jmd.test.hibernate.*; 
 import com.jmd.test.hibernate.dao.*; 
 
 public class Test2DAO { 
-  public static void main(String[] args) { 
-    try { 
-      _RootDAO.initialize(); 
-      Session session = _RootDAO.createSession(); 
-      Transaction tx = session.beginTransaction(); 
-      
+&nbsp;&nbsp;public static void main(String[] args) { 
+&nbsp;&nbsp;&nbsp;&nbsp;try { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_RootDAO.initialize(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Session session = _RootDAO.createSession(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transaction tx = session.beginTransaction(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       Personnes personne = new Personnes(); 
-      personne.setNompersonne(&quot;nom7&quot;); 
-      personne.setPrenompersonne(&quot;prenom7&quot;); 
-      personne.setCoeffpersonne(new Integer(46)); 
-      personne.setDatenaisspersonne(new Date()); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;personne.setNompersonne("nom7"); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;personne.setPrenompersonne("prenom7"); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;personne.setCoeffpersonne(new Integer(46)); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;personne.setDatenaisspersonne(new Date()); 
 
-      PersonnesDAO personnesDAO = new PersonnesDAO(); 
-      personnesDAO.save(personne, session); 
-      
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PersonnesDAO personnesDAO = new PersonnesDAO(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;personnesDAO.save(personne, session); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       GroupesDAO groupesDAO = new GroupesDAO(); 
-      Groupes groupe = groupesDAO.load(new Integer(1),session); 
-      Grppers grppres = new Grppers(); 
-      grppres.setIdpersonne(personne); 
-      grppres.setIdgroupe(groupe); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Groupes groupe = groupesDAO.load(new Integer(1),session); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grppers grppres = new Grppers(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grppres.setIdpersonne(personne); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grppres.setIdgroupe(groupe); 
 
-      GrppersDAO grppresDAO = new GrppersDAO(); 
-      grppresDAO.save(grppres, session); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GrppersDAO grppresDAO = new GrppersDAO(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grppresDAO.save(grppres, session); 
 
-      tx.commit(); 
-    } catch (HibernateException e) { 
-      e.printStackTrace(); 
-    } 
-  } 
-}</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br> 
-  <p>Si une des tables &agrave; traiter ne contient que des donn&eacute;es de r&eacute;f&eacute;rences (un identifiant et une valeur), alors Hibernate Synchronize propose de cr&eacute;er une classe particuli&egrave;re qui va encapsuler les donn&eacute;es non pas de fa&ccedil;on dynamique via un acc&egrave;s &agrave; la table mais de fa&ccedil;on statique.</p> 
-  <p>Dans ce cas, une bo&icirc;te de dialogue demande si la classe g&eacute;n&eacute;r&eacute;e doit l'&ecirc;tre de fa&ccedil;on statique (cr&eacute;ation comme une &eacute;num&eacute;ration)</p> 
-  <p>Exemple&nbsp;: la table groupes ne poss&egrave;de que deux champs (idgroupe et nomgroupe)</p> 
-  <p align="center"><img border=0 width=441 height=139
-src="images/hibernate012.png"></p> 
-  <p>En cliquant sur le bouton «&nbsp;Oui&nbsp;» la classe suivante est g&eacute;n&eacute;r&eacute;e&nbsp;:</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>package com.jmd.test.hibernate; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tx.commit(); 
+&nbsp;&nbsp;&nbsp;&nbsp;} catch (HibernateException e) { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace(); 
+&nbsp;&nbsp;&nbsp;&nbsp;} 
+&nbsp;&nbsp;} 
+}</code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>Si une des tables &agrave; traiter ne contient que des donn&eacute;es de r&eacute;f&eacute;rences (un identifiant et une valeur), alors Hibernate Synchronize propose de cr&eacute;er une classe particuli&egrave;re qui va encapsuler les donn&eacute;es non pas de fa&ccedil;on dynamique via un acc&egrave;s &agrave; la table mais de fa&ccedil;on statique.</p> 
+   <p>Dans ce cas, une bo&icirc;te de dialogue demande si la classe g&eacute;n&eacute;r&eacute;e doit l'&ecirc;tre de fa&ccedil;on statique (cr&eacute;ation comme une &eacute;num&eacute;ration)</p> 
+   <p>Exemple&nbsp;: la table groupes ne poss&egrave;de que deux champs (idgroupe et nomgroupe)</p> 
+   <p align="center"><img border="0" width="441" height="139" src="images/hibernate012.png"></p> 
+   <p>En cliquant sur le bouton &laquo;&nbsp;Oui&nbsp;&raquo; la classe suivante est g&eacute;n&eacute;r&eacute;e&nbsp;:</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple :</td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>package com.jmd.test.hibernate; 
 import java.io.Serializable; 
 import net.sf.hibernate.PersistentEnum; 
 
 /** 
- * This class has been automatically generated by Hibernate Synchronizer. 
- * For more information or documentation, visit The Hibernate Synchronizer page 
- * at http://www.binamics.com/hibernatesync or contact Joe Hudson at joe@binamics.com. 
- */ 
+&nbsp;* This class has been automatically generated by Hibernate Synchronizer. 
+&nbsp;* For more information or documentation, visit The Hibernate Synchronizer page 
+&nbsp;* at http://www.binamics.com/hibernatesync or contact Joe Hudson at joe@binamics.com. 
+&nbsp;*/ 
 public class Groupes implements Serializable, PersistentEnum { 
-  public static final Groupes GROUPE_2 = new Groupes(2); 
-  public static final Groupes GROUPE_1 = new Groupes(1); 
-  private final int code; 
+&nbsp;&nbsp;public static final Groupes GROUPE_2 = new Groupes(2); 
+&nbsp;&nbsp;public static final Groupes GROUPE_1 = new Groupes(1); 
+&nbsp;&nbsp;private final int code; 
 
-  protected Groupes(int code) { 
-    this.code = code; 
-  } 
+&nbsp;&nbsp;protected Groupes(int code) { 
+&nbsp;&nbsp;&nbsp;&nbsp;this.code = code; 
+&nbsp;&nbsp;} 
 
-  public int toInt() { return code; } 
+&nbsp;&nbsp;public int toInt() { return code; } 
 
-  public static Groupes fromInt(int code) { 
-    switch (code) { 
-      case 2: return GROUPE_2; 
-      case 1: return GROUPE_1; 
-      default: throw new RuntimeException(&quot;Unknown value: &quot; + code); 
-    } 
-  } 
+&nbsp;&nbsp;public static Groupes fromInt(int code) { 
+&nbsp;&nbsp;&nbsp;&nbsp;switch (code) { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 2: return GROUPE_2; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 1: return GROUPE_1; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default: throw new RuntimeException("Unknown value: " + code); 
+&nbsp;&nbsp;&nbsp;&nbsp;} 
+&nbsp;&nbsp;} 
 
-  public String toString () { 
-    switch (code) { 
-      case 2: return &quot;groupe 2&quot;; 
-      case 1: return &quot;groupe 1&quot;; 
-      default: return &quot;Unknown value&quot;; 
-    } 
-  } 
-}</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-<P>&nbsp;</P>
-</DIV>
-<!--PIED--><HR>
-<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="chap018.htm" ALT="18. Le plug-in TPTP (Test &amp; Performance Tools Platform)">
-<img src="FlecheG.gif" alt="18. Le plug-in TPTP (Test &amp; Performance Tools Platform)" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="partie5.htm" ALT="Partie 5 : le d&eacute;veloppement d'applications d'entreprise">
-<img src="FlecheD.gif" alt="Partie 5 : le d&eacute;veloppement d'applications d'entreprise" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-<td  rowspan="2" align="center" valign="middle">
-        <script language="JavaScript1.1">
+&nbsp;&nbsp;public String toString () { 
+&nbsp;&nbsp;&nbsp;&nbsp;switch (code) { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 2: return "groupe 2"; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 1: return "groupe 1"; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default: return "Unknown value"; 
+&nbsp;&nbsp;&nbsp;&nbsp;} 
+&nbsp;&nbsp;} 
+}</code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>&nbsp;</p> 
+  </div> 
+  <!--PIED-->
+  <hr> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
+    <tr> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="chap018.htm" alt="18. Le plug-in TPTP (Test &amp; Performance Tools Platform)"> <img src="FlecheG.gif" alt="18. Le plug-in TPTP (Test &amp; Performance Tools Platform)" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="partie5.htm" alt="Partie 5 : le d&eacute;veloppement d'applications d'entreprise"> <img src="FlecheD.gif" alt="Partie 5 : le d&eacute;veloppement d'applications d'entreprise" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
+     <td rowspan="2" align="center" valign="middle"> <script language="JavaScript1.1">
 <!--
 hsh = new Date();
 hsd = document;
@@ -726,31 +697,16 @@ if(parseFloat(navigator.appVersion)>=4)
 {Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
 hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
 //-->
-</script>
-        <noscript>
-        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
-        </noscript>
-        <!--//-->
-      </td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
-
-</BODY>
-</HTML>
-
-
-
-
-
-
-
-
-
-
-
-
-
+</script> 
+      <noscript> 
+       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience"></a> 
+      </noscript> 
+      <!--//--> </td> 
+    </tr> 
+    <tr> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
+    </tr> 
+   </tbody> 
+  </table>   
+ </body>
+</html>

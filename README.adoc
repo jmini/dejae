@@ -28,6 +28,7 @@ Il s'agit d'une modernisation du link:http://www.jmdoudoux.fr/accueil_java.htm#d
 
 * master: branche principale
 * orig: copie des fichiers originaux (encodage des fichiers : ISO_8859_1)
+* orig_fixed: Modification des fichiers HTML originaux à l'aide de JSoup (HTML réparé et mis en forme, caractères spéciaux encodés)
 
 //end::description[]
 

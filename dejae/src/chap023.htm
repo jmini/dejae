@@ -1,175 +1,163 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-            "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html>
-<head>
-<title>Struts et Eclipse</title>
-<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
-<meta name="description" content="">
-<meta name="keywords" content="java tutorial cours dej eclipse struts">
-<meta name="robots" content="all">
-<meta name="revisit-after" content="2 months">
-<meta http-equiv="Content-Language" content="fr-FX">
-<meta name="author" content="Jean Michel DOUDOUX">
-<link href="dej_style.css" rel="stylesheet" type="text/css">
-</head>
-<body> 
-<!--ENTETE--> <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="chap022.htm" ALT="22. Le d&eacute;veloppement d'applications web">
-<img src="FlecheG.gif" alt="22. Le d&eacute;veloppement d'applications web" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="chap024.htm" ALT="24.  Java Server Faces et Eclipse">
-<img src="FlecheD.gif" alt="24.  Java Server Faces et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
-<HR>
-
-<p>&nbsp;</p> 
-<h1><!--idrefpage value="struts" --><!--resumetitre value="d&eacute;taille au travers d'un exemple l'utilisation du plug-in Esay Struts pour d&eacute;veloppement des applications web utilisant Struts." --><!--nchpdeb--><a name="chap_23">23. <!--nchpfin--> Struts et Eclipse</a></h1> 
-<p>&nbsp;</p> 
-<!--chapitredeb-->
-<div align="right">
-  <table border="0" cellspacing="0" summary="titre">
-    <tr>
-      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td>
-<td width="50" valign="top"><img src="images/2.gif" alt="2" width="62" height="83" border="0"></td>
-<td width="50" valign="top"><img src="images/3.gif" alt="3" width="62" height="83" border="0"></td>
-    </tr>
-  </table>
-  <br>
-</div>
-<!--chapitrefin--> 
-<p>&nbsp;</p> 
-<div align="justify"> 
-  <p>Struts est un framework pour applications web d&eacute;velopp&eacute; par le projet Jakarta de la fondation Apache. C'est la plus populaire des frameworks pour le d&eacute;veloppement d'applications web avec Java .</p> 
-  <p>Struts met en oeuvre le mod&egrave;le MVC 2 (Mod&egrave;le / Vue / Contôleur) bas&eacute; sur une seule servlet et des JSP pour chaque application. L'application de ce mod&egrave;le permet une s&eacute;paration en trois partie distinctes de l'interface, des traitements et des donn&eacute;es de l'application.</p> 
-  <p>Struts se concentre sur la vue et le contrôleur. L'impl&eacute;mentation du mod&egrave;le est laiss&eacute;e libre aux d&eacute;veloppeurs : ils ont le choix d'utiliser des java beans, un outil de mapping  objet/relationnel ou des EJB.</p> 
-  <p>Pour le contrôleur, Struts propose une unique servlet par application qui lit la configuration de l'application dans un fichier au format XML. Cette servlet re&ccedil;oit toutes les requ&ecirc;tes de  l'utilisateur concernant l'application. En fonction du param&egrave;trage, il instancie un objet de type Action qui
-    contient les traitements et renvoie une valeur particuli&egrave;re &agrave; la servlet. Ceci lui permet de d&eacute;terminer la JSP qui affichera le r&eacute;sultat &agrave; l'utilisateur. </p> 
-  <p>Il existe un projet open source nomm&eacute; Easy Struts qui est un plug-in dont le but est de faciliter la mise en oeuvre de Struts avec Eclipse. Ce plug-in tr&egrave;s int&eacute;ressant et pratique ne semble malheureusement plus &eacute;voluer : il ne fonctionne d'ailleurs pas avec les versions 3.x de d'Eclipse.</p> 
-  <p>Cette section va mettre en oeuvre les outils suivants&nbsp;sous Windows : </p> 
-  <table border=1 cellspacing=0 cellpadding=4> 
+ <head> 
+  <title>Struts et Eclipse</title> 
+  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1"> 
+  <meta name="description" content=""> 
+  <meta name="keywords" content="java tutorial cours dej eclipse struts"> 
+  <meta name="robots" content="all"> 
+  <meta name="revisit-after" content="2 months"> 
+  <meta http-equiv="Content-Language" content="fr-FX"> 
+  <meta name="author" content="Jean Michel DOUDOUX"> 
+  <link href="dej_style.css" rel="stylesheet" type="text/css"> 
+ </head> 
+ <body> 
+  <!--ENTETE--> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
     <tr> 
-      <td valign=top class="Normal"> <p>Outil</p></td> 
-      <td valign=top class="Normal"> <p>Version</p></td> 
-      <td valign=top class="Normal"> <p>Rôle</p></td> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="chap022.htm" alt="22. Le d&eacute;veloppement d'applications web"> <img src="FlecheG.gif" alt="22. Le d&eacute;veloppement d'applications web" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap024.htm" alt="24.  Java Server Faces et Eclipse"> <img src="FlecheD.gif" alt="24.  Java Server Faces et Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
     </tr> 
     <tr> 
-      <td valign=top class="Normal"> <p>JDK</p></td> 
-      <td valign=top class="Normal"> <p>1.4.2_03</p></td> 
-      <td valign=top class="Normal">&nbsp; </td> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
     </tr> 
-    <tr> 
-      <td valign=top class="Normal"> <p>Eclipse</p></td> 
-      <td valign=top class="Normal">2.1</td> 
-      <td valign=top class="Normal"> <p>IDE</p></td> 
-    </tr> 
-    <tr> 
-      <td valign=top class="Normal"> <p>Tomcat</p></td> 
-      <td valign=top class="Normal"> <p>5.0.28</p></td> 
-      <td valign=top class="Normal"> <p>conteneur web</p></td> 
-    </tr> 
-    <tr> 
-      <td valign=top class="Normal"> <p>plug-in Tomcat de Sysdeo&nbsp;</p></td> 
-      <td valign=top class="Normal"> <p>3</p></td> 
-      <td valign=top class="Normal"> <p>arr&ecirc;t et d&eacute;marrage de Tomcat</p></td> 
-    </tr> 
-    <tr> 
-      <td valign=top class="Normal"> <p>plug-in Easy Struts</p></td> 
-      <td valign=top class="Normal"> <p>0.6.4</p></td> 
-      <td valign=top class="Normal"> <p>faciliter l'utilisation de Struts</p></td> 
-    </tr> 
+   </tbody> 
   </table> 
+  <hr> 
   <p>&nbsp;</p> 
-  <h2><!--nchpdeb--><a name="chap_23_1">23.1. <!--nchpfin--> Le plug-in Easy Struts</a></h2> 
-  <p>Le site officiel du plug-in Easy Struts est &agrave; l'url&nbsp;: <a href="http://easystruts.sourceforge.net/">http://easystruts.sourceforge.net/</a></p> 
-  <p>Ce plug-in permet notamment de faciliter la r&eacute;alisation de certaines t&acirc;ches et la cr&eacute;ation des &eacute;l&eacute;ments suivants&nbsp;: </p> 
-  <ul> 
-    <li>&quot;Add Easy Struts support&quot; :&nbsp; permet d'ajouter les &eacute;l&eacute;ments n&eacute;cessaire &agrave; l'utilisation de Struts dans l'application (fichier .jar, .tld, ...) et cr&eacute;&eacute; les fichiers de configuration</li> 
-    <li>&quot;Easy Form&quot; : cr&eacute;er une JSP avec une classe de type ActionForm associ&eacute;e et ajoute la d&eacute;finition de ce bean dans le fichier de configuration</li> 
-    <li>&quot;Easy Action&quot; : cr&eacute;er une classe de type Action et ajoute la definition du mapping de cette classe dans le fichier de configuration</li> 
-    <li>&quot;Easy Action associated with a form&quot; : cr&eacute;er une JSP avec une classe de type ActionForm associ&eacute;e, ajoute la d&eacute;finition de ce bean dans le fichier de configuration et cr&eacute;&eacute; une classe de type Action et ajoute la definition du mapping de cette classe
-      dans le fichier de configuration</li> 
-    <li>&quot;Easy Forward&quot; : cr&eacute;er des renvois d&eacute;di&eacute;s &agrave; une Action ou globaux</li> 
-    <li>&quot;Easy Exception&quot; : cr&eacute;er des handler pour les exceptions.</li> 
-    <li>&quot;Easy Message resources&quot; : cr&eacute;er des fichiers de ressources pour localiser l'application</li> 
-    <li>“Easy Plug-in&quot; : </li> 
-    <li>&quot;Easy Datasource&quot; : permet de d&eacute;finir une source de donn&eacute;es qui sera utilis&eacute;e dans l'application</li> 
-    <li>“Easy Module” : </li> 
-  </ul> 
+  <h1>
+   <!--idrefpage value="struts" -->
+   <!--resumetitre value="d&eacute;taille au travers d'un exemple l'utilisation du plug-in Esay Struts pour d&eacute;veloppement des applications web utilisant Struts." -->
+   <!--nchpdeb--><a name="chap_23">23. 
+    <!--nchpfin--> Struts et Eclipse</a></h1> 
   <p>&nbsp;</p> 
-  <h3><!--nchpdeb--><a name="chap_23_1_1">23.1.1. <!--nchpfin--> Installation et configuration d'Easy Struts</a></h3>
-  <p>Il y a deux fa&ccedil;ons pour installer Esay Struts&nbsp;: </p> 
-  <ul> 
+  <!--chapitredeb--> 
+  <div align="right"> 
+   <table border="0" cellspacing="0" summary="titre"> 
+    <tbody>
+     <tr> 
+      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td> 
+      <td width="50" valign="top"><img src="images/2.gif" alt="2" width="62" height="83" border="0"></td> 
+      <td width="50" valign="top"><img src="images/3.gif" alt="3" width="62" height="83" border="0"></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+  </div> 
+  <!--chapitrefin--> 
+  <p>&nbsp;</p> 
+  <div align="justify"> 
+   <p>Struts est un framework pour applications web d&eacute;velopp&eacute; par le projet Jakarta de la fondation Apache. C'est la plus populaire des frameworks pour le d&eacute;veloppement d'applications web avec Java .</p> 
+   <p>Struts met en oeuvre le mod&egrave;le MVC 2 (Mod&egrave;le / Vue / Cont&ocirc;leur) bas&eacute; sur une seule servlet et des JSP pour chaque application. L'application de ce mod&egrave;le permet une s&eacute;paration en trois partie distinctes de l'interface, des traitements et des donn&eacute;es de l'application.</p> 
+   <p>Struts se concentre sur la vue et le contr&ocirc;leur. L'impl&eacute;mentation du mod&egrave;le est laiss&eacute;e libre aux d&eacute;veloppeurs : ils ont le choix d'utiliser des java beans, un outil de mapping&nbsp; objet/relationnel ou des EJB.</p> 
+   <p>Pour le contr&ocirc;leur, Struts propose une unique servlet par application qui lit la configuration de l'application dans un fichier au format XML. Cette servlet re&ccedil;oit toutes les requ&ecirc;tes de&nbsp; l'utilisateur concernant l'application. En fonction du param&egrave;trage, il instancie un objet de type Action qui contient les traitements et renvoie une valeur particuli&egrave;re &agrave; la servlet. Ceci lui permet de d&eacute;terminer la JSP qui affichera le r&eacute;sultat &agrave; l'utilisateur. </p> 
+   <p>Il existe un projet open source nomm&eacute; Easy Struts qui est un plug-in dont le but est de faciliter la mise en oeuvre de Struts avec Eclipse. Ce plug-in tr&egrave;s int&eacute;ressant et pratique ne semble malheureusement plus &eacute;voluer : il ne fonctionne d'ailleurs pas avec les versions 3.x de d'Eclipse.</p> 
+   <p>Cette section va mettre en oeuvre les outils suivants&nbsp;sous Windows : </p> 
+   <table border="1" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td valign="top" class="Normal"> <p>Outil</p></td> 
+      <td valign="top" class="Normal"> <p>Version</p></td> 
+      <td valign="top" class="Normal"> <p>R&ocirc;le</p></td> 
+     </tr> 
+     <tr> 
+      <td valign="top" class="Normal"> <p>JDK</p></td> 
+      <td valign="top" class="Normal"> <p>1.4.2_03</p></td> 
+      <td valign="top" class="Normal">&nbsp; </td> 
+     </tr> 
+     <tr> 
+      <td valign="top" class="Normal"> <p>Eclipse</p></td> 
+      <td valign="top" class="Normal">2.1</td> 
+      <td valign="top" class="Normal"> <p>IDE</p></td> 
+     </tr> 
+     <tr> 
+      <td valign="top" class="Normal"> <p>Tomcat</p></td> 
+      <td valign="top" class="Normal"> <p>5.0.28</p></td> 
+      <td valign="top" class="Normal"> <p>conteneur web</p></td> 
+     </tr> 
+     <tr> 
+      <td valign="top" class="Normal"> <p>plug-in Tomcat de Sysdeo&nbsp;</p></td> 
+      <td valign="top" class="Normal"> <p>3</p></td> 
+      <td valign="top" class="Normal"> <p>arr&ecirc;t et d&eacute;marrage de Tomcat</p></td> 
+     </tr> 
+     <tr> 
+      <td valign="top" class="Normal"> <p>plug-in Easy Struts</p></td> 
+      <td valign="top" class="Normal"> <p>0.6.4</p></td> 
+      <td valign="top" class="Normal"> <p>faciliter l'utilisation de Struts</p></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_23_1">23.1. 
+     <!--nchpfin--> Le plug-in Easy Struts</a></h2> 
+   <p>Le site officiel du plug-in Easy Struts est &agrave; l'url&nbsp;: <a href="http://easystruts.sourceforge.net/">http://easystruts.sourceforge.net/</a></p> 
+   <p>Ce plug-in permet notamment de faciliter la r&eacute;alisation de certaines t&acirc;ches et la cr&eacute;ation des &eacute;l&eacute;ments suivants&nbsp;: </p> 
+   <ul> 
+    <li>"Add Easy Struts support" :&nbsp; permet d'ajouter les &eacute;l&eacute;ments n&eacute;cessaire &agrave; l'utilisation de Struts dans l'application (fichier .jar, .tld, ...) et cr&eacute;&eacute; les fichiers de configuration</li> 
+    <li>"Easy Form" : cr&eacute;er une JSP avec une classe de type ActionForm associ&eacute;e et ajoute la d&eacute;finition de ce bean dans le fichier de configuration</li> 
+    <li>"Easy Action" : cr&eacute;er une classe de type Action et ajoute la definition du mapping de cette classe dans le fichier de configuration</li> 
+    <li>"Easy Action associated with a form" : cr&eacute;er une JSP avec une classe de type ActionForm associ&eacute;e, ajoute la d&eacute;finition de ce bean dans le fichier de configuration et cr&eacute;&eacute; une classe de type Action et ajoute la definition du mapping de cette classe dans le fichier de configuration</li> 
+    <li>"Easy Forward" : cr&eacute;er des renvois d&eacute;di&eacute;s &agrave; une Action ou globaux</li> 
+    <li>"Easy Exception" : cr&eacute;er des handler pour les exceptions.</li> 
+    <li>"Easy Message resources" : cr&eacute;er des fichiers de ressources pour localiser l'application</li> 
+    <li>&#x93;Easy Plug-in" : </li> 
+    <li>"Easy Datasource" : permet de d&eacute;finir une source de donn&eacute;es qui sera utilis&eacute;e dans l'application</li> 
+    <li>&#x93;Easy Module&#x94; : </li> 
+   </ul> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_23_1_1">23.1.1. 
+     <!--nchpfin--> Installation et configuration d'Easy Struts</a></h3> 
+   <p>Il y a deux fa&ccedil;ons pour installer Esay Struts&nbsp;: </p> 
+   <ul> 
     <li>t&eacute;l&eacute;chargez et d&eacute;compressez le fichier org.easystruts.eclipse_0.6.4.zip dans le r&eacute;pertoire &laquo;&nbsp;plugins&nbsp;&raquo; d'Eclipse puis lancer Eclipse.</li> 
-    <li>utilisez le gestionnaire de mises &agrave; jour avec l'url<br> 
-    <a
-     href="http://easystruts.sourceforge.net/eclipse/updates/site.xml">http://easystruts.sourceforge.net/eclipse/updates/site.xml</a></li> 
-  </ul> 
-  <p>Editez les pr&eacute;f&eacute;rences (menu Fen&ecirc;tre/Pr&eacute;f&eacute;rences) et s&eacute;lectionnez Easy Struts.</p> 
-  <p>L'onglet &laquo;&nbsp;Style&nbsp;&raquo; permet de d&eacute;finir des comportements par d&eacute;faut.</p> 
-  <p align="center"><img border=0 width=652 height=388 src="images/struts001.png"></p> 
-  <p>L'onglet &laquo;&nbsp;Struts 1.0&nbsp;&raquo; et &laquo;&nbsp;Struts 1.1&nbsp;&raquo; permet de fournir l'emplacement requis par la version de Struts d&eacute;sign&eacute;e par l'onglet.</p> 
-  <p align="center"><img border=0 width=599 height=452 src="images/struts002.png"></p> 
-  <p>Il faut imp&eacute;rativement ajouter les fichiers .jar requis pas Struts ainsi que les fichier .tld des biblioth&egrave;ques personnalis&eacute;es de Struts.</p> 
-  <p align="center"><img border=0 width=600 height=440 src="images/struts003.png"></p> 
-  <p>Une fois tous les param&egrave;tres renseign&eacute;s, cliquez sur le bouton &laquo;&nbsp;Appliquer&nbsp;&raquo; puis sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;.</p> 
-  <p>Il faut cr&eacute;er un projet de type &laquo;&nbsp;Java/Projet Tomcat&nbsp;&raquo; qui va contenir l'application web.</p> 
-  <p align="center"><img border=0 width=500 height=227 src="images/struts004.png"></p> 
-  <p>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;</p> 
-  <p align="center"><img border=0 width=512 height=262 src="images/struts005.png"></p> 
-  <p>Saisissez le nom du projet, par exemple &laquo;&nbsp;test_struts&nbsp;&raquo; et cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.</p> 
-  <p align="center"><img border=0 width=512 height=229 src="images/struts006.png"></p> 
-  <p>Cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;</p> 
-  <p>La structure du projet est la suivante&nbsp;: </p> 
-  <p align="center"><img border=0 width=122 height=97 src="images/struts007.png"></p> 
-  <p>Il faut s&eacute;lectionner les propri&eacute;t&eacute;s du projet. S&eacute;lectionnez l'option &laquo;&nbsp;Easy Struts&nbsp;&raquo;&nbsp;</p> 
-  <p align="center"><img border=0 width=623 height=394 src="images/struts008.png"></p> 
-  <p>Cliquez sur le bouton &laquo;&nbsp;Add Struts support to project&nbsp;... &raquo;. Une bo&icirc;te de dialogue s'ouvre pour permettre la s&eacute;lection des options</p> 
-  <p align="center"><img border=0 width=597 height=377 src="images/struts009.png"></p> 
-  <p>Si les param&egrave;tres ne sont pas correctement renseign&eacute;s, un message d'erreur est affich&eacute;</p> 
-  <p align="center"><img border=0 width=598 height=67 src="images/struts010.png"></p> 
-  <p>Il saisir les informations n&eacute;cessaire &agrave; la configuration de l'application.</p> 
-  <p align="center"><img border=0 width=597 height=378 src="images/struts011.png"></p> 
-  <p>Renseignez les informations n&eacute;cessaires et cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;. Les fichiers sont copi&eacute;s et les propri&eacute;t&eacute;s sont mises &agrave; jour.</p> 
-  <p align="center"><img border=0 width=679 height=340 src="images/struts012.png"></p> 
-  <p>Cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;.</p> 
-  <p>Le fichier web.xml g&eacute;n&eacute;r&eacute; est le suivant&nbsp;: </p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center > 
-    <tr bgcolor="#A6A5C2"> 
+    <li>utilisez le gestionnaire de mises &agrave; jour avec l'url<br> <a href="http://easystruts.sourceforge.net/eclipse/updates/site.xml">http://easystruts.sourceforge.net/eclipse/updates/site.xml</a></li> 
+   </ul> 
+   <p>Editez les pr&eacute;f&eacute;rences (menu Fen&ecirc;tre/Pr&eacute;f&eacute;rences) et s&eacute;lectionnez Easy Struts.</p> 
+   <p>L'onglet &laquo;&nbsp;Style&nbsp;&raquo; permet de d&eacute;finir des comportements par d&eacute;faut.</p> 
+   <p align="center"><img border="0" width="652" height="388" src="images/struts001.png"></p> 
+   <p>L'onglet &laquo;&nbsp;Struts 1.0&nbsp;&raquo; et &laquo;&nbsp;Struts 1.1&nbsp;&raquo; permet de fournir l'emplacement requis par la version de Struts d&eacute;sign&eacute;e par l'onglet.</p> 
+   <p align="center"><img border="0" width="599" height="452" src="images/struts002.png"></p> 
+   <p>Il faut imp&eacute;rativement ajouter les fichiers .jar requis pas Struts ainsi que les fichier .tld des biblioth&egrave;ques personnalis&eacute;es de Struts.</p> 
+   <p align="center"><img border="0" width="600" height="440" src="images/struts003.png"></p> 
+   <p>Une fois tous les param&egrave;tres renseign&eacute;s, cliquez sur le bouton &laquo;&nbsp;Appliquer&nbsp;&raquo; puis sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;.</p> 
+   <p>Il faut cr&eacute;er un projet de type &laquo;&nbsp;Java/Projet Tomcat&nbsp;&raquo; qui va contenir l'application web.</p> 
+   <p align="center"><img border="0" width="500" height="227" src="images/struts004.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;</p> 
+   <p align="center"><img border="0" width="512" height="262" src="images/struts005.png"></p> 
+   <p>Saisissez le nom du projet, par exemple &laquo;&nbsp;test_struts&nbsp;&raquo; et cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="512" height="229" src="images/struts006.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;</p> 
+   <p>La structure du projet est la suivante&nbsp;: </p> 
+   <p align="center"><img border="0" width="122" height="97" src="images/struts007.png"></p> 
+   <p>Il faut s&eacute;lectionner les propri&eacute;t&eacute;s du projet. S&eacute;lectionnez l'option &laquo;&nbsp;Easy Struts&nbsp;&raquo;&nbsp;</p> 
+   <p align="center"><img border="0" width="623" height="394" src="images/struts008.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Add Struts support to project&nbsp;... &raquo;. Une bo&icirc;te de dialogue s'ouvre pour permettre la s&eacute;lection des options</p> 
+   <p align="center"><img border="0" width="597" height="377" src="images/struts009.png"></p> 
+   <p>Si les param&egrave;tres ne sont pas correctement renseign&eacute;s, un message d'erreur est affich&eacute;</p> 
+   <p align="center"><img border="0" width="598" height="67" src="images/struts010.png"></p> 
+   <p>Il saisir les informations n&eacute;cessaire &agrave; la configuration de l'application.</p> 
+   <p align="center"><img border="0" width="597" height="378" src="images/struts011.png"></p> 
+   <p>Renseignez les informations n&eacute;cessaires et cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;. Les fichiers sont copi&eacute;s et les propri&eacute;t&eacute;s sont mises &agrave; jour.</p> 
+   <p align="center"><img border="0" width="679" height="340" src="images/struts012.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;.</p> 
+   <p>Le fichier web.xml g&eacute;n&eacute;r&eacute; est le suivant&nbsp;: </p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
-    </tr> 
-    <tr> 
-      <td> <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 
-&lt;!DOCTYPE web-app PUBLIC &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN&quot; 
-    &quot;http://java.sun.com/j2ee/dtds/web-app_2_3.dtd&quot;&gt; 
+     </tr> 
+     <tr> 
+      <td> <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+&lt;!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" 
+    "http://java.sun.com/j2ee/dtds/web-app_2_3.dtd"&gt; 
 &lt;web-app&gt; 
     &lt;servlet&gt; 
         &lt;servlet-name&gt;action&lt;/servlet-name&gt; 
@@ -193,19 +181,21 @@
         &lt;url-pattern&gt;*.do&lt;/url-pattern&gt; 
     &lt;/servlet-mapping&gt; 
 &lt;/web-app&gt;</code></pre></td> 
-    </tr> 
-  </table> 
-  <br> 
-  <p>Le fichier struts-config.xml g&eacute;n&eacute;r&eacute; est le suivant&nbsp;: </p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center > 
-    <tr bgcolor="#A6A5C2"> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>Le fichier struts-config.xml g&eacute;n&eacute;r&eacute; est le suivant&nbsp;: </p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
-    </tr> 
-    <tr> 
-      <td> <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 
+     </tr> 
+     <tr> 
+      <td> <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
 &lt;!DOCTYPE struts-config PUBLIC 
-    &quot;-//Apache Software Foundation//DTD Struts Configuration 1.1//EN&quot;
-    &quot;http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd&quot;&gt; 
+    "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+    "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd"&gt; 
 &lt;struts-config&gt; 
     &lt;data-sources /&gt; 
     &lt;form-beans /&gt; 
@@ -213,62 +203,63 @@
     &lt;global-forwards /&gt; 
     &lt;action-mappings /&gt; 
     &lt;controller /&gt; 
-    &lt;message-resources parameter=&quot;com.jmd.test.struts.ApplicationResources&quot; /&gt; 
+    &lt;message-resources parameter="com.jmd.test.struts.ApplicationResources" /&gt; 
 &lt;/struts-config&gt;</code></pre></td> 
-    </tr> 
-  </table> 
-  <br> 
-  <p>La structure du projet est alors la suivante&nbsp;: </p>
-  <p align="center"><img border=0 width=178 height=355 src="images/struts013.png"></p>
-  <p>Il faut ensuite cr&eacute;er une nouvelle entit&eacute; de type &laquo;&nbsp;Java / Easy Struts / Easy Action associated with form&nbsp;&raquo;.</p> 
-  <p align="center"><img border=0 width=500 height=340 src="images/struts014.png"></p> 
-  <p>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;. La page suivante permet de renseigner les caract&eacute;ristiques de la page.</p> 
-  <p align="center"><img border=0 width=585 height=514 src="images/struts015.png"></p> 
-  <p>Renseignez le &laquo;&nbsp;Use case&nbsp;&raquo; avec le nom logique de la page, par exemple &laquo;&nbsp;Login&nbsp;&raquo;. Automatiquement les champs Form name et Form Type sont pr&eacute;-renseign&eacute;s en fonction du &laquo;&nbsp;Use Case&nbsp;&raquo; saisi et des propri&eacute;t&eacute;s
-    saisies pour Struts.</p> 
-  <p>Pour ajouter des propri&eacute;t&eacute;s, il suffit de cliquer sur le bouton &laquo;&nbsp;Add&nbsp;&raquo;</p> 
-  <p align="center"><img border=0 width=334 height=197 src="images/struts016.png"></p> 
-  <p>Il suffit alors de renseigner les caract&eacute;ristiques de la donn&eacute;e&nbsp;: le nom, le type, la valeur initiale et le mode de saisie dans la JSP.</p> 
-  <p>Pour valider chaque donn&eacute;e, il faut cliquer sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;. Une fois la saisie termin&eacute;e, il faut cliquer sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;.</p> 
-  <p>Dans l'exemple de cette section, deux donn&eacute;es sont ajout&eacute;es&nbsp;: </p> 
-  <ul> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>La structure du projet est alors la suivante&nbsp;: </p> 
+   <p align="center"><img border="0" width="178" height="355" src="images/struts013.png"></p> 
+   <p>Il faut ensuite cr&eacute;er une nouvelle entit&eacute; de type &laquo;&nbsp;Java / Easy Struts / Easy Action associated with form&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="500" height="340" src="images/struts014.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;. La page suivante permet de renseigner les caract&eacute;ristiques de la page.</p> 
+   <p align="center"><img border="0" width="585" height="514" src="images/struts015.png"></p> 
+   <p>Renseignez le &laquo;&nbsp;Use case&nbsp;&raquo; avec le nom logique de la page, par exemple &laquo;&nbsp;Login&nbsp;&raquo;. Automatiquement les champs Form name et Form Type sont pr&eacute;-renseign&eacute;s en fonction du &laquo;&nbsp;Use Case&nbsp;&raquo; saisi et des propri&eacute;t&eacute;s saisies pour Struts.</p> 
+   <p>Pour ajouter des propri&eacute;t&eacute;s, il suffit de cliquer sur le bouton &laquo;&nbsp;Add&nbsp;&raquo;</p> 
+   <p align="center"><img border="0" width="334" height="197" src="images/struts016.png"></p> 
+   <p>Il suffit alors de renseigner les caract&eacute;ristiques de la donn&eacute;e&nbsp;: le nom, le type, la valeur initiale et le mode de saisie dans la JSP.</p> 
+   <p>Pour valider chaque donn&eacute;e, il faut cliquer sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;. Une fois la saisie termin&eacute;e, il faut cliquer sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;.</p> 
+   <p>Dans l'exemple de cette section, deux donn&eacute;es sont ajout&eacute;es&nbsp;: </p> 
+   <ul> 
     <li>nom de type String</li> 
     <li>motDePasse de type String</li> 
-  </ul> 
-  <p align="center"><img border=0 width=585 height=511 src="images/struts017.png"></p> 
-  <p>Cliquez sur le bouton &laquo;&nbsp;suivant&nbsp;&raquo;</p> 
-  <p>La page suivante permet de saisir les renseignements sur la classe Action qui sera g&eacute;n&eacute;r&eacute;e.</p> 
-  <p align="center"><img border=0 width=585 height=534 src="images/struts018.png"></p> 
-  <p>Les divers renseignements saisis vont permettre de cr&eacute;er la JSP et de modifier le fichier struts-config.xml</p> 
-  <p>Une fois les donn&eacute;es saisies, cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.</p> 
-  <p>La page suivante permet de pr&eacute;ciser les renvois et les captures d'exceptions associ&eacute;s pour l'Action.</p> 
-  <p align="center"><img border=0 width=491 height=319 src="images/struts019.png"></p> 
-  <p>Pour ajouter un renvoi (forward), il faut cliquer sur le bouton &laquo;&nbsp;Add&nbsp;&raquo; correspondant.</p> 
-  <p align="center"><img border=0 width=378 height=149 src="images/struts020.png"></p> 
-  <p>Il faut alors saisir le nom et le chemin du renvoi.</p> 
-  <p align="center"><img border=0 width=378 height=149 src="images/struts021.png"></p> 
-  <p>Une fois les renvois ajout&eacute;s, cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;.</p> 
-  <p>Si n&eacute;cessaire, proc&eacute;dez de la m&ecirc;me fa&ccedil;on avec les captures d'exceptions.</p> 
-  <p align="center"><img border=0 width=486 height=321 src="images/struts022.png"></p> 
-  <p>Cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;.</p> 
-  <p>Le fichier struts-config.xml est modifi&eacute; pour tenir compte des &eacute;l&eacute;ments param&eacute;tr&eacute;s dans l'assistant.</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center > 
-    <tr bgcolor="#A6A5C2"> 
+   </ul> 
+   <p align="center"><img border="0" width="585" height="511" src="images/struts017.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;suivant&nbsp;&raquo;</p> 
+   <p>La page suivante permet de saisir les renseignements sur la classe Action qui sera g&eacute;n&eacute;r&eacute;e.</p> 
+   <p align="center"><img border="0" width="585" height="534" src="images/struts018.png"></p> 
+   <p>Les divers renseignements saisis vont permettre de cr&eacute;er la JSP et de modifier le fichier struts-config.xml</p> 
+   <p>Une fois les donn&eacute;es saisies, cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.</p> 
+   <p>La page suivante permet de pr&eacute;ciser les renvois et les captures d'exceptions associ&eacute;s pour l'Action.</p> 
+   <p align="center"><img border="0" width="491" height="319" src="images/struts019.png"></p> 
+   <p>Pour ajouter un renvoi (forward), il faut cliquer sur le bouton &laquo;&nbsp;Add&nbsp;&raquo; correspondant.</p> 
+   <p align="center"><img border="0" width="378" height="149" src="images/struts020.png"></p> 
+   <p>Il faut alors saisir le nom et le chemin du renvoi.</p> 
+   <p align="center"><img border="0" width="378" height="149" src="images/struts021.png"></p> 
+   <p>Une fois les renvois ajout&eacute;s, cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;.</p> 
+   <p>Si n&eacute;cessaire, proc&eacute;dez de la m&ecirc;me fa&ccedil;on avec les captures d'exceptions.</p> 
+   <p align="center"><img border="0" width="486" height="321" src="images/struts022.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;.</p> 
+   <p>Le fichier struts-config.xml est modifi&eacute; pour tenir compte des &eacute;l&eacute;ments param&eacute;tr&eacute;s dans l'assistant.</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
-    </tr> 
-    <tr> 
-      <td> <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 
+     </tr> 
+     <tr> 
+      <td> <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
 &lt;!DOCTYPE struts-config PUBLIC 
-    &quot;-//Apache Software Foundation//DTD Struts Configuration 1.1//EN&quot; 
-    &quot;http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd&quot;&gt; 
+    "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" 
+    "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd"&gt; 
 &lt;struts-config&gt; 
     &lt;!-- ========== Data Source Configuration =============================== --&gt; 
     &lt;data-sources /&gt; 
     &lt;!-- ========== Form Bean Definitions ================================== --&gt; 
     &lt;form-beans&gt; 
-        &lt;form-bean name=&quot;loginForm&quot; type=&quot;com.jmd.test.struts.form.LoginForm&quot;&gt; 
-            &lt;form-property name=&quot;motDePasse&quot; type=&quot;java.lang.String&quot; /&gt; 
-            &lt;form-property name=&quot;nom&quot; type=&quot;java.lang.String&quot; /&gt; 
+        &lt;form-bean name="loginForm" type="com.jmd.test.struts.form.LoginForm"&gt; 
+            &lt;form-property name="motDePasse" type="java.lang.String" /&gt; 
+            &lt;form-property name="nom" type="java.lang.String" /&gt; 
         &lt;/form-bean&gt; 
     &lt;/form-beans&gt; 
     &lt;!-- ========== Global Exception Definitions ============================== --&gt; 
@@ -278,186 +269,178 @@
     &lt;!-- ========== Action Mapping Definitions =============================== --&gt; 
     &lt;action-mappings&gt; 
         &lt;action 
-            attribute=&quot;loginForm&quot; 
-            input=&quot;/form/login.jsp&quot; 
-            name=&quot;loginForm&quot; 
-            path=&quot;/login&quot; 
-            type=&quot;com.jmd.test.struts.action.LoginAction&quot;&gt; 
-            &lt;forward name=&quot;succes&quot; path=&quot;/form/accueil.jsp&quot; /&gt; 
-            &lt;forward name=&quot;echec&quot; path=&quot;/form/login.jsp&quot; /&gt; 
+            attribute="loginForm" 
+            input="/form/login.jsp" 
+            name="loginForm" 
+            path="/login" 
+            type="com.jmd.test.struts.action.LoginAction"&gt; 
+            &lt;forward name="succes" path="/form/accueil.jsp" /&gt; 
+            &lt;forward name="echec" path="/form/login.jsp" /&gt; 
         &lt;/action&gt; 
     &lt;/action-mappings&gt; 
     &lt;!-- ========== Controller Configuration ================================ --&gt; 
     &lt;controller /&gt; 
     &lt;!-- ========== Message Resources Definitions ============================ --&gt; 
-    &lt;message-resources parameter=&quot;com.jmd.test.struts.ApplicationResources&quot; /&gt; 
+    &lt;message-resources parameter="com.jmd.test.struts.ApplicationResources" /&gt; 
     &lt;!-- ========== Plug Ins Configuration ================================= --&gt; 
 &lt;/struts-config&gt;</code></pre></td> 
-    </tr> 
-  </table> 
-  <br> 
-  <p>Le fichier login.jsp est cr&eacute;&eacute; dans le r&eacute;pertoire form</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center > 
-    <tr bgcolor="#A6A5C2"> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>Le fichier login.jsp est cr&eacute;&eacute; dans le r&eacute;pertoire form</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
-    </tr> 
-    <tr> 
-      <td> <pre><code>&lt;%@ taglib uri=&quot;/WEB-INF/struts-bean.tld&quot; prefix=&quot;bean&quot;%&gt;  
-&lt;%@ taglib uri=&quot;/WEB-INF/struts-html.tld&quot; prefix=&quot;html&quot;%&gt;  
+     </tr> 
+     <tr> 
+      <td> <pre><code>&lt;%@ taglib uri="/WEB-INF/struts-bean.tld" prefix="bean"%&gt;  
+&lt;%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html"%&gt;  
 &lt;html&gt;  
    &lt;head&gt; 
-         &lt;meta name=&quot;Generator&quot; content=&quot;Easy Struts Xslt generator for Eclipse.&quot;&gt; 
+         &lt;meta name="Generator" content="Easy Struts Xslt generator for Eclipse."&gt; 
          &lt;title&gt;Struts Form for loginForm&lt;/title&gt; 
    &lt;/head&gt; 
    &lt;body&gt; 
-         &lt;html:form action=&quot;/login&quot;&gt; 
-               motDePasse : &lt;html:text property=&quot;motDePasse&quot;/&gt;
-               &lt;html:errors property=&quot;motDePasse&quot;/&gt;&lt;/br&gt; 
-               nom : &lt;html:text property=&quot;nom&quot;/&gt;&lt;html:errors property=&quot;nom&quot;/&gt;&lt;/br&gt; 
+         &lt;html:form action="/login"&gt; 
+               motDePasse : &lt;html:text property="motDePasse"/&gt;
+               &lt;html:errors property="motDePasse"/&gt;&lt;/br&gt; 
+               nom : &lt;html:text property="nom"/&gt;&lt;html:errors property="nom"/&gt;&lt;/br&gt; 
                &lt;html:submit/&gt;&lt;html:cancel/&gt; 
          &lt;/html:form&gt; 
    &lt;body&gt; 
 &lt;/html&gt;</code></pre></td> 
-    </tr> 
-  </table> 
-  <br> 
-  <p>Il faut modifier le fichier LoginForm.java pour mettre le code &agrave; ex&eacute;cuter lors de la validation des donn&eacute;es dans la m&eacute;thode validate() &agrave; la place de la lev&eacute;e de l'exception de type UnsupportedOperationException</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center > 
-    <tr bgcolor="#A6A5C2"> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>Il faut modifier le fichier LoginForm.java pour mettre le code &agrave; ex&eacute;cuter lors de la validation des donn&eacute;es dans la m&eacute;thode validate() &agrave; la place de la lev&eacute;e de l'exception de type UnsupportedOperationException</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
-    </tr> 
-    <tr> 
+     </tr> 
+     <tr> 
       <td> <pre><code>  public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) { 
     ActionErrors erreurs = new ActionErrors(); 
-    if (nom == null || nom.equals(&quot;&quot;)) { 
-      erreurs.add(&quot;nom&quot;, new ActionError(&quot;error.login.nommanquant&quot;)); 
+    if (nom == null || nom.equals("")) { 
+      erreurs.add("nom", new ActionError("error.login.nommanquant")); 
     } 
     return erreurs; 
   }</code></pre></td> 
-    </tr> 
-  </table> 
-  <br> 
-  <p>Il faut ajouter une clause d'importation sur la classe org.apache.struts.action.ActionError</p> 
-  <p>Il faut modifier le fichier LoginAction.java pour mettre le code a &eacute;x&eacute;cuter lors des traitements dans la m&eacute;thode execute() &agrave; la pace de la lev&eacute;e de l'exception de type UnsupportedOperationException</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center > 
-    <tr bgcolor="#A6A5C2"> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>Il faut ajouter une clause d'importation sur la classe org.apache.struts.action.ActionError</p> 
+   <p>Il faut modifier le fichier LoginAction.java pour mettre le code a &eacute;x&eacute;cuter lors des traitements dans la m&eacute;thode execute() &agrave; la pace de la lev&eacute;e de l'exception de type UnsupportedOperationException</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
-    </tr> 
-    <tr> 
+     </tr> 
+     <tr> 
       <td> <pre><code>  public ActionForward execute(ActionMapping mapping, ActionForm form, 
           HttpServletRequest request, HttpServletResponse response) throws Exception { 
     ActionForward resultat = null; 
     LoginForm loginForm = (LoginForm) form; 
     String nom = loginForm.getNom(); 
     String mdp = loginForm.getMotDePasse(); 
-    request.setAttribute(&quot;nom&quot;, nom); 
-    if (nom.equals(&quot;test&quot;) &amp;&amp; mdp.equals(&quot;test&quot;)) { 
-      resultat = (mapping.findForward(&quot;succes&quot;)); 
+    request.setAttribute("nom", nom); 
+    if (nom.equals("test") &amp;&amp; mdp.equals("test")) { 
+      resultat = (mapping.findForward("succes")); 
     } else { 
-      resultat = (mapping.findForward(&quot;echec&quot;)); 
+      resultat = (mapping.findForward("echec")); 
     } 
     return resultat; 
   }</code></pre></td> 
-    </tr> 
-  </table> 
-  <br> 
-  <p>Il faut modifier le fichier ApplicationResources.properties se trouvant dans le repertoire WEB-INF/classes/com/jmd/test/struts</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center > 
-    <tr bgcolor="#A6A5C2"> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>Il faut modifier le fichier ApplicationResources.properties se trouvant dans le repertoire WEB-INF/classes/com/jmd/test/struts</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
-    </tr> 
-    <tr> 
+     </tr> 
+     <tr> 
       <td> <pre><code> # Resources for parameter 'com.jmd.test.struts.ApplicationResources'  
  # Project P/test_struts  
  errors.header=&lt;ul&gt;  
  errors.footer=&lt;/ul&gt;  
  error.login.nommanquant=&lt;li&gt;La saisie du nom de l'utilisateur est obligatoire&lt;/li&gt;</code></pre></td> 
-    </tr> 
-  </table> 
-  <br> 
-  <p>Il ensuite cr&eacute;er une nouvele entit&eacute; de type&nbsp; type &laquo;&nbsp;Java / Easy Struts / Easy Form &raquo; dont le &laquo;&nbsp;Use Case&nbsp;&raquo; sera &laquo;&nbsp;Accueil&nbsp;&raquo;.</p> 
-  <p>Il faut modifier le fichier form/accueil.jsp g&eacute;n&eacute;r&eacute;.</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center > 
-    <tr bgcolor="#A6A5C2"> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>Il ensuite cr&eacute;er une nouvele entit&eacute; de type&nbsp; type &laquo;&nbsp;Java / Easy Struts / Easy Form &raquo; dont le &laquo;&nbsp;Use Case&nbsp;&raquo; sera &laquo;&nbsp;Accueil&nbsp;&raquo;.</p> 
+   <p>Il faut modifier le fichier form/accueil.jsp g&eacute;n&eacute;r&eacute;.</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
-    </tr> 
-    <tr> 
-      <td> <pre><code>&lt;%@ taglib uri=&quot;/WEB-INF/struts-bean.tld&quot; prefix=&quot;bean&quot;%&gt;   
-&lt;%@ taglib uri=&quot;/WEB-INF/struts-html.tld&quot; prefix=&quot;html&quot;%&gt;   
+     </tr> 
+     <tr> 
+      <td> <pre><code>&lt;%@ taglib uri="/WEB-INF/struts-bean.tld" prefix="bean"%&gt;   
+&lt;%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html"%&gt;   
 &lt;html&gt;   
   &lt;head&gt;  
-    &lt;meta name = &quot;Generator&quot; 
-          content = &quot;Easy Struts Xslt generator for Eclipse.&quot;&gt;  
+    &lt;meta name = "Generator" 
+          content = "Easy Struts Xslt generator for Eclipse."&gt;  
     &lt;title&gt;Struts Form for accueilForm&lt;/title&gt;  
   &lt;/head&gt;  
   &lt;body&gt;  
-    &lt;H1&gt;Bienvenue&lt;logic:present name=&quot;nom&quot; scope=&quot;request&quot;&gt;  
-      &lt;bean:write name=&quot;nom&quot; scope=&quot;request&quot;/&gt;  
+    &lt;H1&gt;Bienvenue&lt;logic:present name="nom" scope="request"&gt;  
+      &lt;bean:write name="nom" scope="request"/&gt;  
       &lt;/logic:present&gt;&lt;/H1&gt;  
   &lt;body&gt;  
 &lt;/html&gt; </code></pre></td> 
-    </tr> 
-  </table> 
-  <br> 
-  <p>Les fichiers composants l'application sont les suivants&nbsp;: </p> 
-  <p align="center"><img border=0 width=361 height=655
-src="images/struts023.png"></p> 
-  <p>&nbsp;</p> 
-  <h3><!--nchpdeb--><a name="chap_23_1_2">23.1.2. <!--nchpfin--> L'ex&eacute;cution de l'application</a></h3>
-  <p>Il faut lancer Tomcat en cliquant sur le bouton <img border=0 width=23 height=22
-src="images/struts024.png"></p> 
-  <p align="center"><img border=0 width=544 height=239 src="images/struts025.png"></p> 
-  <p>Un clic sur le bouton &laquo;&nbsp;Submit&nbsp;&raquo; sans saisir de nom affiche le message d'erreur</p> 
-  <p align="center"><img border=0 width=591 height=279 src="images/struts026.png"></p> 
-  <p>La validation avec un nom diff&eacute;rent de test r&eacute;affiche la page</p> 
-  <p align="center"><img border=0 width=526 height=233 src="images/struts027.png"></p> 
-  <p>La validation avec le nom &laquo;&nbsp;test&nbsp;&raquo; et le mot de passe &laquo;&nbsp;test&nbsp;&raquo; affiche la page d'accueil</p> 
-  <p align="center"><img border=0 width=526 height=183 src="images/struts028.png"></p> 
-  <p>&nbsp;</p> 
-  <h3><!--nchpdeb--><a name="chap_23_1_3">23.1.3. <!--nchpfin--> La modification du fichier struts-config.xml</a></h3>
-  <p>EasyStrusts propose un &eacute;diteur d&eacute;di&eacute; &agrave; la mise &agrave; jour du fichier de configuration de Struts</p> 
-  <p align="center"><img border=0 width=600 height=382
-src="images/struts029.png"></p> 
-  <p>Cet &eacute;diteur propose deux onglets&nbsp;: &laquo;&nbsp;Easy Struts&nbsp;&raquo; pour modifier les informations avec une interface et &laquo;&nbsp;Source&nbsp;&raquo; qui permet de visualiser et de modifier directement le fichier xml.</p> 
-  <p>L'onglet &laquo;&nbsp;Easy Struts&nbsp;&raquo; de compose de deux parties&nbsp;: </p> 
-  <p>La partie de gauche permet une navigation dans les &eacute;lements qui composent le fichier xml et la s&eacute;lection d'un &eacute;l&eacute;ment.</p> 
-  <p>La partie de droite permet de modifier l'&eacute;l&eacute;ment s&eacute;lectionn&eacute;.</p> 
-  <p align="center"><img border=0 width=600 height=317 src="images/struts030.png"></p> 
-  <p>&nbsp;</p> 
-</div> 
-<!--PIED--><HR>
-<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="chap022.htm" ALT="22. Le d&eacute;veloppement d'applications web">
-<img src="FlecheG.gif" alt="22. Le d&eacute;veloppement d'applications web" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="chap024.htm" ALT="24.  Java Server Faces et Eclipse">
-<img src="FlecheD.gif" alt="24.  Java Server Faces et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-<td  rowspan="2" align="center" valign="middle">
-        <script language="JavaScript1.1">
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>Les fichiers composants l'application sont les suivants&nbsp;: </p> 
+   <p align="center"><img border="0" width="361" height="655" src="images/struts023.png"></p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_23_1_2">23.1.2. 
+     <!--nchpfin--> L'ex&eacute;cution de l'application</a></h3> 
+   <p>Il faut lancer Tomcat en cliquant sur le bouton <img border="0" width="23" height="22" src="images/struts024.png"></p> 
+   <p align="center"><img border="0" width="544" height="239" src="images/struts025.png"></p> 
+   <p>Un clic sur le bouton &laquo;&nbsp;Submit&nbsp;&raquo; sans saisir de nom affiche le message d'erreur</p> 
+   <p align="center"><img border="0" width="591" height="279" src="images/struts026.png"></p> 
+   <p>La validation avec un nom diff&eacute;rent de test r&eacute;affiche la page</p> 
+   <p align="center"><img border="0" width="526" height="233" src="images/struts027.png"></p> 
+   <p>La validation avec le nom &laquo;&nbsp;test&nbsp;&raquo; et le mot de passe &laquo;&nbsp;test&nbsp;&raquo; affiche la page d'accueil</p> 
+   <p align="center"><img border="0" width="526" height="183" src="images/struts028.png"></p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_23_1_3">23.1.3. 
+     <!--nchpfin--> La modification du fichier struts-config.xml</a></h3> 
+   <p>EasyStrusts propose un &eacute;diteur d&eacute;di&eacute; &agrave; la mise &agrave; jour du fichier de configuration de Struts</p> 
+   <p align="center"><img border="0" width="600" height="382" src="images/struts029.png"></p> 
+   <p>Cet &eacute;diteur propose deux onglets&nbsp;: &laquo;&nbsp;Easy Struts&nbsp;&raquo; pour modifier les informations avec une interface et &laquo;&nbsp;Source&nbsp;&raquo; qui permet de visualiser et de modifier directement le fichier xml.</p> 
+   <p>L'onglet &laquo;&nbsp;Easy Struts&nbsp;&raquo; de compose de deux parties&nbsp;: </p> 
+   <p>La partie de gauche permet une navigation dans les &eacute;lements qui composent le fichier xml et la s&eacute;lection d'un &eacute;l&eacute;ment.</p> 
+   <p>La partie de droite permet de modifier l'&eacute;l&eacute;ment s&eacute;lectionn&eacute;.</p> 
+   <p align="center"><img border="0" width="600" height="317" src="images/struts030.png"></p> 
+   <p>&nbsp;</p> 
+  </div> 
+  <!--PIED-->
+  <hr> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
+    <tr> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="chap022.htm" alt="22. Le d&eacute;veloppement d'applications web"> <img src="FlecheG.gif" alt="22. Le d&eacute;veloppement d'applications web" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap024.htm" alt="24.  Java Server Faces et Eclipse"> <img src="FlecheD.gif" alt="24.  Java Server Faces et Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
+     <td rowspan="2" align="center" valign="middle"> <script language="JavaScript1.1">
 <!--
 hsh = new Date();
 hsd = document;
@@ -472,31 +455,16 @@ if(parseFloat(navigator.appVersion)>=4)
 {Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
 hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
 //-->
-</script>
-        <noscript>
-        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
-        </noscript>
-        <!--//-->
-      </td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
- 
-</body>
+</script> 
+      <noscript> 
+       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience"></a> 
+      </noscript> 
+      <!--//--> </td> 
+    </tr> 
+    <tr> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
+    </tr> 
+   </tbody> 
+  </table>   
+ </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-

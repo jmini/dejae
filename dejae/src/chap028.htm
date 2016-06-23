@@ -1,76 +1,64 @@
-<HTML>
-<HEAD>
-<TITLE>Le d&eacute;veloppement avec J2ME</TITLE>
-<META http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
-<META name="description" content="">
-<META name="keywords" content="java tutorial cours dej eclipse">
-<META name="robots" content="all">
-<META name="revisit-after" content="2 months">
-<META http-equiv="Content-Language" content="fr-FX">
-<META name="author" content="Jean Michel DOUDOUX">
-<link href="dej_style.css" rel="stylesheet" type="text/css">
-<BODY>
-<!--ENTETE-->
-<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="partie6.htm" ALT="Partie 6 : le d&eacute;veloppement d'applications mobiles">
-<img src="FlecheG.gif" alt="Partie 6 : le d&eacute;veloppement d'applications mobiles" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="partie7.htm" ALT="Partie 7 : d'autres plug-ins">
-<img src="FlecheD.gif" alt="Partie 7 : d'autres plug-ins" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
-<HR>
-
-<p>&nbsp;</p>
-<H1><!--idrefpage value="j2me" --><!--resumetitre value="Pr&eacute;sente le plug-in EclipseME qui permet de faciliter le d&eacute;veloppement d'applications J2ME." --><!--nchpdeb--><a name="chap_28">28. <!--nchpfin-->Le d&eacute;veloppement avec J2ME</A></H1>
-<p>&nbsp;</p>
-<!--chapitredeb-->
-<div align="right">
-  <table border="0" cellspacing="0" summary="titre">
-    <tr>
-      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td>
-<td width="50" valign="top"><img src="images/2.gif" alt="2" width="62" height="83" border="0"></td>
-<td width="50" valign="top"><img src="images/8.gif" alt="8" width="62" height="83" border="0"></td>
-    </tr>
-  </table>
-  <br>
-</div>
-<!--chapitrefin-->
-<p>&nbsp;</p>
-<DIV ALIGN="justify"> 
-<p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_28_1">28.1. <!--nchpfin-->EclipseME</a></h2> 
-  <p>Le but de ce plug-in est de permettre le d&eacute;veloppement d'applications J2ME reposant sur MIDP en utilisant un Wireless Toolkit.</p> 
-  <p>Les fonctionnalit&eacute;s propos&eacute;es par ce plug-in sont&nbsp;: </p> 
-  <ul type=disc> 
+<html>
+ <head> 
+  <title>Le d&eacute;veloppement avec J2ME</title> 
+  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1"> 
+  <meta name="description" content=""> 
+  <meta name="keywords" content="java tutorial cours dej eclipse"> 
+  <meta name="robots" content="all"> 
+  <meta name="revisit-after" content="2 months"> 
+  <meta http-equiv="Content-Language" content="fr-FX"> 
+  <meta name="author" content="Jean Michel DOUDOUX"> 
+  <link href="dej_style.css" rel="stylesheet" type="text/css"> 
+ </head>
+ <body> 
+  <!--ENTETE--> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
+    <tr> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="partie6.htm" alt="Partie 6 : le d&eacute;veloppement d'applications mobiles"> <img src="FlecheG.gif" alt="Partie 6 : le d&eacute;veloppement d'applications mobiles" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="partie7.htm" alt="Partie 7 : d'autres plug-ins"> <img src="FlecheD.gif" alt="Partie 7 : d'autres plug-ins" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
+    </tr> 
+    <tr> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
+    </tr> 
+   </tbody> 
+  </table> 
+  <hr> 
+  <p>&nbsp;</p> 
+  <h1>
+   <!--idrefpage value="j2me" -->
+   <!--resumetitre value="Pr&eacute;sente le plug-in EclipseME qui permet de faciliter le d&eacute;veloppement d'applications J2ME." -->
+   <!--nchpdeb--><a name="chap_28">28. 
+    <!--nchpfin-->Le d&eacute;veloppement avec J2ME</a></h1> 
+  <p>&nbsp;</p> 
+  <!--chapitredeb--> 
+  <div align="right"> 
+   <table border="0" cellspacing="0" summary="titre"> 
+    <tbody>
+     <tr> 
+      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td> 
+      <td width="50" valign="top"><img src="images/2.gif" alt="2" width="62" height="83" border="0"></td> 
+      <td width="50" valign="top"><img src="images/8.gif" alt="8" width="62" height="83" border="0"></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+  </div> 
+  <!--chapitrefin--> 
+  <p>&nbsp;</p> 
+  <div align="justify"> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_28_1">28.1. 
+     <!--nchpfin-->EclipseME</a></h2> 
+   <p>Le but de ce plug-in est de permettre le d&eacute;veloppement d'applications J2ME reposant sur MIDP en utilisant un Wireless Toolkit.</p> 
+   <p>Les fonctionnalit&eacute;s propos&eacute;es par ce plug-in sont&nbsp;: </p> 
+   <ul type="disc"> 
     <li>Le support de plusieurs Wireless Toolkit </li> 
     <li>Un assistant de cr&eacute;ation de projets de type Midlet Suite</li> 
     <li>Un assistant de cr&eacute;ation de Midlets </li> 
@@ -80,308 +68,268 @@
     <li>L'ex&eacute;cution dans les &eacute;mulateurs fournis avec le&nbsp;WirelessToolkit </li> 
     <li>La cr&eacute;ation d'un package pour les applications J2ME</li> 
     <li>La cr&eacute;ation d'un package obscurci avec Proguard</li> 
-    <li>Le support du mode «&nbsp;Over The Air&nbsp;»</li> 
-  </ul> 
-  <p>Le site officiel de ce plug-in est &agrave; l'url&nbsp;: <a
-href="http://eclipseme.org/">http://eclipseme.org/</a></p> 
-  <p>Un JDK 1.4, une version 3.0.x d'Eclipse et un Wireless Toolkit sont des pr&eacute;-requis pour pouvoir utiliser EclipseMe.</p> 
-  <p>Cette section va mettre en oeuvre les outils suivants&nbsp;sous Windows : </p> 
-  <table border=1 cellspacing=0 cellpadding=4> 
-    <tr> 
-      <td width=205 valign=top> <p>Outil</p></td> 
-      <td width=100 valign=top> <p>Version</p></td> 
-      <td width=309 valign=top> <p>Rôle</p></td> 
-    </tr> 
-    <tr> 
-      <td width=205 valign=top> <p>JDK</p></td> 
-      <td width=100 valign=top> <p>1.4.2_04</p></td> 
-      <td width=309 valign=top>&nbsp; </td> 
-    </tr> 
-    <tr> 
-      <td width=205 valign=top> <p>Eclipse</p></td> 
-      <td width=100 valign=top> <p>3.0.1</p></td> 
-      <td width=309 valign=top> <p>IDE</p></td> 
-    </tr> 
-    <tr> 
-      <td width=205 valign=top> <p>EclipseME</p></td> 
-      <td width=100 valign=top> <p>0.75</p></td> 
-      <td width=309 valign=top>&nbsp; </td> 
-    </tr> 
-    <tr> 
-      <td width=205 valign=top> <p>Proguard</p></td> 
-      <td width=100 valign=top> <p>3.2</p></td> 
-      <td width=309 valign=top>&nbsp; </td> 
-    </tr> 
-    <tr> 
-      <td width=205 valign=top> <p>J2ME Wireless Toolkit</p></td> 
-      <td width=100 valign=top> <p>2.1</p></td> 
-      <td width=309 valign=top> <p>Kit de d&eacute;veloppement J2ME</p></td> 
-    </tr> 
-  </table> 
-  <p>&nbsp;</p>
-  <h3><!--nchpdeb--><a name="chap_28_1_1">28.1.1. <!--nchpfin-->Installation</a></h3> 
-  <p>Pour installer le plug-in, t&eacute;l&eacute;chargez le fichier eclipseme.feature_0.7.5_site.zip et enregistrez le dans un r&eacute;pertoire du syst&egrave;me.</p> 
-  <p>Il suffit alors de suivre les &eacute;tapes suivantes&nbsp;: </p> 
-  <ul type=disc> 
-    <li>Utilisez l'option «&nbsp;Mise &agrave; jour de logiciels/Rechercher et installer&nbsp;» du menu Aide.</li> 
-    <li>S&eacute;lectionnez «&nbsp;Rechercher les nouveaux dispositifs &agrave; installer&nbsp;» et cliquez sur le bouton «&nbsp;Suivant&nbsp;»</li> 
-    <li>Cliquez sur le bouton «&nbsp;Nouveau site archiv&eacute;&nbsp;»</li> 
-    <li>S&eacute;lectionnez le fichier et cliquez sur «&nbsp;Ouvrir&nbsp;»</li> 
-    <li>Dans l'arborescence des sites, s&eacute;lectionnez eclipseme.feature_0.7.5_site.zip et cliquez sur le bouton «&nbsp;Suivant&nbsp;»</li> 
-    <li>S&eacute;lectionnez les dispositifs «&nbsp;EclipseMe&nbsp;» et «&nbsp;eclipseme.features.siemens&nbsp;»</li> 
-    <li>Lisez la licence et si vous l'acceptez cliquer sur «&nbsp;J'accepte les termes du contrat&nbsp;» et cliquez sur le bouton «&nbsp;Suivant&nbsp;»</li> 
-    <li>Cliquez sur le bouton «&nbsp;Fin&nbsp;»</li> 
-    <li>Lors de l'affichage de  la bo&icirc;te de dialogue «&nbsp;V&eacute;rification du dispositif&nbsp;», cliquez sur le bouton «&nbsp;Installer&nbsp;»</li> 
+    <li>Le support du mode &laquo;&nbsp;Over The Air&nbsp;&raquo;</li> 
+   </ul> 
+   <p>Le site officiel de ce plug-in est &agrave; l'url&nbsp;: <a href="http://eclipseme.org/">http://eclipseme.org/</a></p> 
+   <p>Un JDK 1.4, une version 3.0.x d'Eclipse et un Wireless Toolkit sont des pr&eacute;-requis pour pouvoir utiliser EclipseMe.</p> 
+   <p>Cette section va mettre en oeuvre les outils suivants&nbsp;sous Windows : </p> 
+   <table border="1" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td width="205" valign="top"> <p>Outil</p></td> 
+      <td width="100" valign="top"> <p>Version</p></td> 
+      <td width="309" valign="top"> <p>R&ocirc;le</p></td> 
+     </tr> 
+     <tr> 
+      <td width="205" valign="top"> <p>JDK</p></td> 
+      <td width="100" valign="top"> <p>1.4.2_04</p></td> 
+      <td width="309" valign="top">&nbsp; </td> 
+     </tr> 
+     <tr> 
+      <td width="205" valign="top"> <p>Eclipse</p></td> 
+      <td width="100" valign="top"> <p>3.0.1</p></td> 
+      <td width="309" valign="top"> <p>IDE</p></td> 
+     </tr> 
+     <tr> 
+      <td width="205" valign="top"> <p>EclipseME</p></td> 
+      <td width="100" valign="top"> <p>0.75</p></td> 
+      <td width="309" valign="top">&nbsp; </td> 
+     </tr> 
+     <tr> 
+      <td width="205" valign="top"> <p>Proguard</p></td> 
+      <td width="100" valign="top"> <p>3.2</p></td> 
+      <td width="309" valign="top">&nbsp; </td> 
+     </tr> 
+     <tr> 
+      <td width="205" valign="top"> <p>J2ME Wireless Toolkit</p></td> 
+      <td width="100" valign="top"> <p>2.1</p></td> 
+      <td width="309" valign="top"> <p>Kit de d&eacute;veloppement J2ME</p></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_28_1_1">28.1.1. 
+     <!--nchpfin-->Installation</a></h3> 
+   <p>Pour installer le plug-in, t&eacute;l&eacute;chargez le fichier eclipseme.feature_0.7.5_site.zip et enregistrez le dans un r&eacute;pertoire du syst&egrave;me.</p> 
+   <p>Il suffit alors de suivre les &eacute;tapes suivantes&nbsp;: </p> 
+   <ul type="disc"> 
+    <li>Utilisez l'option &laquo;&nbsp;Mise &agrave; jour de logiciels/Rechercher et installer&nbsp;&raquo; du menu Aide.</li> 
+    <li>S&eacute;lectionnez &laquo;&nbsp;Rechercher les nouveaux dispositifs &agrave; installer&nbsp;&raquo; et cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;</li> 
+    <li>Cliquez sur le bouton &laquo;&nbsp;Nouveau site archiv&eacute;&nbsp;&raquo;</li> 
+    <li>S&eacute;lectionnez le fichier et cliquez sur &laquo;&nbsp;Ouvrir&nbsp;&raquo;</li> 
+    <li>Dans l'arborescence des sites, s&eacute;lectionnez eclipseme.feature_0.7.5_site.zip et cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;</li> 
+    <li>S&eacute;lectionnez les dispositifs &laquo;&nbsp;EclipseMe&nbsp;&raquo; et &laquo;&nbsp;eclipseme.features.siemens&nbsp;&raquo;</li> 
+    <li>Lisez la licence et si vous l'acceptez cliquer sur &laquo;&nbsp;J'accepte les termes du contrat&nbsp;&raquo; et cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;</li> 
+    <li>Cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;</li> 
+    <li>Lors de l'affichage de&nbsp; la bo&icirc;te de dialogue &laquo;&nbsp;V&eacute;rification du dispositif&nbsp;&raquo;, cliquez sur le bouton &laquo;&nbsp;Installer&nbsp;&raquo;</li> 
     <li>Acceptez de relancer le plan de travail.</li> 
-  </ul> 
-  <p>&nbsp;</p>
-  <h3><!--nchpdeb--><a name="chap_28_1_2">28.1.2. <!--nchpfin-->Les pr&eacute;f&eacute;rences du plug-in</a></h3> 
-  <p>Le plug-in propose plusieurs pages pour g&eacute;rer les options du plug-in lors de son utilisation. </p> 
-  <p>Ces pages se trouvent sous l'arborescence «&nbsp;J2ME&nbsp;».</p> 
-  <p align="center"><img border=0 width=560 height=395
-src="images/j2me001.png"></p> 
-  <p>Il est possible de configurer le mode «&nbsp;Over the Air&nbsp;» en s&eacute;lectionnant «&nbsp;J2ME/Over the Air&nbsp;» dans l'arborescence.</p> 
-  <p align="center"><img border=0 width=554 height=260
-src="images/j2me002.png"></p> 
-  <p align="center"><img border=0 width=482 height=323
-src="images/j2me003.png"></p> 
-  <p>EclipseMe peut travailler avec Proguard, un projet open source qui a pour but de proposer un outil pour rendre le code obscurci. Pour cela, il faut s&eacute;lectionner J2ME/Packaging/Obfuscation</p> 
-  <p align="center"><img border=0 width=617 height=343
-src="images/j2me004.png"></p> 
-  <p>Pour l'utiliser Proguard, il faut t&eacute;l&eacute;charger le fichier proguard3.2.zip sur le site <a href="http://proguard.sourceforge.net/">http://proguard.sourceforge.net/</a> et le d&eacute;compresser dans un r&eacute;pertoire.</p> 
-  <p>Il suffit alors de s&eacute;lectionner le r&eacute;pertoire qui contient Proguard en cliquant sur le bouton «&nbsp;Parcourir&nbsp;».</p> 
-  <p align="center"><img border=0 width=600 height=307
-src="images/j2me005.png"></p> 
-  <p align="center"><img border=0 width=509 height=216
-src="images/j2me006.png"></p> 
-  <p>Cet &eacute;cran permet de configurer le Wireless Toolkit qui sera utilis&eacute; avec le plug-in.</p> 
-  <p>Par exemple, pour ajouter le J2ME Wireless Toolkit 2.1, s&eacute;lectionnez l'option «&nbsp;Add&nbsp;Wireless Toolkit » du menu contextuel de «&nbsp;Wireless Toolkits&nbsp;»</p> 
-  <p align="center"><img border=0 width=346 height=210
-src="images/j2me007.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Browse&nbsp;» pour s&eacute;lectionner le r&eacute;pertoire o&ugrave; le J2ME Wireless Toolkit 2.1 est install&eacute; et cliquez sur le bouton «&nbsp;Fin&nbsp;».</p> 
-  <p align="center"><img border=0 width=493 height=402
-src="images/j2me008.png"></p> 
-  <p>Pour pouvoir utiliser le d&eacute;bogueur d'Eclipse avec un «&nbsp;Wireless Toolkit&nbsp;», il faut modifier les param&egrave;tres du d&eacute;bogueur.</p> 
-  <p>Dans les pr&eacute;f&eacute;rences, d&eacute;cochez les deux premi&egrave;res options et modifiez la valeur du d&eacute;lai d'expiration du d&eacute;bogueur pour mettre la valeur 15000.</p> 
-  <p align="center"><img border=0 width=600 height=409
-src="images/j2me009.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;OK&nbsp;»</p> 
-  <p>&nbsp;</p>
-  <h3><!--nchpdeb--><a name="chap_28_1_3">28.1.3. <!--nchpfin-->Cr&eacute;ation d'un premier exemple</a></h3> 
-  <p>Il faut cr&eacute;er un nouveau projet de type «&nbsp;J2ME/J2ME Midlet Suite&nbsp;».</p> 
-  <p align="center"><img border=0 width=384 height=365
-src="images/j2me010.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;».</p> 
-  <p align="center"><img border=0 width=434 height=267
-src="images/j2me011.png"></p> 
-  <p>Saisissez le nom du projet et cliquez sur le bouton «&nbsp;Suivant&nbsp;».</p> 
-  <p align="center"><img border=0 width=436 height=238
-src="images/j2me012.png"></p> 
-  <p>S&eacute;lectionnez la plate-forme et cliquez sur le bouton «&nbsp;Suivant&nbsp;».</p> 
-  <p align="center"><img border=0 width=414 height=372
-src="images/j2me013.png"></p> 
-  <p>La derni&egrave;re page de l'assistant permet de g&eacute;rer les param&egrave;tres du projet tel qu'il est possible de le faire pour un projet Java classique.</p> 
-  <p>Cliquez sur le bouton «&nbsp;Fin&nbsp;» pour cr&eacute;er le projet.</p> 
-  <p align="center"><img border=0 width=256 height=208
-src="images/j2me014.png"></p> 
-  <p>Ajouter une midlet en cr&eacute;ant une nouvelle entit&eacute; de type «&nbsp;J2ME/J2ME Midlet&nbsp;».</p> 
-  <p align="center"><img border=0 width=344 height=280
-src="images/j2me015.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;».</p> 
-  <p align="center"><img border=0 width=532 height=516
-src="images/j2me016.png"></p> 
-  <p>La page suivante de l'assistant permet de pr&eacute;ciser les caract&eacute;ristiques de la midlet.</p> 
-  <p>Saisissez le nom du package et le nom de la classe et cliquez sur le bouton «&nbsp;Fin&nbsp;».</p> 
-  <p>Il faut ensuite saisir le code de la midlet.</p> 
-<table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>package com.jmd.test.j2me; 
+   </ul> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_28_1_2">28.1.2. 
+     <!--nchpfin-->Les pr&eacute;f&eacute;rences du plug-in</a></h3> 
+   <p>Le plug-in propose plusieurs pages pour g&eacute;rer les options du plug-in lors de son utilisation. </p> 
+   <p>Ces pages se trouvent sous l'arborescence &laquo;&nbsp;J2ME&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="560" height="395" src="images/j2me001.png"></p> 
+   <p>Il est possible de configurer le mode &laquo;&nbsp;Over the Air&nbsp;&raquo; en s&eacute;lectionnant &laquo;&nbsp;J2ME/Over the Air&nbsp;&raquo; dans l'arborescence.</p> 
+   <p align="center"><img border="0" width="554" height="260" src="images/j2me002.png"></p> 
+   <p align="center"><img border="0" width="482" height="323" src="images/j2me003.png"></p> 
+   <p>EclipseMe peut travailler avec Proguard, un projet open source qui a pour but de proposer un outil pour rendre le code obscurci. Pour cela, il faut s&eacute;lectionner J2ME/Packaging/Obfuscation</p> 
+   <p align="center"><img border="0" width="617" height="343" src="images/j2me004.png"></p> 
+   <p>Pour l'utiliser Proguard, il faut t&eacute;l&eacute;charger le fichier proguard3.2.zip sur le site <a href="http://proguard.sourceforge.net/">http://proguard.sourceforge.net/</a> et le d&eacute;compresser dans un r&eacute;pertoire.</p> 
+   <p>Il suffit alors de s&eacute;lectionner le r&eacute;pertoire qui contient Proguard en cliquant sur le bouton &laquo;&nbsp;Parcourir&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="600" height="307" src="images/j2me005.png"></p> 
+   <p align="center"><img border="0" width="509" height="216" src="images/j2me006.png"></p> 
+   <p>Cet &eacute;cran permet de configurer le Wireless Toolkit qui sera utilis&eacute; avec le plug-in.</p> 
+   <p>Par exemple, pour ajouter le J2ME Wireless Toolkit 2.1, s&eacute;lectionnez l'option &laquo;&nbsp;Add&nbsp;Wireless Toolkit &raquo; du menu contextuel de &laquo;&nbsp;Wireless Toolkits&nbsp;&raquo;</p> 
+   <p align="center"><img border="0" width="346" height="210" src="images/j2me007.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Browse&nbsp;&raquo; pour s&eacute;lectionner le r&eacute;pertoire o&ugrave; le J2ME Wireless Toolkit 2.1 est install&eacute; et cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="493" height="402" src="images/j2me008.png"></p> 
+   <p>Pour pouvoir utiliser le d&eacute;bogueur d'Eclipse avec un &laquo;&nbsp;Wireless Toolkit&nbsp;&raquo;, il faut modifier les param&egrave;tres du d&eacute;bogueur.</p> 
+   <p>Dans les pr&eacute;f&eacute;rences, d&eacute;cochez les deux premi&egrave;res options et modifiez la valeur du d&eacute;lai d'expiration du d&eacute;bogueur pour mettre la valeur 15000.</p> 
+   <p align="center"><img border="0" width="600" height="409" src="images/j2me009.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;</p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_28_1_3">28.1.3. 
+     <!--nchpfin-->Cr&eacute;ation d'un premier exemple</a></h3> 
+   <p>Il faut cr&eacute;er un nouveau projet de type &laquo;&nbsp;J2ME/J2ME Midlet Suite&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="384" height="365" src="images/j2me010.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="434" height="267" src="images/j2me011.png"></p> 
+   <p>Saisissez le nom du projet et cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="436" height="238" src="images/j2me012.png"></p> 
+   <p>S&eacute;lectionnez la plate-forme et cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="414" height="372" src="images/j2me013.png"></p> 
+   <p>La derni&egrave;re page de l'assistant permet de g&eacute;rer les param&egrave;tres du projet tel qu'il est possible de le faire pour un projet Java classique.</p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo; pour cr&eacute;er le projet.</p> 
+   <p align="center"><img border="0" width="256" height="208" src="images/j2me014.png"></p> 
+   <p>Ajouter une midlet en cr&eacute;ant une nouvelle entit&eacute; de type &laquo;&nbsp;J2ME/J2ME Midlet&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="344" height="280" src="images/j2me015.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="532" height="516" src="images/j2me016.png"></p> 
+   <p>La page suivante de l'assistant permet de pr&eacute;ciser les caract&eacute;ristiques de la midlet.</p> 
+   <p>Saisissez le nom du package et le nom de la classe et cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;.</p> 
+   <p>Il faut ensuite saisir le code de la midlet.</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple :</td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>package com.jmd.test.j2me; 
 
 import javax.microedition.midlet.*; 
 import javax.microedition.lcdui.*; 
 
 public class BonjourMidlet extends MIDlet { 
-  private Display display; 
-  private TextBox textbox; 
-  public BonjourMidlet() { 
-    super(); 
-    display = Display.getDisplay(this); 
-    textbox = new TextBox(&quot;&quot;, &quot;Bonjour&quot;, 20, 0); 
-  } 
+&nbsp; private Display display; 
+&nbsp; private TextBox textbox; 
+&nbsp; public BonjourMidlet() { 
+&nbsp;&nbsp;&nbsp; super(); 
+&nbsp;&nbsp;&nbsp; display = Display.getDisplay(this); 
+&nbsp;&nbsp;&nbsp; textbox = new TextBox("", "Bonjour", 20, 0); 
+&nbsp; } 
 
-  /* (non-Javadoc) 
-   * @see javax.microedition.midlet.MIDlet#startApp() 
-   */ 
-  protected void startApp() throws MIDletStateChangeException { 
-    display.setCurrent(textbox); 
-  } 
+&nbsp; /* (non-Javadoc) 
+&nbsp; &nbsp;* @see javax.microedition.midlet.MIDlet#startApp() 
+&nbsp; &nbsp;*/ 
+&nbsp; protected void startApp() throws MIDletStateChangeException { 
+&nbsp;&nbsp;&nbsp; display.setCurrent(textbox); 
+&nbsp; } 
 
-  /* (non-Javadoc) 
-   * @see javax.microedition.midlet.MIDlet#pauseApp() 
-   */ 
-  protected void pauseApp() { 
-    // TODO Raccord de m&eacute;thode auto-g&eacute;n&eacute;r&eacute; 
-  } 
+&nbsp; /* (non-Javadoc) 
+&nbsp; &nbsp;* @see javax.microedition.midlet.MIDlet#pauseApp() 
+&nbsp; &nbsp;*/ 
+&nbsp; protected void pauseApp() { 
+&nbsp;&nbsp;&nbsp; // TODO Raccord de m&eacute;thode auto-g&eacute;n&eacute;r&eacute; 
+&nbsp; } 
 
-  /* (non-Javadoc) 
-   * @see javax.microedition.midlet.MIDlet#destroyApp(boolean) 
-   */ 
-  protected void destroyApp(boolean arg0) throws MIDletStateChangeException { 
-    // TODO Raccord de m&eacute;thode auto-g&eacute;n&eacute;r&eacute; 
-  } 
-} </code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <p>La structure du projet est la suivante&nbsp;: </p> 
-  <p align="center"><img border=0 width=309 height=358
-src="images/j2me017.png"></p> 
-  <p>&nbsp;</p>
-  <h3><!--nchpdeb--><a name="chap_28_1_4">28.1.4. <!--nchpfin-->Ex&eacute;cution de l'application</a></h3> 
-  <p>Pour ex&eacute;cuter la midlet, il faut cliquer sur la petite fl&egrave;che de l'icône <img border=0 width=36 height=25
-src="images/j2me018.png"> de la barre d'outils.</p> 
-  <p align="center"><img border=0 width=351 height=164
-src="images/j2me019.png"></p> 
-  <p>Il suffit alors de s&eacute;lectionner «&nbsp;Emulated J2ME Midlet&nbsp;» pour lancer l'application dans l'&eacute;mulateur.</p> 
-  <p align="center"><img border=0 width=272 height=404
-src="images/j2me020.png"></p> 
-  <p>L'&eacute;mulateur couleur par d&eacute;faut est utilis&eacute; pour ex&eacute;cuter l'application.</p> 
-  <p>Pour permettre de param&eacute;trer le mode d'ex&eacute;cution de la midlet, il suffit d'utiliser l'option «&nbsp;Ex&eacute;cuter en tant que ...&nbsp;»</p> 
-  <p align="center"><img border=0 width=628 height=431
-src="images/j2me021.png"></p> 
-  <p>L'onglet&nbsp;Midlet permet notamment de pr&eacute;ciser le mode d'ex&eacute;cution.</p> 
-  <p align="center"><img border=0 width=629 height=486
-src="images/j2me022.png"></p> 
-  <p>L'onglet Emulation permet de pr&eacute;ciser la plate-forme et l'&eacute;mulateur &agrave; utiliser.</p> 
-  <p>&nbsp;</p>
-  <h3><!--nchpdeb--><a name="chap_28_1_5">28.1.5. <!--nchpfin-->D&eacute;boguer l'application</a></h3> 
-  <p>Pour d&eacute;boguer l'application, il suffit de placer un point d'arr&ecirc;t dans le code et de cliquer sur la petite fl&egrave;che de l'icône <img border=0 width=36 height=22
-src="images/j2me023.png"> dans la barre de tache.</p> 
-  <p align="center"><img border=0 width=351 height=193
-src="images/j2me024.png"></p> 
-  <p>La perspective «&nbsp;D&eacute;bogueur&nbsp;» s'ouvre lors de l'ex&eacute;cution de l'instruction contenant le point d'arr&ecirc;t.</p> 
-  <p align="center"><img border=0 width=492 height=180
-src="images/j2me025.png"></p> 
-  <p>&nbsp;</p>
-  <h3><!--nchpdeb--><a name="chap_28_1_6">28.1.6. <!--nchpfin-->Modification des propri&eacute;t&eacute;s du descripteur d'application</a></h3> 
-  <p>Une application J2ME est compos&eacute;e de deux fichiers&nbsp;: </p> 
-  <ul type=disc> 
+&nbsp; /* (non-Javadoc) 
+&nbsp; &nbsp;* @see javax.microedition.midlet.MIDlet#destroyApp(boolean) 
+&nbsp; &nbsp;*/ 
+&nbsp; protected void destroyApp(boolean arg0) throws MIDletStateChangeException { 
+&nbsp;&nbsp;&nbsp; // TODO Raccord de m&eacute;thode auto-g&eacute;n&eacute;r&eacute; 
+&nbsp; } 
+} </code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>La structure du projet est la suivante&nbsp;: </p> 
+   <p align="center"><img border="0" width="309" height="358" src="images/j2me017.png"></p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_28_1_4">28.1.4. 
+     <!--nchpfin-->Ex&eacute;cution de l'application</a></h3> 
+   <p>Pour ex&eacute;cuter la midlet, il faut cliquer sur la petite fl&egrave;che de l'ic&ocirc;ne <img border="0" width="36" height="25" src="images/j2me018.png">&nbsp;de la barre d'outils.</p> 
+   <p align="center"><img border="0" width="351" height="164" src="images/j2me019.png"></p> 
+   <p>Il suffit alors de s&eacute;lectionner &laquo;&nbsp;Emulated J2ME Midlet&nbsp;&raquo; pour lancer l'application dans l'&eacute;mulateur.</p> 
+   <p align="center"><img border="0" width="272" height="404" src="images/j2me020.png"></p> 
+   <p>L'&eacute;mulateur couleur par d&eacute;faut est utilis&eacute; pour ex&eacute;cuter l'application.</p> 
+   <p>Pour permettre de param&eacute;trer le mode d'ex&eacute;cution de la midlet, il suffit d'utiliser l'option &laquo;&nbsp;Ex&eacute;cuter en tant que ...&nbsp;&raquo;</p> 
+   <p align="center"><img border="0" width="628" height="431" src="images/j2me021.png"></p> 
+   <p>L'onglet&nbsp;Midlet permet notamment de pr&eacute;ciser le mode d'ex&eacute;cution.</p> 
+   <p align="center"><img border="0" width="629" height="486" src="images/j2me022.png"></p> 
+   <p>L'onglet Emulation permet de pr&eacute;ciser la plate-forme et l'&eacute;mulateur &agrave; utiliser.</p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_28_1_5">28.1.5. 
+     <!--nchpfin-->D&eacute;boguer l'application</a></h3> 
+   <p>Pour d&eacute;boguer l'application, il suffit de placer un point d'arr&ecirc;t dans le code et de cliquer sur la petite fl&egrave;che de l'ic&ocirc;ne <img border="0" width="36" height="22" src="images/j2me023.png">&nbsp;dans la barre de tache.</p> 
+   <p align="center"><img border="0" width="351" height="193" src="images/j2me024.png"></p> 
+   <p>La perspective &laquo;&nbsp;D&eacute;bogueur&nbsp;&raquo; s'ouvre lors de l'ex&eacute;cution de l'instruction contenant le point d'arr&ecirc;t.</p> 
+   <p align="center"><img border="0" width="492" height="180" src="images/j2me025.png"></p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_28_1_6">28.1.6. 
+     <!--nchpfin-->Modification des propri&eacute;t&eacute;s du descripteur d'application</a></h3> 
+   <p>Une application J2ME est compos&eacute;e de deux fichiers&nbsp;: </p> 
+   <ul type="disc"> 
     <li>Un fichier .jar qui contient l'ex&eacute;cutable</li> 
-    <li>Un fichier .jad  qui contient des informations que l'application</li> 
-  </ul> 
-  <p>EclipseMe propose un &eacute;diteur d&eacute;di&eacute; pour &eacute;diter le fichier.jad associ&eacute; &agrave; l'application. Pour ouvrir cet &eacute;diteur, il suffit de double-cliquer sur le fichier .jad du projet.</p> 
-  <p align="center"><img border=0 width=374 height=287
-src="images/j2me026.png"></p> 
-  <p>Le premier onglet permet de modifier les propri&eacute;t&eacute;s obligatoires.</p> 
-  <p align="center"><img border=0 width=550 height=212
-src="images/j2me027.png"></p> 
-  <p>L'onglet Midlets permet de pr&eacute;ciser la ou les midlets qui composent l'application.</p> 
-  <p align="center"><img border=0 width=374 height=288
-src="images/j2me028.png"></p> 
-  <p>L'onglet «&nbsp;Optional&nbsp;» permet de pr&eacute;ciser des param&egrave;tres optionnels.</p> 
-  <p>&nbsp;</p>
-  <h3><!--nchpdeb--><a name="chap_28_1_7">28.1.7. <!--nchpfin-->Packager l'application</a></h3> 
-  <p>Pour cr&eacute;er un package de l'application, il faut utiliser l'option «&nbsp;J2ME/Create package&nbsp;» du menu contextuel du projet dans le navigateur.</p> 
-  <p align="center"><img border=0 width=310 height=195
-src="images/j2me029.png"></p> 
-  <p>Les fichiers .jad et .jar sont cr&eacute;&eacute;s dans le r&eacute;pertoire deployed. Le fichier .jar inclus les classes et les biblioth&egrave;ques contenues dans le r&eacute;pertoire verified, les ressources (images, son, ...) contenues dans le r&eacute;pertoire res et le fichier manifest g&eacute;n&eacute;r&eacute; &agrave; partir du fichier .jad &agrave; la racine du projet.</p> 
-<table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple de fichier META-INF/MANIFEST.MF : </td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>Manifest-Version: 1.0 
+    <li>Un fichier .jad&nbsp; qui contient des informations que l'application</li> 
+   </ul> 
+   <p>EclipseMe propose un &eacute;diteur d&eacute;di&eacute; pour &eacute;diter le fichier.jad associ&eacute; &agrave; l'application. Pour ouvrir cet &eacute;diteur, il suffit de double-cliquer sur le fichier .jad du projet.</p> 
+   <p align="center"><img border="0" width="374" height="287" src="images/j2me026.png"></p> 
+   <p>Le premier onglet permet de modifier les propri&eacute;t&eacute;s obligatoires.</p> 
+   <p align="center"><img border="0" width="550" height="212" src="images/j2me027.png"></p> 
+   <p>L'onglet Midlets permet de pr&eacute;ciser la ou les midlets qui composent l'application.</p> 
+   <p align="center"><img border="0" width="374" height="288" src="images/j2me028.png"></p> 
+   <p>L'onglet &laquo;&nbsp;Optional&nbsp;&raquo; permet de pr&eacute;ciser des param&egrave;tres optionnels.</p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_28_1_7">28.1.7. 
+     <!--nchpfin-->Packager l'application</a></h3> 
+   <p>Pour cr&eacute;er un package de l'application, il faut utiliser l'option &laquo;&nbsp;J2ME/Create package&nbsp;&raquo; du menu contextuel du projet dans le navigateur.</p> 
+   <p align="center"><img border="0" width="310" height="195" src="images/j2me029.png"></p> 
+   <p>Les fichiers .jad et .jar sont cr&eacute;&eacute;s dans le r&eacute;pertoire deployed. Le fichier .jar inclus les classes et les biblioth&egrave;ques contenues dans le r&eacute;pertoire verified, les ressources (images, son, ...) contenues dans le r&eacute;pertoire res et le fichier manifest g&eacute;n&eacute;r&eacute; &agrave; partir du fichier .jad &agrave; la racine du projet.</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple de fichier META-INF/MANIFEST.MF : </td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>Manifest-Version: 1.0 
 MIDlet-2: BonjourMidlet,,com.jmd.test.j2me.BonjourMidlet 
 MicroEdition-Configuration: CLDC-1.0 
 MIDlet-Name: test_J2ME Midlet Suite 
 MIDlet-Vendor: Midlet Suite Vendor 
 MIDlet-1: ,, 
 MIDlet-Version: 1.0.0 
-MicroEdition-Profile: MIDP-1.0</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <p>Si Proguard est install&eacute; et configur&eacute; dans le plug-in, il est possible de cr&eacute;er un package obscurci de l'application, il faut utiliser l'option «&nbsp;J2ME/Create obsfucated package&nbsp;» du menu contextuel du projet dans le navigateur.</p> 
-  <p>Plusieurs fichiers sont g&eacute;n&eacute;r&eacute;s&nbsp;dans le r&eacute;pertoire deployed.</p> 
-  <p align="center"><img border=0 width=308 height=271
-src="images/j2me030.png"></p> 
-  <p>Le fichier test_J2ME_base.jar est le fichier .jar avant l'op&eacute;ration d'obscurcissement. Le fichier test_J2ME_base_obf.jar est le fichier .jar apr&egrave;s l'op&eacute;ration d'obscurcissement. Le fichier proguard.cfg contient les options utilis&eacute;es par Proguard pour r&eacute;aliser le package.</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>-libraryjars C:\WTK21\lib\cldcapi10.jar;C:\WTK21\lib\midpapi10.jar 
--injars      C:\java\eclipse31\workspace\test_J2ME\deployed\test_J2ME_base.jar 
--outjar      C:\java\eclipse31\workspace\test_J2ME\deployed\test_J2ME_base_obf.jar 
--printseeds  C:\java\eclipse31\workspace\test_J2ME\deployed\pro_seeds.txt 
+MicroEdition-Profile: MIDP-1.0</code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>Si Proguard est install&eacute; et configur&eacute; dans le plug-in, il est possible de cr&eacute;er un package obscurci de l'application, il faut utiliser l'option &laquo;&nbsp;J2ME/Create obsfucated package&nbsp;&raquo; du menu contextuel du projet dans le navigateur.</p> 
+   <p>Plusieurs fichiers sont g&eacute;n&eacute;r&eacute;s&nbsp;dans le r&eacute;pertoire deployed.</p> 
+   <p align="center"><img border="0" width="308" height="271" src="images/j2me030.png"></p> 
+   <p>Le fichier test_J2ME_base.jar est le fichier .jar avant l'op&eacute;ration d'obscurcissement. Le fichier test_J2ME_base_obf.jar est le fichier .jar apr&egrave;s l'op&eacute;ration d'obscurcissement. Le fichier proguard.cfg contient les options utilis&eacute;es par Proguard pour r&eacute;aliser le package.</p> 
+   <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+    <tbody>
+     <tr bgcolor="#A6A5C2"> 
+      <td>Exemple :</td> 
+     </tr> 
+     <tr> 
+      <td> <pre><code>-libraryjars C:\WTK21\lib\cldcapi10.jar;C:\WTK21\lib\midpapi10.jar 
+-injars&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C:\java\eclipse31\workspace\test_J2ME\deployed\test_J2ME_base.jar 
+-outjar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C:\java\eclipse31\workspace\test_J2ME\deployed\test_J2ME_base_obf.jar 
+-printseeds&nbsp; C:\java\eclipse31\workspace\test_J2ME\deployed\pro_seeds.txt 
 -printmapping C:\java\eclipse31\workspace\test_J2ME\deployed\pro_map.txt 
 -dontnote -defaultpackage '' 
--keep public class * extends javax.microedition.midlet.MIDlet</code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <p>Lors de la r&eacute;alisation du packaging, il est possible d'obtenir ce message d'erreur.</p> 
-  <p align="center"><img border=0 width=443 height=144
-src="images/j2me031.png"></p> 
-  <p>Dans ce cas, il faut modifier les param&egrave;tres du JRE d&eacute;finis dans les Pr&eacute;f&eacute;rences d'Eclipse&nbsp;: par d&eacute;faut Eclipse utilise un JRE et Proguard n&eacute;cessite un JDK lors de ces op&eacute;rations.</p> 
-  <p align="center"><img border=0 width=600 height=259
-src="images/j2me032.png"></p> 
-  <p>S&eacute;lectionnez le JRE et cliquez sur le bouton «&nbsp;Editer&nbsp;»</p> 
-  <p align="center"><img border=0 width=505 height=406
-src="images/j2me033.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;Parcourir&nbsp;» associ&eacute; &agrave; «&nbsp;R&eacute;pertoire racine du JRE&nbsp;»</p> 
-  <p align="center"><img border=0 width=337 height=302
-src="images/j2me034.png"></p> 
-  <p>Il suffit de s&eacute;lectionner le r&eacute;pertoire qui contient le JDK et de cliquer sur le bouton «&nbsp;OK&nbsp;».</p> 
-  <p align="center"><img border=0 width=505 height=406
-src="images/j2me035.png"></p> 
-  <p>Cliquez sur le bouton «&nbsp;OK&nbsp;».</p> 
-  <p>Cliquez encore sur le bouton «&nbsp;Ok&nbsp;» pour fermer la fen&ecirc;tre des «&nbsp;Pr&eacute;f&eacute;rences&nbsp;».</p> 
-<P>&nbsp;</P>
-</DIV>
-<!--PIED--><HR>
-<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="partie6.htm" ALT="Partie 6 : le d&eacute;veloppement d'applications mobiles">
-<img src="FlecheG.gif" alt="Partie 6 : le d&eacute;veloppement d'applications mobiles" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="partie7.htm" ALT="Partie 7 : d'autres plug-ins">
-<img src="FlecheD.gif" alt="Partie 7 : d'autres plug-ins" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-<td  rowspan="2" align="center" valign="middle">
-        <script language="JavaScript1.1">
+-keep public class * extends javax.microedition.midlet.MIDlet</code></pre> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+   <p>Lors de la r&eacute;alisation du packaging, il est possible d'obtenir ce message d'erreur.</p> 
+   <p align="center"><img border="0" width="443" height="144" src="images/j2me031.png"></p> 
+   <p>Dans ce cas, il faut modifier les param&egrave;tres du JRE d&eacute;finis dans les Pr&eacute;f&eacute;rences d'Eclipse&nbsp;: par d&eacute;faut Eclipse utilise un JRE et Proguard n&eacute;cessite un JDK lors de ces op&eacute;rations.</p> 
+   <p align="center"><img border="0" width="600" height="259" src="images/j2me032.png"></p> 
+   <p>S&eacute;lectionnez le JRE et cliquez sur le bouton &laquo;&nbsp;Editer&nbsp;&raquo;</p> 
+   <p align="center"><img border="0" width="505" height="406" src="images/j2me033.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Parcourir&nbsp;&raquo; associ&eacute; &agrave; &laquo;&nbsp;R&eacute;pertoire racine du JRE&nbsp;&raquo;</p> 
+   <p align="center"><img border="0" width="337" height="302" src="images/j2me034.png"></p> 
+   <p>Il suffit de s&eacute;lectionner le r&eacute;pertoire qui contient le JDK et de cliquer sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="505" height="406" src="images/j2me035.png"></p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;.</p> 
+   <p>Cliquez encore sur le bouton &laquo;&nbsp;Ok&nbsp;&raquo; pour fermer la fen&ecirc;tre des &laquo;&nbsp;Pr&eacute;f&eacute;rences&nbsp;&raquo;.</p> 
+   <p>&nbsp;</p> 
+  </div> 
+  <!--PIED-->
+  <hr> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
+    <tr> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="partie6.htm" alt="Partie 6 : le d&eacute;veloppement d'applications mobiles"> <img src="FlecheG.gif" alt="Partie 6 : le d&eacute;veloppement d'applications mobiles" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="partie7.htm" alt="Partie 7 : d'autres plug-ins"> <img src="FlecheD.gif" alt="Partie 7 : d'autres plug-ins" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
+     <td rowspan="2" align="center" valign="middle"> <script language="JavaScript1.1">
 <!--
 hsh = new Date();
 hsd = document;
@@ -396,31 +344,16 @@ if(parseFloat(navigator.appVersion)>=4)
 {Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
 hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
 //-->
-</script>
-        <noscript>
-        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
-        </noscript>
-        <!--//-->
-      </td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
-
-</BODY>
-</HTML>
-
-
-
-
-
-
-
-
-
-
-
-
-
+</script> 
+      <noscript> 
+       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience"></a> 
+      </noscript> 
+      <!--//--> </td> 
+    </tr> 
+    <tr> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
+    </tr> 
+   </tbody> 
+  </table>   
+ </body>
+</html>

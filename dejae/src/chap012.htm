@@ -1,361 +1,308 @@
 <html>
-<head>
-<title>La gestion de la plate-forme</title>
-<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
-<meta name="description" content="">
-<meta name="keywords" content="java tutorial cours dej eclipse">
-<meta name="robots" content="all">
-<meta name="revisit-after" content="2 months">
-<meta http-equiv="Content-Language" content="fr-FX">
-<meta name="author" content="Jean Michel DOUDOUX">
-<link href="dej_style.css" rel="stylesheet" type="text/css">
-<body>
-<!--ENTETE-->
-<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="partie3.htm" ALT="Partie 3 : les fonctions avanc&eacute;es d'Eclipse">
-<img src="FlecheG.gif" alt="Partie 3 : les fonctions avanc&eacute;es d'Eclipse" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="chap013.htm" ALT="13.  CVS 2.0 et Eclipse 2.1">
-<img src="FlecheD.gif" alt="13.  CVS 2.0 et Eclipse 2.1" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
-<HR>
-
-<p>&nbsp;</p>
-  <h1><!--idrefpage value="gestion" --><!--resumetitre value="d&eacute;taille les fonctionnalit&eacute;s propos&eacute;es pour g&eacute;rer les plug-ins et la plate-forme Eclipse." --><!--nchpdeb--><a name="chap_12">12. <!--nchpfin--> La gestion de la plate-forme</a></h1>
-<p>&nbsp;</p>
-<!--chapitredeb-->
-<div align="right">
-  <table border="0" cellspacing="0" summary="titre">
-    <tr>
-      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td>
-<td width="50" valign="top"><img src="images/1.gif" alt="1" width="62" height="83" border="0"></td>
-<td width="50" valign="top"><img src="images/2.gif" alt="2" width="62" height="83" border="0"></td>
-    </tr>
-  </table>
-  <br>
-</div>
-<!--chapitrefin-->
-<div align="justify"> 
-<p>&nbsp;</p>
-<p>Eclipse est con&ccedil;u pour &ecirc;tre un outil modulaire. De nombreux modules (plug-ins) sont fournis avec Eclipse mais il est aussi tr&egrave;s facile d'en ajouter d'autres&nbsp; d&eacute;velopp&eacute;s par la communaut&eacute; ou des soci&eacute;t&eacute;s commerciales.</p>
-<p>L'installation d'un plug-in est souvent tr&egrave;s simple car elle consiste essentiellement &agrave; d&eacute;compresser l'archive qui contient le plug-in pour que le contenu soit ins&eacute;rer dans le r&eacute;pertoire &quot;plugins&quot; o&ugrave; est install&eacute; Eclipse.</p>
-<p>Eclipse 2.0 propose une fonctionnalit&eacute; qui permet d'installer ou de mettre &agrave; jour des plug-ins via le web.</p>
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_12_1">12.1. <!--nchpfin-->Informations sur les plug-ins install&eacute;s</a></h2>
-  <p>Pour obtenir des informations sur la plate-forme, il faut utiliser le menu &quot;Aide / A propos de plateforme Eclipse&quot;.</p>
-  <p align="center"><img border=0 width=469 height=297
-src="images/plugin011.png"></p>
-  <p>Cette bo&icirc;te de dialogue affiche des informations g&eacute;n&eacute;rales sur Eclipse et permet de s&eacute;lectionner le type d'informations suppl&eacute;mentaires souhait&eacute;es.</p>
-  <p>Cliquez sur le bouton &quot;D&eacute;tails des plug-ins&quot; pour obtenir une liste de tous les plug-ins install&eacute;s.</p>
-  <p align="center"><img border=0 width=595 height=211
-src="images/plugin012.png"></p>
-  <p>Un clic sur le bouton &quot;D&eacute;tails de la configuration&quot; affiche un fichier dans la vue &eacute;diteur contenant des informations d&eacute;taill&eacute;es sur la configuration en cours d'utilisation.</p>
-  <p align="center"><img border=0 width=422 height=210
-src="images/plugin013.png"></p>
-  <p>Un clic sur le bouton &quot;D&eacute;tails des dispositifs&quot;, permet d'avoir des informations sur les &eacute;l&eacute;ments de base d'Eclipse.</p>
-  <p align="center"><img border=0 width=595 height=352
-src="images/plugin014.png"></p>
-<p>&nbsp;</p>
-<h2><!--nchpdeb--><a name="chap_12_2">12.2. <!--nchpfin--> Installation du plug-in JadClipse sous Eclipse 1.0</a></h2>
-<p>Jadclipse est un plug-in qui permet d'utiliser le d&eacute;compilateur Jad dans Eclipse.</p>
-  <p>Il suffit de t&eacute;l&eacute;charger le fichier zip contenant le module &agrave; l'url <a href="http://sourceforge.net/projects/jadclipse/">http://sourceforge.net/projects/jadclipse/</a>. Il faut aussi avoir installer l'outil Jad.</p>
-  <p>Pour installer le plug-in, il suffit simplement de d&eacute;compresser le fichier dans le r&eacute;pertoire &quot;plugins&quot; du r&eacute;pertoire principal d'Eclipse.</p>
-  <p>Pour que le module soit pris en compte et configurer automatiquement, il suffit de lancer ou relancer Eclipse.</p>
-  <p>A l'ouverture d'un fichier .class, le menu «&nbsp;Decompile&nbsp;» appara&icirc;t dans le menu principal. Il faut cocher l'option «&nbsp;Engage Jadclipse&nbsp;». Chaque fichier .class ouvert est automatiquement d&eacute;compil&eacute; et le code source est affich&eacute; dans l'&eacute;diteur.</p>
-  <p align="center"><img src="images/plugin004.png" width=600 height=171></p>
-  <p>Le plug-in est parfaitement int&eacute;gr&eacute; dans Eclipse&nbsp;: les options du plug-in sont modifiables dans l'arborescence &quot;Java / Jadclipse&quot; des pr&eacute;f&eacute;rences (menu &quot;Window / Preferences&quot;).</p>
-  <p align=center><img width=400 height=299 src="./images/plugin005.png"></p>
-<p>&nbsp;</p>
-<h2><!--nchpdeb--><a name="chap_12_3">12.3. <!--nchpfin--> La mise &agrave; jour des plug-ins avec Eclipse 2.0</a></h2>
-<p>Eclipse 2.0 propose des fonctionnalit&eacute;s pour permettre la mise &agrave; jour ou l'installation de plug-ins en utilisant le web.</p>
-<p>&nbsp;</p>
-<h3><!--nchpdeb--><a name="chap_12_3_1">12.3.1. <!--nchpfin--> La perspective « Installation / Mise &agrave; jour&nbsp;»</a></h3>
-  <p>La perspective « Installation / Mise &agrave; jour&nbsp;» permet la gestion des mises &agrave; jour. Pour l'afficher, il suffit de s&eacute;lectionner cette perspective ou de s&eacute;lectionner l'option «&nbsp;Mise &agrave; jour des logiciels / Gestionnaire des mises 
-  &agrave; jour&nbsp;» du menu &quot;Aide&quot;.</p>
-  <p align="center"><img src="images/update001.png" width="600" height="290"></p>
-  <p>La vue &quot;Mises &agrave; jour des dispositifs&quot; recence la liste des sources d'o&ugrave; peuvent &ecirc;tre t&eacute;l&eacute;charg&eacute;es les mises &agrave; jour. </p>
-<p>&nbsp;</p>
-<h3><!--nchpdeb--><a name="chap_12_3_2">12.3.2. <!--nchpfin--> Recherche et installation des mises &agrave; jour</a></h3>
-<p>Il faut utiliser l'option &quot;Mise &agrave; jour des logiciels&quot; du menu &quot;Aide&quot;.</p>
-<p>Un assistant recherche les mises &agrave; jour pour les plug-ins dont le site est enregistr&eacute; dans Eclipse. </p>
-<p align="center"><img width=450 height=152 src="images/update008.png"></p>
-<p>L'exemple ci dessous illustre la mise &agrave; jour d'une version 2.1 d'Eclipse avec la version 2.1.1.</p>
-<p align="center"><img width=400 height=253 src="images/update009.png"></p>
-<p>Cliquez sur le bouton &quot;Next&quot;</p>
-<p align="center"><img width=400 height=333 src="images/update010.png"></p>
-<p>Lisez la licence et si vous l'acceptez, Cliquez sur le bouton &quot;J'accepte les termes des contrats de licence&quot; puis sur le bouton &quot;Finish&quot;</p>
-<p align="center"><img width=400 height=333 src="images/update011.png"></p>
-<p>Cliquez sur le bouton &quot;Installer&quot;. Une fois l'installation termin&eacute;e, il faut relancer Eclipse. </p>
-<p align="center"><img width=441 height=139 src="images/update012.png"></p>
-<p>Pour rechercher les mises &agrave; jour, il est aussi possible dans la perspective &quot;Installation/mise &agrave; jour&quot; de cliquer sur &quot;Mise &agrave; jour disponible&quot; dans la vue &quot;Mises &agrave; jour des dispositifs&quot;.</p>
-<p align="center"><img src="images/config012.png" width="376" height="124"> </p>
-<p>La progression et le d&eacute;tail des mises &agrave; jour trouv&eacute;es sont affich&eacute;s dans la vue &quot;Aper&ccedil;u&quot;</p>
-<p align="center"><img src="images/config013.png" width="394" height="505"> </p>
-<p>&nbsp;</p>
-<h3><!--nchpdeb--><a name="chap_12_3_3">12.3.3. <!--nchpfin--> Installation d'un nouveau plug-in</a></h3>
-  <p>L'exemple ci dessous met en oeuvre l'installation du plug-in Easy Struts. Pour d'autres plug-in permettant leur mise &agrave; jour par le r&eacute;seau, la proc&eacute;dure est similaire.</p>
-  <p>Pour ajouter une nouvelle source, il suffit de s&eacute;lectionner l'option «&nbsp;Nouveau / Signet du site ... &nbsp;» du menu contextuel de la vue «&nbsp;Mises &agrave; jour des dispositifs&nbsp;».</p>
-  <p align="center"><img src="images/update003.png" width="262" height="223"></p>
-  <p>&nbsp;</p>
-  <p>Une bo&icirc;te de dialogue permet de saisir un nom et l'URL du signet.</p>
-  <p align="center"><img src="images/update005.png" width="523" height="352"></p>
-  <p>Il faut saisir le nom et l'url du fichier site.xml d&eacute;sir&eacute; puis cliquer sur le bouton &quot;Fin&quot;.</p>
-  <p align="center"><img width=272 height=229 src="images/update006.png"></p>
-  <p>L'application va lire le fichier et affiche les plug-ins disponibles dans l'arbrescence. Il suffit de s&eacute;lectionner la version d&eacute;sir&eacute;e. La vue &quot;Aper&ccedil;u&quot; affiche le details du plug-in s&eacute;lectionn&eacute;.</p>
-  <p>Pour installer la version s&eacute;lectionn&eacute;e, cliquer sur le bouton &quot;Install&quot; dans la vue «&nbsp;Aper&ccedil;u&nbsp;».</p>
-  <p align="center"><img width=400 height=288 src="./images/image042.png"></p>
-  <p>Cliquer sur le bouton  "Next". Lire et accepter la licence, puis cliquer sur le bouton “Next”</p>
-  <p align="center"><img width=400 height=289 src="./images/image046.png"></p>
-  <p>S&eacute;lectionner la cible d'installation et cliquer sur le bouton «Finish».</p>
-  <p align="center"><img width=400 height=297 src="./images/image048.png"></p>
-<p>Il faut confirmer l'installation, car le package n'est pas sign&eacute;, en cliquant sur le bouton «&nbsp;Install&nbsp;»</p>
-  <p align="left">Le plug-in est t&eacute;l&eacute;charg&eacute; et install&eacute;. L'assistant propose de red&eacute;marrer le plan de travail pour que les modifications soient prises en compte. Cliquez sur le bouton &quot;Yes&quot;.</p>
-  <p align="center"><img width=436 height=129 src="./images/image051.png"></p>
-  <p>Il peut &ecirc;tre int&eacute;ressant d'ajouter le site officiel d'Eclipse pour ajouter des plug-ins qui ne sont pas fournis en standard.</p>
-  <p align="center"><img src="images/update013.png" width="523" height="344"></p>
-  <p align="left">Un fois le nouveau signet configur&eacute;, il suffit de naviguer dans l'arborescence en fonction de la version de la plate-forme pour pouvoir installer un ou plusieurs  plug-ins parmis ceux propos&eacute;s.</p>
-  <p align="center"><img src="images/update014.png" width="201" height="224"> </p>
-  <p>&nbsp;</p>
-  <h3><!--nchpdeb--><a name="chap_12_3_4">12.3.4. <!--nchpfin--> Sauvegarde et restauration d'une configuration</a></h3>
-  <p>A chaque mise &agrave; jour, Eclipse enregistre la configuration. </p> 
-  <p>Il est aussi possible de demander la sauvegarde explicite de la configuration&nbsp;: il faut, dans la perspective  «&nbsp;Installation / Mise &agrave; jour&nbsp;», s&eacute;lectionner «&nbsp;Plate-forme Eclipse&nbsp;» dans la vue «&nbsp;Configuration de l'installation&nbsp;»</p> 
-  <p align="center"><img border=0 width=442 height=140 src="images/config001.png"></p> 
-  <p>Il suffit de cliquer sur le bouton «&nbsp;Sauvegarder&nbsp;» dans la vue «&nbsp;Aper&ccedil;u&nbsp;»</p> 
-  <p align="center"><img border=0 width=517 height=392 src="images/config002.png"></p> 
-  <p>Pour restaurer une configuration, il suffit de s&eacute;lectionner, dans la vue «&nbsp;Configuration de l'installation&nbsp;», la sauvegarde automatique (dans «&nbsp;historique de la configuration) ou la sauvegarde manuelle (dans «&nbsp;Configuration sauvegard&eacute;es).</p> 
-  <p align="center"><img border=0 width=441 height=139 src="images/config003.png"></p> 
-  <p>Il suffit ensuite de cliquer sur le bouton «&nbsp;Restaurer&nbsp;» de la vue «&nbsp;Aper&ccedil;u&nbsp;».</p> 
-  <p align="center"><img border=0 width=513 height=492 src="images/config004.png"></p> 
-  <p>Cette op&eacute;ration n&eacute;cessite un red&eacute;marrage de l'application.</p> 
+ <head> 
+  <title>La gestion de la plate-forme</title> 
+  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1"> 
+  <meta name="description" content=""> 
+  <meta name="keywords" content="java tutorial cours dej eclipse"> 
+  <meta name="robots" content="all"> 
+  <meta name="revisit-after" content="2 months"> 
+  <meta http-equiv="Content-Language" content="fr-FX"> 
+  <meta name="author" content="Jean Michel DOUDOUX"> 
+  <link href="dej_style.css" rel="stylesheet" type="text/css"> 
+ </head>
+ <body> 
+  <!--ENTETE--> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
+    <tr> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="partie3.htm" alt="Partie 3 : les fonctions avanc&eacute;es d'Eclipse"> <img src="FlecheG.gif" alt="Partie 3 : les fonctions avanc&eacute;es d'Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap013.htm" alt="13.  CVS 2.0 et Eclipse 2.1"> <img src="FlecheD.gif" alt="13.  CVS 2.0 et Eclipse 2.1" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
+    </tr> 
+    <tr> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
+    </tr> 
+   </tbody> 
+  </table> 
+  <hr> 
   <p>&nbsp;</p> 
-  <h3><!--nchpdeb--><a name="chap_12_3_5">12.3.5. <!--nchpfin--> R&eacute;solution des probl&egrave;mes de d&eacute;pendances</a></h3>
-  <p>Il est possible que la mise &agrave; jour ou l'installation d'un plug-in &eacute;choue notamment pour des questions de d&eacute;pendances vis-&agrave;-vis d'un autre plug-in.</p> 
-  <p>Dans ce cas, la mise &agrave; jour est signal&eacute;e avec une croix blanche dans un rond rouge.</p> 
-  <p align="center"><img border=0 width=500 height=262 src="images/config005.png"></p> 
-  <p>Pour avoir plus d'informations, il suffit de s&eacute;lectionner la mise &agrave; jour et de cliquer sur le bouton «&nbsp;D&eacute;tails de l'erreur&nbsp;».</p> 
-  <p align="center"><img border=0 width=443 height=226 src="images/config006.png"></p> 
-  <p>Dans l'exemple ci-dessus, il manque un plug-in ou la version install&eacute;e n'est pas correcte.</p> 
-  <p>Pour r&eacute;soudre le probl&egrave;me, il suffit de quitter Eclipse, d'installer le plug-in (en le d&eacute;compressant dans le bon r&eacute;pertoire) et de relancer Eclipse.</p> 
-  <p align="center"><img border=0 width=500 height=258 src="images/config007.png"></p> 
-  <p>Il suffit alors de d&eacute;cocher la mise &agrave; jour posant probl&egrave;me et de cliquer sur le bouton «&nbsp;Fin&nbsp;» afin de mettre &agrave; jour le plug-in manquant. Cette op&eacute;ration n&eacute;cessite le red&eacute;marrage d'Eclipse.</p> 
-  <p align="center"><img border=0 width=500 height=249 src="images/config008.png"></p> 
-  <p>Suite &agrave; ce red&eacute;marrage, le plug-in erron&eacute; n'appara&icirc;t plus en erreur et peut &ecirc;tre install&eacute; en cliquant sur le bouton «&nbsp;Fin&nbsp;».</p> 
-  <p>&nbsp;</p>
-  <h2><!--nchpdeb--><a name="chap_12_4">12.4. <!--nchpfin-->La mise &agrave; jour des plug-ins avec Eclipse 3.0</a></h2> 
-  <p>La perspective &quot;Installation et mise &agrave; jour&quot; est supprim&eacute;e et l'option &quot;Mise &agrave; jour de logiciels&quot; du menu &quot;Aide&quot; propose maintenant deux options&nbsp;: </p> 
-  <ul type=circle> 
-    <li>&quot;Rechercher et installer ...&quot;</li> 
-    <li>&quot;Configuration du produit ...&quot;</li> 
-  </ul> 
-<p>&nbsp;</p>
-  <h3><!--nchpdeb--><a name="chap_12_4_1">12.4.1. <!--nchpfin-->Recherche et installation de plug-ins</a></h3> 
-  <p>L'option &quot;Rechercher et installer ...&nbsp;&quot; permet de rechercher et d'installation un plug-in ou une nouvelle version d'un plug-in install&eacute; gr&acirc;ce &agrave; un assistant.</p> 
-  <p align="center"><img width=600 height=210
-src="images/config014.png"></p> 
-  <p>La premi&egrave;re page permet de s&eacute;lectionner le type d'&eacute;l&eacute;ment &agrave; rechercher.</p> 
-  <p>L'option &quot;Rechercher les mises &agrave; jour des dispositifs d&eacute;j&agrave; install&eacute;s&quot; permet de rechercher dans les sites enregistr&eacute;s, des nouvelles versions des plug-ins install&eacute;s.</p> 
-  <p align="center"><img width=546 height=359
-src="images/config015.png"></p> 
-  <p>L'option &quot;Rechercher les nouveaux dispositifs &agrave; installer&quot; permet de g&eacute;rer la liste des sites proposant des plug-ins et ainsi d'obtenir de nouveaux plug-ins.</p> 
-  <p align="center"><img width=546 height=333
-src="images/config016.png"></p> 
-  <p>Cette page permet de s&eacute;lectionner les sites concern&eacute;s par la recherche. Il est possible d'ajouter de nouveaux sites gr&acirc;ce aux boutons de droite.</p> 
-  <p>Un clic sur le bouton &quot;Nouveau site distant ...&quot; ouvre une bo&icirc;te de dialogue qui permet de saisir les informations le nouveau site. Il suffit de saisir un nom et l'url du site.</p> 
-  <p align="center"><img width=356 height=117
-src="images/config018.png"></p> 
-  <p>Cliquez sur le bouton &quot;OK&quot;</p> 
-  <p>Le nouveau site est ajouter dans la liste. Il faut ouvrir l'arborescence du nouveau site pour s&eacute;lectionner les dispositifs d&eacute;sir&eacute;s.</p> 
-  <p align="center"><img width=546 height=330
-src="images/config019.png"></p> 
-  <p>Un clic sur le bouton &quot;Suivant&quot; permet de lancer la rechercher. Les r&eacute;sultats de la recherche sont affich&eacute;s dans la page suivante.</p> 
-  <p align="center"><img width=546 height=364
-src="images/config020.png"></p> 
-  <p>Il suffit alors de s&eacute;lectionner le ou les plug-ins d&eacute;sir&eacute;s puis de cliquer sur le bouton &quot;Suivant&quot;.</p> 
-  <p align="center"><img width=546 height=314
-src="images/config021.png"></p> 
-  <p>La page suivante permet de lire et d'accepter la licence pour poursuivre les traitements.</p> 
-  <p>Si vous acceptez la licence, cliquez sur le bouton &quot;J'accepte les termes des contrats de licence&quot; puis sur le bouton &quot;Suivant&quot;.</p> 
-  <p>La page suivante permet de s&eacute;lectionner l'emplacement de l'installation du plug-in</p> 
-  <p align="center"><img width=546 height=265
-src="images/config022.png"></p> 
-  <p>Cliquez sur le bouton &quot;Fin&quot;.</p> 
-  <p>Si le plug-in n'est pas sign&eacute;, une demande de confirmation d'installation est demand&eacute;e</p> 
-  <p align="center"><img width=600 height=271
-src="images/config023.png"></p> 
-  <p>Dans ce cas, cliquez sur le bouton &quot;Installer&quot;.</p>
-  <p>Les fichiers sont t&eacute;l&eacute;charg&eacute;s et install&eacute;s.</p> 
-  <p align="center"><img width=546 height=307
-src="images/config024.png"></p> 
-  <p>Une fois ces op&eacute;rations termin&eacute;es, le syst&egrave;me recommande de red&eacute;marrer la plate-forme.</p> 
-  <p align="center"><img width=463 height=159
-src="images/config025.png"></p> 
-  <p>Il est donc recommand&eacute; de cliquer sur le bouton &quot;Oui&quot; surtout pour pouvoir utiliser imm&eacute;diatement le plug-in fra&icirc;chement install&eacute;.</p> 
-  <p>&nbsp;</p>
-  <h3><!--nchpdeb--><a name="chap_12_4_2">12.4.2. <!--nchpfin-->La configuration du produit</a></h3> 
-  <p>L'option Configuration du produit permet un gestion d&eacute;taill&eacute; de la plate-forme.</p> 
-  <p align="center"><img width=530 height=456
-src="images/config026.png"></p> 
-  <p>En s&eacute;lection la racine de l'arborescence &quot;Plateforme Eclipse&quot;, plusieurs t&acirc;ches sont disponibles.</p> 
-  <p>La tache &quot;R&eacute;tablir&quot; permet de restaurer une ancienne configuration.</p> 
-  <p align="center"><img width=432 height=377
-src="images/config027.png"></p> 
-  <p>Il suffit de s&eacute;lectionner la configuration d&eacute;sir&eacute;e et de cliquer sur le bouton &quot;Fin&quot;.</p> 
-  <p>La t&acirc;che &quot;Afficher l'historique d'installation&quot; affiche une page web contenant l'historique des installations. Le bouton <img width=23 height=22
-src="images/config028.png"> permet aussi de demander l'ex&eacute;cution de cette t&acirc;che.</p> 
-  <p align="center"><img width=481 height=573
-src="images/config029.png"></p> 
-  <p>Pour chaque plug-in install&eacute;, il est possible de r&eacute;aliser plusieurs t&acirc;ches en le s&eacute;lectionnant&nbsp;: </p> 
-  <p align="center"><img width=533 height=345
-src="images/config030.png"></p> 
-  <p>La t&acirc;che &quot;D&eacute;sactiver&quot; permet d&eacute;sactiver le plug-in apr&egrave;s une confirmation</p> 
-  <p align="center"><img width=441 height=139
-src="images/config031.png"></p> 
-  <p>Il faut r&eacute;demarrer la plateforme que la d&eacute;sactivation soit effective.</p> 
-  <p>Par d&eacute;faut, les plug-ins d&eacute;sactiv&eacute;s ne sont pas affich&eacute;s. Il faut cliquer sur le bouton <img width=24 height=22
-src="images/config032.png"> pour les afficher dans l'arborescence.</p> 
-  <p align="center"><img width=328 height=265
-src="images/config033.png"></p> 
-  <p>La t&acirc;che &quot;Activer&quot; permet de r&eacute;activer le plug-in apr&egrave;s une configuration. La relance de la plate-forme n'est pas obligatoire mais fortement recommand&eacute;e.</p> 
-  <p>La t&acirc;che &quot;D&eacute;sinstaller&quot; permet de d&eacute;sinstaller le plug-in apr&egrave;s confirmation</p> 
-  <p align="center"><img width=441 height=110
-src="images/config034.png"></p> 
-  <p>La relance de la plate-forme n'est pas obligatoire mais fortement recommand&eacute;e.</p> 
-<h3><!--nchpdeb--><a name="chap_12_4_3">12.4.3. <!--nchpfin--> Mises &agrave; jour automatiques</a></h3>
-  <table width="100%"  border="0" cellspacing="0" cellpadding="4">
-    <tr>
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td>
-      <td><p>Il est possible de param&eacute;trer une fr&eacute;quence de mises &agrave; jour automatiques. Pour cela dans les pr&eacute;f&eacute;rences, il faut cocher l'option &quot;Rechercher automatiquement les nouvelles mises &agrave; jour et m'envoyer une notification&quot;</p>
-        <p align="center"><img src="images/config009.png" width="580" height="343"></p>
-        <p>Il est alors possible de param&eacute;trer la planification et les options de t&eacute;l&eacute;chargement pour une mise &agrave; jour automatique des &eacute;l&eacute;ments enregistr&eacute;s dans le syst&egrave;me de mise &agrave; jour de l'application.</p>
-        <p>Il est ainsi possible de pr&eacute;ciser deux choses : </p>
-        <ul>
-          <li>le moment de la recherche automatique : soit &agrave; chaque d&eacute;marrage de l'application soit &agrave; une p&eacute;riodicit&eacute; et une heure pr&eacute;cise.</li>
-          <li>informer de la disponibilit&eacute; de mises &agrave; jour ou  t&eacute;l&eacute;charger automatiquement les mises &agrave; jour trouv&eacute;s et informer de la fin de leur t&eacute;l&eacute;chargement </li>
-        </ul>        
-        <p>Si le syst&egrave;me d&eacute;tecte des mises &agrave; jour, une bo&icirc;te de dialogue est affich&eacute;e &agrave; l'issu des traitements de recherche&nbsp;: </p>        
-        <p align="center"><img src="images/config010.png" width="441" height="109"></p>        
-        <p> Un clic sur le bouton &quot;Oui&quot; permet d'afficher une bo&icirc;te de dialogue recensant les mises &agrave; jours trouv&eacute;es. </p>        
-        <p align="center"><img src="images/config011.png" width="580" height="356"></p>
-        <p>Il faut s&eacute;lectionner le ou les &eacute;l&eacute;ments &agrave; mettre &agrave; jour et de cliquer sur le bouton &quot;Suivant&quot;. </p>
-        <p>Il suffit enfin de suivre les &eacute;tapes de l'assistant pour obtenir et installer le ou les dispositifs choisis. </p></td>
-    </tr>
-  </table>
-  <p>&nbsp;</p>
-<h3><!--nchpdeb--><a name="chap_12_4_4">12.4.4. <!--nchpfin-->Mise &agrave; jour de la plate-forme via des mirroirs</a></h3>
-  <table width="100%"  border="0" cellspacing="0" cellpadding="4">
-    <tr>
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse31.png" width="64" height="32" align="center"></td>
-      <td>
-  <p>La mise &agrave; jour de la plate-forme se faire &agrave; partir de miroir. Lors d'une demande mise &agrave; jour, une bo&icirc;te de dialogue permet de s&eacute;lectionner le miroir &agrave; utiliser.</p> 
-  <p align="center"><img width=470 height=329 src="images/plugin030.png"></p> 
-  <p align="center"><img width=456 height=370 src="images/plugin031.png"></p> 
-  <p>S&eacute;lectionnez le miroir et cliquez sur le bouton «&nbsp;OK&nbsp;»</p> 
-  <p align="center"><img width=450 height=191 src="images/plugin032.png"></p> 
-  <p>Si aucune mise n'est trouv&eacute;e alors un message est affich&eacute;</p> 
-  <p align="center"><img width=441 height=139 src="images/plugin033.png"></p> 
-  <p>Il est possible d'exporter/importer une liste des signets de sites de mise &agrave; jour</p> 
-  <p align="center"><img width=357 height=489 src="images/plugin034.png"></p> 
-  <p>En cliquant sur le bouton «&nbsp;Exporter des sites&nbsp;», une bo&icirc;te de dialogue permet de s&eacute;lectionner le fichier qui va contenir la liste.</p> 
-  <p align="center"><img width=563 height=412 src="images/plugin035.png"></p> 
-  <p>Le fichier cr&eacute;&eacute; est au format <span class=SpellE>xml</span>.</p> 
-  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
-    <tr bgcolor="#A6A5C2">
-      <td>Exemple :</td>
-    </tr>
-    <tr>
-      <td>
-        <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 
+  <h1>
+   <!--idrefpage value="gestion" -->
+   <!--resumetitre value="d&eacute;taille les fonctionnalit&eacute;s propos&eacute;es pour g&eacute;rer les plug-ins et la plate-forme Eclipse." -->
+   <!--nchpdeb--><a name="chap_12">12. 
+    <!--nchpfin--> La gestion de la plate-forme</a></h1> 
+  <p>&nbsp;</p> 
+  <!--chapitredeb--> 
+  <div align="right"> 
+   <table border="0" cellspacing="0" summary="titre"> 
+    <tbody>
+     <tr> 
+      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td> 
+      <td width="50" valign="top"><img src="images/1.gif" alt="1" width="62" height="83" border="0"></td> 
+      <td width="50" valign="top"><img src="images/2.gif" alt="2" width="62" height="83" border="0"></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <br> 
+  </div> 
+  <!--chapitrefin--> 
+  <div align="justify"> 
+   <p>&nbsp;</p> 
+   <p>Eclipse est con&ccedil;u pour &ecirc;tre un outil modulaire. De nombreux modules (plug-ins) sont fournis avec Eclipse mais il est aussi tr&egrave;s facile d'en ajouter d'autres&nbsp; d&eacute;velopp&eacute;s par la communaut&eacute; ou des soci&eacute;t&eacute;s commerciales.</p> 
+   <p>L'installation d'un plug-in est souvent tr&egrave;s simple car elle consiste essentiellement &agrave; d&eacute;compresser l'archive qui contient le plug-in pour que le contenu soit ins&eacute;rer dans le r&eacute;pertoire "plugins" o&ugrave; est install&eacute; Eclipse.</p> 
+   <p>Eclipse 2.0 propose une fonctionnalit&eacute; qui permet d'installer ou de mettre &agrave; jour des plug-ins via le web.</p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_12_1">12.1. 
+     <!--nchpfin-->Informations sur les plug-ins install&eacute;s</a></h2> 
+   <p>Pour obtenir des informations sur la plate-forme, il faut utiliser le menu "Aide / A propos de plateforme Eclipse".</p> 
+   <p align="center"><img border="0" width="469" height="297" src="images/plugin011.png"></p> 
+   <p>Cette bo&icirc;te de dialogue affiche des informations g&eacute;n&eacute;rales sur Eclipse et permet de s&eacute;lectionner le type d'informations suppl&eacute;mentaires souhait&eacute;es.</p> 
+   <p>Cliquez sur le bouton "D&eacute;tails des plug-ins" pour obtenir une liste de tous les plug-ins install&eacute;s.</p> 
+   <p align="center"><img border="0" width="595" height="211" src="images/plugin012.png"></p> 
+   <p>Un clic sur le bouton "D&eacute;tails de la configuration" affiche un fichier dans la vue &eacute;diteur contenant des informations d&eacute;taill&eacute;es sur la configuration en cours d'utilisation.</p> 
+   <p align="center"><img border="0" width="422" height="210" src="images/plugin013.png"></p> 
+   <p>Un clic sur le bouton "D&eacute;tails des dispositifs", permet d'avoir des informations sur les &eacute;l&eacute;ments de base d'Eclipse.</p> 
+   <p align="center"><img border="0" width="595" height="352" src="images/plugin014.png"></p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_12_2">12.2. 
+     <!--nchpfin--> Installation du plug-in JadClipse sous Eclipse 1.0</a></h2> 
+   <p>Jadclipse est un plug-in qui permet d'utiliser le d&eacute;compilateur Jad dans Eclipse.</p> 
+   <p>Il suffit de t&eacute;l&eacute;charger le fichier zip contenant le module &agrave; l'url <a href="http://sourceforge.net/projects/jadclipse/">http://sourceforge.net/projects/jadclipse/</a>. Il faut aussi avoir installer l'outil Jad.</p> 
+   <p>Pour installer le plug-in, il suffit simplement de d&eacute;compresser le fichier dans le r&eacute;pertoire "plugins" du r&eacute;pertoire principal d'Eclipse.</p> 
+   <p>Pour que le module soit pris en compte et configurer automatiquement, il suffit de lancer ou relancer Eclipse.</p> 
+   <p>A l'ouverture d'un fichier .class, le menu &laquo;&nbsp;Decompile&nbsp;&raquo; appara&icirc;t dans le menu principal. Il faut cocher l'option &laquo;&nbsp;Engage Jadclipse&nbsp;&raquo;. Chaque fichier .class ouvert est automatiquement d&eacute;compil&eacute; et le code source est affich&eacute; dans l'&eacute;diteur.</p> 
+   <p align="center"><img src="images/plugin004.png" width="600" height="171"></p> 
+   <p>Le plug-in est parfaitement int&eacute;gr&eacute; dans Eclipse&nbsp;: les options du plug-in sont modifiables dans l'arborescence "Java / Jadclipse" des pr&eacute;f&eacute;rences (menu "Window / Preferences").</p> 
+   <p align="center"><img width="400" height="299" src="./images/plugin005.png"></p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_12_3">12.3. 
+     <!--nchpfin--> La mise &agrave; jour des plug-ins avec Eclipse 2.0</a></h2> 
+   <p>Eclipse 2.0 propose des fonctionnalit&eacute;s pour permettre la mise &agrave; jour ou l'installation de plug-ins en utilisant le web.</p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_12_3_1">12.3.1. 
+     <!--nchpfin--> La perspective &laquo; Installation / Mise &agrave; jour&nbsp;&raquo;</a></h3> 
+   <p>La perspective &laquo; Installation / Mise &agrave; jour&nbsp;&raquo; permet la gestion des mises &agrave; jour. Pour l'afficher, il suffit de s&eacute;lectionner cette perspective ou de s&eacute;lectionner l'option &laquo;&nbsp;Mise &agrave; jour des logiciels / Gestionnaire des mises &agrave; jour&nbsp;&raquo; du menu "Aide".</p> 
+   <p align="center"><img src="images/update001.png" width="600" height="290"></p> 
+   <p>La vue "Mises &agrave; jour des dispositifs" recence la liste des sources d'o&ugrave; peuvent &ecirc;tre t&eacute;l&eacute;charg&eacute;es les mises &agrave; jour. </p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_12_3_2">12.3.2. 
+     <!--nchpfin--> Recherche et installation des mises &agrave; jour</a></h3> 
+   <p>Il faut utiliser l'option "Mise &agrave; jour des logiciels" du menu "Aide".</p> 
+   <p>Un assistant recherche les mises &agrave; jour pour les plug-ins dont le site est enregistr&eacute; dans Eclipse. </p> 
+   <p align="center"><img width="450" height="152" src="images/update008.png"></p> 
+   <p>L'exemple ci dessous illustre la mise &agrave; jour d'une version 2.1 d'Eclipse avec la version 2.1.1.</p> 
+   <p align="center"><img width="400" height="253" src="images/update009.png"></p> 
+   <p>Cliquez sur le bouton "Next"</p> 
+   <p align="center"><img width="400" height="333" src="images/update010.png"></p> 
+   <p>Lisez la licence et si vous l'acceptez, Cliquez sur le bouton "J'accepte les termes des contrats de licence" puis sur le bouton "Finish"</p> 
+   <p align="center"><img width="400" height="333" src="images/update011.png"></p> 
+   <p>Cliquez sur le bouton "Installer". Une fois l'installation termin&eacute;e, il faut relancer Eclipse. </p> 
+   <p align="center"><img width="441" height="139" src="images/update012.png"></p> 
+   <p>Pour rechercher les mises &agrave; jour, il est aussi possible dans la perspective "Installation/mise &agrave; jour" de cliquer sur "Mise &agrave; jour disponible" dans la vue "Mises &agrave; jour des dispositifs".</p> 
+   <p align="center"><img src="images/config012.png" width="376" height="124"> </p> 
+   <p>La progression et le d&eacute;tail des mises &agrave; jour trouv&eacute;es sont affich&eacute;s dans la vue "Aper&ccedil;u"</p> 
+   <p align="center"><img src="images/config013.png" width="394" height="505"> </p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_12_3_3">12.3.3. 
+     <!--nchpfin--> Installation d'un nouveau plug-in</a></h3> 
+   <p>L'exemple ci dessous met en oeuvre l'installation du plug-in Easy Struts. Pour d'autres plug-in permettant leur mise &agrave; jour par le r&eacute;seau, la proc&eacute;dure est similaire.</p> 
+   <p>Pour ajouter une nouvelle source, il suffit de s&eacute;lectionner l'option &laquo;&nbsp;Nouveau / Signet du site ... &nbsp;&raquo; du menu contextuel de la vue &laquo;&nbsp;Mises &agrave; jour des dispositifs&nbsp;&raquo;.</p> 
+   <p align="center"><img src="images/update003.png" width="262" height="223"></p> 
+   <p>&nbsp;</p> 
+   <p>Une bo&icirc;te de dialogue permet de saisir un nom et l'URL du signet.</p> 
+   <p align="center"><img src="images/update005.png" width="523" height="352"></p> 
+   <p>Il faut saisir le nom et l'url du fichier site.xml d&eacute;sir&eacute; puis cliquer sur le bouton "Fin".</p> 
+   <p align="center"><img width="272" height="229" src="images/update006.png"></p> 
+   <p>L'application va lire le fichier et affiche les plug-ins disponibles dans l'arbrescence. Il suffit de s&eacute;lectionner la version d&eacute;sir&eacute;e. La vue "Aper&ccedil;u" affiche le details du plug-in s&eacute;lectionn&eacute;.</p> 
+   <p>Pour installer la version s&eacute;lectionn&eacute;e, cliquer sur le bouton "Install" dans la vue &laquo;&nbsp;Aper&ccedil;u&nbsp;&raquo;.</p> 
+   <p align="center"><img width="400" height="288" src="./images/image042.png"></p> 
+   <p>Cliquer sur le bouton &nbsp;"Next". Lire et accepter la licence, puis cliquer sur le bouton &#x93;Next&#x94;</p> 
+   <p align="center"><img width="400" height="289" src="./images/image046.png"></p> 
+   <p>S&eacute;lectionner la cible d'installation et cliquer sur le bouton &laquo;Finish&raquo;.</p> 
+   <p align="center"><img width="400" height="297" src="./images/image048.png"></p> 
+   <p>Il faut confirmer l'installation, car le package n'est pas sign&eacute;, en cliquant sur le bouton &laquo;&nbsp;Install&nbsp;&raquo;</p> 
+   <p align="left">Le plug-in est t&eacute;l&eacute;charg&eacute; et install&eacute;. L'assistant propose de red&eacute;marrer le plan de travail pour que les modifications soient prises en compte. Cliquez sur le bouton "Yes".</p> 
+   <p align="center"><img width="436" height="129" src="./images/image051.png"></p> 
+   <p>Il peut &ecirc;tre int&eacute;ressant d'ajouter le site officiel d'Eclipse pour ajouter des plug-ins qui ne sont pas fournis en standard.</p> 
+   <p align="center"><img src="images/update013.png" width="523" height="344"></p> 
+   <p align="left">Un fois le nouveau signet configur&eacute;, il suffit de naviguer dans l'arborescence en fonction de la version de la plate-forme pour pouvoir installer un ou plusieurs plug-ins parmis ceux propos&eacute;s.</p> 
+   <p align="center"><img src="images/update014.png" width="201" height="224"> </p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_12_3_4">12.3.4. 
+     <!--nchpfin--> Sauvegarde et restauration d'une configuration</a></h3> 
+   <p>A chaque mise &agrave; jour, Eclipse enregistre la configuration. </p> 
+   <p>Il est aussi possible de demander la sauvegarde explicite de la configuration&nbsp;: il faut, dans la perspective&nbsp; &laquo;&nbsp;Installation / Mise &agrave; jour&nbsp;&raquo;, s&eacute;lectionner &laquo;&nbsp;Plate-forme Eclipse&nbsp;&raquo; dans la vue &laquo;&nbsp;Configuration de l'installation&nbsp;&raquo;</p> 
+   <p align="center"><img border="0" width="442" height="140" src="images/config001.png"></p> 
+   <p>Il suffit de cliquer sur le bouton &laquo;&nbsp;Sauvegarder&nbsp;&raquo; dans la vue &laquo;&nbsp;Aper&ccedil;u&nbsp;&raquo;</p> 
+   <p align="center"><img border="0" width="517" height="392" src="images/config002.png"></p> 
+   <p>Pour restaurer une configuration, il suffit de s&eacute;lectionner, dans la vue &laquo;&nbsp;Configuration de l'installation&nbsp;&raquo;, la sauvegarde automatique (dans &laquo;&nbsp;historique de la configuration) ou la sauvegarde manuelle (dans &laquo;&nbsp;Configuration sauvegard&eacute;es).</p> 
+   <p align="center"><img border="0" width="441" height="139" src="images/config003.png"></p> 
+   <p>Il suffit ensuite de cliquer sur le bouton &laquo;&nbsp;Restaurer&nbsp;&raquo; de la vue &laquo;&nbsp;Aper&ccedil;u&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="513" height="492" src="images/config004.png"></p> 
+   <p>Cette op&eacute;ration n&eacute;cessite un red&eacute;marrage de l'application.</p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_12_3_5">12.3.5. 
+     <!--nchpfin--> R&eacute;solution des probl&egrave;mes de d&eacute;pendances</a></h3> 
+   <p>Il est possible que la mise &agrave; jour ou l'installation d'un plug-in &eacute;choue notamment pour des questions de d&eacute;pendances vis-&agrave;-vis d'un autre plug-in.</p> 
+   <p>Dans ce cas, la mise &agrave; jour est signal&eacute;e avec une croix blanche dans un rond rouge.</p> 
+   <p align="center"><img border="0" width="500" height="262" src="images/config005.png"></p> 
+   <p>Pour avoir plus d'informations, il suffit de s&eacute;lectionner la mise &agrave; jour et de cliquer sur le bouton &laquo;&nbsp;D&eacute;tails de l'erreur&nbsp;&raquo;.</p> 
+   <p align="center"><img border="0" width="443" height="226" src="images/config006.png"></p> 
+   <p>Dans l'exemple ci-dessus, il manque un plug-in ou la version install&eacute;e n'est pas correcte.</p> 
+   <p>Pour r&eacute;soudre le probl&egrave;me, il suffit de quitter Eclipse, d'installer le plug-in (en le d&eacute;compressant dans le bon r&eacute;pertoire) et de relancer Eclipse.</p> 
+   <p align="center"><img border="0" width="500" height="258" src="images/config007.png"></p> 
+   <p>Il suffit alors de d&eacute;cocher la mise &agrave; jour posant probl&egrave;me et de cliquer sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo; afin de mettre &agrave; jour le plug-in manquant. Cette op&eacute;ration n&eacute;cessite le red&eacute;marrage d'Eclipse.</p> 
+   <p align="center"><img border="0" width="500" height="249" src="images/config008.png"></p> 
+   <p>Suite &agrave; ce red&eacute;marrage, le plug-in erron&eacute; n'appara&icirc;t plus en erreur et peut &ecirc;tre install&eacute; en cliquant sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;.</p> 
+   <p>&nbsp;</p> 
+   <h2>
+    <!--nchpdeb--><a name="chap_12_4">12.4. 
+     <!--nchpfin-->La mise &agrave; jour des plug-ins avec Eclipse 3.0</a></h2> 
+   <p>La perspective "Installation et mise &agrave; jour" est supprim&eacute;e et l'option "Mise &agrave; jour de logiciels" du menu "Aide" propose maintenant deux options&nbsp;: </p> 
+   <ul type="circle"> 
+    <li>"Rechercher et installer ..."</li> 
+    <li>"Configuration du produit ..."</li> 
+   </ul> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_12_4_1">12.4.1. 
+     <!--nchpfin-->Recherche et installation de plug-ins</a></h3> 
+   <p>L'option "Rechercher et installer ...&nbsp;" permet de rechercher et d'installation un plug-in ou une nouvelle version d'un plug-in install&eacute; gr&acirc;ce &agrave; un assistant.</p> 
+   <p align="center"><img width="600" height="210" src="images/config014.png"></p> 
+   <p>La premi&egrave;re page permet de s&eacute;lectionner le type d'&eacute;l&eacute;ment &agrave; rechercher.</p> 
+   <p>L'option "Rechercher les mises &agrave; jour des dispositifs d&eacute;j&agrave; install&eacute;s" permet de rechercher dans les sites enregistr&eacute;s, des nouvelles versions des plug-ins install&eacute;s.</p> 
+   <p align="center"><img width="546" height="359" src="images/config015.png"></p> 
+   <p>L'option "Rechercher les nouveaux dispositifs &agrave; installer" permet de g&eacute;rer la liste des sites proposant des plug-ins et ainsi d'obtenir de nouveaux plug-ins.</p> 
+   <p align="center"><img width="546" height="333" src="images/config016.png"></p> 
+   <p>Cette page permet de s&eacute;lectionner les sites concern&eacute;s par la recherche. Il est possible d'ajouter de nouveaux sites gr&acirc;ce aux boutons de droite.</p> 
+   <p>Un clic sur le bouton "Nouveau site distant ..." ouvre une bo&icirc;te de dialogue qui permet de saisir les informations le nouveau site. Il suffit de saisir un nom et l'url du site.</p> 
+   <p align="center"><img width="356" height="117" src="images/config018.png"></p> 
+   <p>Cliquez sur le bouton "OK"</p> 
+   <p>Le nouveau site est ajouter dans la liste. Il faut ouvrir l'arborescence du nouveau site pour s&eacute;lectionner les dispositifs d&eacute;sir&eacute;s.</p> 
+   <p align="center"><img width="546" height="330" src="images/config019.png"></p> 
+   <p>Un clic sur le bouton "Suivant" permet de lancer la rechercher. Les r&eacute;sultats de la recherche sont affich&eacute;s dans la page suivante.</p> 
+   <p align="center"><img width="546" height="364" src="images/config020.png"></p> 
+   <p>Il suffit alors de s&eacute;lectionner le ou les plug-ins d&eacute;sir&eacute;s puis de cliquer sur le bouton "Suivant".</p> 
+   <p align="center"><img width="546" height="314" src="images/config021.png"></p> 
+   <p>La page suivante permet de lire et d'accepter la licence pour poursuivre les traitements.</p> 
+   <p>Si vous acceptez la licence, cliquez sur le bouton "J'accepte les termes des contrats de licence" puis sur le bouton "Suivant".</p> 
+   <p>La page suivante permet de s&eacute;lectionner l'emplacement de l'installation du plug-in</p> 
+   <p align="center"><img width="546" height="265" src="images/config022.png"></p> 
+   <p>Cliquez sur le bouton "Fin".</p> 
+   <p>Si le plug-in n'est pas sign&eacute;, une demande de confirmation d'installation est demand&eacute;e</p> 
+   <p align="center"><img width="600" height="271" src="images/config023.png"></p> 
+   <p>Dans ce cas, cliquez sur le bouton "Installer".</p> 
+   <p>Les fichiers sont t&eacute;l&eacute;charg&eacute;s et install&eacute;s.</p> 
+   <p align="center"><img width="546" height="307" src="images/config024.png"></p> 
+   <p>Une fois ces op&eacute;rations termin&eacute;es, le syst&egrave;me recommande de red&eacute;marrer la plate-forme.</p> 
+   <p align="center"><img width="463" height="159" src="images/config025.png"></p> 
+   <p>Il est donc recommand&eacute; de cliquer sur le bouton "Oui" surtout pour pouvoir utiliser imm&eacute;diatement le plug-in fra&icirc;chement install&eacute;.</p> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_12_4_2">12.4.2. 
+     <!--nchpfin-->La configuration du produit</a></h3> 
+   <p>L'option Configuration du produit permet un gestion d&eacute;taill&eacute; de la plate-forme.</p> 
+   <p align="center"><img width="530" height="456" src="images/config026.png"></p> 
+   <p>En s&eacute;lection la racine de l'arborescence "Plateforme Eclipse", plusieurs t&acirc;ches sont disponibles.</p> 
+   <p>La tache "R&eacute;tablir" permet de restaurer une ancienne configuration.</p> 
+   <p align="center"><img width="432" height="377" src="images/config027.png"></p> 
+   <p>Il suffit de s&eacute;lectionner la configuration d&eacute;sir&eacute;e et de cliquer sur le bouton "Fin".</p> 
+   <p>La t&acirc;che "Afficher l'historique d'installation" affiche une page web contenant l'historique des installations. Le bouton <img width="23" height="22" src="images/config028.png">&nbsp;permet aussi de demander l'ex&eacute;cution de cette t&acirc;che.</p> 
+   <p align="center"><img width="481" height="573" src="images/config029.png"></p> 
+   <p>Pour chaque plug-in install&eacute;, il est possible de r&eacute;aliser plusieurs t&acirc;ches en le s&eacute;lectionnant&nbsp;: </p> 
+   <p align="center"><img width="533" height="345" src="images/config030.png"></p> 
+   <p>La t&acirc;che "D&eacute;sactiver" permet d&eacute;sactiver le plug-in apr&egrave;s une confirmation</p> 
+   <p align="center"><img width="441" height="139" src="images/config031.png"></p> 
+   <p>Il faut r&eacute;demarrer la plateforme que la d&eacute;sactivation soit effective.</p> 
+   <p>Par d&eacute;faut, les plug-ins d&eacute;sactiv&eacute;s ne sont pas affich&eacute;s. Il faut cliquer sur le bouton <img width="24" height="22" src="images/config032.png">&nbsp;pour les afficher dans l'arborescence.</p> 
+   <p align="center"><img width="328" height="265" src="images/config033.png"></p> 
+   <p>La t&acirc;che "Activer" permet de r&eacute;activer le plug-in apr&egrave;s une configuration. La relance de la plate-forme n'est pas obligatoire mais fortement recommand&eacute;e.</p> 
+   <p>La t&acirc;che "D&eacute;sinstaller" permet de d&eacute;sinstaller le plug-in apr&egrave;s confirmation</p> 
+   <p align="center"><img width="441" height="110" src="images/config034.png"></p> 
+   <p>La relance de la plate-forme n'est pas obligatoire mais fortement recommand&eacute;e.</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_12_4_3">12.4.3. 
+     <!--nchpfin--> Mises &agrave; jour automatiques</a></h3> 
+   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td> 
+      <td><p>Il est possible de param&eacute;trer une fr&eacute;quence de mises &agrave; jour automatiques. Pour cela dans les pr&eacute;f&eacute;rences, il faut cocher l'option "Rechercher automatiquement les nouvelles mises &agrave; jour et m'envoyer une notification"</p> <p align="center"><img src="images/config009.png" width="580" height="343"></p> <p>Il est alors possible de param&eacute;trer la planification et les options de t&eacute;l&eacute;chargement pour une mise &agrave; jour automatique des &eacute;l&eacute;ments enregistr&eacute;s dans le syst&egrave;me de mise &agrave; jour de l'application.</p> <p>Il est ainsi possible de pr&eacute;ciser deux choses : </p> 
+       <ul> 
+        <li>le moment de la recherche automatique : soit &agrave; chaque d&eacute;marrage de l'application soit &agrave; une p&eacute;riodicit&eacute; et une heure pr&eacute;cise.</li> 
+        <li>informer de la disponibilit&eacute; de mises &agrave; jour ou t&eacute;l&eacute;charger automatiquement les mises &agrave; jour trouv&eacute;s et informer de la fin de leur t&eacute;l&eacute;chargement </li> 
+       </ul> <p>Si le syst&egrave;me d&eacute;tecte des mises &agrave; jour, une bo&icirc;te de dialogue est affich&eacute;e &agrave; l'issu des traitements de recherche&nbsp;: </p> <p align="center"><img src="images/config010.png" width="441" height="109"></p> <p> Un clic sur le bouton "Oui" permet d'afficher une bo&icirc;te de dialogue recensant les mises &agrave; jours trouv&eacute;es. </p> <p align="center"><img src="images/config011.png" width="580" height="356"></p> <p>Il faut s&eacute;lectionner le ou les &eacute;l&eacute;ments &agrave; mettre &agrave; jour et de cliquer sur le bouton "Suivant". </p> <p>Il suffit enfin de suivre les &eacute;tapes de l'assistant pour obtenir et installer le ou les dispositifs choisis. </p></td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <p>&nbsp;</p> 
+   <h3>
+    <!--nchpdeb--><a name="chap_12_4_4">12.4.4. 
+     <!--nchpfin-->Mise &agrave; jour de la plate-forme via des mirroirs</a></h3> 
+   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
+    <tbody>
+     <tr> 
+      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse31.png" width="64" height="32" align="center"></td> 
+      <td> <p>La mise &agrave; jour de la plate-forme se faire &agrave; partir de miroir. Lors d'une demande mise &agrave; jour, une bo&icirc;te de dialogue permet de s&eacute;lectionner le miroir &agrave; utiliser.</p> <p align="center"><img width="470" height="329" src="images/plugin030.png"></p> <p align="center"><img width="456" height="370" src="images/plugin031.png"></p> <p>S&eacute;lectionnez le miroir et cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;</p> <p align="center"><img width="450" height="191" src="images/plugin032.png"></p> <p>Si aucune mise n'est trouv&eacute;e alors un message est affich&eacute;</p> <p align="center"><img width="441" height="139" src="images/plugin033.png"></p> <p>Il est possible d'exporter/importer une liste des signets de sites de mise &agrave; jour</p> <p align="center"><img width="357" height="489" src="images/plugin034.png"></p> <p>En cliquant sur le bouton &laquo;&nbsp;Exporter des sites&nbsp;&raquo;, une bo&icirc;te de dialogue permet de s&eacute;lectionner le fichier qui va contenir la liste.</p> <p align="center"><img width="563" height="412" src="images/plugin035.png"></p> <p>Le fichier cr&eacute;&eacute; est au format <span class="SpellE">xml</span>.</p> 
+       <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
+        <tbody>
+         <tr bgcolor="#A6A5C2"> 
+          <td>Exemple :</td> 
+         </tr> 
+         <tr> 
+          <td> <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
 &lt;bookmarks&gt; 
-   &lt;site name=&quot;Log4E&quot; url=&quot;http://log4e.jayefem.de/update&quot; 
-      web=&quot;false&quot; selected=&quot;true&quot; local=&quot;false&quot;/&gt; 
-   &lt;site name=&quot;Hibernate synchroniser&quot; 
-      url=&quot;http://www.binamics.com/hibernatesync&quot; 
-      web=&quot;false&quot; selected=&quot;true&quot; local=&quot;false&quot;/&gt; 
-   &lt;site name=&quot;JFaceBDC&quot; 
-      url=&quot;http://jfacedbc.sourceforge.net/update-site/site.xml&quot; 
-      web=&quot;false&quot; selected=&quot;true&quot; local=&quot;false&quot;/&gt; 
-   &lt;site name=&quot;QJ-Pro&quot; 
-      url=&quot;http://qjpro.sourceforge.net/update_site&quot; 
-      web=&quot;false&quot; selected=&quot;true&quot; local=&quot;false&quot;/&gt; 
-   &lt;site name=&quot;EclipseME&quot; 
-      url=&quot;http://eclipseme.org/updates/&quot; 
-      web=&quot;false&quot; selected=&quot;true&quot; local=&quot;false&quot;/&gt; 
-   &lt;site name=&quot;Eclipse.org update site&quot; 
-      url=&quot;http://update.eclipse.org/updates/3.0&quot; 
-      web=&quot;false&quot; selected=&quot;false&quot; local=&quot;false&quot;/&gt; 
-&lt;/bookmarks&gt; </code></pre>
-      </td>
-    </tr>
-  </table>
-  <br>
-  <p>Pour importer une liste, il suffit de cliquer sur le bouton «&nbsp;Importer des sites&nbsp;» et de s&eacute;lectionner le fichier contenant la liste.</p> 
-</td>
-    </tr>
-  </table>
-  <p>&nbsp;</p>
-</div>
-<!--PIED--><HR>
-<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
-<TBODY>
-<tr>
-<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
-<A HREF="partie3.htm" ALT="Partie 3 : les fonctions avanc&eacute;es d'Eclipse">
-<img src="FlecheG.gif" alt="Partie 3 : les fonctions avanc&eacute;es d'Eclipse" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" width="50">
-<A HREF="chap013.htm" ALT="13.  CVS 2.0 et Eclipse 2.1">
-<img src="FlecheD.gif" alt="13.  CVS 2.0 et Eclipse 2.1" align="left" border="0" hspace="0" width="31" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="javascript:window.print()">
-<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="index.htm">
-<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
-</a>
-</td>
-<td rowspan="2" align="center" >
-<a href="indexavecframes.htm"  target="_top">
-<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
-</a>
-</td>
-<td align="right">
-<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
-<td  rowspan="2" align="center" valign="middle">
-        <script language="JavaScript1.1">
+&nbsp;&nbsp; &lt;site name="Log4E" url="http://log4e.jayefem.de/update" 
+      web="false" selected="true" local="false"/&gt; 
+&nbsp;&nbsp; &lt;site name="Hibernate synchroniser" 
+      url="http://www.binamics.com/hibernatesync" 
+      web="false" selected="true" local="false"/&gt; 
+&nbsp;&nbsp; &lt;site name="JFaceBDC" 
+      url="http://jfacedbc.sourceforge.net/update-site/site.xml" 
+      web="false" selected="true" local="false"/&gt; 
+&nbsp;&nbsp; &lt;site name="QJ-Pro" 
+      url="http://qjpro.sourceforge.net/update_site" 
+      web="false" selected="true" local="false"/&gt; 
+&nbsp;&nbsp; &lt;site name="EclipseME" 
+      url="http://eclipseme.org/updates/" 
+      web="false" selected="true" local="false"/&gt; 
+&nbsp;&nbsp; &lt;site name="Eclipse.org update site" 
+      url="http://update.eclipse.org/updates/3.0" 
+      web="false" selected="false" local="false"/&gt; 
+&lt;/bookmarks&gt; </code></pre> </td> 
+         </tr> 
+        </tbody>
+       </table> <br> <p>Pour importer une liste, il suffit de cliquer sur le bouton &laquo;&nbsp;Importer des sites&nbsp;&raquo; et de s&eacute;lectionner le fichier contenant la liste.</p> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <p>&nbsp;</p> 
+  </div> 
+  <!--PIED-->
+  <hr> 
+  <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
+   <tbody> 
+    <tr> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td>
+     <td rowspan="2" align="center" width="50"> <a href="partie3.htm" alt="Partie 3 : les fonctions avanc&eacute;es d'Eclipse"> <img src="FlecheG.gif" alt="Partie 3 : les fonctions avanc&eacute;es d'Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap013.htm" alt="13.  CVS 2.0 et Eclipse 2.1"> <img src="FlecheD.gif" alt="13.  CVS 2.0 et Eclipse 2.1" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
+     <td rowspan="2" align="center" valign="middle"> <script language="JavaScript1.1">
 <!--
 hsh = new Date();
 hsd = document;
@@ -370,31 +317,16 @@ if(parseFloat(navigator.appVersion)>=4)
 {Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
 hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
 //-->
-</script>
-        <noscript>
-        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
-        </noscript>
-        <!--//-->
-      </td>
-</tr>
-<tr>
-<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
-</tr>
-</TBODY>
-</table>
-
-</body>
+</script> 
+      <noscript> 
+       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience"></a> 
+      </noscript> 
+      <!--//--> </td> 
+    </tr> 
+    <tr> 
+     <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
+    </tr> 
+   </tbody> 
+  </table>   
+ </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
