@@ -1,0 +1,45 @@
+//tag::vardef[]
+:gh-repo-owner: jmini
+:gh-repo-name: dejae
+:project-name: Développons en Java avec Eclipse
+:branch: master
+:twitter-handle: j2r2b
+:license-url: http://www.gnu.org/licenses/old-licenses/fdl-1.1.en.html
+:license-name: GNU Free Documentation License, version 1.1
+
+:repository: {gh-repo-owner}/{gh-repo-name}
+:homepage: https://{gh-repo-owner}.github.io/{gh-repo-name}
+:issues: https://github.com/{repository}/issues
+:setup: https://raw.githubusercontent.com/{repository}/{branch}/{oomph-file}
+:src-folder-url: https://github.com/{repository}/tree/{branch}/{src-folder-name}
+//end::vardef[]
+
+//tag::header[]
+= {project-name}
+Didacticiel concernant l'utilisation d'Eclipse.
+//end::header[]
+
+//tag::description[]
+== Description
+Ce repository git contient le didacticiel "Développons en Java avec Eclipse" qui décrit l'utilisation d'Eclipse pour développer en Java.
+Il s'agit d'une modernisation du link:http://www.jmdoudoux.fr/accueil_java.htm#dejae[travail] de Jean-Michel DOUDOUX.
+
+=== Branches
+
+* master: branche principale
+
+//end::description[]
+
+//tag::contact-section[]
+== Me contacter
+
+Utiliser l'link:{issues}[issue tracker "{project-name}"] sur GitHub.
+
+On peut aussi me contacter sur Twitter: link:https://twitter.com/{twitter-handle}[@{twitter-handle}]
+//end::contact-section[]
+
+//tag::license-section[]
+== License
+
+link:{license-url}[{license-name}]
+//end::license-section[]
