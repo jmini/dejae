@@ -1,0 +1,335 @@
+<HTML>
+<HEAD>
+<TITLE>CVS 2.5 et Eclipse 3.0</TITLE>
+<META http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
+<META name="description" content="">
+<META name="keywords" content="java tutorial cours dej eclipse">
+<META name="robots" content="all">
+<META name="revisit-after" content="2 months">
+<META http-equiv="Content-Language" content="fr-FX">
+<META name="author" content="Jean Michel DOUDOUX">
+<link href="dej_style.css" rel="stylesheet" type="text/css">
+<BODY>
+<!--ENTETE-->
+<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="chap013.htm" ALT="13.  CVS 2.0 et Eclipse 2.1">
+<img src="FlecheG.gif" alt="13.  CVS 2.0 et Eclipse 2.1" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="chap015.htm" ALT="15. Subversion et Eclipse">
+<img src="FlecheD.gif" alt="15. Subversion et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+<HR>
+
+<p>&nbsp;</p>
+  <h1><!--idrefpage value="cvs25" --><!--resumetitre value="d&eacute;taille l'utilisation de CVS 2.5 avec Eclipse 3.0." --><!--nchpdeb--><a name="chap_14">14. <!--nchpfin--> CVS 2.5 et Eclipse 3.0</a></h1>
+<p>&nbsp;</p>
+<!--chapitredeb-->
+<div align="right">
+  <table border="0" cellspacing="0" summary="titre">
+    <tr>
+      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td>
+<td width="50" valign="top"><img src="images/1.gif" alt="1" width="62" height="83" border="0"></td>
+<td width="50" valign="top"><img src="images/4.gif" alt="4" width="62" height="83" border="0"></td>
+    </tr>
+  </table>
+  <br>
+</div>
+<!--chapitrefin-->
+<p>&nbsp;</p>
+<DIV ALIGN="justify"> 
+<P>&nbsp;</P>
+  <h2><!--nchpdeb--><a name="chap_14_1">14.1. <!--nchpfin-->Installation  et configuration de CVS 2.5</a></h2> 
+  <p>Il faut t&eacute;l&eacute;charger le fichier cvsnt-2.5.01.1927.msi sur le site <a href="http://www.cvsnt.com/cvspro/">http://www.cvsnt.com/cvspro/</a> et l'ex&eacute;cuter</p> 
+  <p align="center"><img border=0 width=499 height=385 src="images/cvs053.png"></p> 
+  <p>Il suffit de suivre les diff&eacute;rentes &eacute;tapes de l'assistant pour r&eacute;aliser l'installation</p> 
+  <ul type=disc> 
+    <li>Sur la page d'accueil, cliquez sur le bouton «&nbsp;Next&nbsp;»</li> 
+    <li>Sur la page «&nbsp;End-User License Agreement&nbsp;», s&eacute;lectionnez «&nbsp;I accept the terms in the Licence Agreement&nbsp;» et cliquez sur le bouton «&nbsp;Next&nbsp;» </li> 
+    <li>Sur la page «&nbsp;Choose Setup Type&nbsp;», cliquez sur le bouton «&nbsp;Complete&nbsp;»</li> 
+    <li>Sur la page «&nbsp;Ready to Install&nbsp;», cliquez sur le bouton «&nbsp;Install&nbsp;»</li> 
+    <li>Les fichiers sont copi&eacute;s sur le syst&egrave;me</li> 
+    <li>Cliquez sur le bouton «&nbsp;Finish&nbsp;»</li> 
+  </ul> 
+  <p>Une bo&icirc;te de dialogue informe de la n&eacute;cessite de red&eacute;marrer le syst&egrave;me.</p> 
+  <p align="center"><img border=0 width=366 height=165 src="images/cvs054.png"></p> 
+  <p>Cliquez sur le bouton «&nbsp;Yes&nbsp;» pour red&eacute;marrer le syst&egrave;me.</p> 
+  <p>Une petite icône est ajout&eacute;e dans le panneau de configuration</p> 
+  <p align="center"><img border=0 width=64 height=57 src="images/cvs055.png"></p> 
+  <p>Un double clic sur cette icône permet d'acc&eacute;der &agrave; la configuration de CVSNT.</p> 
+  <p align="center"><img border=0 width=344 height=486 src="images/cvs056.png"></p> 
+  <p>Cliquez sur l'onglet «&nbsp;Repositories&nbsp;»</p> 
+  <p align="center"><img border=0 width=344 height=246 src="images/cvs057.png"></p> 
+  <p>Cliquez sur le bouton «&nbsp;Add&nbsp;»</p> 
+  <p align="center"><img border=0 width=384 height=261 src="images/cvs058.png" v:shapes "_x0000_i1030"></p> 
+  <p>S&eacute;lectionner l'emplacement de stockage des fichiers, saisissez le nom du r&eacute;f&eacute;rentiel et la description puis cliquez sur le bouton «&nbsp;Ok&nbsp;».</p> 
+  <p align="center"><img border=0 width=366 height=126 src="images/cvs059.png"></p> 
+  <p>Cliquez sur le bouton «&nbsp;Oui&nbsp;» pour proc&eacute;der &agrave; l'initialisation du r&eacute;f&eacute;rentiel</p> 
+  <p align="center"><img border=0 width=344 height=246 src="images/cvs060.png"></p> 
+  <p>S&eacute;lectionnez l'onglet «&nbsp;Server Settings&nbsp;»</p> 
+  <p align="center"><img border=0 width=344 height=386 src="images/cvs061.png"></p> 
+  <p>S&eacute;lectionnez les informations utiles et cliquez sur le bouton «&nbsp;Appliquer&nbsp;»</p> 
+  <p>S&eacute;lectionnez l'onglet «&nbsp;Service Status&nbsp;» et d&eacute;marrez les deux services propos&eacute;s ci ceux-ci sont arr&ecirc;t&eacute;s.</p> 
+<p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_14_2">14.2. <!--nchpfin-->La perspective «&nbsp;Exploration du r&eacute;f&eacute;rentiel CVS&nbsp;»</a></h2> 
+  <p>Pour ouvrir une perspective, il faut s&eacute;lectionnez le menu «&nbsp;Fen&ecirc;tre/Ouvrir la perspective/Autre&nbsp;».</p> 
+  <p align="center"><img border=0 width=244 height=263 src="images/cvs062.png"></p> 
+  <p>S&eacute;lectionnez l'option «&nbsp;Exploration du r&eacute;f&eacute;rentiel CVS&nbsp;» et cliquez sur le bouton «&nbsp;OK&nbsp;» pour ouvrir la perspective.</p> 
+  <p align="center"><img border=0 width=600 height=241 src="images/cvs063.png"></p> 
+  <p>Dans la vue «&nbsp;R&eacute;f&eacute;rentiels CVS&nbsp;», s&eacute;lectionnez l'option «&nbsp;Cr&eacute;er/Emplacement du r&eacute;f&eacute;rentiel&nbsp;» du menu contextuel.</p> 
+  <p align="center"><img border=0 width=438 height=494 src="images/cvs064.png"></p> 
+  <p>Saisissez le nom de l'hôte, le chemin du r&eacute;f&eacute;rentiel, nom de l'utilisateur et son mot de passe pour se connecter &agrave; CVS, le type de connexion. Cliquez sur le bouton «&nbsp;Fin&nbsp;» pour demander la connexion</p> 
+  <p align="center"><img border=0 width=448 height=181 src="images/cvs065.png"></p> 
+  <p>Un message d'erreur informe de l'inexistante du r&eacute;f&eacute;rentiel si ce dernier n'est pas trouv&eacute;.</p> 
+  <p align="center"><img border=0 width=441 height=159 src="images/cvs066.png"></p> 
+  <p>Comme CVS est configur&eacute; pour utiliser un pr&eacute;fixe, un message d'erreur est affich&eacute;.</p> 
+  <p align="center"><img border=0 width=441 height=224 src="images/cvs067.png"></p> 
+  <p>Cliquez sur le bouton «&nbsp;Non&nbsp;»</p> 
+  <p>Il est alors n&eacute;cessaire de modifier le nom du r&eacute;f&eacute;rentiel dans la configuration de CVSNT en pr&eacute;cisant le chemin complet du r&eacute;f&eacute;rentiel dans son nom. </p> 
+  <p align="center"><img border=0 width=384 height=261 src="images/cvs068.png"></p> 
+  <p>Cliquez sur le bouton «&nbsp;OK&nbsp;»</p> 
+  <p align="center"><img border=0 width=632 height=119 src="images/cvs069.png"></p> 
+  <p>Cliquez sur le bouton «&nbsp;Oui&nbsp;»</p> 
+  <p align="center"><img border=0 width=344 height=236 src="images/cvs070.png"></p> 
+  <p>Cliquez sur le bouton «&nbsp;Appliquer&nbsp;» puis sur le bouton «&nbsp;OK&nbsp;»</p> 
+  <p>Il suffit alors de modifier les param&egrave;tres du r&eacute;f&eacute;rentiel sous Eclipse</p> 
+  <p align="center"><img border=0 width=438 height=504 src="images/cvs071.png"></p> 
+  <p>Le chemin du r&eacute;f&eacute;rentiel doit contenir le chemin complet. Cliquez sur le bouton «&nbsp;Fin&nbsp;»</p> 
+  <p>Si le mot de passe saisi est incorrect, une bo&icirc;te de dialogue permet de le ressaisir.</p> 
+  <p align="center"><img border=0 width=464 height=249 src="images/cvs072.png"></p> 
+  <p>Le nouveau chemin de r&eacute;f&eacute;rentiel est ajout&eacute; dans la vue «&nbsp;R&eacute;f&eacute;rentiels CVS&nbsp;».</p> 
+  <p align="center"><img border=0 width=321 height=151 src="images/cvs073.png"></p> 
+  <p>Un chemin de r&eacute;f&eacute;rentiel n'est pas une connexion mais des informations n&eacute;cessaires &agrave; cette connexion r&eacute;alis&eacute;e lorsque que les traitements en ont besoin.</p> 
+<p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_14_3">14.3. <!--nchpfin-->Ajouter un projet au r&eacute;f&eacute;rentiel</a></h2> 
+  <p>Pour ajouter un projet au r&eacute;f&eacute;rentiel, il faut utiliser l'option «&nbsp;Equipe/Partager le projet ...&nbsp;» du menu contextuel du projet</p> 
+  <p align="center"><img border=0 width=440 height=309 src="images/cvs074.png"></p> 
+  <p>S&eacute;lectionnez «&nbsp;Utiliser l'emplacement de r&eacute;f&eacute;rentiel existant&nbsp;» et cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p> 
+  <p align="center"><img border=0 width=440 height=254 src="images/cvs075.png"></p> 
+  <p>S&eacute;lectionnez «&nbsp;Utiliser le nom de projet comme nom de module&nbsp;» et cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p> 
+  <p align="center"><img border=0 width=440 height=294 src="images/cvs076.png"></p> 
+  <p>La page suivante de l'assistant permet de voir les fichiers qui seront ajout&eacute;s au r&eacute;f&eacute;rentiel.</p> 
+  <p align="center"><img border=0 width=544 height=345 src="images/cvs077.png"></p> 
+  <p>Cliquez sur le bouton «&nbsp;Fin&nbsp;»</p> 
+  <p align="center"><img border=0 width=441 height=139 src="images/cvs078.png"></p> 
+  <p>Cliquez sur le bouton «&nbsp;Oui&nbsp;»</p> 
+  <p align="center"><img border=0 width=436 height=150 src="images/cvs079.png"></p> 
+  <p>Cliquez sur le bouton «&nbsp;D&eacute;tails&nbsp;» pour obtenir la liste des ressources &agrave; ajouter dans le r&eacute;f&eacute;rentiel.</p> 
+  <p align="center"><img border=0 width=436 height=352 src="images/cvs080.png"></p> 
+  <p>Cliquez sur le bouton «&nbsp;Oui&nbsp;»</p> 
+  <p align="center"><img border=0 width=415 height=239 src="images/cvs081.png"></p> 
+  <p>Saisissez le commentaire et cliquez sur le bouton «&nbsp;OK&nbsp;»</p> 
+  <p align="center"><img border=0 width=450 height=191 src="images/cvs082.png"></p> 
+  <p>Une bo&icirc;te de dialogue affiche la progression des traitements.</p> 
+  <p align="center"><img border=0 width=278 height=157 src="images/cvs083.png"></p> 
+  <p>Les projets qui sont connect&eacute;s &agrave; un r&eacute;f&eacute;rentiel sont identifiables gr&acirc;ce &agrave; plusieurs informations&nbsp;: </p> 
+  <ul type=disc> 
+    <li>le projet et les &eacute;l&eacute;ments inclus dans le r&eacute;f&eacute;rentiel poss&egrave;dent une icône avec un petit cylindre jaune</li> 
+    <li>le nom du projet est suivi du nom du r&eacute;f&eacute;rentiel entre crochets</li> 
+    <li>le nom des &eacute;l&eacute;ments du projet sont suivis de la version et du type de fichiers entre parenth&egrave;ses</li> 
+  </ul> 
+<p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_14_4">14.4. <!--nchpfin-->Reporter des modifications dans le r&eacute;f&eacute;rentiel</a></h2> 
+  <p>D&egrave;s qu'un &eacute;l&eacute;ment inclus dans le r&eacute;f&eacute;rentiel est modifi&eacute;, ce dernier et le nom de l'ensemble de ces &eacute;l&eacute;ments p&egrave;res sont pr&eacute;c&eacute;d&eacute;s d'un caract&egrave;re «&nbsp;&gt;&nbsp;» permettant de rapidement visualiser les fichiers modifi&eacute;s.</p> 
+  <p align="center"><img border=0 width=319 height=166 src="images/cvs084.png"></p> 
+  <p>Pour reporter les modifications, il est possible de le faire au niveau de chaque &eacute;l&eacute;ments ou au niveau du projet en utilisant l'option «&nbsp;Equipe/Synchroniser avec le r&eacute;f&eacute;rentiel&nbsp;» du menu contextuel.</p> 
+  <p align="center"><img border=0 width=600 height=371 src="images/cvs085.png"></p> 
+  <p>La vue affiche les diff&eacute;rences entre la version locale et la version contenue dans le r&eacute;f&eacute;rentiel.</p> 
+  <p>Pour reporter les modifications dans le r&eacute;f&eacute;rentiel, il faut utiliser l'option «&nbsp;Equipe/Valider&nbsp;» de l'&eacute;l&eacute;ment compar&eacute;.</p> 
+  <p align="center"><img border=0 width=415 height=239 src="images/cvs086.png"></p> 
+  <p>Une bo&icirc;te de dialogue permet de saisir le commentaire de validation. Cliquez sur le bouton «&nbsp;OK&nbsp;».</p> 
+  <p>Comme la version locale et la version dans le r&eacute;f&eacute;rentiel sont identiques, les caract&egrave;res «&nbsp;&gt;&nbsp;» disparaissent.</p> 
+  <p align="center"><img border=0 width=319 height=162 src="images/cvs087.png"></p> 
+  <p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_14_5">14.5. <!--nchpfin-->D&eacute;connecter un projet du r&eacute;f&eacute;rentiel</a></h2> 
+  <p>Pour supprimer un r&eacute;f&eacute;rentiel, il faut s&eacute;lectionner l'option «&nbsp;Ignorer l'emplacement&nbsp;» du menu contextuel</p> 
+  <p>Il est obligatoire qu'aucun projet ne soit connect&eacute; sur ce dernier sinon un message d'erreur emp&ecirc;che l'op&eacute;ration. </p> 
+  <p align="center"><img border=0 width=438 height=153 src="images/cvs088.png"></p> 
+  <p>Pour d&eacute;connecter un projet, il faut utiliser l'option «&nbsp;Equipe/D&eacute;connecter ...&nbsp;» du menu contextuel du projet.</p> 
+  <p align="center"><img border=0 width=448 height=173 src="images/cvs089.png"></p> 
+  <p>Cliquez sur le bouton «&nbsp;Oui&nbsp;»</p> 
+  <p>&nbsp;</p>  
+  <h2><!--nchpdeb--><a name="chap_14_6">14.6. <!--nchpfin-->La perspective Synchronisation de l'&eacute;quipe</a></h2> 
+  <p>Pour ouvrir cette perspective, il faut utiliser l'option «&nbsp;Fen&ecirc;tre/Ouvrir la perspective/Autre&nbsp;» et s&eacute;lectionner l'option «&nbsp;Synchronisation de l'&eacute;quipe&nbsp;»</p> 
+  <p align="center"><img border=0 width=244 height=294 src="images/cvs090.png"></p> 
+  <p>Cette perspective est aussi utilis&eacute;e lors de l'utilisation de l'option «&nbsp;Equipe/Synchroniser avec le r&eacute;f&eacute;rentiel ...&nbsp;»</p> 
+  <p>La vue&nbsp; «&nbsp;Synchronisation&nbsp;» permet de synchroniser les sources contenues dans l'espace de travail et le r&eacute;f&eacute;rentiel de CVS.</p> 
+  <p align="center"><img border=0 width=600 height=236 src="images/cvs091.png"></p> 
+  <p>Les modifications sont signal&eacute;es avec de petites icônes&nbsp;: </p> 
+  <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=2> 
+    <tr> 
+      <td width=55 valign=top class="Normal"> <p align="center"><img border=0 width=16 height=15 src="images/cvs092.png"></p></td> 
+      <td width=559 valign=top class="Normal"> <p>Pour les modifications contenues dans le r&eacute;f&eacute;rentiel &agrave; int&eacute;grer dans l'espace de travail</p></td> 
+    </tr> 
+    <tr> 
+      <td width=55 valign=top class="Normal"> <p align="center"><img border=0 width=16 height=16 src="images/cvs093.png"></p></td> 
+      <td width=559 valign=top class="Normal"> <p>Pour les modifications contenues dans l'espace de travail &agrave; int&eacute;grer dans le r&eacute;f&eacute;rentiel</p></td> 
+    </tr> 
+    <tr> 
+      <td width=55 valign=top class="Normal"> <p align="center"><img border=0 width=20 height=15 src="images/cvs094.png"></p></td> 
+      <td width=559 valign=top class="Normal"> <p>Pour signaler des modifications effectu&eacute;es dans l'espace de travail et dans le r&eacute;f&eacute;rentiel</p></td> 
+    </tr> 
+  </table><br> 
+  <p>La vue synchronisation propose plusieurs modes pour faciliter la synchronisation&nbsp;: </p> 
+  <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=2> 
+    <tr> 
+      <td width=55 valign=middle class="Normal"> <p align="center"><img border=0 width=23 height=22 src="images/cvs095.png"></p></td> 
+      <td width=559 valign=top class="Normal"> <p>Mode entrant&nbsp;: des modifications sont pr&eacute;sentes dans le r&eacute;f&eacute;rentiel mais pas encore en local </p></td> 
+    </tr> 
+    <tr> 
+      <td width=55 valign=middle class="Normal"> <p align="center"><img border=0 width=23 height=22 src="images/cvs096.png"></p></td> 
+      <td width=559 valign=top class="Normal"> <p>Mode sortant&nbsp;: modifications locales qui ne sont pas encore enregistr&eacute;es dans le r&eacute;f&eacute;rentiel </p></td> 
+    </tr> 
+    <tr> 
+      <td width=55 valign=middle class="Normal"> <p align="center"><img border=0 width=23 height=22 src="images/cvs097.png"></p></td> 
+      <td width=559 valign=top class="Normal"> <p>Mode entrant/sortant&nbsp;: utilisation des deux modes pr&eacute;c&eacute;dents simultan&eacute;ment </p></td> 
+    </tr> 
+    <tr> 
+      <td width=55 valign=middle class="Normal"> <p align="center"><img border=0 width=23 height=22 src="images/cvs098.png"></p></td> 
+      <td width=559 valign=top class="Normal"> <p>Mode «&nbsp;en conflit&nbsp;»&nbsp;: des modifications locales existent et des modifications diff&eacute;rentes sont pr&eacute;sentes dans le r&eacute;f&eacute;rentiel </p></td> 
+    </tr> 
+  </table> <br>
+  <p>Les modifications selon le mode courant sont affich&eacute;es&nbsp;: </p> 
+  <p align="center"><img border=0 width=332 height=143 src="images/cvs099.png"></p> 
+  <p>Si le mode courant  ne contient aucune modification, il propose de passer dans un autre mode.</p> 
+  <p align="center"><img border=0 width=333 height=143 src="images/cvs100.png"></p> 
+  <p>Pour conna&icirc;tre l'historique des versions, il faut utiliser dans la vue «&nbsp;Synchronisation&nbsp;» l'option «&nbsp;Afficher dans l'historique des versions&nbsp;» du menu contextuel d'un &eacute;l&eacute;ment.</p> 
+  <p>La vue «&nbsp;Historique des ressources CVS&nbsp;» s'affiche.</p> 
+  <p align="center"><img border=0 width=520 height=177 src="images/cvs101.png"></p> 
+  <p>La version correspondant &agrave; celle dans l'espace de travail est signal&eacute;e avec une petite &eacute;toile.</p> 
+  <p>A partir de cette vue, il est possible de r&eacute;cup&eacute;rer dans l'espace de travail n'importe quelle version en la s&eacute;lectionnant et en utilisant l'option «&nbsp;Obtenir le contenu&nbsp;» du menu contextuel.</p> 
+  <p align="center"><img border=0 width=519 height=177 src="images/cvs102.png"></p> 
+  <p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_14_7">14.7. <!--nchpfin-->Importation d'un projet &agrave; partir de CVS</a></h2> 
+  <p>Il est possible &agrave; n'importe quel utilisateur pouvant se connecter au r&eacute;f&eacute;rentiel d'importer un projet dans son espace de travail pour le modifier.</p> 
+  <p>Il faut utiliser l'option «&nbsp;Fichier/Importer&nbsp;...» du menu principal.</p> 
+  <p align="center"><img border=0 width=337 height=277 src="images/cvs103.png"></p> 
+  <p>S&eacute;lectionnez «&nbsp;R&eacute;servation de projets &agrave; partir de CVS&nbsp;» puis cliquez sur le bouton «&nbsp;Suivant&nbsp;».</p> 
+  <p align="center"><img border=0 width=442 height=264 src="images/cvs104.png"></p> 
+  <p>Le r&eacute;f&eacute;rentiel est s&eacute;lectionn&eacute; par d&eacute;faut, cliquez sur le bouton «&nbsp;Suivant&nbsp;».</p> 
+  <p align="center"><img border=0 width=467 height=248 src="images/cvs105.png"></p> 
+  <p>Saisir le nom du module et cliquez sur le bouton «&nbsp;Suivant&nbsp;». Il est aussi possible de cocher la case «&nbsp;Utiliser un module existant&nbsp;» pour demander &agrave; l'assistant de rechercher les modules inclus dans le r&eacute;f&eacute;rentiel et de permettre de s&eacute;lectionner ceux concern&eacute;s.</p> 
+  <p align="center"><img border=0 width=467 height=298 src="images/cvs106.png"></p> 
+  <p>L'assistant se connecte au r&eacute;f&eacute;rentiel</p> 
+  <p align="center"><img border=0 width=423 height=303 src="images/cvs107.png"></p> 
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p> 
+  <p align="center"><img border=0 width=423 height=226 src="images/cvs108.png"></p> 
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p> 
+  <p align="center"><img border=0 width=344 height=280 src="images/cvs109.png"></p> 
+  <p>S&eacute;lectionnez la balise HEAD et cliquez sur le bouton «&nbsp;Fin&nbsp;»</p> 
+  <p>Le projet est import&eacute; dans l'espace de travail.</p> 
+  <p align="center"><img border=0 width=268 height=125 src="images/cvs110.png"></p> 
+  <p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_14_8">14.8. <!--nchpfin-->Versionner un projet</a></h2> 
+  <p>Il faut utiliser l'option «&nbsp;Equipe/Baliser en tant que version...&nbsp;» dans la vue «&nbsp;Navigateur&nbsp;» ou «&nbsp;Packages&nbsp;»</p> 
+  <p>Si toutes les modifications ne sont pas valid&eacute;es, un message de confirmation est demand&eacute; &agrave; l'utilisateur.</p> 
+  <p align="center"><img border=0 width=441 height=159 src="images/cvs111.png"></p> 
+  <p>Une bo&icirc;te de dialogue permet de saisir le nom de la balise de version (ce nom ne doit pas contenir d'espaces)</p> 
+  <p align="center"><img border=0 width=401 height=177 src="images/cvs112.png"></p> 
+  <p>Il suffit de saisir le nom de la balise et de cliquer sur le bouton «&nbsp;OK&nbsp;»</p> 
+  <p align="center"><img border=0 width=444 height=204 src="images/cvs113.png"></p> 
+  <P>&nbsp;</P>
+</DIV>
+<!--PIED--><HR>
+<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="chap013.htm" ALT="13.  CVS 2.0 et Eclipse 2.1">
+<img src="FlecheG.gif" alt="13.  CVS 2.0 et Eclipse 2.1" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="chap015.htm" ALT="15. Subversion et Eclipse">
+<img src="FlecheD.gif" alt="15. Subversion et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+<td  rowspan="2" align="center" valign="middle">
+        <script language="JavaScript1.1">
+<!--
+hsh = new Date();
+hsd = document;
+//hsr = hsd.referrer.replace(/[<>]/g, '');
+hsr = parent.document.referrer.replace(/[<>]/g,  '');
+hsi = '<a href="http://www.xiti.com/xiti.asp?s=128624"';
+hsi += ' TARGET="_top"><img width="39" height="25" border=0 ';
+hsi += 'src="http://logv23.xiti.com/hit.xiti?s=128624';
+hsi += '&p=';
+hsi += '&hl=' + hsh.getHours() + 'x' + hsh.getMinutes() + 'x' + hsh.getSeconds();
+if(parseFloat(navigator.appVersion)>=4)
+{Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
+hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
+//-->
+</script>
+        <noscript>
+        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
+        </noscript>
+        <!--//-->
+      </td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+
+</BODY>
+</HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+

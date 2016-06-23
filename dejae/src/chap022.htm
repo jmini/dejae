@@ -1,0 +1,548 @@
+<HTML>
+<HEAD>
+<TITLE>Le d&eacute;veloppement d'applications web</TITLE>
+<META http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
+<META name="description" content="">
+<META name="keywords" content="java tutorial cours dej eclipse">
+<META name="robots" content="all">
+<META name="revisit-after" content="2 months">
+<META http-equiv="Content-Language" content="fr-FX">
+<META name="author" content="Jean Michel DOUDOUX">
+<link href="dej_style.css" rel="stylesheet" type="text/css">
+<BODY>
+<!--ENTETE-->
+<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="chap021.htm" ALT="21. XML et Eclipse">
+<img src="FlecheG.gif" alt="21. XML et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="chap023.htm" ALT="23.  Struts et Eclipse">
+<img src="FlecheD.gif" alt="23.  Struts et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+<HR>
+
+<p>&nbsp;</p>
+<H1><!--idrefpage value="web" --><!--resumetitre value="Propose de mettre en oeuvre le d&eacute;veloppement d'applications web gr&agrave;ce &agrave; des plug-ins d'Eclipse." --><!--nchpdeb--><a name="chap_22">22. <!--nchpfin-->Le d&eacute;veloppement d'applications web</A></H1>
+<p>&nbsp;</p>
+<!--chapitredeb-->
+<div align="right">
+  <table border="0" cellspacing="0" summary="titre">
+    <tr>
+      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td>
+<td width="50" valign="top"><img src="images/2.gif" alt="2" width="62" height="83" border="0"></td>
+<td width="50" valign="top"><img src="images/2.gif" alt="2" width="62" height="83" border="0"></td>
+    </tr>
+  </table>
+  <br>
+</div>
+<!--chapitrefin-->
+<p>&nbsp;</p>
+<DIV ALIGN="justify"> 
+<p>Le d&eacute;veloppement d'applications web est particuli&egrave;rement adapt&eacute; pour &ecirc;tre r&eacute;alis&eacute; avec Java notamment gr&acirc;ce &agrave; plusieurs API de Java EE et de nombreux frameworks open source comme Struts.</p>
+<p>Plusieurs plug-ins d'Eclipse facilitent le d&eacute;veloppement de ce type d'applications.</p>
+  <p>Ce chapitre contient plusieurs sections : </p>
+  <!--listesectiondeb-->
+  <ul>
+    <li type="square"><a href="#chap_22_1">Le d&eacute;veloppement d'applications web avec WTP 1.0</a></li>
+    <li type="square"><a href="#chap_22_2">Le d&eacute;veloppement d'applications web avec le plug-in Lomboz 2.1</a></li>
+  </ul>
+<!--listesectionfin-->
+<p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_22_1">22.1. <!--nchpfin-->Le d&eacute;veloppement d'applications web avec WTP 1.0</A></h2> 
+<p>Le plug-in WTP propose des fonctionnalit&eacute;s pour faciliter le d&eacute;veloppement d'applications Web.</p>
+<p>&nbsp; </p>
+<h3><!--nchpdeb--><a name="chap_22_1_1">22.1.1. <!--nchpfin-->La cr&eacute;ation d'un nouveau projet</A></h3> 
+  <p>Pour d&eacute;velopper une application web, il est n&eacute;cessaire de cr&eacute;er un projet de type «&nbsp;Web/Projet Web dynamique &nbsp;». Ce type de projet est un projet Java qui va contenir une application serveur de type web.</p> 
+  <p align="center"><img border=0 width=344 height=343
+src="images/wtp019.png" ></p> 
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p> 
+  <p align="center"><img border=0 width=547 height=440
+src="images/wtp020.png" ></p> 
+  <p>Il faut saisir le nom du projet et le contexte de l'application. Il est possible de s&eacute;lectionner la version de l'API servlet &agrave; utiliser dans le projet et modifier le serveur cible si plusieurs sont d&eacute;finis.</p> 
+  <p>Si l'application doit &ecirc;tre int&eacute;gr&eacute;e dans une archive de type&nbsp;EAR, il faut cocher la case demandant l'ajout de la webapp dans une telle archive.</p> 
+  <p>Cliquez sur le bouton «&nbsp;Terminer&nbsp;».</p> 
+  <p align="center"><img border=0 width=441 height=160
+src="images/wtp021.png" ></p> 
+  <p>Le plus simple est de cocher «&nbsp;M&eacute;moriser ma d&eacute;cision&nbsp;» et de cliquer sur le bouton «&nbsp;Oui&nbsp;» pour ouvrir la perspective J2EE.</p> 
+  <p>Le nouveau projet est cr&eacute;&eacute; dans l'arborescence «&nbsp;Project Web dynamiques&nbsp;» de la vue «&nbsp;Explorateur de projects&nbsp;». Cette vue permet d'avoir une pr&eacute;sentation des projets selon les grandes familles de projets.</p> 
+  <p align="center"><img border=0 width=326 height=257
+src="images/wtp022.png" ></p> 
+  <p>La vue «&nbsp;Explorateur de packages&nbsp;» permet d'avoir une vue plus concise du projet.</p> 
+  <p align="center"><img border=0 width=329 height=237
+src="images/wtp023.png" ></p> 
+<p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_22_1_2">22.1.2. <!--nchpfin-->La cr&eacute;ation d'une servlet</A></h3> 
+  <p>Pour ajouter une servlet au projet, il faut cr&eacute;er une nouvelle entit&eacute; du type «&nbsp;Web/Servlet&nbsp;»</p> 
+  <p align="center"><img border=0 width=341 height=344
+src="images/wtp024.png" ></p> 
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p> 
+  <p align="center"><img border=0 width=380 height=375
+src="images/wtp025.png" ></p> 
+  <p>Il faut saisir le nom du package, de la servlet  et les informations concernant la classe de la servlet&nbsp;: il suffit simplement de saisir le package qui va contenir la servlet et de cliquer sur le bouton &laquo;&nbsp;Suivant&nbsp;»</p>
+  <p align="center"><img border=0 width=380 height=392
+src="images/wtp026.png" ></p>
+  <p>La page suivante de l'assistant permet de saisir sa description, ses param&egrave;tres et son url de mapping si celle propos&eacute;e par d&eacute;faut ne convient pas. Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.</p> 
+  <p align="center"></p>
+  <p align="center"><img border=0 width=345 height=396
+src="images/wtp027.png" ></p> 
+  <p>La page suivante de l'assistant permet de pr&eacute;ciser les membres qui seront g&eacute;n&eacute;r&eacute;s dans la servlet.</p> 
+  <p>Pour g&eacute;n&eacute;rer la servlet, il suffit de cliquer sur le bouton «&nbsp;Terminer&nbsp;».</p> 
+  <p align="center"><img border=0 width=327 height=303
+src="images/wtp028.png" ></p> 
+  <p>Il suffit alors de saisir le code de la servlet.</p> 
+  <p>Pour &eacute;liminer l'avertissement, il suffit de demander la g&eacute;n&eacute;ration d'un identifiant en cliquant sur la petite ampoule jaune.</p> 
+  <p align="center"><img border=0 width=649 height=114
+src="images/wtp029.png" ></p> 
+  <p>Si la source n'est pas sauvegard&eacute;e, un message de confirmation de la sauvegarde est propos&eacute; &agrave; l'utilisateur. </p> 
+  <p align="center"><img border=0 width=441 height=121
+src="images/wtp030.png" ></p> 
+  <p>Cliquez sur le bouton &quot;Oui&quot;.</p>
+  <p align="center"><img src="images/wtp081.png" width="441" height="109"></p>
+  <p>Ce message d'erreur appara&icirc;t si le r&eacute;pertoire cible de la compilation n'existe pas. </p>
+  <p align="center"><img src="images/wtp082.png" width="450" height="216"></p>
+  <p>L'identifiant est g&eacute;n&eacute;r&eacute; et ins&eacute;r&eacute; dans le code de la servlet. Il ne reste plus alors qu'&agrave; &eacute;crire le code des traitements de la servlet.</p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>package com.jmd.test.wtp;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class for Servlet: HelloServlet
+ *
+ */
+ public class HelloServlet extends javax.servlet.http.HttpServlet 
+                           implements javax.servlet.Servlet {
+
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 341173098392449924L;
+
+	/* (non-Java-doc)
+	 * @see javax.servlet.http.HttpServlet#HttpServlet()
+	 */
+	public HelloServlet() {
+		super();
+	}
+
+	/* (non-Java-doc)
+	 * @see javax.servlet.http.HttpServlet#doGet(HttpServletRequest request, 
+     *                                           HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	                       throws ServletException, IOException {
+       response.setContentType(&quot;text/html&quot;); 
+       PrintWriter out = response.getWriter(); 
+       out.println(&quot;&lt;HTML&gt;&quot;); 
+       out.println(&quot;&lt;HEAD&gt;&quot;); 
+       out.println(&quot;&lt;TITLE&gt;Bonjour&lt;/TITLE&gt;&quot;); 
+       out.println(&quot;&lt;/HEAD&gt;&quot;); 
+       out.println(&quot;&lt;BODY&gt;&quot;); 
+       out.println(&quot;&lt;H1&gt;Bonjour&lt;/H1&gt;&quot;); 
+       out.println(&quot;&lt;/BODY&gt;&quot;); 
+       out.println(&quot;&lt;/HTML&gt;&quot;); 
+	}
+
+	/* (non-Java-doc)
+	 * @see javax.servlet.http.HttpServlet#doPost(HttpServletRequest request, 
+     *                                            HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+	    throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+}
+</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <p>Lors de la sauvegarde de la servlet, le descripteur de d&eacute;ploiement est enrichi avec la d&eacute;claration de la servlet.</p> 
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app id=&quot;WebApp_ID&quot; version=&quot;2.4&quot; 
+  xmlns=&quot;http://java.sun.com/xml/ns/j2ee&quot; 
+  xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+  xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/j2ee 
+     http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;&gt;
+  &lt;display-name&gt;TestWebApp&lt;/display-name&gt;
+  &lt;servlet&gt;
+    &lt;description&gt;
+    &lt;/description&gt;
+    &lt;display-name&gt;HelloServlet&lt;/display-name&gt;
+    &lt;servlet-name&gt;HelloServlet&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;com.jmd.test.wtp.HelloServlet&lt;/servlet-class&gt;
+  &lt;/servlet&gt;
+
+  &lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;HelloServlet&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/HelloServlet&lt;/url-pattern&gt;
+  &lt;/servlet-mapping&gt;
+
+  &lt;welcome-file-list&gt;
+    &lt;welcome-file&gt;index.html&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;index.htm&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;default.html&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;default.htm&lt;/welcome-file&gt;
+    &lt;welcome-file&gt;default.jsp&lt;/welcome-file&gt;
+  &lt;/welcome-file-list&gt;
+&lt;/web-app&gt;
+</code></pre></td>
+    </tr>
+  </table>
+  <br>
+
+<p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_22_1_3">22.1.3. <!--nchpfin-->La cr&eacute;ation d'une JSP</A></h3> 
+  <p>Pour ajouter une JSP, il faut s&eacute;lectionner l'&eacute;l&eacute;ment «&nbsp;Projet Web Dynamic/WebContent&nbsp;» et cr&eacute;er une nouvelle entit&eacute; du type &quot; Web/JSP &quot;.</p> 
+  <p align="center"><img border=0 width=348 height=386
+src="images/wtp031.png" ></p> 
+  <p>Il suffit alors de saisir le nom du fichier qui va contenir <st1:PersonName
+ProductID="la JSP" w:st="on">la JSP et de cliquer sur le bouton «&nbsp;Suivant&nbsp;».</p> 
+  <p align="center"><img src="images/wtp084.png" width="473" height="442"></p>
+  <p>S&eacute;lectionnez le mod&egrave;le &agrave; utiliser et cliquez sur le bouton &quot;Terminer&quot; pour cr&eacute;er le fichier. </p>
+  <p>L'&eacute;diteur de code s'ouvre avec le fichier cr&eacute;&eacute;. Cet &eacute;diteur propose plusieurs assistants pour la r&eacute;daction du code de <st1:PersonName
+ProductID="la JSP" w:st="on">la JSP</p>
+  <p>Par exemple pour un tag HTML, il suffit de saisir le d&eacute;but du tag et d'appuyer sur la combinaison de touches Ctrl+espace</p> 
+  <p align="center"><img border=0 width=377 height=183
+src="images/wtp032.png" ></p> 
+  <p>L'assistant permet aussi de saisir les attributs d'un tag.</p> 
+  <p align="center"><img border=0 width=651 height=89
+src="images/wtp033.png" ></p> 
+  <p>L'assistant propose aussi des mod&egrave;les </p> 
+  <p align="center"><img border=0 width=452 height=200
+src="images/wtp034.png" ></p> 
+  <p>L'assistant propose la compl&eacute;tude de code Java dans les scriptlets. </p> 
+  <p align="center"><img border=0 width=415 height=198
+src="images/wtp035.png" ></p> 
+<p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_22_1_4">22.1.4. <!--nchpfin-->L'ex&eacute;cution de l'application</a></h3> 
+  <p>Il est n&eacute;cessaire de d&eacute;finir un serveur en utilisant l'assistant de cr&eacute;ation d'entit&eacute; de type «&nbsp;Serveur/Serveur&nbsp;».</p> 
+  <p align="center"><img border=0 width=340 height=275
+src="images/wtp036.png" ></p> 
+  <p>Il est aussi possible de cr&eacute;er un nouveau serveur en utilisant l'option «&nbsp;Nouveau/Serveur&nbsp;» du menu contextuel dans le vue «&nbsp;Serveurs&nbsp;»</p> 
+  <p align="center"><img border=0 width=497 height=137
+src="images/wtp037.png" ></p> 
+  <p>Un assistant permet de saisir les informations concernant le nouveau serveur. </p> 
+  <p align="center"><img border=0 width=352 height=411
+src="images/wtp038.png" ></p> 
+  <p>Par exmeple pour Tomcat, s &eacute;lectionnez la version de Tomcat install&eacute;e et cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p> 
+  <p align="center"><img border=0 width=457 height=358
+src="images/wtp039.png" ></p> 
+  <p>S&eacute;lectionnez le projet puis cliquez sur le bouton «&nbsp;Ajouter&nbsp;».</p> 
+  <p align="center"><img border=0 width=457 height=355
+src="images/wtp040.png" ></p> 
+  <p>Cliquez sur le bouton «&nbsp;Terminer&nbsp;»</p> 
+  <p align="center"><img border=0 width=493 height=93
+src="images/wtp041.png" ></p> 
+  <p>L'option «&nbsp;Ouverture&nbsp;» du menu contextuel sur le serveur permet d'obtenir des informations sur ce dernier.</p> 
+  <p align="center"><img border=0 width=600 height=347
+src="images/wtp042.png" ></p> 
+  <p>L'onglet «&nbsp;Modules&nbsp;» permet d'obtenir la liste des applications install&eacute;es sur le serveur.</p> 
+  <p align="center"><img border=0 width=600 height=238
+src="images/wtp043.png" ></p> 
+  <p>Dans la vue &quot;Serveurs&quot;, il est possible de supprimer un serveur en le s&eacute;lectionnant dans la vue &laquo;&nbsp;Serveurs&nbsp;&raquo; et en utilisant l'option &laquo;&nbsp;Supprimer&nbsp;&raquo; du menu contextuel. </p>
+  <p align="center"><img src="images/wtp085.png" width="553" height="128"></p>
+  <p>Pour lancer un serveur, il y a plusieurs solutions apr&egrave;s avoir s&eacute;lectionn&eacute; ce serveur&nbsp;: </p>
+  <ul type=disc> 
+    <li>Cliquez sur le bouton <img border=0 width=23 height=23
+     src="images/wtp044.png" ></li> 
+    <li>Utilisez l'option «&nbsp;D&eacute;marrer&nbsp;» du menu contextuel</li> 
+  </ul> 
+  <p>Le serveur est lanc&eacute; en arri&egrave;re plan</p> 
+  <p align="center"><img border=0 width=257 height=27
+src="images/wtp045.png" ></p> 
+  <p>Les informations de d&eacute;marrage du serveur sont affich&eacute;es dans la vue «&nbsp;Console&nbsp;»</p> 
+  <p align=center><img border=0 width=677 height=213
+src="images/wtp046.png" ></p> 
+  <p>Il suffit alors d'ouvrir un navigateur et de saisir l'url de la servlet pour permettre son affichage</p> 
+  <p align=center><img border=0 width=552 height=172
+src="images/wtp047.png" ></p> 
+  <p>Il est possible de d&eacute;finir un serveur par d&eacute;faut pour le projet dans les propri&eacute;t&eacute;s de ce dernier.</p> 
+  <p align="center"><img border=0 width=612 height=354
+src="images/wtp048.png" ></p> 
+  <p>Il suffit alors de s&eacute;lectionner le serveur pr&eacute;c&eacute;demment d&eacute;fini, de cliquer sur le bouton «&nbsp;Appliquer&nbsp;» puis sur le bouton «&nbsp;OK&nbsp;».</p> 
+  <p>Si des modifications sont apport&eacute;es &agrave; l'application alors que le serveur la concernant est lanc&eacute;, le contexte est automatiquement recharg&eacute; si l'option de la webapp pr&eacute;voie un rechargement automatique .</p> 
+  <p align="center"><img border=0 width=677 height=213
+src="images/wtp049.png" ></p> 
+  <p>&nbsp;</p> 
+  <p>S&eacute;lectionnez l'option <img border=0 width=21 height=19
+src="images/wtp051.png" > &quot; Publier sur le serveur &quot; du menu contextuel du serveur.</p> 
+  <p align="center"><img border=0 width=450 height=169
+src="images/wtp052.png" ></p> 
+  <p>L'&eacute;tat passe alors &agrave; &quot; Synchronis&eacute; &quot; </p>
+  <p align="center"><img src="images/wtp145.png" width="541" height="101"></p>
+  <p>Pour les ex&eacute;cutions suivantes, il est possible d'utiliser l'option «&nbsp;Executer en tant que/Ex&eacute;cution sur le serveur&nbsp;» pour lancer le serveur et ouvrir le navigateur int&eacute;gr&eacute; d'Eclipse avec l'url de l'application</p>
+  <p align=center><img border=0 width=558 height=261
+src="images/wtp053.png" ></p> 
+<p>&nbsp;</p>
+  <P>&nbsp;</P>
+  <h2><!--nchpdeb--><a name="chap_22_2">22.2. <!--nchpfin-->Le d&eacute;veloppement d'applications web avec le plug-in Lomboz 2.1</A></h2> 
+  <P>Le plug-in Lomboz propose des fonctionnalit&eacute;s pour faciliter le d&eacute;veloppement d'applications de type web dans un projet de type « Java / Lomboz J2EE Wizard / Lomboz J2EE Project ». La configuration de Lomboz et la cr&eacute;ation d'un tel projet est d&eacute;taill&eacute; dans le chapitre &quot;<!--idreflinkdeb href="j2ee" libelle="le d&eacute;veloppement avec J2EE" --><a href="chap020.htm#chap_20">le d&eacute;veloppement avec J2EE</a><!--idreflinkfin-->&quot;.</p>  
+  <p>Cette section va utiliser Lomboz avec JBoss et Tomcat.</p> 
+  <table border="1" cellspacing="0" cellpadding="4"> 
+    <tr> 
+      <td>&nbsp;</td> 
+      <td><p>Version utilis&eacute;e dans cette section</p></td> 
+    </tr> 
+    <tr> 
+      <td><p>Eclipse</p></td> 
+      <td><p>2.1.2</p></td> 
+    </tr> 
+    <tr> 
+      <td><p>J2RE</p></td> 
+      <td><p>1.4.2_02</p></td> 
+    </tr> 
+    <tr> 
+      <td>Lomboz</td> 
+      <td>2.1.2</td> 
+    </tr> 
+    <tr> 
+      <td>JBoss</td> 
+      <td>3.0.6</td> 
+    </tr> 
+    <tr> 
+      <td>Tomcat</td> 
+      <td>4.1.18</td> 
+    </tr> 
+  </table> 
+  <p>&nbsp;</p> 
+  <h3><!--nchpdeb--><a name="chap_22_2_1">22.2.1. <!--nchpfin-->     Cr&eacute;ation d'une webapp</a></h3> 
+  <p>Une webapp est contenue dans un module web. Si un tel module n'a pas &eacute;t&eacute; ajout&eacute; lors de la cr&eacute;ation du projet ou si il est n&eacute;cessaire d'en ajouter un nouveau, il faut cr&eacute;er une nouvelle entit&eacute; de type &quot;Autre / Java / Lomboz J2EE Wizards / Lomboz J2EE Module&quot;.</p> 
+  <p>Sur l'onglet «&nbsp;Web module&nbsp;» de la page de l'assistant, il suffit de suivre les indications pr&eacute;cis&eacute;es dans la section de cr&eacute;ation d'un nouveau projet pour ajouter un nouveau module web.</p> 
+  <p>&nbsp;</p> 
+  <h3><!--nchpdeb--><a name="chap_22_2_2">22.2.2. <!--nchpfin-->     Ajouter un fichier HTML &agrave; une webapp</a></h3> 
+  <p>Il faut cr&eacute;er une nouvelle entit&eacute; du type «&nbsp;Autres / Java / Lomboz J2EE Wizards / Lomboz HTML Wizard&nbsp;».</p> 
+  <p align="center"><img border=0 width=440 height=380 src="images/j2ee033.png" ></p> 
+  <p>Il faut s&eacute;lectionner le r&eacute;pertoire ou sera stock&eacute; le fichier, saisir le nom du fichier et cliquer sur le bouton «&nbsp;Fin&nbsp;».</p> 
+  <p align="center"><img border=0 width=193 height=259 src="images/j2ee034.png" ></p> 
+  <p>Le fichier cr&eacute;&eacute; est ouvert dans un &eacute;diteur d&eacute;di&eacute;.</p> 
+  <p align="center"><img border=0 width=470 height=229 src="images/j2ee035.png" ></p> 
+  <p>L'&eacute;diteur propose une assistance &agrave; la r&eacute;daction du code pour les tags en appuyant sur les touches &quot;Ctrl+Espace&quot;.</p> 
+  <p align="center"><img border=0 width=386 height=152 src="images/j2ee036.png" ></p> 
+  <p>Il propose aussi une assistance pour la saisie des attributs d'un tag.</p> 
+  <p align="center"><img border=0 width=401 height=158 src="images/j2ee037.png" ></p> 
+  <p>&nbsp;</p> 
+  <h3><!--nchpdeb--><a name="chap_22_2_3">22.2.3. <!--nchpfin-->     Ajouter une JSP &agrave; une webapp</a></h3> 
+  <p>Il faut cr&eacute;er une nouvelle entit&eacute; du type «&nbsp;Autres / Java / Lomboz J2EE Wizards / Lomboz JSP Wizard&nbsp;».</p> 
+  <p align="center"><img border=0 width=500 height=425 src="images/j2ee038.png" ></p> 
+  <p>Il faut s&eacute;lectionner le r&eacute;pertoire, saisir le nom de la JSP et cliquer sur le bouton «&nbsp;Suivant&nbsp;».</p> 
+  <p align="center"><img border=0 width=500 height=381 src="images/j2ee039.png" ></p> 
+  <p>La page suivante de l'assistant permet de saisir des informations concernant la nouvelle JSP. Un clic sur le bouton «&nbsp;Add&nbsp;» permet d'ouvrir une boite de dialogue demandant les param&egrave;tres du bean &agrave; ajouter : </p> 
+  <p align="center"><img border=0 width=296 height=291 src="images/j2ee040.png" ></p> 
+  <p>Il suffit de cliquer sur le bouton «&nbsp;Fin&nbsp;» pour g&eacute;n&eacute;rer la fichier et l'ouvrir dans l'&eacute;diteur.</p> 
+  <p align="center"><img border=0 width=470 height=199 src="images/j2ee041.png" ></p> 
+  <p>L'&eacute;diteur propose une coloration syntaxique des &eacute;l&eacute;ments de la JSP et une assistance &agrave; la r&eacute;daction du code en appuyant sur les touches &quot;Ctrl+Espace&quot;.</p> 
+  <p align="center"><img border=0 width=402 height=132 src="images/j2ee042.png" ></p> 
+  <p>Lors de la sauvegarde du fichier, la JSP est compil&eacute;e et les &eacute;ventuelles erreurs sont signal&eacute;es&nbsp;: </p> 
+  <p align="center"><img border=0 width=400 height=234 src="images/j2ee043.png" ></p> 
+  <p>Il suffit alors de corriger les erreurs signal&eacute;es et de sauvegarder le fichier.</p> 
+  <p>&nbsp;</p> 
+  <h3><!--nchpdeb--><a name="chap_22_2_4">22.2.4. <!--nchpfin-->     Ajouter une servlet &agrave; une webapp</a></h3> 
+  <p>Il faut cr&eacute;er une nouvelle entit&eacute; du type «&nbsp;Autres / Java / Lomboz J2EE Wizards / Lomboz Servlet Wizard&nbsp;».</p> 
+  <p align="center"><img border=0 width=500 height=528 src="images/j2ee044.png" ></p> 
+  <p>La premi&egrave;re page de l'assistant permet de saisir les informations g&eacute;n&eacute;rales sur la nouvelle servlet notamment son package, son nom, ces modificateurs et les m&eacute;thodes qui doivent &ecirc;tre g&eacute;n&eacute;r&eacute;es.</p> 
+  <p>Pour cr&eacute;er une servlet, il faut absolument que le fichier servlet.jar soit dans le classpath du projet, sinon un message d'erreur est affich&eacute;.</p> 
+  <p align="center"><img border=0 width=525 height=94 src="images/j2ee045.png" ></p> 
+  <p>Une fois toutes les informations saisies, il suffit de cliquer sur le bouton «&nbsp;Suivant&nbsp;» pour acc&eacute;der &agrave; la seconde page de l'assistant.</p> 
+  <p align="center"><img border=0 width=500 height=409 src="images/j2ee046.png" ></p> 
+  <p>Cette page permet de saisir les informations de la servlet pour enrichir le fichier web.xml. Pour s&eacute;lectionner le module web qui va contenir la servlet, il faut cliquer sur le bouton «&nbsp;Browse&nbsp;» : </p> 
+  <p align="center"><img border=0 width=319 height=127 src="images/j2ee047.png" ></p> 
+  <p>Il suffit alors de s&eacute;lectionner le module web et de cliquer sur le bouton «&nbsp;Ok&nbsp;».</p> 
+  <p>La saisie du nom de la servlet et du mapping URL est obligatoire.</p> 
+  <p>Pour ajouter un param&egrave;tre &agrave; la servlet, il suffit de cliquer sur le bouton «&nbsp;Add&nbsp;» et de renseigner le nom et la valeur du param&egrave;tre dans la bo&icirc;te de dialogue qui s'ouvre puis de cliquer sur le bouton «&nbsp;OK&nbsp;».</p> 
+  <p align="center"><img border=0 width=292 height=144 src="images/j2ee048.png" ></p> 
+  <p align="center"><img border=0 width=500 height=431 src="images/j2ee049.png" ></p> 
+  <p>Pour cr&eacute;er la servlet, il suffit enfin de cliquer sur le bouton «&nbsp;Fin&nbsp;».</p> 
+  <p align="center"><img border=0 width=193 height=145 src="images/j2ee050.png" ></p> 
+  <p>L'&eacute;diteur de code s'ouvre avec le source de la servlet cr&eacute;&eacute;e.</p> 
+  <p align="center"><img border=0 width=471 height=214 src="images/j2ee051.png" ></p> 
+  <p>Le fichier WEB-INF/web.xml est automatiquement modifi&eacute; par Lomboz pour tenir compte des informations concernant la nouvelle servlet&nbsp;: </p> 
+  <p><pre><code>
+  &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; 
+  &lt;!DOCTYPE web-app PUBLIC &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN&quot; 
+                           &quot;http://java.sun.com/j2ee/dtds/web-app_2_3.dtd&quot;&gt; 
+  &lt;!-- Copyright (c) 2002 by ObjectLearn. All Rights Reserved. --&gt; 
+  &lt;web-app&gt; 
+      &lt;servlet&gt; 
+          &lt;servlet-name&gt;TestServlet&lt;/servlet-name&gt; 
+          &lt;servlet-class&gt;com.moi.test.lomboz.web.TestServlet&lt;/servlet-class&gt; 
+          &lt;display-name&gt;servlet_de_test&lt;/display-name&gt; 
+          &lt;description&gt;Ma servlet de test&lt;/description&gt; 
+          &lt;init-param&gt; 
+              &lt;param-name&gt;param1&lt;/param-name&gt; 
+              &lt;param-value&gt;valeur1&lt;/param-value&gt; 
+          &lt;/init-param&gt; 
+      &lt;/servlet&gt; 
+      &lt;servlet-mapping&gt; 
+          &lt;servlet-name&gt;TestServlet&lt;/servlet-name&gt; 
+          &lt;url-pattern&gt;/&lt;/url-pattern&gt; 
+      &lt;/servlet-mapping&gt; 
+      &lt;welcome-file-list&gt; 
+          &lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt; 
+      &lt;/welcome-file-list&gt; 
+      &lt;error-page&gt; 
+          &lt;error-code&gt;404&lt;/error-code&gt; 
+          &lt;location&gt;/error.jsp&lt;/location&gt; 
+      &lt;/error-page&gt; 
+  &lt;/web-app&gt;</code></pre>
+  <p>&nbsp;</p> 
+  <h3><!--nchpdeb--><a name="chap_22_2_5">22.2.5. <!--nchpfin-->     Tester une webapp</a></h3> 
+  <p>Pour tester une webapp, il faut d&eacute;marrer le serveur d'application et d&eacute;ployer l'application sur le serveur.</p> 
+  <p>Pour cela, il faut utiliser la vue «&nbsp;Lomboz&nbsp;» en appuyant sur le bouton <img border=0 width=22 height=23
+src="images/j2ee011.png" > dans la barre d'outils.</p> 
+  <p align="center"><img border=0 width=264 height=246 src="images/j2ee053.png" ></p> 
+  <p>Cette vue poss&egrave;de plusieurs boutons pour r&eacute;aliser certaines taches&nbsp;: </p> 
+  <table border=0 cellspacing=0 cellpadding=4 align="center">  
+    <tr> 
+      <td> <p><img border=0 width=23 height=22 src="images/j2ee054.png" alt="*" ></p></td> 
+      <td> <p>Lancer le serveur</p></td> 
+    </tr> 
+    <tr> 
+      <td> <p><img border=0 width=23 height=22 src="images/j2ee055.png" alt="*" ></p></td> 
+      <td> <p>Arr&ecirc;ter le serveur</p></td> 
+    </tr> 
+    <tr> 
+      <td> <p><img border=0 width=23 height=22 src="images/j2ee056.png" ></p></td> 
+      <td> <p>D&eacute;ployer le module dans le serveur</p></td> 
+    </tr> 
+    <tr> 
+      <td> <p><img border=0 width=23 height=22 src="images/j2ee057.png" ></p></td> 
+      <td> <p>Supprimer le module du serveur</p></td> 
+    </tr> 
+    <tr> 
+      <td> <p><img border=0 width=23 height=22 src="images/j2ee058.png" ></p></td> 
+      <td> <p>Permet de rafra&icirc;chir la vue</p></td> 
+    </tr> 
+  </table> 
+  <p>Pour lancer un serveur, il suffit de le s&eacute;lectionner dans l'arborescence et de cliquer sur le bouton correspondant ou d'utiliser l'option «&nbsp; Debug server&nbsp;» ou «&nbsp;Run server&nbsp;» du menu contextuel.</p> 
+  <p>Lors du premier lancement, un bo&icirc;te de dialogue demande si le serveur doit devenir le serveur par d&eacute;faut du module.</p> 
+  <p align="center"><img border=0 width=441 height=103 src="images/j2ee059.png" ></p> 
+  <p>La progression du d&eacute;marrage du serveur web Tomcat est affich&eacute;e dans la vue «&nbsp;Console&nbsp;».</p> 
+  <p align="center"><img border=0 width=398 height=239 src="images/j2ee060.png" ></p> 
+  <p>Pour v&eacute;rifier que Tomcat est lanc&eacute;, il suffit d'ouvrir un navigateur et de saisir l'url http://localhost:8080</p> 
+  <p align="center"><img border=0 width=442 height=309 src="images/j2ee061.png" ></p> 
+  <p align="center"><img border=0 width=450 height=149 src="images/j2ee062.png" ></p> 
+  <p>Avec Tomcat, il faut le red&eacute;marrer apr&egrave;s le deploiement d'une webapp sinon un message d'erreur est signal&eacute; lors de l'appel de la webapp dans le navigateur.</p> 
+  <p align="center"><img border=0 width=442 height=309 src="images/j2ee063.png" ></p> 
+  <p>Pour r&eacute;soudre le probl&egrave;me manuellement, il faut arr&ecirc;ter le serveur et le lancer de nouveau.</p> 
+  <p align="center"><img border=0 width=442 height=218 src="images/j2ee064.png" ></p> 
+  <p>Pour r&eacute;soudre automatiquement ce probl&egrave;me, il suffit de changer les param&egrave;tres de lomboz</p> 
+  <p align="center"><img border=0 width=629 height=312 src="images/j2ee065.png" ></p> 
+  <p>Il faut cocher la case &agrave; cocher &quot;Restart server after deploy (Tomcat)&quot; et cliquer sur le bouton &quot;OK&nbsp;&quot;.</p> 
+  <p>Il est possible que certaines erreurs emp&ecirc;chent le d&eacute;marrage de la webapp.</p> 
+  <p>Exemple&nbsp;: </p> 
+  <p align="center"><img border=0 width=615 height=171 src="images/j2ee066.png" ></p> 
+  <p>Pour r&eacute;soudre ce probl&egrave;me, il faut modifier dans le fichier web.xml l'ordre du tag web-app/servlet/servlet-class pour le mettre apr&egrave;s le tag web-app/servlet/description</p> 
+  <p>Pour acc&eacute;der aux entit&eacute;s qui composent la webapp, il suffit de saisir l'url correspondante dans le navigateur.</p> 
+  <p>Exemple avec la JSP d'accueil de la webapp</p> 
+  <p align="center"><img border=0 width=401 height=169 src="images/j2ee067.png" ></p> 
+  <p>Exemple avec la servlet (attention, le mapping url a &eacute;t&eacute; modifi&eacute; en /servlet dans le fichier web.xml)</p> 
+  <p align="center"><img border=0 width=401 height=206 src="images/j2ee068.png" ="_x0000_i1091"></p> 
+  <p>Exemple&nbsp;avec le fichier HTML</p> 
+  <p align="center"><img border=0 width=401 height=149 src="images/j2ee069.png" ></p> 
+</DIV>
+<!--PIED--><HR>
+<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="chap021.htm" ALT="21. XML et Eclipse">
+<img src="FlecheG.gif" alt="21. XML et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="chap023.htm" ALT="23.  Struts et Eclipse">
+<img src="FlecheD.gif" alt="23.  Struts et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+<td  rowspan="2" align="center" valign="middle">
+        <script language="JavaScript1.1">
+<!--
+hsh = new Date();
+hsd = document;
+//hsr = hsd.referrer.replace(/[<>]/g, '');
+hsr = parent.document.referrer.replace(/[<>]/g,  '');
+hsi = '<a href="http://www.xiti.com/xiti.asp?s=128624"';
+hsi += ' TARGET="_top"><img width="39" height="25" border=0 ';
+hsi += 'src="http://logv23.xiti.com/hit.xiti?s=128624';
+hsi += '&p=';
+hsi += '&hl=' + hsh.getHours() + 'x' + hsh.getMinutes() + 'x' + hsh.getSeconds();
+if(parseFloat(navigator.appVersion)>=4)
+{Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
+hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
+//-->
+</script>
+        <noscript>
+        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
+        </noscript>
+        <!--//-->
+      </td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+
+</BODY>
+</HTML>

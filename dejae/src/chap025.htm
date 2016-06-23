@@ -1,0 +1,436 @@
+<HTML>
+<HEAD>
+<TITLE>EJB et Eclipse</TITLE>
+<META http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
+<META name="description" content="">
+<META name="keywords" content="java tutorial cours dej eclipse">
+<META name="robots" content="all">
+<META name="revisit-after" content="2 months">
+<META http-equiv="Content-Language" content="fr-FX">
+<META name="author" content="Jean Michel DOUDOUX">
+<link href="dej_style.css" rel="stylesheet" type="text/css">
+<BODY>
+<!--ENTETE-->
+<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="chap024.htm" ALT="24.  Java Server Faces et Eclipse">
+<img src="FlecheG.gif" alt="24.  Java Server Faces et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="chap026.htm" ALT="26.  Les services web et Eclipse">
+<img src="FlecheD.gif" alt="26.  Les services web et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+<HR>
+
+<p>&nbsp;</p>
+<H1><!--idrefpage value="ejb" --><!--resumetitre value="Propose de d&eacute;velopper des EJB en utilisant des plug-ins d'Eclipse." --><!--nchpdeb--><a name="chap_25">25. <!--nchpfin--> EJB et Eclipse</A></H1>
+<p>&nbsp;</p>
+<!--chapitredeb-->
+<div align="right">
+  <table border="0" cellspacing="0" summary="titre">
+    <tr>
+      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td>
+<td width="50" valign="top"><img src="images/2.gif" alt="2" width="62" height="83" border="0"></td>
+<td width="50" valign="top"><img src="images/5.gif" alt="5" width="62" height="83" border="0"></td>
+    </tr>
+  </table>
+  <br>
+</div>
+<!--chapitrefin-->
+<DIV ALIGN="justify"> 
+<p>&nbsp;</p>
+<p>Eclipse en standard ne propose aucune fonctionnalit&eacute; particuli&egrave;re pour d&eacute;velopper des EJB. Il est cependant possible d'utiliser un plug-in pour faciliter le d&eacute;veloppment des EJB. C'est notamment le cas du plug-in WTP.</p>
+  <p>Ce chapitre contient plusieurs sections : </p>
+  <!--listesectiondeb-->
+  <ul>
+    <li type="square"><a href="#chap_25_1">Le d&eacute;veloppement d'EJB avec le plug-in WTP 1.5</a></li>
+    <li type="square"><a href="#chap_25_2">Le d&eacute;veloppement d'EJB avec le plug-in Lomboz 2.1</a></li>
+  </ul>
+<!--listesectionfin-->
+<p>&nbsp;</p>
+<h2><!--nchpdeb--><a name="chap_25_1">25.1. <!--nchpfin-->Le d&eacute;veloppement d'EJB avec le plug-in WTP 1.5</A></h2> 
+  <p>Le plug-in WTP 1.5 propose des assistants et l'utilisation de XDoclet pour
+    d&eacute;velopper des EJB en version 2.1.</p>
+  <p>Cette section va mettre en oeuvre les outils suivants&nbsp;sous Windows : </p> 
+  <table border=1 cellspacing=0 cellpadding=4> 
+    <tr> 
+      <td > <p>Outil</p></td> 
+      <td > <p>Version</p></td> 
+      <td > <p>Rôle</p></td> 
+    </tr> 
+    <tr> 
+      <td> <p>JDK</p></td> 
+      <td> <p>1.5.0_7</p></td> 
+      <td>&nbsp; </td> 
+    </tr> 
+    <tr> 
+      <td> <p>Eclipse</p></td> 
+      <td> <p>3.2</p></td> 
+      <td> <p>IDE</p></td> 
+    </tr> 
+    <tr> 
+      <td> <p>JBoss</p></td> 
+      <td> <p>4.0.4.GA</p></td> 
+      <td> <p>conteneur EJB</p></td> 
+    </tr> 
+  </table>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_25_1_1">25.1.1. <!--nchpfin-->La cr&eacute;ation d'un projet de type EJB</a></h3>
+  <p>Cr&eacute;ez un nouveau projet de type «&nbsp;EJB / Projet EJB&nbsp;»</p>
+  <p align="center"><img width=378 height=252 src="images/ejb001.png"></p>
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p>
+  <p align="center"><img width=496 height=483 src="images/ejb002.png"></p>
+  <p>Saisissez le nom du projet, cochez la case «&nbsp;Ajouter &agrave; un fichier EAR&nbsp;»  et s&eacute;lectionnez
+    l'environnement d'ex&eacute;cution. Si aucun n'est d&eacute;fini cliquez sur le bouton «&nbsp;Nouveau ...&nbsp;».</p>
+  <p align="center"><img width=372 height=365 src="images/ejb003.png"></p>
+  <p>S&eacute;lectionnez le type de serveur «&nbsp;JBoss / JBoss v4.0&nbsp;» dans l'exemple de cette section et cliquez sur le bouton «&nbsp;Suivant&nbsp;».</p>
+  <p align="center"><img width=512 height=238 src="images/ejb004.png"></p>
+  <p>S&eacute;lectionnez le r&eacute;pertoire contenant le JBoss en cliquant sur le bouton «&nbsp;Parcourir&nbsp;».</p>
+  <p align="center"><img width=512 height=238 src="images/ejb005.png"></p>
+  <p>cliquez sur le bouton «&nbsp;Terminer&nbsp;»</p>
+  <p align="center"><img width=454 height=456 src="images/ejb006.png"></p>
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p>
+  <p align="center"><img width=432 height=294 src="images/ejb007.png"></p>
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p>
+  <p align="center"><img width=445 height=326 src="images/ejb008.png"></p>
+  <p>Cliquez sur le bouton «&nbsp;Terminer&nbsp;»</p>
+  <p align="center"><img width=441 height=160 src="images/ejb009.png"></p>
+  <p>Cliquez sur «&nbsp;Oui&nbsp;» pour cr&eacute;er les projets</p>
+  <p align="center">&nbsp;</p>
+  <table width="100%" border="0">
+    <tr>
+      <td><div align="center"><img width=288 height=256 src="images/ejb010.png"></div></td>
+      <td><div align="center"><img width=288 height=178 src="images/ejb010a.png"></div></td>
+    </tr>
+  </table><br>
+  <p>Trois projets sont cr&eacute;&eacute;s</p>
+  <ul type=disc>
+    <li>TestEJB</li>
+    <li>TestEJBClient</li>
+    <li>TestEJBEAR</li>
+  </ul>
+  <p align="center"><img width=553 height=122 src="images/ejb011.png"></p>
+  <p>Une erreur est signal&eacute;e sur le projet TestEJB si XDoclet n'est pas correctement configur&eacute;. Pour la corriger, il ouvrir les Pr&eacute;f&eacute;rences d'Eclipse.</p>
+  <p align="center"><img width=600 height=182 src="images/ejb012.png"></p>
+  <p>S&eacute;lectionnez le r&eacute;pertoire d'installation de XDoclet et sa version</p>
+  <p align="center"><img width=600 height=178 src="images/ejb013.png"></p>
+  <p>Cliquez sur le bouton «&nbsp;OK&nbsp;»</p>
+  <P>&nbsp;</P>
+  <h3><!--nchpdeb--><a name="chap_25_1_2">25.1.2. <!--nchpfin-->La cr&eacute;ation d'un EJB de type SessionBean stateless</a></h3>
+  <p>Cr&eacute;ez une nouvelle entit&eacute; de type EJB / EJB XDoclet</p>
+  <p align="center"><img width=383 height=268 src="images/ejb014.png"></p>
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p>
+  <p>Si XDoclet n'est pas correctement configur&eacute;, une erreur emp&ecirc;che la poursuite de l'assistant. Pour r&eacute;aliser cette
+    configuration, il suffit de cliquer sur le lien «&nbsp;Pr&eacute;f&eacute;rences&nbsp;»</p>
+  <p align="center"><img width=400 height=243 src="images/ejb015.png"></p>
+  <p>L'assistant permet de s&eacute;lectionner le type d'EJB &agrave; cr&eacute;er.</p>
+  <p align="center"><img width=377 height=240 src="images/ejb016.png"></p>
+  <p>S&eacute;lectionnez le type et cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p>
+  <p align="center"><img width=393 height=296 src="images/ejb017.png"></p>
+  <p>Saisissez le package et le nom de la classe&nbsp;: il est recommand&eacute; de suffixer le nom de la classe par Bean.</p>
+  <p align="center"><img width=393 height=296 src="images/ejb018.png"></p>
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p>
+  <p align="center"><img width=393 height=306 src="images/ejb019.png"></p>
+  <p>La page suivante de l'assistant permet de pr&eacute;ciser des informations sur l'EJB, cliquez sur le bouton
+    «&nbsp;Suivant&nbsp;».</p>
+  <p align="center"><img width=371 height=343 src="images/ejb020.png"></p>
+  <p>Cliquez sur le bouton «&nbsp;Terminer&nbsp;».</p>
+  <p>Les fichiers de base sont g&eacute;n&eacute;r&eacute;s puis les autres fichiers sont g&eacute;n&eacute;r&eacute;s gr&acirc;ce &agrave; un script Ant qui ex&eacute;cute XDoclet</p>
+  <p align="center"><img width=600 height=463 src="images/ejb021.png"></p>
+  <p>Ouvrez la classe MonPremierEJBBean g&eacute;n&eacute;r&eacute;e</p>
+  <p align="center"><img width=602 height=108 src="images/ejb022.png"></p>
+  <p>Remplacez la m&eacute;thode foo par la m&eacute;thode afficher en saisissant son code&nbsp;:</p>
+  <p align="center"><img width=601 height=109 src="images/ejb023.png"></p>
+  <p>Enregistrez le fichier modifi&eacute;&nbsp;: le script est ex&eacute;cut&eacute; pour permettre &agrave; XDoclet de synchroniser les
+    diff&eacute;rents fichiers notamment l'interface MonPremierEJB. Le projet est ainsi compos&eacute; des entit&eacute;s suivantes&nbsp;: </p>
+  <p align="center"><img width=318 height=441 src="images/ejb024.png"></p>
+  <p>Le projet TestEJBClient comporte une erreur car la classe MonPremierEJB ne peut &ecirc;tre r&eacute;solue.</p>
+  <p align="center"><img width=319 height=124 src="images/ejb025.png"></p>
+  <p>Il suffit dans ce cas de copier l'interface MonPremierEJB du projet TestEJB dans le projet TestClient.</p>
+  <p>S&eacute;lectionnez le projet TestEJBEAR et utilisez l'option «&nbsp;Ex&eacute;cuter en tant que / Ex&eacute;cuter sur le serveur&nbsp;»</p>
+  <p align="center"><img width=519 height=457 src="images/ejb026.png"></p>
+  <p>Cochez la case «&nbsp;D&eacute;finir le serveur comme serveur par d&eacute;faut du projet&nbsp;» et cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p>
+  <p align="center"><img width=372 height=261 src="images/ejb027.png"></p>
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;».</p>
+  <p align="center"><img width=469 height=367 src="images/ejb028.png"></p>
+  <p>Cliquez sur le bouton «&nbsp;Terminer&nbsp;».</p>
+  <p align="center"><img width=441 height=139 src="images/ejb029.png"></p>
+  <p>Ouvrez la vue «&nbsp;Serveur&nbsp;»</p>
+  <p align="center"><img width=502 height=136 src="images/ejb030.png"></p>
+  <p>S&eacute;lectionnez le serveur JBoss et cliquez sur le bouton <img width=24 height=22 src="images/ejb031.png"> ou s&eacute;lectionnez l'option «&nbsp;D&eacute;marrer&nbsp;» du menu contextuel</p>
+  <p align="center"><img width=526 height=191 src="images/ejb032.png"></p>
+  <p>La vue console affiche les informations lors du d&eacute;marrage du serveur.</p>
+  <P>&nbsp;</P>
+  <h3><!--nchpdeb--><a name="chap_25_1_3">25.1.3. <!--nchpfin-->La cr&eacute;ation et l'ex&eacute;cution d'un client de test</a></h3>
+  <p>Cr&eacute;ez un nouveau projet de type Java nomm&eacute; TestEJBApp.</p>
+  <p align="center"><img width=561 height=267 src="images/ejb033.png"></p>
+  <p>Dans les propri&eacute;t&eacute;s du projet, sur l'onglet «&nbsp;Projets&nbsp;», cliquez sur le bouton «&nbsp;Ajouter&nbsp;»</p>
+  <p align="center"><img width=344 height=269 src="images/ejb034.png"></p>
+  <p>S&eacute;lectionnez le projet TestEJBClient et cliquez sur le bouton «&nbsp;OK&nbsp;».</p>
+  <p align="center"><img width=561 height=267 src="images/ejb035.png"></p>
+  <p>Cliquez sur l'onglet «&nbsp;Biblioth&egrave;ques&nbsp;»</p>
+  <p align="center"><img width=600 height=377 src="images/ejb036.png"></p>
+  <p>Cliquez sur le bouton «&nbsp;Ajouter une biblioth&egrave;que ...&nbsp;».</p>
+  <p align="center"><img width=371 height=260 src="images/ejb037.png"></p>
+  <p>S&eacute;lectionnez «&nbsp;Environnement d'ex&eacute;cution du serveur&nbsp;» et cliquez sur le bouton «&nbsp;Suivant&nbsp;».</p>
+  <p align="center"><img width=372 height=225 src="images/ejb038.png"></p>
+  <p>S&eacute;lectionnez JBoss v4.0 et cliquez sur le bouton «&nbsp;Terminer&nbsp;».</p>
+  <p align="center"><img width=600 height=391 src="images/ejb039.png"></p>
+  <p>Cliquez sur le bouton «&nbsp;OK&nbsp;».</p>
+  <p>Cr&eacute;ez une nouvelle classe Java nomm&eacute;e TestEJBApp et saisissez son code&nbsp;: </p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>package com.jmdoudoux.test.ejb.app;
+
+import java.util.Hashtable;
+import javax.naming.Context;
+import com.jmdoudoux.test.ejb.MonPremierEJB;
+import com.jmdoudoux.test.ejb.MonPremierEJBHome;
+import com.jmdoudoux.test.ejb.MonPremierEJBUtil;
+
+public class TestEJBApp {
+
+  public static void main(String[] args) {
+    Hashtable environment = new Hashtable();
+    environment.put(Context.INITIAL_CONTEXT_FACTORY,
+      &quot;org.jnp.interfaces.NamingContextFactory&quot;);
+    environment.put(Context.URL_PKG_PREFIXES,
+      &quot;org.jboss.naming:org.jnp.interfaces&quot;);
+    environment.put(Context.PROVIDER_URL, &quot;jnp://127.0.0.1:1099&quot;);
+    MonPremierEJB monEJB = null;
+
+    try {
+      MonPremierEJBHome home = MonPremierEJBUtil.getHome(environment);
+      monEJB = home.create();
+      System.out.println(monEJB.afficher(&quot;test&quot;));
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+}</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <p>Ex&eacute;cutez la classe en tant qu'application Java</p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>R&eacute;sultat&nbsp;: </td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>Bonjour test</code></pre>
+      </td>
+    </tr>
+  </table>
+  <P>&nbsp;</P>
+  <h2><!--nchpdeb--><a name="chap_25_2">25.2. <!--nchpfin-->Le d&eacute;veloppement d'EJB avec le plug-in Lomboz 2.1</A></h2> 
+  <P>Le plug-in Lomboz propose des fonctionnalit&eacute;s pour faciliter le d&eacute;veloppement d'EJB dans un projet de type « Java / Lomboz J2EE Wizard / Lomboz J2EE Project ». La configuration de Lomboz et la cr&eacute;atino d'un tel projet est d&eacute;taill&eacute; dans le chapitre &quot;<!--idreflinkdeb href="j2ee" libelle="le d&eacute;veloppement avec J2EE" --><a href="chap020.htm#chap_20">le d&eacute;veloppement avec J2EE</a><!--idreflinkfin-->&quot;.</p>  
+    <p>Cette section va utiliser Lomboz avec JBoss.</p> 
+  <table border="1" cellspacing="0" cellpadding="4"> 
+    <tr> 
+      <td>&nbsp;</td> 
+      <td><p>Version utilis&eacute;e dans cette section</p></td> 
+    </tr> 
+    <tr> 
+      <td><p>Eclipse</p></td> 
+      <td><p>2.1.2</p></td> 
+    </tr> 
+    <tr> 
+      <td><p>J2RE</p></td> 
+      <td><p>1.4.2_02</p></td> 
+    </tr> 
+    <tr> 
+      <td>Lomboz</td> 
+      <td>2.1.2</td> 
+    </tr> 
+    <tr> 
+      <td>JBoss</td> 
+      <td>3.0.6</td> 
+    </tr> 
+  </table> 
+  <P>&nbsp;</P>
+  <h3><!--nchpdeb--><a name="chap_25_2_1">25.2.1. <!--nchpfin--> La cr&eacute;ation un EJB de type Session</a></h3> 
+  <p>Il faut cr&eacute;er une nouvelle entit&eacute; de type «&nbsp;Java / Lomboz J2EE Wizards / Lomboz EJB Creation Wizard&nbsp;».</p> 
+  <p align="center"><img border=0 width=500 height=319 src="images/j2ee070.png" ></p> 
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p> 
+  <p align="center"><img border=0 width=500 height=393 src="images/j2ee071.png" ></p> 
+  <p>Sur la page suivante, il faut saisir le nom du package, le nom de l'EJB, s&eacute;lectionner le type «&nbsp;Stateless Session EJB&nbsp;» ou «&nbsp;Statefull Session EJB&nbsp;» selon le type d'EJB session &agrave; cr&eacute;er et enfin cliquer sur le bouton «&nbsp;Fin&nbsp;».</p> 
+  <p>L'assistant g&eacute;n&egrave;re un fichier source java contenant le squelette du code de l'impl&eacute;mentation de l'EJB. Le nom du fichier g&eacute;n&eacute;r&eacute; est constitu&eacute; du nom de l'EJB et du sufixe Bean qui est automatiquement ajout&eacute;.</p> 
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple : </td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>  package com.test.lomboz2.ejb;
+  
+  import javax.ejb.SessionBean;
+
+  /**
+   * @ejb.bean name=&quot;MonEJBSession1&quot;
+   *     jndi-name=&quot;MonEJBSession1Bean&quot;
+   *     type=&quot;Stateless&quot;
+  **/
+  public abstract class MonEJBSession1Bean implements SessionBean { 
+  }</code></pre>
+      </td>
+    </tr>
+  </table><br>
+  <p>Ce code contient un tag qui sera traiter par Xdoclet pour g&eacute;n&eacute;rer ou enrichir certains fichiers (l'interface Home du Bean, le fichier descripteur de d&eacute;ploiement et le fichier jboss.xml).</p> 
+  <p>&nbsp;</p> 
+  <h3><!--nchpdeb--><a name="chap_25_2_2">25.2.2. <!--nchpfin-->     Ajouter une m&eacute;thode &agrave; un EJB</a></h3> 
+  <p>Dans la vue «&nbsp;Packages&nbsp;», il faut s&eacute;lectionner la classe d'implementation du Bean pr&eacute;c&eacute;demment g&eacute;n&eacute;r&eacute;e et utiliser l'option «&nbsp;Add EJB Method&nbsp;» du menu contextuel «&nbsp;Lomboz J2EE&nbsp;» ou utiliser l'option «&nbsp;Autre...&nbsp;» du menu contextuel «&nbsp;Nouveau&nbsp;». Avec cette derni&egrave;re possibilit&eacute;, il faut s&eacute;lectionner la cr&eacute;ation d'une entit&eacute; de type «&nbsp;Lomboz EJB Method Wizard&nbsp;»</p> 
+  <p align="center"><img border=0 width=438 height=348 src="images/j2ee072.png" ></p> 
+  <p>L'assistant permet de saisir la signature compl&egrave;te de la m&eacute;thode, le type de m&eacute;thode et dans quelle interface sera g&eacute;n&eacute;r&eacute;e la m&eacute;thode.</p> 
+  <p>L'assistant g&eacute;n&egrave;re le code suivant&nbsp;: </p> 
+
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple : </td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>/**
+ * @ejb.interface-method
+ *    tview-type="remote" 
+**/
+
+public String monMessage(String nom){ 
+ return null; 
+}</code></pre>
+      </td>
+    </tr>
+  </table><br>
+  <p>Le tag dans les commentaires sera utilis&eacute; par Xdoclet pour la g&eacute;n&eacute;ration des fichiers n&eacute;cessaire &agrave; l'EJB.</p> 
+  <p>Il faut saisir le code des traitements de la nouvelle m&eacute;thode.</p> 
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple : </td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>  /** 
+   * @ejb.interface-method 
+   *  tview-type=&quot;remote&quot;  
+  **/ 
+  public String monMessage(String nom) { 
+    return &quot;Bonjour &quot; + nom; 
+  } </code></pre>
+      </td>
+    </tr>
+  </table><br>
+  <p>ajout de l'EJB &agrave; un module</p> 
+  <p>Dans la vue «&nbsp;Package&nbsp;», s&eacute;lectionner la classe du bean et utiliser l'option «&nbsp;Lomboz J2EE / Add EJB to Module&nbsp;»     </p> 
+  <p align="center"><img width=344 height=153 src="images/j2ee084.png"> </p> 
+  <p>S&eacute;lectionner le module et cliquer sur «&nbsp;OK&nbsp;».</p> 
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_25_2_3">25.2.3. <!--nchpfin-->La g&eacute;n&eacute;ration des fichiers des EJB</a></h3> 
+  <p>Avant de pouvoir d&eacute;ployer un ou plusieurs EJB, il faut demander &agrave; Lomboz de g&eacute;n&eacute;rer les fichiers n&eacute;cessaires aux EJB gr&acirc;ce &agrave; Xdoclet et aux tags utiles ins&eacute;rer dans le code</p> 
+  <p align="center"><img width=302 height=196 src="images/j2ee085.png"></p> 
+  <p>Dans la vue «&nbsp;Lomboz&nbsp;», il faut utiliser sur le module EJB l'option «&nbsp;Generate EJB files&nbsp;».</p> 
+  <p align="center"><img width=450 height=142 src="images/j2ee086.png"></p> 
+  <p>L'EJB est affich&eacute;e dans la vue Lomboz.</p> 
+  <p align="center"><img width=321 height=233 src="images/j2ee087.png"></p> 
+  <p>Lomboz a g&eacute;n&eacute;r&eacute; tous les fichiers n&eacute;cessaires au bean</p> 
+  <p align="center"><img width=288 height=373 src="images/j2ee088.png"></p> 
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_25_2_4">25.2.4. <!--nchpfin-->D&eacute;ploiement du module EJB</a></h3> 
+  <p>Dans la vue «&nbsp;Lomboz&nbsp;», s&eacute;lectionner le module EJB concern&eacute; et utiliser l'option «&nbsp;Deploy&nbsp;».</p> 
+  <p align="center"><img width=450 height=142 src="images/j2ee089.png"></p> 
+  <p>Le fichier testlomboz2EJB.jar est cr&eacute;&eacute; et enregistrer dans le r&eacute;pertoire server/default/deploy de JBOSS.</p> 
+  <p>&nbsp;</p>
+</DIV>
+<!--PIED--><HR>
+<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="chap024.htm" ALT="24.  Java Server Faces et Eclipse">
+<img src="FlecheG.gif" alt="24.  Java Server Faces et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="chap026.htm" ALT="26.  Les services web et Eclipse">
+<img src="FlecheD.gif" alt="26.  Les services web et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+<td  rowspan="2" align="center" valign="middle">
+        <script language="JavaScript1.1">
+<!--
+hsh = new Date();
+hsd = document;
+//hsr = hsd.referrer.replace(/[<>]/g, '');
+hsr = parent.document.referrer.replace(/[<>]/g,  '');
+hsi = '<a href="http://www.xiti.com/xiti.asp?s=128624"';
+hsi += ' TARGET="_top"><img width="39" height="25" border=0 ';
+hsi += 'src="http://logv23.xiti.com/hit.xiti?s=128624';
+hsi += '&p=';
+hsi += '&hl=' + hsh.getHours() + 'x' + hsh.getMinutes() + 'x' + hsh.getSeconds();
+if(parseFloat(navigator.appVersion)>=4)
+{Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
+hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
+//-->
+</script>
+        <noscript>
+        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
+        </noscript>
+        <!--//-->
+      </td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+
+</BODY>
+</HTML>

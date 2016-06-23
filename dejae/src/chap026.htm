@@ -1,0 +1,753 @@
+<HTML>
+<HEAD>
+<TITLE>Les services web et Eclipse</TITLE>
+<META http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
+<META name="description" content="">
+<META name="keywords" content="java tutorial cours dej eclipse">
+<META name="robots" content="all">
+<META name="revisit-after" content="2 months">
+<META http-equiv="Content-Language" content="fr-FX">
+<META name="author" content="Jean Michel DOUDOUX">
+<link href="dej_style.css" rel="stylesheet" type="text/css">
+<BODY>
+<!--ENTETE-->
+<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="chap025.htm" ALT="25.  EJB et Eclipse">
+<img src="FlecheG.gif" alt="25.  EJB et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="chap027.htm" ALT="27. JPA et Eclipse">
+<img src="FlecheD.gif" alt="27. JPA et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+<HR>
+
+<p>&nbsp;</p>
+<H1><!--idrefpage value="servicesweb" --><!--resumetitre value="Propose d'utiliser Eclipse pour d&eacute;velopper des services web manuellement ou avec le plug-in WTP." --><!--nchpdeb--><a name="chap_26">26. <!--nchpfin--> Les services web et Eclipse</A></H1>
+<p>&nbsp;</p>
+<!--chapitredeb-->
+<div align="right">
+  <table border="0" cellspacing="0" summary="titre">
+    <tr>
+      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td>
+<td width="50" valign="top"><img src="images/2.gif" alt="2" width="62" height="83" border="0"></td>
+<td width="50" valign="top"><img src="images/6.gif" alt="6" width="62" height="83" border="0"></td>
+    </tr>
+  </table>
+  <br>
+</div>
+<!--chapitrefin-->
+<p>&nbsp;</p>
+<DIV ALIGN="justify"> 
+  <p>&nbsp;</p>
+
+  <p>Ce chapitre propose le d&eacute;veloppement de services web avec Eclipse essentiellement avec Axis avec ou sans utilisation d'un plug-in d&eacute;di&eacute;.</p>
+  <p>Ce chapitre contient plusieurs sections : </p>
+  <!--listesectiondeb-->
+  <ul>
+    <li type="square"><a href="#chap_26_1">La mise en oeuvre manuelle d'Axis</a></li>
+    <li type="square"><a href="#chap_26_2">La consommation du service Web en .Net</a></li>
+    <li type="square"><a href="#chap_26_3">Le d&eacute;veloppement de services web avec WTP 1.0</a></li>
+    <li type="square"><a href="#chap_26_4">La mise en oeuvre d'Axis avec le WTP 1.5</a></li>
+  </ul>
+<!--listesectionfin-->
+  <p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_26_1">26.1. <!--nchpfin-->La mise en oeuvre manuelle d'Axis</a></h2>
+  <p>Cette section va mettre en oeuvre les outils suivants&nbsp;sous Windows : </p> 
+    <table border=1 cellspacing=0 cellpadding=4> 
+    <tr> 
+      <td width=307>&nbsp; </td> 
+      <td width=307>Version utilis&eacute;e dans cette section</td> 
+    </tr> 
+    <tr> 
+      <td width=307>Eclipse </td> 
+      <td width=307>3.2.1</td> 
+    </tr> 
+    <tr> 
+      <td width=307>WTP </td> 
+      <td width=307>1.5.1</td> 
+    </tr> 
+    <tr> 
+      <td width=307>JDK </td> 
+      <td width=307>1.5_07</td> 
+    </tr> 
+    <tr> 
+      <td width=307>Axis </td> 
+      <td width=307>1.4</td> 
+    </tr> 
+    <tr> 
+      <td width=307>Tomcat </td> 
+      <td width=307>5.0</td> 
+    </tr> 
+  </table> <br>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_26_1_1">26.1.1. <!--nchpfin-->La configuration de l'environnement</a></h3>
+  <p>T&eacute;l&eacute;chargez le fichier axis-bin-1_4.zip et le d&eacute;compresser
+    dans un r&eacute;pertoire du syst&egrave;me, par exemple c:\java.</p>
+  <p>Cr&eacute;er une nouvelle entit&eacute; de serveur si aucun serveur n'est d&eacute;j&agrave;
+    d&eacute;fini dans Eclipse. L'exemple de cette section va mettre en oeuvre Tomcat 5.0.</p>
+  <p align="center"><img width=381 height=267 src="images/ws001.png" v:shapes="_x0000_i1033"></p>
+  <p>Cr&eacute;er une nouvelle entit&eacute; de type
+    «&nbsp;Serveur/Serveur&nbsp;» puis cliquez sur le bouton «&nbsp;Suivant&nbsp;».</p>
+  <p align="center"><img width=442 height=376 src="images/ws002.png" v:shapes="_x0000_i1025"></p>
+  <p>S&eacute;lectionnez le type de serveur parmi ceux propos&eacute;s puis
+    cliquez sur le bouton «&nbsp;Suivant&nbsp;».</p>
+  <p align="center"><img width=386 height=300 src="images/ws003.png" v:shapes="_x0000_i1034"></p>
+  <p>Cliquez sur «&nbsp;Parcourir&nbsp;» pour s&eacute;lectionner le
+    r&eacute;pertoire d'installation de Tomcat.</p>
+  <p align="center"><img width=523 height=279 src="images/ws004.png" v:shapes="_x0000_i1026"></p>
+  <p>Pour utiliser Tomcat, il est
+    n&eacute;cessaire de s&eacute;lectionner un JDK pour permettre &agrave; Tomcat d'utiliser certains outils. Si aucun JDK n'appara&icirc;t dans la liste d&eacute;roulante, cliquez
+    sur le bouton «&nbsp;JRE install&eacute;s&nbsp;».</p>
+  <p align="center"><img width=600 height=153 src="images/ws005.png" v:shapes="_x0000_i1027"></p>
+  <p>Cliquez sur le bouton «&nbsp;Ajouter&nbsp;»</p>
+  <p align="center"><img width=504 height=410 src="images/ws006.png" v:shapes="_x0000_i1028"></p>
+  <p>Cliquez sur le bouton «&nbsp;Parcourir&nbsp;»</p>
+  <p align="center"><img width=326 height=229 src="images/ws007.png" v:shapes="_x0000_i1035"></p>
+  <p>S&eacute;lectionnez le r&eacute;pertoire d'installation du JDK et cliquez
+    sur le bouton «&nbsp;OK&nbsp;».</p>
+  <p align="center"><img width=504 height=406 src="images/ws008.png" v:shapes="_x0000_i1029"></p>
+  <p>Eclipse renseigne automatiquement les informations extraites
+    &agrave; partir du JDK. Cliquez sur le bouton «&nbsp;OK&nbsp;».</p>
+  <p align="center"><img width=600 height=298 src="images/ws009.png" v:shapes="_x0000_i1075"></p>
+  <p>Cliquez sur le bouton «&nbsp;OK&nbsp;» puis s &eacute;lectionnez le JDK cr&eacute;&eacute; dans la liste d&eacute;roulante</p>
+  <p align="center"><img width=421 height=295 src="images/ws010.png" v:shapes="_x0000_i1036"></p>
+  <p>Cliquez sur le bouton «&nbsp;Terminer&nbsp;»</p>
+  <p align="center"><img width=254 height=180 src="images/ws011.png" v:shapes="_x0000_i1037"></p>
+  <p>Le nouveau serveur appara&icirc;t dans la branche serveurs de la
+    vue «&nbsp;Explorateur de package&nbsp;».</p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_26_1_2">26.1.2. <!--nchpfin-->La cr&eacute;ation d'un projet de type web</a></h3>
+  <p>Cr&eacute;ez une nouvelle entit&eacute; de type «&nbsp;Web/Projet Web
+    dynamique&nbsp;»</p>
+  <p align="center"><img width=377 height=270 src="images/ws012.png" v:shapes="_x0000_i1038"></p>
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p>
+  <p align="center"><img width=460 height=480 src="images/ws013.png" v:shapes="_x0000_i1039"></p>
+  <p>Saisissez le nom du projet puis cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p>
+  <p align="center"><img width=459 height=315 src="images/ws014.png" v:shapes="_x0000_i1040"></p>
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p>
+  <p align="center"><img width=371 height=282 src="images/ws015.png" v:shapes="_x0000_i1076"></p>
+  <p>Cliquez sur le bouton «&nbsp;Terminer&nbsp;»</p>
+  <p align="center"><img width=506 height=558 src="images/ws016.png" v:shapes="_x0000_i1077"></p>
+  <p>Lisez la licence et si vous l'acceptez, cliquez sur le
+    bouton «&nbsp;J'accepte&nbsp;».</p>
+  <p align="center"><img width=441 height=160 src="images/ws017.png" v:shapes="_x0000_i1078"></p>
+  <p>Cliquez sur la case &agrave; cocher «&nbsp;M&eacute;moriser ma
+    d&eacute;cision&nbsp;» puis sur le bouton «&nbsp;Oui&nbsp;»</p>
+  <p>La perspective «&nbsp;J2EE&nbsp;» s'ouvre et le projet est
+    affich&eacute; dans la vue «&nbsp;Explorateur de projets&nbsp;»</p>
+  <p align="center"><img width=255 height=384 src="images/ws018.png" v:shapes="_x0000_i1041"></p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_26_1_3">26.1.3. <!--nchpfin-->La configuration du projet</a></h3>
+  <p>Cr&eacute;ez un r&eacute;pertoire nomm&eacute; «&nbsp;classes&nbsp;» dans le
+    r&eacute;pertoire WEB-INF du projet.</p>
+  <p>Dans les propri&eacute;t&eacute;s du projet, s&eacute;lectionnez «&nbsp;chemin de
+    g&eacute;n&eacute;ration Java&nbsp;», cliquez sur l'onglet «&nbsp;Source&nbsp;», s&eacute;lectionnez
+    dans la zone de texte «&nbsp;Dossier de sortie par d&eacute;faut&nbsp;» le chemin du
+    r&eacute;pertoire «&nbsp;classes&nbsp;» puis cliquez sur le bouton «&nbsp;OK&nbsp;».</p>
+  <p>Remplacez le fichier WEBContent\WEB_INF\web.xml par celui pr&eacute;sent dans le sous r&eacute;pertoire webapps\axis\WEB-INF du r&eacute;pertoire d'installation d'axis.</p>
+  <p>Copiez les fichiers du sous r&eacute;pertoire webapps\axis\WEB-INF\lib du r&eacute;pertoire d'installation d'axis dans le r&eacute;pertoire WEBContent\WEB-INF\lib.</p>
+  <p>Dans les propri&eacute;t&eacute;s du projet, s&eacute;lectionnez «&nbsp;Chemin de
+    g&eacute;n&eacute;ration Java&nbsp;» puis cliquez sur l'onglet «&nbsp;Biblioth&egrave;ques&nbsp;»</p>
+  <p align="center"><img width=600 height=361 src="images/ws019.png" v:shapes="_x0000_i1068"></p>
+  <p>Cliquez sur le bouton «&nbsp;Ajouter une biblioth&egrave;que&nbsp;»</p>
+  <p align="center"><img width=367 height=268 src="images/ws020.png" v:shapes="_x0000_i1074"></p>
+  <p>S&eacute;lectionnez «&nbsp;Biblioth&egrave;que utilisateur&nbsp;» puis
+    cliquez sur le bouton «&nbsp;Suivant&nbsp;».</p>
+  <p align="center"><img width=367 height=228 src="images/ws021.png" v:shapes="_x0000_i1042"></p>
+  <p>Cliquez sur le bouton «&nbsp;Biblioth&egrave;que utilisateur
+    ...&nbsp;»</p>
+  <p align="center"><img width=515 height=350 src="images/ws022.png" v:shapes="_x0000_i1072"></p>
+  <p>Cliquez sur le bouton «&nbsp;Nouveau&nbsp;».</p>
+  <p align="center"><img width=399 height=136 src="images/ws023.png" v:shapes="_x0000_i1073"></p>
+  <p>Saisissez le nom de la biblioth&egrave;que, par exemple «&nbsp;Biblioth&egrave;que
+    Axis&nbsp;» et cliquez sur le bouton «&nbsp;OK&nbsp;».</p>
+  <p>Cliquez sur le bouton «&nbsp;Ajouter des fichiers jar
+    ...&nbsp;».</p>
+  <p align="center"><img width=563 height=362 src="images/ws024.png" v:shapes="_x0000_i1079"></p>
+  <p>S&eacute;lectionnez les fichiers .jar du r&eacute;pertoire lib et cliquez sur le bouton «&nbsp;Ouvrir&nbsp;»</p>
+  <p align="center"><img width=621 height=392 src="images/ws025.png" v:shapes="_x0000_i1080"></p>
+  <p>Cliquez sur le bouton «&nbsp;OK&nbsp;».</p>
+  <p align="center"><img width=367 height=194 src="images/ws026.png" v:shapes="_x0000_i1081"></p>
+  <p>Cliquez sur le bouton «&nbsp;Terminer&nbsp;».</p>
+  <p align="center"><img width=600 height=340 src="images/ws027.png" v:shapes="_x0000_i1048"></p>
+  <p>Cliquez sur le bouton «&nbsp;OK&nbsp;».</p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_26_1_4">26.1.4. <!--nchpfin-->La cr&eacute;ation d'une nouvelle classe</a></h3>
+  <p>Cr&eacute;er une nouvelle entit&eacute; de type «&nbsp;classe&nbsp;».</p>
+  <p align="center"><img width=600 height=505 src="images/ws028.png" v:shapes="_x0000_i1047"></p>
+  <p>Saisissez le code d'une m&eacute;thode nomm&eacute;e additionner()&nbsp;: </p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>
+      public int additionner(int valeur1, int valeur2) {
+            <b>return</b> valeur1 + valeur2;
+      }</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <p>Dans le r&eacute;pertoire WEB-INF du projet, cr&eacute;er un r&eacute;pertoire deploy. La cr&eacute;ation de ce r&eacute;pertoire n'est pas obligatoire
+    mais il permet de rassembler tous les fichiers de d&eacute;ploiement d'Axis.</p>
+  <p>Dans ce r&eacute;pertoire deploy, cr&eacute;ez
+    un fichier nomm&eacute; Calculer.wsdd.</p>
+  <p align="center"><img width=374 height=105 src="images/ws029.png" v:shapes="_x0000_i1032"></p>
+  <p>Saisissez le contenu du fichier&nbsp;: </p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>&lt;deployment xmlns=&quot;http://xml.apache.org/axis/wsdd/&quot;
+            xmlns:java=&quot;http://xml.apache.org/axis/wsdd/providers/java&quot;&gt;
+  &lt;service name=&quot;CalculerWS&quot; provider=&quot;java:RPC&quot; style=&quot;wrapped&quot; use=&quot;literal&quot;&gt;
+    &lt;parameter name=&quot;className&quot; value=&quot;com.jmdoudoux.test.axis.Calculer&quot; /&gt;
+    &lt;parameter name=&quot;allowedMethods&quot; value=&quot;*&quot; /&gt;
+    &lt;parameter name=&quot;scope&quot; value=&quot;Request&quot; /&gt;
+  &lt;/service&gt;
+&lt;/deployment&gt;</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+<p>Cr&eacute;ez un fichier undeployCalculer.wsdd dans le r&eacute;pertoire deploy et saisissez son contenu&nbsp;: </p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>&lt;undeployment xmlns=&quot;http://xml.apache.org/axis/wsdd/&quot;&gt;
+  &lt;service name=&quot;CalculerWS&quot; /&gt;
+&lt;/undeployment&gt;</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_26_1_5">26.1.5. <!--nchpfin-->Le lancement de l'application web</a></h3>
+  <p>Dans la vue «&nbsp;Serveurs&nbsp;», s&eacute;lectionnez le serveur Tomcat et utiliser l'option «&nbsp;Ajouter et supprimer des
+    projets ...&nbsp;» du menu contextuel.</p>
+  <p align="center"><img width=369 height=358 src="images/ws030.png" v:shapes="_x0000_i1043"></p>
+  <p>Cliquez sur le bouton «&nbsp;Ajouter &gt;&nbsp;» pour faire basculer le projet testWS dans la liste des projets configur&eacute;s, puis cliquez
+    sur le bouton «&nbsp;Terminer&nbsp;».</p>
+  <p align="center"><img width=502 height=135 src="images/ws031.png" v:shapes="_x0000_i1044"></p>
+  <p>Cliquez sur le bouton <img width=24 height=23
+src="images/ws032.png" v:shapes="_x0000_i1045"> pour d&eacute;marrer le serveur.</p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_26_1_6">26.1.6. <!--nchpfin-->Le d&eacute;ploiement du service dans Axis</a></h3>
+  <p>Le plus simple est de cr&eacute;er un script Dos qui va se charger
+    du d&eacute;ploiement. Cr&eacute;ez un fichier adminclient.bat dans
+    le r&eacute;pertoire WEB-INF/deploy de la webapp et saisissez le code de ce script&nbsp;: </p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>@echo off
+cd &quot;C:\Documents and Settings\jumbo\workspace\testWS\WebContent\WEB-INF\deploy&quot;
+set CLASSPATH=.;..\lib\axis.jar;..\lib\axis-ant.jar;..\lib\commons-discovery-0.2.jar;
+..\lib\commons-logging-1.0.4.jar;..\lib\jaxrpc.jar;..\lib\log4j-1.2.8.jar;
+..\lib\saaj.jar;..\lib\wsdl4j-1.5.1.jar
+java org.apache.axis.client.AdminClient -s /testWS/services/AdminService %1%.wsdd</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <p>Adaptez simplement le chemin du r&eacute;pertoire deploy &agrave; votre contexte.</p>
+  <p>Pour ex&eacute;cuter ce script dans Eclipse, il faut utiliser
+    l'option «&nbsp;Outils externes / Outils externes&nbsp;» du menu principal
+    «&nbsp;Ex&eacute;cuter&nbsp;».</p>
+  <p align="center"><img width=605 height=443 src="images/ws033.png" v:shapes="_x0000_i1046"></p>
+  <p>Saisissez le nom de la configuration, par exemple «&nbsp;deploy Calculer&nbsp;»</p>
+  <p>S&eacute;lectionnez l'emplacement du script et saisissez dans la
+    zone de texte Arguments «&nbsp;deployCalculer&nbsp;».</p>
+  <p>Cliquez sur le bouton «&nbsp;Ex&eacute;cuter&nbsp;».</p>
+  <p>Cr&eacute;ez de la m&ecirc;me fa&ccedil;on une configuration «&nbsp;undeploy Calculer&nbsp;» qui appelle le script adminclient.bat avec l'argument undeployCalculer.</p>
+  <p>La console affiche le r&eacute;sultat des traitements de
+    d&eacute;ploiement</p>
+  <p>- Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment
+    support is disabled.</p>
+  <p>Processing file deployCalculer.wsdd</p>
+  <p>&lt;Admin&gt;Done processing&lt;/Admin&gt;</p>
+  <p>Le message d'avertissement n'est pas important pour les
+    besoins du service web.</p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_26_1_7">26.1.7. <!--nchpfin-->La v&eacute;rification du d&eacute;ploiement du service web</a></h3>
+  <p>Ouvrez un navigateur et saisissez l'url http://localhost:8080/testWS/services</p>
+  <p align="center"><img width=505 height=301 src="images/ws034.png" v:shapes="_x0000_i1070"></p>
+  <p>Le service web CalculerWS appara&icirc;t
+    dans la liste des services.</p>
+  <p>Cliquez sur le lien wsdl du
+    service pour afficher la description du service.</p>
+  <p align="center"><img width=604 height=408 src="images/ws035.png" v:shapes="_x0000_i1071"></p>
+  <p>Saisissez l'url http://localhost:8080/testWS/services/CalculerWS?method=additionner</p>
+  <p align="center"><img width=604 height=395 src="images/ws036.png" v:shapes="_x0000_i1083"></p>
+  <p>La r&eacute;ponse contient une erreur puisque les param&egrave;tres de la
+    m&eacute;thode ne sont pas fournis.</p>
+  <p>Saisissez l'url :<br><a
+href="http://localhost:8080/testWS/services/CalculerWS?method=additionner&amp;valeur1=10&amp;valeur2=20">http://localhost:8080/testWS/services/CalculerWS?method=additionner&amp;valeur1=10&amp;valeur2=20</a></p>
+  <p align="center"><img border=0 width=604 height=266 src="images/ws037.png" v:shapes="_x0000_i1082"></p>
+  <p>La r&eacute;ponse SOAP contient le r&eacute;sultat de l'ex&eacute;cution du
+    service.</p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_26_1_8">26.1.8. <!--nchpfin-->La modification du type du service web</a></h3>
+  <p>Appelez  la configuration externe «&nbsp;undeploy calculer&nbsp;»&nbsp;:
+    la console affiche les traitements</p>
+  <p>- Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment
+    support is disabled.</p>
+  <p>Processing file undeployCalculer.wsdd</p>
+  <p>&lt;Admin&gt;Done processing&lt;/Admin&gt;</p>
+  <p align="center"><img border=0 width=508 height=265 src="images/ws038.png" v:shapes="_x0000_i1031"> </p>
+  <p>Modifiez le fichier Calculer.wsdd en
+    rempla&ccedil;ant style=”wrapped” par style=”document” et
+    enregistrez les modifications.</p>
+  <p>Utilisez la configuration externe «&nbsp;deploy Calculer&nbsp;» pour red&eacute;ployer le service</p>
+  <p>Appelez l'url http://localhost:8080/testWS/services/CalculerWS?wsdl</p>
+  <p align="center"><img border=0 width=600 height=414 src="images/ws039.png" v:shapes="_x0000_i1030"></p>
+  <p>Le format du fichier wsdl est
+    adapt&eacute; par Axis en fonction du format pr&eacute;cis&eacute;. </p>
+  <p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_26_2">26.2. <!--nchpfin-->La consommation du service Web en .Net</a></h2>
+  <p>Sous Visual Studio 2005, cr&eacute;ez un nouveau projet de type «&nbsp;Visual C# / Windows /
+    Windows Application&nbsp;» nomm&eacute; TestWSAxis&nbsp;: </p>
+  <p align="center"><img border=0 width=600 height=347 src="images/ws040.png" v:shapes="_x0000_i1061"></p>
+  <p>Le projet est cr&eacute;&eacute; avec une fen&ecirc;tre principale vide</p>
+  <p align="center"><img border=0 width=192 height=178 src="images/ws041.png" v:shapes="_x0000_i1084"></p>
+  <p>S&eacute;lectionnez l'option «&nbsp;Add new DataSource&nbsp;» du menu principal
+    «&nbsp;Data&nbsp;»</p>
+  <p align="center"><img border=0 width=500 height=315 src="images/ws042.png" v:shapes="_x0000_i1085"></p>
+  <p>S&eacute;lectionnez «&nbsp;Web Service&nbsp;» et cliquez sur bouton
+    «&nbsp;Next&nbsp;».</p>
+  <p align="center"><img border=0 width=600 height=301 src="images/ws043.png" v:shapes="_x0000_i1058"></p>
+  <p>Saisissez l'url <a
+href="http://localhost:8080/testWS/services/CalculerWS?wsdl">http://localhost:8080/testWS/services/CalculerWS?wsdl</a> et cliquez sur le bouton «&nbsp;Go&nbsp;».</p>
+  <p align="center"><img border=0 width=600 height=284 src="images/ws044.png" v:shapes="_x0000_i1059"></p>
+  <p>Le document wsdl est analys&eacute; et
+    les m&eacute;thodes trouv&eacute;es sont affich&eacute;es. </p>
+  <p>Saisissez le nom CalculerWS et
+    cliquez sur le bouton «&nbsp;Add Reference&nbsp;».</p>
+  <p align="center"><img border=0 width=191 height=231 src="images/ws045.png" v:shapes="_x0000_i1057"></p>
+  <p>Une «&nbsp;Web Reference&nbsp;»
+    concernant le service web est ajout&eacute;e. Renommez la en CalculerWS.</p>
+  <p>Visual Studio a cr&eacute;&eacute; un fichier Reference.cs dans le sous r&eacute;pertoire Web References\CalculerWS du projet.
+    Ce fichier contient une classe qui fait office de proxy vers le service web. Le contenu de ce fichier est automatiquement g&eacute;n&eacute;r&eacute; par Visual Studio &agrave; partir du wsdl du
+    service web.</p>
+  <p>Dans la fen&ecirc;tre du projet, ajouter un composant de type TextBox et un composant de type Button.</p>
+  <p align="center"><img border=0 width=408 height=127 src="images/ws046.png" v:shapes="_x0000_i1056"></p>
+  <p>Ajouter un &eacute;v&eacute;nement sur le clic du bouton en double
+    cliquant dessus. L'&eacute;diteur s'ouvre sur la m&eacute;thode g&eacute;n&eacute;r&eacute;e. </p>
+  <p>Ajouter une clause using concernant la web reference g&eacute;n&eacute;r&eacute;e.</p>
+  <p>using TestWSAxis.CalculerWS;</p>
+  <p>Dans le corps de la m&eacute;thode, saisissez le code de l'appel du
+    service web.</p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>        CalculerService cs = new CalculerService();
+        int resultat = cs.additionner(10, 20);
+        textBox1.Text = &quot;&quot;+resultat;</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <p>Remarque&nbsp;: ce code est spartiate puisqu'il ne contient
+    aucune gestion des erreurs qui peuvent survenir dans ces traitements.</p>
+  <p>Appuyer sur la touche F5 pour compiler le projet et
+    l'ex&eacute;cuter.</p>
+  <p align="center"><img border=0 width=396 height=112 src="images/ws047.png" v:shapes="_x0000_i1055"></p>
+  <p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_26_3">26.3. <!--nchpfin-->Le d&eacute;veloppement de services web avec WTP 1.0</a></h2> 
+<P>Le plug in WTP propose plusieurs fonctionnalit&eacute;s pour faciliter le d&eacute;veloppement de services web.</P>
+<P>&nbsp;</P>
+  <h3><!--nchpdeb--><a name="chap_26_3_1">26.3.1. <!--nchpfin-->Convertir une classe en service web</a></h3> 
+<P align="left">Le plug-in propose de convertir automatiquement une classe en un service web, reposant sur Axis du groupe Apache Jakarta. </P>
+<P align="center"><img src="images/wtp091.png" width="260" height="394"></P>
+<P>Il faut s&eacute;lectionner la classe et utiliser l'option &laquo;&nbsp;Nouveau/Autre ...&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp092.png" width="340" height="309"></P>
+<P>S&eacute;lectionnez &laquo;&nbsp;Services Web/Service Web&nbsp;&raquo; et cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp093.png" width="508" height="486"></P>
+<P>Cochez &laquo;&nbsp;G&eacute;n&eacute;rer un proxy&nbsp;&raquo;, &laquo;&nbsp;Tester le service web&nbsp;&raquo; et &laquo;&nbsp;Contr&ocirc;ler le service web&nbsp;&raquo; et cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.  </P>
+<P align="center"><img src="images/wtp094.png" width="497" height="202"></P>
+<P>Par d&eacute;faut, la classe s&eacute;lectionn&eacute;e est utilis&eacute;e. Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.  </P>
+<P align="center"><img src="images/wtp095.png" width="497" height="713"></P>
+<P>Le bouton &laquo;&nbsp;Editer&nbsp;&raquo; de la partie &laquo;&nbsp;S&eacute;lection du d&eacute;ploiement c&ocirc;t&eacute; serveur&nbsp;&raquo; permet de s&eacute;lectionner le serveur et l'environnement d'ex&eacute;cution.  </P>
+<P align="center"><img src="images/wtp096.png" width="645" height="349"></P>
+<P>Une fois le serveur s&eacute;lectionn&eacute;, cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;.</P>
+<p>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo; pour afficher la page &laquo;&nbsp;Identit&eacute; du bean Java de service web&nbsp;&raquo; de l'assistant </p>
+<P align="center"><img src="images/wtp097.png" width="493" height="505"></P>
+<P>Cette page permet de s&eacute;lectionner les informations qui composeront le fichier .wsdl. Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.  </P>
+<P align="center"><img src="images/wtp098.png" width="492" height="95"></P>
+<P>L'assistant g&eacute;n&egrave;re les fichiers correspondant au service. </P>
+<P>Une confirmation est demand&eacute;e dans le cas d'un remplacement d'un descripteur existant.  </P>
+<P align="center"><img src="images/wtp099.png" width="454" height="136"></P>
+<P>La page suivant de l'assistant permet de demander le test du service Web.</P>
+<P align="center"><img src="images/wtp100.png" width="490" height="188"></P>
+<P>Cliquez sur le bouton &laquo;&nbsp;Lancer&nbsp;&raquo; pour d&eacute;marrer le service dans le serveur.  </P>
+<P align="center"><img src="images/wtp101.png" width="600" height="401"></P>
+<P>La vue Explorateur de services web s'ouvre</P>
+<p>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo; de l'assistant.</p>
+<P align="center"><img src="images/wtp102.png" width="375" height="239"></P>
+<P>La page &laquo;&nbsp;Page Proxy de service web&nbsp;&raquo; permet fournir des pr&eacute;cisions sur le proxy qui sera g&eacute;n&eacute;r&eacute;. Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp103.png" width="460" height="522"></P>
+<P>Cette page permet de tester le proxy g&eacute;n&eacute;r&eacute;. Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp104.png" width="539" height="231"></P>
+<P>Cette page permet de demander la publication du service web. Cliquez sur le bouton &laquo;&nbsp;Terminer&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp105.png" width="464" height="303"></P>
+<P>La vue &laquo;&nbsp;Web Services Test Client&nbsp;&raquo; s'ouvre. Il suffit de cliquer sur une m&eacute;thode dans la partie &laquo;&nbsp;Methods&nbsp;&raquo;, par exemple la m&eacute;thode additionner().  </P>
+<P align="center"><img src="images/wtp106.png"></P>
+<P>La partie &laquo;&nbsp;Inputs&nbsp;&raquo; permet de saisir les valeurs des deux param&egrave;tres de la m&eacute;thode s&eacute;lectionn&eacute;e.</P>
+<p>Il suffit de saisir les deux valeurs et de cliquer sur le bouton &laquo;&nbsp;Invoke&nbsp;&raquo;</p>
+<P align="center"><img src="images/wtp107.png" width="574" height="248"></P>
+<P>La vue &laquo;&nbsp;Moniteur TCP/IP&nbsp;&raquo; s'ouvre et affiche de d&eacute;tails de l'appel du service web.</P>
+<p>Il est possible de modifier le format d'affichage de la requ&ecirc;te et de la r&eacute;ponse en utilisant les listes d&eacute;roulantes.</p>
+<P align="center"><img src="images/wtp108.png" width="575" height="345"></P>
+<P>Le r&eacute;sultat de l'appel au service web s'affiche dans la partie &laquo;&nbsp;Result&nbsp;&raquo; de la vue &laquo;&nbsp;Web Services Test Client&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp109.png" width="575" height="313"></P>
+<P>La vue &laquo;&nbsp;Explorateur de services web&nbsp;&raquo; permet d'obtenir des informations sur les services web.</P>
+<p>Pour afficher cette vue, il suffit de s&eacute;lectionner le fichier .wsdl du services web dans le r&eacute;pertoire WebContent/wsdl et d'utiliser l'option &laquo;&nbsp;Services web/Tester avec un explorateur de services web&nbsp;&raquo;.</p>
+<P align="center"><img src="images/wtp110.png" width="562" height="624"></P>
+<P>Il suffit de cliquer sur une m&eacute;thode du service pour la tester.  </P>
+<P align="center"><img src="images/wtp111.png" width="562" height="458"></P>
+<P>Il suffit de saisir les param&egrave;tres et de cliquer sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;.  </P>
+<P align="center"><img src="images/wtp112.png" width="562" height="514"></P>
+<P>Le service est appel&eacute; avec les param&egrave;tres et le r&eacute;sultat est affich&eacute; dans la partie &laquo;&nbsp;Statut&nbsp;&raquo; </P>
+<p>En cliquant sur le lien &laquo;&nbsp;Source&nbsp;&raquo; est est possible d'affiche la requete et la r&eacute;ponse SOAP.</p>
+<P align="center"><img src="images/wtp113.png" width="595" height="323"></P>
+<P>&nbsp;</P>
+  <h3><!--nchpdeb--><a name="chap_26_3_2">26.3.2. <!--nchpfin-->Les diff&eacute;rentes fonctionnalit&eacute;s sur les services web</a></h3> 
+<P>Le menu contextuel &laquo;&nbsp;Services web&nbsp;&raquo; du fichier .wsdl propose plusieurs fonctionnalit&eacute;s.  </P>
+<P align="center"><img src="images/wtp114.png" width="609" height="92"></P>
+<P>L'option &laquo;&nbsp;Services web/Publier un fichier WSDL&nbsp;&raquo; permet d'enregistrer le service web dans un annuaire UDDI </P>
+<p>L'option &laquo;&nbsp;Services web/G&eacute;n&eacute;rer un client&nbsp;&raquo; permet de g&eacute;n&eacute;rer une application web pour tester le service web. Il est aussi possible de s&eacute;lectionner l'option &laquo;&nbsp;Nouveau/Autre&nbsp;&raquo; du menu contextuel du fichier .wsdl.</p>
+<P align="center"><img src="images/wtp115.png" width="340" height="309"></P>
+<P>Un assistant permet de saisir les caract&eacute;ristiques de l'application &agrave; g&eacute;n&eacute;rer.  </P>
+<P align="center"><img src="images/wtp116.png" width="436" height="320"></P>
+<P>L'option &laquo;&nbsp;Contr&ocirc;ler le service Web&nbsp;&raquo; permet de lancer le Moniteur TCP/IP. Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;</P>
+<P align="center"><img src="images/wtp117.png" width="466" height="233"></P>
+<P>Cliquez sur le bouton &laquo;&nbsp;suivant&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp118.png" width="478" height="384"></P>
+<P>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp119.png" width="382" height="230"></P>
+<P>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo; pour permettre &agrave; l'assistant de g&eacute;n&eacute;rer les premi&egrave;res entit&eacute;s.  </P>
+<P align="center"><img src="images/wtp120.png" width="429" height="480"></P>
+<P>Cliquez sur le bouton &laquo;&nbsp;Terminer&nbsp;&raquo; pour g&eacute;n&eacute;rer les derni&egrave;res entit&eacute;s, publier l'application sur le serveur et ouvrir la vue &laquo;&nbsp;Web Services Test Client&nbsp;&raquo;</P>
+<p>L'option &laquo;&nbsp;Services web/G&eacute;n&eacute;rer un squelette de bean Java&nbsp;&raquo; permet de g&eacute;n&eacute;rer une impl&eacute;mentation d'une description d'un service web &agrave; partir d'un fichier .wsdl</p>
+<P align="center"><img src="images/wtp121.png" width="510" height="511"></P>
+<P>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp122.png" width="469" height="273"></P>
+<P>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp123.png" width="477" height="456"></P>
+<P>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp124.png"></P>
+<P>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp125.png" width="539" height="228"></P>
+<P>Cliquez sur le bouton &laquo;&nbsp;Terminer&nbsp;&raquo;. Le fichier CalculSoapBindingImpl.java est g&eacute;n&eacute;r&eacute; </p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>/** 
+* CalculSoapBindingImpl.java 
+* 
+* This file was auto-generated from WSDL 
+* by the Apache Axis 1.2.1 Jun 14, 2005 (09:15:57 EDT) WSDL2Java emitter. 
+*/ 
+
+package com.jmd.test.wtp; 
+
+public class CalculSoapBindingImpl implements com.jmd.test.wtp.Calcul{ 
+  
+  public long additionner(int a, int b) throws java.rmi.RemoteException { 
+    return -3; 
+  } 
+ 
+  public int soustraire(int a, int b) throws java.rmi.RemoteException { 
+    return -3; 
+  } 
+ 
+  public double diviser(int a, int b) throws java.rmi.RemoteException { 
+    return -3; 
+  } 
+ 
+  public long multiplier(int a, int b) throws java.rmi.RemoteException { 
+    return -3; 
+  }  
+} </code></pre>
+      </td>
+    </tr>
+  </table>
+  <P>&nbsp;</P>
+  <h3><!--nchpdeb--><a name="chap_26_3_3">26.3.3. <!--nchpfin-->L'explorateur de services</a> web</h3> 
+  <p>Il est possible de lancer &laquo;&nbsp;l'Explorateur de services web&nbsp;&raquo; en utilisant l'option &laquo;&nbsp;Ex&eacute;cuter/Explorateur de services web&nbsp;&raquo; du menu principale </p>
+<P align="center"><img src="images/wtp126.png" width="413" height="263"></P>
+<P>En cliquant sur &laquo;&nbsp;UDDI - Page principale&nbsp;&raquo;, il est possible d'interroger un annuaireUDDI.</P>
+<p>Cette vue permet d'explorer trois types d'entit&eacute;s li&eacute;es au service web&nbsp;: </p>
+<ul>
+  <li>un annuaire UDDI&nbsp;: <img src="images/wtp127.png"></li>
+  <li>un fichier .WSIL&nbsp;: <img src="images/wtp128.png"></li>
+  <li>un fichier .WSDL&nbsp;: <img src="images/wtp129.png"></li>
+</ul>
+<P align="center"><img src="images/wtp130.png" width="528" height="418"></P>
+<P>S&eacute;lectionner l'annuaire et cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp131.png" width="600" height="504"></P>
+<P>Cliquez sur &laquo;&nbsp;WSIL – Page principale&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp132.png" width="546" height="446"></P>
+<P>Cliquez sur &laquo;&nbsp;WSDL – Page principale&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp133.png" width="547" height="368"></P>
+<P>Il suffit de cliquer sur le lien &laquo;&nbsp;Parcourir&nbsp;&raquo; pour ouvrir une bo&icirc;te de dialogue permettant de s&eacute;lectionner le fichier .wsdl.  </P>
+<P align="center"><img src="images/wtp134.png" width="458" height="267"></P>
+<P>Il suffit de s&eacute;lectionner le projet de l'espace de travail puis de s&eacute;lectionner le fichier .wsdl de ce projet &agrave; utiliser  </P>
+<P align="center"><img src="images/wtp135.png" width="458" height="270"></P>
+<P>Cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp136.png" width="586" height="348"></P>
+<P>Cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp137.png" width="678" height="435"></P>
+<P>Il est aussi possible d'appeler un service web externe. Par exemple : <a href="http://www.dataaccess.com/webservicesserver/conversions.wso?WSDL">http://www.dataaccess.com/webservicesserver/conversions.wso?WSDL </a></P>
+<P align="center"><img src="images/wtp138.png" width="679" height="357"></P>
+<P>Saisissez l'url du fichier .wsdl et cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp139.png" width="678" height="459"></P>
+<P>Cliquez sur le lien &quot; NumberToWord &quot;.  </P>
+<P align="center"><img src="images/wtp140.png" width="679" height="459"></P>
+<P>Saisissez un nombre et cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp141.png" width="487" height="147"></P>
+<P>Le service web est appel&eacute; avec les param&egrave;tres fournis et le r&eacute;sultat est affich&eacute; dans la partie &laquo;&nbsp;Statut&nbsp;&raquo;. </P>
+<P>&nbsp;</P>
+  <h3><!--nchpdeb--><a name="chap_26_3_4">26.3.4. <!--nchpfin-->L'&eacute;diteur de fichier .wsdl</a></h3> 
+<p>Il faut cr&eacute;er une nouvelle entit&eacute; de type XML/WSDL</p>
+<P align="center"><img src="images/wtp142.png" width="346" height="307"></P>
+<P>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp143.png" width="353" height="367"></P>
+<P>Saisissez le nom du fichier .wsdl et cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;  </P>
+<P align="center"><img src="images/wtp144.png" width="341" height="372"></P>
+  <p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_26_4">26.4. <!--nchpfin-->La mise en oeuvre d'Axis avec le WTP 1.5</a></h2>
+  <p>&nbsp;</p>
+    <table border=1 cellspacing=0 cellpadding=4> 
+    <tr> 
+      <td width=307>&nbsp; </td> 
+      <td width=307>Version utilis&eacute;e dans cette section</td> 
+    </tr> 
+    <tr> 
+      <td width=307>Eclipse </td> 
+      <td width=307>3.2.1</td> 
+    </tr> 
+    <tr> 
+      <td width=307>WTP </td> 
+      <td width=307>1.5.1</td> 
+    </tr> 
+    <tr> 
+      <td width=307>JDK </td> 
+      <td width=307>1.5_07</td> 
+    </tr> 
+    <tr> 
+      <td width=307>Axis </td> 
+      <td width=307>1.4</td> 
+    </tr> 
+    <tr> 
+      <td width=307>Tomcat </td> 
+      <td width=307>5.0</td> 
+    </tr> 
+  </table> <br>
+  <p>Cette section va utiliser un projet de type web dynamique
+    nomm&eacute; TestWsWTP dans lequel la cible de compilation a
+    &eacute;t&eacute; modifi&eacute;e pour pointer sur le r&eacute;pertoire WebContent/WEB-INF/classes
+    cr&eacute;&eacute; pour l'occasion.</p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_26_4_1">26.4.1. <!--nchpfin-->La cr&eacute;ation du service web</a></h3>
+  <p>Cr&eacute;ez une classe nomm&eacute;e Echo</p>
+    <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>package com.jmdoudoux.test.axis; 
+
+public   class  Echo { 
+  public  String afficher(String message) { 
+    return  message; 
+  } 
+}</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <p>Dans la vue «&nbsp;Explorateur de projets&nbsp;»,
+    s&eacute;lectionnez la classe Echo et utilisez l'option «&nbsp;Service web / Cr&eacute;er un service
+    web&nbsp;» du menu contextuel.</p>
+  <p align="center"><img border=0 width=500 height=517 src="images/ws048.png" v:shapes="_x0000_i1049"></p>
+  <p>Il est possible de pr&eacute;ciser le niveau de fonctionnalit&eacute;s
+    pris en compte par l'assistant gr&acirc;ce au curseur de gauche. Cliquez sur le
+    bouton «&nbsp;Suivant&nbsp;».</p>
+  <p align="center"><img border=0 width=408 height=363 src="images/ws049.png" v:shapes="_x0000_i1050"></p>
+  <p>La bo&icirc;te de dialogue suivante permet de pr&eacute;ciser les options
+    pour g&eacute;n&eacute;rer le fichier wsdl notamment en pr&eacute;cisant
+    son nom, les m&eacute;thodes de la classe qui seront propos&eacute;es dans le service web et
+    le type de service web. Cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p>
+  <p align="center"><img border=0 width=475 height=269 src="images/ws050.png" v:shapes="_x0000_i1051"></p>
+  <p>La page suivante permet de d&eacute;marrer le serveur&nbsp;:
+    cliquez sur le bouton «&nbsp;D&eacute;marrer le serveur&nbsp;». Le serveur d&eacute;marre&nbsp;: cliquez sur le bouton
+    «&nbsp;Suivant&nbsp;».</p>
+  <p align="center"><img border=0 width=545 height=226 src="images/ws051.png" v:shapes="_x0000_i1052"></p>
+  <p>La page suivante permet de demander l'enregistrement du
+    service dans un annuaire UDDI.</p>
+  <p>Cliquez sur le bouton «&nbsp;Terminer&nbsp;».</p>
+  <p>Ouvrez un navigateur et saisissez l'url http://localhost:8080/TestWsWTP/services</p>
+  <p align="center"><img border=0 width=531 height=291 src="images/ws052.png" v:shapes="_x0000_i1053"></p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_26_4_2">26.4.2. <!--nchpfin-->Le test du service web avec l'explorateur de    services web</a></h3>
+  <p>Le WTP propose un outil qui permet de tester un service web.</p>
+  <p>Dans l'explorateur de projets, s&eacute;lectionner le fichier wsdl correspondant au service web puis utilisez l'option
+    «&nbsp;Service Web / Tester avec un explorateur de services web&nbsp;».</p>
+  <p align="center"><img border=0 width=617 height=523 src="images/ws053.png" v:shapes="_x0000_i1054"></p>
+  <p>Cliquez sur le lien «&nbsp;afficher&nbsp;» dans la liste des
+    op&eacute;rations.</p>
+  <p align="center"><img border=0 width=418 height=283 src="images/ws054.png" v:shapes="_x0000_i1062"></p>
+  <p>Saisissez test comme valeur du param&egrave;tre message de type
+    string et cliquez sur le bouton «&nbsp;OK&nbsp;».</p>
+  <p align="center"><img border=0 width=419 height=129 src="images/ws055.png" v:shapes="_x0000_i1063"></p>
+  <p>Cliquez sur le lien source pour voir la requ&ecirc;te et la
+    r&eacute;ponse SOAP</p>
+  <p align="center"><img border=0 width=426 height=466 src="images/ws056.png" v:shapes="_x0000_i1060"></p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_26_4_3">26.4.3. <!--nchpfin-->La cr&eacute;ation d'un client de test</a></h3>
+  <p>Dans l'explorateur de packages, s&eacute;lectionnez la classe qui
+    impl&eacute;mente le service web et utilisez l'option «&nbsp;Services web / G&eacute;n&eacute;rer
+    des fichiers JSP d'exemples&nbsp;» du menu contextuel.</p>
+  <p align="center"><img border=0 width=438 height=446 src="images/ws057.png" v:shapes="_x0000_i1064"></p>
+  <p>Cliquez sur le bouton «&nbsp;Terminer&nbsp;» pour g&eacute;n&eacute;rer
+    les fichiers</p>
+  <p align="center"><img border=0 width=257 height=432 src="images/ws058.png" v:shapes="_x0000_i1069"></p>
+  <p>Les pages JSP de test sont g&eacute;n&eacute;r&eacute;es dans un r&eacute;pertoire nomm&eacute;
+    «&nbsp;sample&nbsp;» suivi du nom de la classe</p>
+  <p>L'assistant lance le navigateur interne pour afficher la
+    page principale g&eacute;n&eacute;r&eacute;e.</p>
+  <p align="center"><img border=0 width=464 height=245 src="images/ws059.png" v:shapes="_x0000_i1065"></p>
+  <p>L'url de cette page est <a href="http://localhost:8080/TestWsWTP/sampleEcho/TestClient.jsp">http://localhost:8080/TestWsWTP/sampleEcho/TestClient.jsp</a></p>
+  <p>Cliquez sur le lien de la m&eacute;thode afficher()&nbsp;: </p>
+  <p align="center"><img border=0 width=548 height=287 src="images/ws060.png" v:shapes="_x0000_i1066"></p>
+  <p>Saisissez une valeur pour la propri&eacute;t&eacute; message de la m&eacute;thode
+    et cliquez sur le bouton «&nbsp;Invoke&nbsp;»</p>
+  <p align="center"><img border=0 width=550 height=295 src="images/ws061.png" v:shapes="_x0000_i1067"></p>
+  <p>La m&eacute;thode du service web est invoqu&eacute;e et le r&eacute;sultat est
+    affich&eacute; dans le cadre Result.</p>
+<P>&nbsp; </P>
+<P>&nbsp; </P>
+<P>&nbsp;</P>
+<table border="0" width="100%" cols="1">
+    <tr>
+      <td>
+        <div align="Center"><img src="images/construct4.gif" alt="en construction" width="144" height="50"><br>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div align="Center">Cette section sera d&eacute;velopp&eacute;e dans une version future de ce document</div>
+      </td>
+    </tr>
+  </table>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</DIV>
+<!--PIED--><HR>
+<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="chap025.htm" ALT="25.  EJB et Eclipse">
+<img src="FlecheG.gif" alt="25.  EJB et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="chap027.htm" ALT="27. JPA et Eclipse">
+<img src="FlecheD.gif" alt="27. JPA et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+<td  rowspan="2" align="center" valign="middle">
+        <script language="JavaScript1.1">
+<!--
+hsh = new Date();
+hsd = document;
+//hsr = hsd.referrer.replace(/[<>]/g, '');
+hsr = parent.document.referrer.replace(/[<>]/g,  '');
+hsi = '<a href="http://www.xiti.com/xiti.asp?s=128624"';
+hsi += ' TARGET="_top"><img width="39" height="25" border=0 ';
+hsi += 'src="http://logv23.xiti.com/hit.xiti?s=128624';
+hsi += '&p=';
+hsi += '&hl=' + hsh.getHours() + 'x' + hsh.getMinutes() + 'x' + hsh.getSeconds();
+if(parseFloat(navigator.appVersion)>=4)
+{Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
+hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
+//-->
+</script>
+        <noscript>
+        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
+        </noscript>
+        <!--//-->
+      </td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+
+</BODY>
+</HTML>

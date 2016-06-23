@@ -1,0 +1,298 @@
+<html>
+<head>
+<title>JUnit et Eclipse</title>
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
+<meta name="description" content="">
+<meta name="keywords" content="java tutorial cours dej eclipse">
+<meta name="robots" content="all">
+<meta name="revisit-after" content="2 months">
+<meta http-equiv="Content-Language" content="fr-FX">
+<meta name="author" content="Jean Michel DOUDOUX">
+<link href="dej_style.css" rel="stylesheet" type="text/css">
+<body>
+<!--ENTETE-->
+<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="chap010.htm" ALT="10. Ant et Eclipse">
+<img src="FlecheG.gif" alt="10. Ant et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="partie3.htm" ALT="Partie 3 : les fonctions avanc&eacute;es d'Eclipse">
+<img src="FlecheD.gif" alt="Partie 3 : les fonctions avanc&eacute;es d'Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+<HR>
+
+<p>&nbsp;</p>
+  <h1><!--idrefpage value="junit" --><!--resumetitre value="pr&eacute;sente l'utilisation de JUnit avec Eclipse pour r&eacute;aliser l'automatisation des tests unitaires." --><!--nchpdeb--><a name="chap_11">11. <!--nchpfin-->JUnit et Eclipse</a></h1>
+<p>&nbsp;</p>
+<!--chapitredeb-->
+<div align="right">
+  <table border="0" cellspacing="0" summary="titre">
+    <tr>
+      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td>
+<td width="50" valign="top"><img src="images/1.gif" alt="1" width="62" height="83" border="0"></td>
+<td width="50" valign="top"><img src="images/1.gif" alt="1" width="62" height="83" border="0"></td>
+    </tr>
+  </table>
+  <br>
+</div>
+<!--chapitrefin-->
+<p>&nbsp;</p>
+<div align="justify"> 
+  <p>La version 2.1 d'Eclipse int&egrave;gre la possibilit&eacute; d'utiliser JUnit directement dans l'IDE.</p>
+	
+<p>JUnit est un framework open source pour r&eacute;aliser des tests unitaires sur du code Java. Le principal
+int&eacute;r&ecirc;t est de s'assurer que le code r&eacute;pond toujours au besoin m&ecirc;me apr&egrave;s d'&eacute;ventuelles modifications.</p>
+<p>Le but est d'automatiser les tests. Ceux ci sont exprim&eacute;s dans des classes sous la forme de cas de tests avec leurs r&eacute;sultats
+attendus. JUnit ex&eacute;cute ces tests et les comparent avec ces r&eacute;sultats.</p>
+  <p>Avec Junit, l'unit&eacute; de tests est une classe d&eacute;di&eacute;e qui regroupe des cas de tests. Ces cas de tests ex&eacute;cutent les t&acirc;ches suivantes :</p>
+  <ul>
+<li>cr&eacute;ation d'une instance de la classe et de tout autre objet n&eacute;cessaire aux tests</li>
+<li>appel de la m&eacute;thode &agrave; tester avec les param&egrave;tres du cas de test</li>
+<li>comparaison du r&eacute;sultat obtenu avec le r&eacute;sultat attendu : en cas d'&eacute;chec, une exception est lev&eacute;e</li>
+</ul>
+<p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_11_1">11.1. <!--nchpfin-->Param&eacute;trage de l'environnement</a></h2>
+  <p>Pour pouvoir utiliser JUnit dans un projet, il faut ajouter le fichier junit.jar dans le classpath du projet. Il faut pour cela&nbsp;: </p>
+<ul type=disc>
+  <li>s&eacute;lectionner les propri&eacute;t&eacute;s du projet</li>
+  <li>dans l'onglet librairies, cliquer sur le bouton «&nbsp;Add&nbsp;External Jar&nbsp;»</li>
+  <li>s&eacute;lectionner le fichier junit.jar dans le r&eacute;pertoire plugins/org.junit_3.8.1 du r&eacute;pertoire d'Eclipse</li>
+</ul>
+<p align="center"> <img width=358 height=234 src="images/junit001.png"> </p>
+<p>Eclipse ajoute le fichier junit.jar au classpath</p>
+<p align="center"> <img width=601 height=122 src="images/junit002.png"> </p>
+<p>Dans ce chapitre, la classe suivante est utilis&eacute;e comme classe &agrave; tester avec JUnit.</p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" >
+    <tr bgcolor="#A6A5C2"> 
+      <td>Exemple : </td>
+    </tr>
+    <tr> 
+      <td> <pre><code>
+package com.moi.test.junit;
+public class MaClasse {
+  public int additioner(int a, int b) {
+    return a + b;
+  }
+}</code></pre> </td>
+    </tr>
+  </table>
+<p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_11_2">11.2. <!--nchpfin-->Ecriture des cas de tests</a></h2>
+  <p>Pour utiliser JUnit, il faut cr&eacute;er une classe qui va contenir les cas de test. Il faut cr&eacute;er une nouvelle entit&eacute; de type &quot; Java / JUnit / Sc&eacute;nario de test &quot;. </p>
+  <p align="center"> <img width=500 height=414 src="images/junit004.png"> </p>
+  <p>Si le fichier junit.jar n'est pas inclus dans le classpath du projet, un message d'erreur est affich&eacute; et il est impossible de poursuivre l'ex&eacute;cution de l'assistant.</p>
+<p align="center"> <img width=497 height=97 src="images/junit005.png"> </p>
+<p align="left">Cliquez sur le bouton &quot;Suivant&quot;. </p>
+<p align="center"> <img width=500 height=396 src="images/junit006.png"> </p>
+  <p>Il faut compl&eacute;ter la classe g&eacute;n&eacute;r&eacute;e selon les besoins&nbsp;: par exemple, ajouter un attribut qui va contenir une instance de la classe &agrave; tester, ajouter l'instanciation de cette classe dans la m&eacute;thode setUp() et lib&eacute;rer cette instance dans la m&eacute;thode tearDown().</p>
+  <p>Il faut ajouter les traitements n&eacute;cessaires dans les m&eacute;thodes testXXX() en utilisant l'API de&nbsp;JUnit.</p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" >
+    <tr bgcolor="#A6A5C2"> 
+      <td>Exemple : </td>
+    </tr>
+    <tr> 
+      <td> <pre><code>
+package com.moi.test.junit;
+
+import junit.framework.TestCase;
+
+public class MaClasseTest extends TestCase {
+   private MaClasse maClasse = null;
+
+   public MaClasseTest(String arg0) {
+         super(arg0);
+   }
+
+   public static void main(String[] args) {
+         junit.swingui.TestRunner.run(MaClasseTest.class);
+   }
+
+   protected void setUp() throws Exception {
+         super.setUp();
+         maClasse = new MaClasse();
+   }
+
+   protected void tearDown() throws Exception {
+         super.tearDown();
+         maClasse = null;
+   }
+
+   public void testAdditioner() {
+         assertTrue(maClasse.additioner(2,2) == 4);           
+   }
+}</code></pre> </td>
+    </tr>
+  </table>
+  <br>
+  <p>JUnit utilise l'instrospection pour ex&eacute;cuter les m&eacute;thodes commen&ccedil;ant par test.</p>
+<p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_11_3">11.3. <!--nchpfin-->Ex&eacute;cution des cas de tests</a></h2>
+  <p>Pour ex&eacute;cuter les tests, il faut ex&eacute;cuter la classe en tant que «&nbsp;Test JUnit &nbsp;».</p>
+  <p align="center"> <img width=338 height=152 src="images/junit007.png"> </p>
+<p align="center"> <img width=450 height=132 src="images/junit008.png"> </p>
+  <p>Eclipse ex&eacute;cute les tests et affiche le r&eacute;sultat dans une vue d&eacute;di&eacute;e. </p>
+<p align="center"> <img width=422 height=236 src="images/junit009.png"> </p>
+  <p>Si tous les cas de tests ont &eacute;t&eacute; ex&eacute;cut&eacute;s avec succ&egrave;s, une ligne verte est affich&eacute;e.</p>
+<p>Cette vue contient deux onglets&nbsp;: </p>
+<ul type=disc>
+  <li>«&nbsp;Failures&nbsp;»&nbsp;: contient la liste des cas de tests qui ont &eacute;chou&eacute;s</li>
+  <li>«&nbsp;Hierarchy&nbsp;»&nbsp;: contient une arborescence des cas de tests</li>
+</ul>
+  <p>Dans le cas o&ugrave; un ou plusieurs tests &eacute;chouent, la ligne est rouge.</p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" >
+    <tr bgcolor="#A6A5C2"> 
+      <td>Exemple : si le cas test suivant est ajout&eacute;&nbsp;:</td>
+    </tr>
+    <tr> 
+      <td> <pre><code>
+      public void testAdditioner() {
+            assertTrue(maClasse.additioner(2,2) == 4);
+            assertTrue(maClasse.additioner(2,3) == 4);
+      }</code></pre> </td>
+    </tr>
+  </table>
+  <br>
+  <p>Une ex&eacute;cution de l'exemple pr&eacute;c&eacute;dent permet d'avoir le r&eacute;sultat suivant&nbsp;: </p>
+  <p align="center"> <img width=421 height=262 src="images/junit010.png"> </p>
+  <p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_11_4">11.4. <!--nchpfin-->Le support de JUnit 4</a></h2>
+  <table width="100%"  border="0" cellspacing="0" cellpadding="4">
+    <tr>
+      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse32.png" width="64" height="32" align="center"></td>
+      <td>  <p>Eclipse 3.2 propose un support de la version 4 de   JUnit. L'assistant de cr&eacute;ation d'un sc&eacute;nario de test permet de s&eacute;lectionner la version de JUnit &agrave; utiliser. </p>
+  <p align="center"><img width=580 height=468 src="images/junit011.png"></p>
+  <p>Pour ajouter la biblioth&egrave;que au   classpath   du projet, il suffit de cliquer sur le lien «&nbsp;Cliquez ici&nbsp;»</p>
+  <p align="center"><img width=580 height=375 src="images/junit012.png"></p>
+  <p>Le fichier jar correspondant est ajout&eacute; et il suffit simplement
+    d'appuyer sur le bouton «&nbsp;OK&nbsp;» pour valider l'ajout de la
+    biblioth&egrave;que.</p>
+  <p>Le principe est identique lorsque c'est la version 4.0 de   JUnit   qui est s&eacute;lectionn&eacute;e.</p>
+  <p align="center"><img width=580 height=439 src="images/junit013.png"></p>
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;».</p>
+  <p align="center"><img width=422 height=361 src="images/junit014.png"></p>
+  <p>S&eacute;lectionnez les m&eacute;thodes &agrave; tester dans le sc&eacute;nario et
+    cliquez sur le bouton «&nbsp;Terminer&nbsp;»</p>
+  <p align="center"><img width=444 height=273 src="images/junit015.png"></p>
+  <p>La classe g&eacute;n&eacute;r&eacute;e prend en compte les fonctionnalit&eacute;s de la version
+    4 notamment les annotations.</p>
+  <p>L'assistant de code propose l'annotation @test.</p>
+  <p align="center"><img width=600 height=108 src="images/junit016.png"></p>
+  <p>Le menu «&nbsp;Ex&eacute;cuter&nbsp;» propose automatiquement
+    l'option «&nbsp;Ex&eacute;cuter en tant que / Test   JUnit  &nbsp;».</p>
+  <p align="center"><img width=399 height=231 src="images/junit017.png"></p>
+  <p>En cas d'&eacute;chec, les erreurs sont pr&eacute;cis&eacute;es dans la partie
+    «&nbsp;Trace de l'&eacute;chec&nbsp;».</p>
+  <p align="center"><img width=407 height=232 src="images/junit018.png"></p>
+  <p>L'assistant de code propose aussi l'annotation @Ignore pour
+    ne pas prendre en compte une m&eacute;thode de test.</p>
+  <p align="center"><img width=600 height=98 src="images/junit019.png"></p>
+  <p>La vue   JUnit   propose un historique
+    des tests effectu&eacute;s&nbsp;: pour afficher la liste des tests effectu&eacute;s, il
+    suffit de cliquer sur le bouton   <img width=37 height=22 src="images/junit020.png">.</p>
+  <p align="center"><img width=400 height=191 src="images/junit021.png"></p>
+  <p>Il suffit de s&eacute;lectionner le test &agrave; ex&eacute;cuter et de cliquer
+    sur le bouton «&nbsp;OK&nbsp;».</p>
+  <p>Il est possible de supprimer un test en le s&eacute;lectionnant et
+    en cliquant sur le bouton «&nbsp;Supprimer&nbsp;» ou de supprimer tous les
+    tests en utilisant le bouton «&nbsp;Supprimer tout&nbsp;»</p>
+  <p>En cliquant sur la petite fl&egrave;che du bouton, la liste
+    appara&icirc;t directement dans le menu d&eacute;roulant.</p>
+  <p align="center"><img width=378 height=164 src="images/junit022.png"></p>
+  <p>L'option «&nbsp;Historique&nbsp;... » permet d'ouvrir la bo&icirc;te
+    de dialogue «&nbsp;Ex&eacute;cutions de test&nbsp;».</p>
+  <p>L'option «&nbsp;Effacer les &eacute;l&eacute;ments termin&eacute;s&nbsp;» permet
+    de vider l'historique. </p></td>
+    </tr>
+  </table>
+<p>&nbsp;</p>
+</div>
+<!--PIED--><HR>
+<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="chap010.htm" ALT="10. Ant et Eclipse">
+<img src="FlecheG.gif" alt="10. Ant et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="partie3.htm" ALT="Partie 3 : les fonctions avanc&eacute;es d'Eclipse">
+<img src="FlecheD.gif" alt="Partie 3 : les fonctions avanc&eacute;es d'Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+<td  rowspan="2" align="center" valign="middle">
+        <script language="JavaScript1.1">
+<!--
+hsh = new Date();
+hsd = document;
+//hsr = hsd.referrer.replace(/[<>]/g, '');
+hsr = parent.document.referrer.replace(/[<>]/g,  '');
+hsi = '<a href="http://www.xiti.com/xiti.asp?s=128624"';
+hsi += ' TARGET="_top"><img width="39" height="25" border=0 ';
+hsi += 'src="http://logv23.xiti.com/hit.xiti?s=128624';
+hsi += '&p=';
+hsi += '&hl=' + hsh.getHours() + 'x' + hsh.getMinutes() + 'x' + hsh.getSeconds();
+if(parseFloat(navigator.appVersion)>=4)
+{Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
+hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
+//-->
+</script>
+        <noscript>
+        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
+        </noscript>
+        <!--//-->
+      </td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+
+</body>
+</html>

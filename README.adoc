@@ -27,6 +27,7 @@ Il s'agit d'une modernisation du link:http://www.jmdoudoux.fr/accueil_java.htm#d
 === Branches
 
 * master: branche principale
+* orig: copie des fichiers originaux (encodage des fichiers : ISO_8859_1)
 
 //end::description[]
 

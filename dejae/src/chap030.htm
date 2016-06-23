@@ -1,0 +1,296 @@
+<html>
+<head>
+<title>Le plug-in Eclipse et UML</title>
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
+<meta name="description" content="">
+<meta name="keywords" content="java tutorial cours dej eclipse uml omondo eclipseuml">
+<meta name="robots" content="all">
+<meta name="revisit-after" content="2 months">
+<meta http-equiv="Content-Language" content="fr-FX">
+<meta name="author" content="Jean Michel DOUDOUX">
+<link href="dej_style.css" rel="stylesheet" type="text/css">
+<body>
+<!--ENTETE-->
+<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="chap029.htm" ALT="29. Le plug-in CDT pour le d&eacute;veloppement en C / C++">
+<img src="FlecheG.gif" alt="29. Le plug-in CDT pour le d&eacute;veloppement en C / C++" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="chap031.htm" ALT="31. Les bases de donn&eacute;es et Eclipse">
+<img src="FlecheD.gif" alt="31. Les bases de donn&eacute;es et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+<HR>
+
+<p>&nbsp;</p>
+<h1><!--idrefpage value="eclipseuml" --><!--resumetitre value="pr&eacute;sente le plug-in EclipseUML de la soci&eacute;t&eacute; Omondo pour r&eacute;aliser des diagrammes UML avec Eclipse." --><!--nchpdeb--><a name="chap_30">30. <!--nchpfin-->Le plug-in EclipseUML </a></h1>
+<p>&nbsp;</p>
+<!--chapitredeb-->
+<div align="right">
+  <table border="0" cellspacing="0" summary="titre">
+    <tr>
+      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td>
+<td width="50" valign="top"><img src="images/3.gif" alt="3" width="62" height="83" border="0"></td>
+<td width="50" valign="top"><img src="images/0.gif" alt="0" width="62" height="83" border="0"></td>
+    </tr>
+  </table>
+  <br>
+</div>
+<!--chapitrefin-->
+<p>&nbsp;</p>
+<div align="justify"> 
+  <p>La soci&eacute;t&eacute; Omondo propose EclipseUML qui est un plug-in permettant de r&eacute;aliser des diagrammes UML dans Eclipse.</p>
+  <p>EclipseUML propose une version gratuite avec le support des 11 diagrammes d'UML 2.0.</p> 
+  <table border=1 cellspacing=0 cellpadding=4> 
+    <tr> 
+      <td width=307 valign=top class="Normal">&nbsp; </td> 
+      <td width=307 valign=top class="Normal"> <p>Version utilis&eacute;e dans cette section</p></td> 
+    </tr> 
+    <tr> 
+      <td width=307 valign=top class="Normal"> <p>Eclipse</p></td> 
+      <td width=307 valign=top class="Normal"> <p>3.0.1</p></td> 
+    </tr> 
+    <tr> 
+      <td width=307 valign=top class="Normal"> <p>J2SE</p></td> 
+      <td width=307 valign=top class="Normal"> <p>1.4.2_03</p></td> 
+    </tr> 
+    <tr> 
+      <td width=307 valign=top class="Normal"> <p>EclipseUML</p></td> 
+      <td width=307 valign=top class="Normal"> <p>2.0.0</p></td> 
+    </tr> 
+  </table> <br>
+  <p>EclipseUML n&eacute;cessite plusieurs plug-ins pour son fonctionnement avec Eclipse 3.0&nbsp;: </p> 
+  <ul type=disc> 
+    <li><a
+     href="http://www.eclipse.org/gef">GEF</a> (Graphical Editor Framework) 3.0.1 </li> 
+    <li><a
+     href="http://www.eclipse.org/emf">EMF</a> (Eclipse Modeling Framework) 2.0.1 </li> 
+    <li><a
+     href="http://www.eclipse.org/uml2">UML2</a> 1.0.1</li> 
+  </ul> 
+  <p>&nbsp;</p> 
+  <h2><!--nchpdeb--><a name="chap_30_1">30.1. <!--nchpfin-->Installation</a></h2> 
+  <p>Il faut t&eacute;l&eacute;charger le fichier eclipseUML_E301_freeEdition_2.0.0.beta.20041026.jar sur le site d'Omondo&nbsp;: <a
+href="http://www.omondo.com/download/free/index.html">http://www.omondo.com/download/free/index.html</a></p> 
+  <p>Ce fichier .jar contient un ex&eacute;cutable qui va installer EclipseUML et les diff&eacute;rents plug-ins tiers n&eacute;cessaires (GEF, EMF et UML2).</p> 
+  <p>Si Eclipse est en cours d'ex&eacute;cution, il faut le quitter avant de lancer l'installation.</p> 
+  <p>Pour lancer l'installation, il suffit de lancer la commande ci dessous dans une console DOS</p> 
+  <p>java -jar eclipseUML_E301_freeEdition_2.0.0.beta.20041026.jar</p> 
+  <p>Un assistant guide l'utilisateur dans les diff&eacute;rentes &eacute;tapes de l'installation&nbsp;: </p> 
+  <ul type=disc> 
+    <li>l'&eacute;cran d'accueil permet de s&eacute;lectionner la langue de l'assistant&nbsp;: cliquez sur le bouton  «&nbsp;Ok&nbsp;»</li> 
+    <li>l'&eacute;cran «&nbsp;Introduction&nbsp;» vous souhaite la bienvenue&nbsp;: cliquez sur le bouton «&nbsp;Suivant&nbsp;»</li> 
+    <li>l'&eacute;cran «&nbsp;Informations&nbsp;» affiche des informations &agrave; lire&nbsp;:  cliquez sur le bouton «&nbsp;Suivant&nbsp;»</li> 
+    <li>l'&eacute;cran «&nbsp;License&nbsp;» affiche la licence d'utilisation&nbsp;: lisez la licence et si vous l'acceptez, cliquez sur le bouton «&nbsp;J'accepte les termes de cet accord de licence&nbsp;» puis sur le bouton «&nbsp;Suivant&nbsp;»</li> 
+    <li>l'&eacute;cran «&nbsp;Configuration&nbsp;» permet de s&eacute;lectionner le r&eacute;pertoire d'installation d'Eclipse. S&eacute;lectionnez le r&eacute;pertoire d'installation d'Eclipse au besoin et cliquez sur le bouton «&nbsp;Suivant&nbsp;».</li> 
+    <li>l'&eacute;cran «&nbsp;Configuration&nbsp;» suivant permet de s&eacute;lectionner les packages &agrave; installer&nbsp;: cliquez sur le bouton «&nbsp;Suivant&nbsp;»</li> 
+    <li>l'&eacute;cran «&nbsp;Installation&nbsp;» affiche la progression de la copie des fichiers&nbsp;: cliquez sur le bouton «&nbsp;Suivant&nbsp;»</li> 
+    <li>l'&eacute;cran «&nbsp;Install Complete&nbsp;»&nbsp;: cliquez sur le bouton «&nbsp;Quitter&nbsp;».</li> 
+  </ul> 
+  <p>Une fois l'installation termin&eacute;e, il suffit de lancer Eclipse.</p> 
+  <p>&nbsp;</p> 
+  <h2><!--nchpdeb--><a name="chap_30_2">30.2. <!--nchpfin-->Les  pr&eacute;f&eacute;rences</a></h2> 
+  <p>Les nombreux param&egrave;tres d'EclipseUML peuvent &ecirc;tre r&eacute;gl&eacute;s dans les pr&eacute;f&eacute;rences (menu Fen&ecirc;tre/Pr&eacute;f&eacute;rences)</p> 
+  <p align="center"><img border=0 width=677 height=402
+src="images/uml001.png" ></p> 
+  <p>&nbsp;</p> 
+  <h2><!--nchpdeb--><a name="chap_30_3">30.3. <!--nchpfin-->Mise en oeuvre du plug-in</a></h2> 
+  <p>L'utilisation des diagrammes UML n&eacute;cessitent d'utiliser un projet Java. Si aucun projet Java n'est s&eacute;lectionn&eacute;, avant l'appel &agrave; l'assistant de cr&eacute;ation d'entit&eacute;s, ce dernier affichera un   message d'erreur lors de son utilisation.</p> 
+  <p align="center"><img border=0 width=441 height=139
+src="images/uml004.png" ></p> 
+  <p>Pour cr&eacute;er un nouveau diagramme, il faut s&eacute;lectionner un projet et utiliser l'option «&nbsp;Nouveau / Autres&nbsp;» du menu «&nbsp;Fichier&nbsp;».</p> 
+  <p align="center"><img border=0 width=500 height=407
+src="images/uml005.png" ></p> 
+  <p>Il est possible d'exporter chaque diagramme dans plusieurs formats en utilisant l'option «&nbsp;Export&nbsp;» de l'&eacute;diteur de diagrammes. Les formats utilisables sont&nbsp;: SVG, JPEG et Gif.</p> 
+  <p>Chacun des &eacute;diteurs proposent des fonctionnalit&eacute;s de zoom via plusieurs options du menu contextuel.</p> 
+  <p>&nbsp;</p> 
+  <h3><!--nchpdeb--><a name="chap_30_3_1">30.3.1. <!--nchpfin-->Cr&eacute;ation d'un diagramme de cas d'utilisation</a></h3> 
+  <p>Il faut cr&eacute;er une nouvelle entit&eacute; de type  «&nbsp;UML Diagrams&nbsp;/ UML Use Case Diagram» et cliquer sur le bouton «&nbsp;Suivant&nbsp;»</p> 
+  <p align="center"><img border=0 width=500 height=333
+src="images/uml006.png" ></p> 
+  <p>Saisissez le nom du fichier et cliquez sur le bouton «&nbsp;Fin&nbsp;».</p> 
+  <p>Le fichier est cr&eacute;&eacute; par l'assistant</p> 
+  <p align="center"><img border=0 width=265 height=126
+src="images/uml007.png" ></p> 
+  <p>et une vue d&eacute;di&eacute;e &agrave; l'&eacute;dition du diagramme ouvre le fichier</p> 
+  <p align="center"><img border=0 width=522 height=191
+src="images/uml008.png" ></p> 
+  <p>Il suffit alors de composer son diagramme.</p> 
+  <p>Pour ajouter un acteur, il faut cliquer sur le bouton <img border=0 width=23 height=21
+src="images/uml009.png" > puis cliquer sur la surface de travail de la vue.</p> 
+  <p>Une boite de dialogue permet de saisir le st&eacute;r&eacute;otype et le nom du nouvel acteur.</p> 
+  <p align="center"><img border=0 width=438 height=201
+src="images/uml010.png" ></p> 
+  <p>Le diagramme est enrichi avec le nouvel acteur.</p> 
+  <p align="center"><img border=0 width=244 height=213
+src="images/uml011.png" ></p> 
+  <p>Il est possible de r&eacute;p&eacute;ter l'op&eacute;ration d'ajout d'un nouvel acteur en cliquant sur la surface tant que le bouton <img border=0 width=23 height=21
+src="images/uml009.png" > est activ&eacute;.</p> 
+  <p>La cr&eacute;ation d'un cas d'utilisation est similaire en utilisant le bouton <img border=0 width=23 height=21
+src="images/uml013.png" >.</p> 
+  <p>Une bo&icirc;te de dialogue permet de saisir les informations concernant le nouveau cas d'utilisation.</p> 
+  <p align="center"><img border=0 width=438 height=304
+src="images/uml014.png" ></p> 
+  <p>Il faut saisir les informations et cliquer sur le bouton «&nbsp;OK&nbsp;».</p> 
+  <p align="center"><img border=0 width=294 height=130
+src="images/uml015.png" ></p> 
+  <p>Pour ajouter des associations, il suffit de cliquer sur l'association d&eacute;sir&eacute;e dans la barre d'outils, puis de cliquer sur la premi&egrave;re entit&eacute; (celle ci change de couleur au passage de la souris) puis sur la seconde (celle ci change aussi de couleur au passage de la souris).</p> 
+  <p>Pour ajouter un commentaire, il suffit de cliquer sur le bouton <img border=0 width=23 height=21
+src="images/uml016.png" alt="*" > .</p> 
+  <p>Une boite de dialogue permet de saisir le commentaire.</p> 
+  <p align="center"><img border=0 width=438 height=179
+src="images/uml017.png" ></p> 
+  <p>Voici un exemple de diagramme.</p> 
+  <p align="center"><img border=0 width=561 height=225
+src="images/uml018.png" ></p> 
+  <p>&nbsp;</p> 
+  <h3><!--nchpdeb--><a name="chap_30_3_2">30.3.2. <!--nchpfin-->Cr&eacute;ation d'un diagramme de classe</a></h3> 
+  <p>Pour cr&eacute;er un diagramme de classe, il faut s&eacute;lectionner un package et cr&eacute;er une nouvelle entit&eacute; de type «&nbsp;UML Diagrams/UML Class Diagram&nbsp;».</p> 
+  <p align="center"><img border=0 width=500 height=416
+src="images/uml019.png" ></p> 
+  <p>Le bouton «&nbsp;Browse&nbsp;» permet de s&eacute;lectionner le package concern&eacute;</p> 
+  <p align="center"><img border=0 width=326 height=203
+src="images/uml020.png" ></p> 
+  <p>Saisissez le nom du fichier qui sa contenir le diagramme et cliquez sur le bouton «&nbsp;Fin&nbsp;» pour cr&eacute;er le fichier et ouvrir l'&eacute;diteur</p> 
+  <p align="center"><img border=0 width=500 height=217
+src="images/uml021.png" ></p> 
+  <p>Pour cr&eacute;er une nouvelle classe, il suffit de cliquer sur le bouton <img border=0 width=23 height=21
+src="images/uml022.png" > puis de cliquer sur la surface de travail de l'&eacute;diteur.</p> 
+  <p>L'assistant de cr&eacute;ation de classe s'ouvre.</p> 
+  <p align="center"><img border=0 width=544 height=505
+src="images/uml023.png" ></p> 
+  <p>Le bouton suivant permet d'ajouter des st&eacute;r&eacute;otypes. Une fois la saisie termin&eacute;e, il suffit de cliquer sur le bouton «&nbsp;Fin&nbsp;». La nouvelle classe est alors ajout&eacute;e dans le diagramme mais aussi dans l'espace de travail.</p> 
+  <table border=0 cellspacing=0 cellpadding=0 align="center"> 
+    <tr> 
+      <td width=307 valign=top class="Normal"> <p><img border=0 width=196 height=113
+  src="images/uml024.png" ></p></td> 
+      <td width=307 valign=top class="Normal"> <p><img border=0 width=265 height=236
+  src="images/uml025.png" ></p></td> 
+    </tr> 
+  </table> 
+  <p>L'option «&nbsp;New&nbsp;» du menu contextuel de la classe dans l'&eacute;diteur permet d'ajouter des membres &agrave; la classe.</p> 
+  <p>Une boite de dialogue permet alors la saisie des informations sur le nouveau membre.</p> 
+  <p>Par exemple pour ajouter un nouveau champ.</p> 
+  <p align="center"><img border=0 width=476 height=532
+src="images/uml026.png" ></p> 
+  <p>Par exemple, pour ajouter une nouvelle m&eacute;thode</p> 
+  <p align="center"><img border=0 width=444 height=644
+src="images/uml027.png" ></p> 
+  <p>Pour ajouter une nouvelle interface, il suffit de cliquer sur le bouton <img border=0 width=23 height=21
+src="images/uml028.png" > puis sur la surface de travail de l'&eacute;diteur. Une bo&icirc;te de dialogue permet de saisir les informations de la nouvelle interface.</p> 
+  <p align="center"><img border=0 width=544 height=337
+src="images/uml029.png" ></p> 
+  <p>La cr&eacute;ation d'une association de g&eacute;n&eacute;ralisation entre deux classes/interfaces se fait en cliquant sur le bouton <img border=0 width=23 height=21
+src="images/uml030.png" >, puis sur la classe fille et enfin sur la classe m&egrave;re.</p> 
+  <p>La relation g&eacute;n&eacute;r&eacute;e (h&eacute;ritage ou impl&eacute;mentation) se fait automatiquement en fonction du type des deux entit&eacute;s concern&eacute;es.</p> 
+  <p align="center"><img border=0 width=135 height=262
+src="images/uml031.png" ></p> 
+  <p>Pour mettre &agrave; jour le code source en fonction des relations ajout&eacute;s, il faut utiliser l'option «&nbsp;Model synchronize&nbsp;» du menu contextuel de la classe ou interface dans l'&eacute;diteur.</p> 
+  <p>Les mises &agrave; jour sont bi-directionnelles&nbsp;: dans le code et sur le diagramme. Il faut donc faire attention notamment &agrave; la suppression d'une classe du diagramme qui la supprime aussi dans le package. Si le besoin est simplement de ne plus afficher la classe dans le diagramme, il faut simplement la masquer en utilisant l'option «&nbsp;Hide » du menu contextuel.</p> 
+  <p>Pour faire r&eacute;appara&icirc;tre un &eacute;l&eacute;ment masqu&eacute;, il faut utiliser l'option «&nbsp;Package elements ...&nbsp;»</p> 
+  <p align="center"><img border=0 width=298 height=204
+src="images/uml033.png" ></p> 
+  <p>Il suffit de s&eacute;lectionner l'&eacute;l&eacute;ment et de cliquer sur le bouton «&nbsp;OK&nbsp;».</p>  
+</div>
+<!--PIED--><HR>
+<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="chap029.htm" ALT="29. Le plug-in CDT pour le d&eacute;veloppement en C / C++">
+<img src="FlecheG.gif" alt="29. Le plug-in CDT pour le d&eacute;veloppement en C / C++" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="chap031.htm" ALT="31. Les bases de donn&eacute;es et Eclipse">
+<img src="FlecheD.gif" alt="31. Les bases de donn&eacute;es et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+<td  rowspan="2" align="center" valign="middle">
+        <script language="JavaScript1.1">
+<!--
+hsh = new Date();
+hsd = document;
+//hsr = hsd.referrer.replace(/[<>]/g, '');
+hsr = parent.document.referrer.replace(/[<>]/g,  '');
+hsi = '<a href="http://www.xiti.com/xiti.asp?s=128624"';
+hsi += ' TARGET="_top"><img width="39" height="25" border=0 ';
+hsi += 'src="http://logv23.xiti.com/hit.xiti?s=128624';
+hsi += '&p=';
+hsi += '&hl=' + hsh.getHours() + 'x' + hsh.getMinutes() + 'x' + hsh.getSeconds();
+if(parseFloat(navigator.appVersion)>=4)
+{Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
+hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
+//-->
+</script>
+        <noscript>
+        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
+        </noscript>
+        <!--//-->
+      </td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

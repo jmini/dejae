@@ -1,0 +1,741 @@
+<HTML>
+<HEAD>
+<TITLE>JPA et Eclipse</TITLE>
+<META http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
+<META name="description" content="">
+<META name="keywords" content="java tutorial cours dej eclipse">
+<META name="robots" content="all">
+<META name="revisit-after" content="2 months">
+<META http-equiv="Content-Language" content="fr-FX">
+<META name="author" content="Jean Michel DOUDOUX">
+<link href="dej_style.css" rel="stylesheet" type="text/css">
+<BODY>
+<!--ENTETE-->
+<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="chap026.htm" ALT="26.  Les services web et Eclipse">
+<img src="FlecheG.gif" alt="26.  Les services web et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="partie6.htm" ALT="Partie 6 : le d&eacute;veloppement d'applications mobiles">
+<img src="FlecheD.gif" alt="Partie 6 : le d&eacute;veloppement d'applications mobiles" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+<HR>
+
+<p>&nbsp;</p>
+<H1><!--idrefpage value="jpa" --><!--resumetitre value="Propose de mettre en oeuvre le plug-in Dali pour faciliter la mise en oeuvre de l'API Java Persistence API." --><!--nchpdeb--><a name="chap_27">27. <!--nchpfin-->JPA et Eclipse</A></H1>
+<p>&nbsp;</p>
+<!--chapitredeb-->
+<div align="right">
+  <table border="0" cellspacing="0" summary="titre">
+    <tr>
+      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td>
+<td width="50" valign="top"><img src="images/2.gif" alt="2" width="62" height="83" border="0"></td>
+<td width="50" valign="top"><img src="images/7.gif" alt="7" width="62" height="83" border="0"></td>
+    </tr>
+  </table>
+  <br>
+</div>
+<!--chapitrefin-->
+<p>&nbsp;</p>
+<DIV ALIGN="justify"> 
+<P>&nbsp;</P>
+  <p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_27_1">27.1. <!--nchpfin-->Dali</a></h2>
+  <p>Dali est un plug-in proposant de
+    fournir des outils pour faciliter le mapping objet/relationnel.</p>
+  <p>Dali est un sous projet du projet WTP dont le but est de faciliter
+    la mise en oeuvre de l'API JPA (Java Persistence API) d&eacute;finie par la JSR 220.</p>
+  <p>La page officiel du projet est l'url&nbsp;: <a href="http://www.eclipse.org/dali">http://www.eclipse.org/dali</a>.</p>
+  <p>Les versions utilis&eacute;es dans cette section sont&nbsp;: </p>
+  <table border=1 cellspacing=0 cellpadding=4>
+    <tr>
+      <td>Eclipse</td>
+      <td>3.2.1</td>
+    </tr>
+    <tr>
+      <td>WTP</td>
+      <td>1.5.1</td>
+    </tr>
+    <tr>
+      <td>Dali</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>MySQL</td>
+      <td>4.1</td>
+    </tr>
+    <tr>
+      <td>API JPA&nbsp;</td>
+      <td>Impl&eacute;mentation de r&eacute;f&eacute;rence (toplink-essentials.jar)
+          fournie avec GlassFish</td>
+    </tr>
+  </table><br>
+  <p>La version utilis&eacute;e du plug-in dans
+    cette section est en cours d&eacute;veloppement mais elle propose d&eacute;j&agrave; des
+    fonctionnalit&eacute;s int&eacute;ressantes.</p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_27_1_1">27.1.1. <!--nchpfin-->La cr&eacute;ation et la configuration d'un nouveau projet</a></h3>
+  <p>Il faut ouvrir la perspective Java Perspective&nbsp;:
+    s&eacute;lectionnez l'option «&nbsp;Fen&ecirc;tre / ouverture la perspective&nbsp;» du menu
+    principal.</p>
+  <p align="center"><img width=245 height=150 src="images/dali001.png" ></p>
+  <p>S&eacute;lectionnez «&nbsp;Java Persistence&nbsp;»
+    et cliquez sur le bouton «&nbsp;OK&nbsp;» pour ouvrir la perspective.</p>
+  <p align="center"><img width=600 height=371 src="images/dali002.png" ></p>
+  <p>Cr&eacute;ez un nouveau projet de type Java associ&eacute; &agrave; un JRE 1.5
+    minimum.</p>
+  <p>Il faut ajouter le support de l'API Java Persistence au projet.</p>
+  <p>S&eacute;lectionnez le projet dans l'explorateur de projet et
+    utiliser l'option Java Persistence / Add Java Persistence&nbsp;»&nbsp;:
+    une bo&icirc;te de dialogue perme de saisir les informations requises.</p>
+  <p align="center"><img width=500 height=505 src="images/dali003.png" ></p>
+  <p>Cliquez sur le lien «&nbsp;Add connections&nbsp;»</p>
+  <p align="center"><img width=600 height=466 src="images/dali004.png" ></p>
+  <p>Saisissez les informations concernant la base de donn&eacute;es et
+    sa connexion.</p>
+  <p align="center"><img width=600 height=469 src="images/dali005.png" ></p>
+  <p>Cliquez sur le bouton «&nbsp;Tester la connexion&nbsp;»</p>
+  <p>Si la base de donn&eacute;es n'est pas trouv&eacute;e, un message est
+    affich&eacute;&nbsp;: </p>
+  <p align="center"><img width=441 height=139 src="images/dali006.png" ></p>
+  <p>Si la base de donn&eacute;es est trouv&eacute;e, un message d'information
+    est affich&eacute;</p>
+  <p align="center"><img width=441 height=139 src="images/dali007.png" ></p>
+  <p>Cliquez sur le bouton «&nbsp;OK&nbsp;» puis sur le bouton
+    «&nbsp;Terminer&nbsp;»</p>
+  <p align="center"><img width=500 height=505 src="images/dali008.png" ></p>
+  <p>Cliquez sur le bouton «&nbsp;Configure the project build path&nbsp;»</p>
+  <p align="center"><img width=600 height=357 src="images/dali009.png" ></p>
+  <p>Cliquez sur l'onglet «&nbsp;Biblioth&egrave;ques&nbsp;», puis sur le
+    bouton «&nbsp;Ajouter des fichiers jar externes&nbsp;»</p>
+  <p align="center"><img width=500 height=325 src="images/dali010.png" ></p>
+  <p>S&eacute;lectionnez le fichier toplink-essentials.jar,
+    puis cliquez sur le bouton «&nbsp;Ouvrir&nbsp;» et sur le bouton
+    «&nbsp;OK&nbsp;».</p>
+  <p align="center"><img width=500 height=505 src="images/dali011.png" ></p>
+  <p>S&eacute;lectionnez le sch&eacute;ma de la base de donn&eacute;es (dans le cas de MySQL, c'est la base de donn&eacute;es elle-m&ecirc;me)</p>
+  <p>Saisissez le nom de la classe du Provider de Persistence&nbsp;: oracle.toplink.essentials.PersistenceProvider et le nom de l'unit&eacute; de persistence puis cliquez sur
+    le bouton «&nbsp;Terminer&nbsp;».</p>
+  <p>Le fichier persistence.xml est
+    cr&eacute;&eacute; dans le r&eacute;pertoire META-INF</p>
+  <p align="center"><img width=419 height=295 src="images/dali012.png" ></p>
+  <p>Ce fichier xml est le fichier de
+    configuration de l'API JPA.</p>
+  <p align="center"><img width=599 height=173 src="images/dali013.png" ></p>
+  <p>La connexion &agrave; la base de donn&eacute;es est affich&eacute;e dans la vue
+    «&nbsp;Explorateur de base de donn&eacute;es&nbsp;».</p>
+  <p align="center"><img width=326 height=262 src="images/dali014.png" ></p>
+  <p>&nbsp;</p>
+    <h3><!--nchpdeb--><a name="chap_27_1_2">27.1.2. <!--nchpfin-->Ajouter une entit&eacute; persistante</a></h3>
+  <p>Cr&eacute;ez une nouvelle entit&eacute; de type «&nbsp;Java Persistence / Entity&nbsp;»</p>
+  <p align="center"><img width=377 height=316 src="images/dali015.png" ></p>
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p>
+  <p align="center"><img width=600 height=542 src="images/dali016.png" ></p>
+  <p>Saisissez le nom du package et le nom de la classe puis
+    cliquez sur le bouton «&nbsp;Terminer&nbsp;».</p>
+  <p>La classe est g&eacute;n&eacute;r&eacute;e et son contenu est ouvert dans un
+    &eacute;diteur.</p>
+  <p align="center"><img width=367 height=192 src="images/dali017.png" ></p>
+  <p>La classe est marqu&eacute;e avec l'annotation @Entity&nbsp;:
+    elle est en erreur car aucun champ de la classe n'est marqu&eacute; avec l'annotation
+    @Id qui est obligatoire.</p>
+  <p>La vue «&nbsp;Persistence Outline&nbsp;» affiche la nouvelle entity cr&eacute;&eacute;e.</p>
+  <p align="center"><img width=242 height=74 src="images/dali018.png" ></p>
+  <p>La vue «&nbsp;Persistence properties&nbsp;» affiche les propri&eacute;t&eacute;s de cet &eacute;l&eacute;ment.</p>
+  <p align="center"><img width=544 height=336 src="images/dali019.png" ></p>
+  <p>Cette vue indique que l'entit&eacute; est mapp&eacute;e sur le table
+    Personne.</p>
+  <p>Il faut ajouter les champs dans l'entit&eacute;&nbsp;: </p>
+  <p align="center"><img width=338 height=245 src="images/dali020.png" ></p>
+  <p>La vue «&nbsp;Persistence outline&nbsp;» affiche les champs ajout&eacute;s</p>
+  <p align="center"><img width=236 height=119 src="images/dali021.png" ></p>
+  <p>Il faut r&eacute;aliser le mapping entre
+    les champs de l'entit&eacute; et les champs de la table</p>
+  <p>Dans la vue «&nbsp;Persistence outline&nbsp;», s&eacute;lectionnez le champ id.</p>
+  <p align="center"><img width=257 height=281 src="images/dali022.png" ></p>
+  <p>Modifiez le champ «&nbsp;Map As&nbsp;» en s&eacute;lectionnant le type «&nbsp;Id&nbsp;»&nbsp;: le code de la classe
+    est modifi&eacute; pour ajouter l'annotation @Id sur le champ.</p>
+  <p align="center"><img width=340 height=275 src="images/dali023.png" ></p>
+  <p>L'icône du champ est aussi modifi&eacute; dans la vue «&nbsp;Persistence outline&nbsp;» pour
+    indiquer que ce champ est la cl&eacute;.</p>
+  <p align="center"><img width=235 height=120 src="images/dali024.png" ></p>
+  <p>S&eacute;lectionnez le type «&nbsp;Basic&nbsp;» pour les deux
+    autres champs. Comme le nom des champs correspond exactement dans la table et
+    dans la classe, le mapping est automatique.</p>
+  <p>L'entit&eacute; ainsi modifi&eacute;e est la suivante</p>
+  <p align="center"><img width=323 height=358 src="images/dali025.png" ></p>
+  <p>L'&eacute;diteur affiche les erreurs de mapping si certaines sont d&eacute;tect&eacute;es.</p>
+  <p align="center"><img width=384 height=259 src="images/dali026.png" ></p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_27_1_3">27.1.3. <!--nchpfin-->Exemple d'utilisation de l'</a>API</h3>
+  <p>Il faut rajouter dans le classpath de l'application la biblioth&egrave;que du pilote JDBC (dans cet exemple c'est la base
+    de donn&eacute;es MySQL qui est utilis&eacute;e&nbsp;: le fichier mysql-connector-java-3.1.10-bin.jar
+    est donc ajout&eacute; au classpath du projet).</p>
+  <p>Il faut enrichir le fichier persistence.xml avec les propri&eacute;t&eacute;s de connexion &agrave; la base de donn&eacute;es.</p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>    &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;    
+    &lt;persistence xmlns=&quot;http://java.sun.com/xml/ns/persistence&quot;    
+      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+      version=&quot;1.0&quot;    
+      xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/persistence
+      http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd&quot;&gt;    
+      &lt;persistence-unit name=&quot;test_dali&quot;&gt;    
+        &lt;provider&gt;    
+          oracle.toplink.essentials.PersistenceProvider    
+        &lt;/provider&gt;    
+        &lt;class&gt;com.jmdoudoux.test.dali.Personne&lt;/class&gt;    
+        &lt;properties&gt;    
+          &lt;property name=&quot;toplink.jdbc.driver&quot; value=&quot;com.mysql.jdbc.Driver&quot; /&gt;    
+          &lt;property name=&quot;toplink.jdbc.url&quot; value=&quot;jdbc:mysql://localhost/test&quot; /&gt;    
+          &lt;property name=&quot;toplink.jdbc.user&quot; value=&quot;root&quot; /&gt;    
+          &lt;property name=&quot;toplink.jdbc.password&quot; value=&quot;&quot; /&gt;    
+          &lt;property name=&quot;toplink.logging.level&quot; value=&quot;INFO&quot; /&gt;    
+        &lt;/properties&gt;    
+      &lt;/persistence-unit&gt;    
+    &lt;/persistence&gt;</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <p>Il faut enfin &eacute;crire le code qui va utiliser l'API JPA et les diff&eacute;rentes entit&eacute;s de mapping g&eacute;n&eacute;r&eacute;es.</p>
+  <p>Exemple&nbsp;: obtenir la personne dont l'identifiant vaut 1</p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>package com.jmdoudoux.test.dali;    
+
+import javax.persistence.Persistence;    
+import javax.persistence.EntityManagerFactory;    
+import javax.persistence.EntityManager;    
+
+public class TestDali {    
+
+  public static void main(String[]argv) {    
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory(&quot;test_dali&quot;);    
+    EntityManager em = emf.createEntityManager();    
+    Personne personne = em.find(Personne.class, 1l);    
+    System.out.println(&quot;Personne.nom=&quot;+personne.getNom());    
+    em.close();    
+    emf.close();    
+  }    
+}</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>R&eacute;sultat d'ex&eacute;cution&nbsp;:</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>         
+    [TopLink Info]: 2006.11.06
+  06:01:18.134--ServerSession(25378506)--TopLink, version:
+  Oracle TopLink Essentials - 2006.4 (Build 060412)    
+    [TopLink Info]: 2006.11.06
+  06:01:19.757--ServerSession(25378506)--file:/C:/Documents%20and%20Settings
+  /jumbo/workspace/TestDali/bin-test_dali
+  login successful    
+    Personne.nom=nom1    
+    [TopLink Info]: 2006.11.06
+  06:01:20.117--ServerSession(25378506)--file:/C:/Documents%20and%20Settings
+  /jumbo/workspace/TestDali/bin-test_dali
+  logout successful</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+    <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_27_1_4">27.1.4. <!--nchpfin-->Connexion &agrave; la base de donn&eacute;es.</h3>
+  <p>Avant de pouvoir utiliser les fonctionnalit&eacute;s du plug-in, il est n&eacute;cessaire d'&ecirc;tre connect&eacute; &agrave; la base de
+    donn&eacute;es afin de pouvoir contrôles les informations de mapping.</p>
+  <p>Il est possible de le faire dans les propri&eacute;t&eacute;s du projet.</p>
+  <p align="center"><img width=525 height=323 src="images/dali027.png" > </p>
+  <p>S&eacute;lectionnez “Java Persistence” et
+    cliquez sur le bouton “Reconnect”.</p>
+  <p>Il est aussi possible d'utiliser la vue «&nbsp;Explorateur
+    de base de donn&eacute;es&nbsp;».</p>
+  <p align="center"><img width=288 height=129 src="images/dali028.png" > </p>
+  <p>S&eacute;lectionnez la connexion et cliquez sur l'option
+    “Reconnecter” du menu contextuel</p>
+  <p align="center"><img width=258 height=147 src="images/dali029.png" ></p>
+  <p>Une bo&icirc;te de dialogue permet de saisir le login et le mot de
+    passe de connexion.</p>
+  <p>Si la connexion &eacute;choue alors un message d'erreur affiche la
+    pile d'appel des exceptions</p>
+  <p align="center"><img width=440 height=113 src="images/dali030.png" ></p>
+  <p>Si la connexion r&eacute;ussie, la base de donn&eacute;es est affich&eacute;e
+    avec une petite icône verte et il est possible de parcourir l'arborescence des
+    &eacute;l&eacute;ments qui la compose.</p>
+  <p align="center"><img width=288 height=303 src="images/dali031.png" > </p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_27_1_5">27.1.5. <!--nchpfin-->La g&eacute;n&eacute;ration des entit&eacute;s &agrave; partir de la base de    donn&eacute;es</a></h3>
+  <p>Le plug-in propose une
+    fonctionnalit&eacute; pour g&eacute;n&eacute;rer automatiquement les entit&eacute;s &agrave; par des tables d'une
+    base de donn&eacute;es connect&eacute;es.</p>
+  <p>S&eacute;lectionnez le projet et utilisez l'option Java «&nbsp;Java Persistence/Generate entities&nbsp;»</p>
+  <p align="center"><img width=381 height=364 src="images/dali032.png" > </p>
+  <p>Saisissez le nom du package, s&eacute;lectionnez les tables
+    concern&eacute;es et cliquez sur le bouton «&nbsp;Terminer&nbsp;».</p>
+  <p>Si une classe correspondant &agrave; une entit&eacute; existante, alors un
+    message de confirmation est affich&eacute;&nbsp;: </p>
+  <p align="center"><img width=424 height=105 src="images/dali033.png" ></p>
+  <p>Les diff&eacute;rentes classes des entit&eacute;s sont g&eacute;n&eacute;r&eacute;es.</p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_27_1_6">27.1.6. <!--nchpfin-->L'&eacute;diteur du fichier persistence.xml</a></h3>
+  <p>Dali  propose un
+    &eacute;diteur d&eacute;di&eacute; &agrave; la modification du fichier persistence.xml. C'est l'&eacute;diteur par d&eacute;faut de ce fichier. Il propose deux onglets&nbsp;:
+    Conception et Source</p>
+  <p align="center"><img width=454 height=341 src="images/dali034.png" ></p>
+  <p>La modification du fichier est facilit&eacute;e par l'&eacute;diteur qui
+    int&egrave;gre le sch&eacute;ma du document XML.</p>
+  <p align="center"><img width=563 height=397 src="images/dali035.png" ></p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_27_1_7">27.1.7. <!--nchpfin-->La synchronisation des classes</a></h3>
+  <p>Dans l'explorateur de packages, il faut s&eacute;lectionner le
+    fichier persistence.xml et utiliser l'option «&nbsp;Persistence / Synchronize classes&nbsp;» du menu contextuel.</p>
+  <p>Chaque nouvelle entit&eacute; d&eacute;finie dans les sources est
+    automatiquement ajout&eacute;e dans un tag &lt;class&gt; du fichier persistence.xml.</p>
+  <p>Le travail de synchronisation est effectu&eacute; en tache de fond.</p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_27_1_8">27.1.8. <!--nchpfin-->Transformer une classe existante  en entit&eacute;</a></h3>
+  <p>Il est possible de transformer une classe existante en Entity.</p>
+  <p>Exemple&nbsp;: </p>
+  <p align="center"><img width=381 height=188 src="images/dali036.png" ></p>
+  <p>S&eacute;lectionnez la classe (ne s&eacute;lectionnez pas le fichier .java
+    mais la classe directement) dans l'explorateur de packages et utiliser l'option
+    «&nbsp;Persistence / Make Java Persistence Entity&nbsp;».</p>
+  <p>La clause import n&eacute;cessaire et l'annotation «&nbsp;Entity&nbsp;» sont ajout&eacute;es&nbsp;: </p>
+  <p align="center"><img width=381 height=237 src="images/dali037.png" ></p>
+  <p>Dans l'&eacute;diteur de code, s&eacute;lectionnez la classe puis affichez
+    la vue «&nbsp;Persistence Properties&nbsp;»</p>
+  <p>Dans la liste d&eacute;roulante «&nbsp;Map As&nbsp;» s&eacute;lectionnez «&nbsp;Entity&nbsp;»</p>
+  <p align="center"><img width=350 height=130 src="images/dali038.png" ></p>
+  <p>La bo&icirc;te de dialogue s'enrichie avec les propri&eacute;t&eacute;s relative
+    au type Entity.</p>
+  <p align="center"><img width=349 height=336 src="images/dali039.png" ></p>
+  <p>Dans la liste d&eacute;roulante Table, s&eacute;lectionnez la table infopersonne</p>
+  <p align="center"><img width=350 height=194 src="images/dali040.png" ></p>
+  <p>Le code de l'entit&eacute; est modifi&eacute;</p>
+  <p align="center"><img width=363 height=171 src="images/dali041.png" ></p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_27_1_9">27.1.9. <!--nchpfin-->La cr&eacute;ation d'une association 1-1</a></h3>
+  <p>L'exemple de cette section va utiliser les tables ci dessous</p>
+  <p align="center"><img width=266 height=119 src="images/dali042.png" ></p>
+  <p>La table «&nbsp;personne&nbsp;» contient les donn&eacute;es suivantes&nbsp;: </p>
+  <p align="center"><img width=392 height=105 src="images/dali043.png" ></p>
+  <p>La table «&nbsp;infopersonne&nbsp;»
+    contient les donn&eacute;es suivantes&nbsp;: </p>
+  <p align="center"><img width=332 height=38 src="images/dali044.png" ></p>
+  <p>Il faut mettre en place l'association en modifiant la classe
+    Personne</p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>package com.jmdoudoux.test.dali;
+    
+import javax.persistence.Entity;    
+import javax.persistence.Id;    
+import javax.persistence.Basic;    
+import javax.persistence.Table;    
+
+@Entity    
+@Table(name=&quot;personne&quot;)    
+public class Personne {    
+
+  @Id    
+  private Long idPersonne;    
+
+  @Basic    
+  private String nomPersonne;    
+
+  @Basic    
+  private String prenomPersonne;    
+  private InfoPersonne idInfoPersonne;    
+}</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <p>Dans l'&eacute;diteur de code, s&eacute;lectionnez le champ idInfoPersonne</p>
+  <p align="center"><img width=457 height=274 src="images/dali045.png" ></p>
+  <p>Dans la vue «&nbsp;Persistence Properties&nbsp;», l'onglet «&nbsp;Join columns&nbsp;» permet de modifier les options de la
+    jointure</p>
+  <p align="center"><img width=457 height=275 src="images/dali046.png" ></p>
+  <p>Cochez la case «&nbsp;Override Default&nbsp;»</p>
+  <p>S&eacute;lectionnez la ligne dans la liste et cliquez sur le bouton
+    «&nbsp;Edit&nbsp;» pour ouvrir la bo&icirc;te de dialogue «&nbsp;Edit Join Column&nbsp;»</p>
+  <p align="center"><img width=386 height=197 src="images/dali047.png" ></p>
+  <p>Dans la liste d&eacute;roulante Name,
+    s&eacute;lectionnez le champ idInfoPersonne</p>
+  <p>Cliquez sur le bouton «&nbsp;OK&nbsp;» pour modifier le code
+    de l'entit&eacute;</p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>  @OneToOne    
+  @JoinColumn(name=&quot;idInfoPersonne&quot;, referencedColumnName = &quot;idInfoPersonne&quot;)    
+     private     InfoPersonne idInfoPersonne;</code></pre>
+      </td>
+    </tr>
+  </table><br>
+  <p>Sources complets de l'exemple&nbsp;: </p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Le fichier Persistence.xml :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;    
+&lt;persistence xmlns=&quot;http://java.sun.com/xml/ns/persistence&quot;    
+  xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;1.0&quot;    
+  xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/persistence
+http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd&quot;&gt;    
+  &lt;persistence-unit name=&quot;test_dali&quot;&gt;    
+    &lt;provider&gt;    
+      oracle.toplink.essentials.PersistenceProvider    
+    &lt;/provider&gt;    
+    &lt;class&gt;com.jmdoudoux.test.dali.InfoPersonne&lt;/class&gt;    
+    &lt;class&gt;com.jmdoudoux.test.dali.Personne&lt;/class&gt;    
+    &lt;properties&gt;    
+      &lt;property name=&quot;toplink.jdbc.driver&quot;    
+        value=&quot;com.mysql.jdbc.Driver&quot; /&gt;    
+      &lt;property name=&quot;toplink.jdbc.url&quot;    
+        value=&quot;jdbc:mysql://localhost/test&quot; /&gt;    
+      &lt;property name=&quot;toplink.jdbc.user&quot; value=&quot;root&quot; /&gt;    
+      &lt;property name=&quot;toplink.jdbc.password&quot; value=&quot;&quot; /&gt;    
+      &lt;property name=&quot;toplink.logging.level&quot; value=&quot;INFO&quot; /&gt;    
+    &lt;/properties&gt;    
+  &lt;/persistence-unit&gt;    
+&lt;/persistence&gt;</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Le fichier InfoPersonne.java :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>package com.jmdoudoux.test.dali;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Basic;
+
+@Entity
+@Table(name=&quot;infopersonne&quot;)
+public class InfoPersonne {
+
+  @Id
+  @Column(name=&quot;idInfoPersonne&quot;)
+  private long idInfoPersonne;
+
+  @Basic
+  private String commentaires;
+
+  public String getCommentaires() {
+    return commentaires;
+  }
+
+  public void setCommentaires(String commentaires) {
+    this.commentaires = commentaires;
+  }
+
+  public long getIdInfoPersonne() {
+    return idInfoPersonne;
+  }
+
+  public void setIdInfoPersonne(long idInfoPersonne) {
+    this.idInfoPersonne = idInfoPersonne;
+  }
+}</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Le fichier Personne.java</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>package com.jmdoudoux.test.dali;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Basic;
+import javax.persistence.Table;
+import javax.persistence.OneToOne;
+import javax.persistence.JoinColumn;
+
+@Entity
+@Table(name=&quot;personne&quot;)
+public class Personne {
+
+  @Id
+  private Long idPersonne;
+
+  @Basic
+  private String nomPersonne;
+
+  @Basic
+  private String prenomPersonne;
+
+  @OneToOne
+  @JoinColumn(name=&quot;idInfoPersonne&quot;, referencedColumnName = &quot;idInfoPersonne&quot;)
+  private InfoPersonne idInfoPersonne;  
+
+  public Long getId() {
+    return idPersonne;
+  }
+
+  public void setId(Long id) {
+    this.idPersonne = id;
+  }
+
+  public String getNom() {
+    return nomPersonne;
+  }
+
+  public void setNom(String nom) {
+    this.nomPersonne = nom;
+  }
+
+  public String getPrenom() {
+    return prenomPersonne;
+  }
+
+  public void setPrenom(String prenom) {
+    this.prenomPersonne = prenom;
+  }
+
+  public InfoPersonne getIdInfoPersonne() {
+    return idInfoPersonne;
+  }
+
+  public void setIdInfoPersonne(InfoPersonne idInfoPersonne) {
+    this.idInfoPersonne = idInfoPersonne;
+  }
+}</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Le fichier TestDali.java</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>package com.jmdoudoux.test.dali;
+  
+import javax.persistence.Persistence;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityManager;
+ 
+public class TestDali {
+
+  public static void main(String[]argv) {
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory(&quot;test_dali&quot;);
+    EntityManager em = emf.createEntityManager();
+    Personne personne = em.find(Personne.class, 1l);
+    System.out.println(&quot;Personne.nom=&quot;+personne.getNom());
+    System.out.println(&quot;commentaires = &quot;
+      +personne.getIdInfoPersonne().getCommentaires());
+    em.close();
+    emf.close();
+  }
+}</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>R&eacute;sultat d'ex&eacute;cution :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>  [TopLink Info]: 2006.11.09
+    07:06:29.267--ServerSession(31999426)--TopLink, version:
+    Oracle TopLink Essentials - 2006.4 (Build 060412)
+  [TopLink Info]: 2006.11.09
+    07:06:30.679--ServerSession(31999426)--file:/C:/Documents%20and%20Settings
+    /jumbo/workspace/TestDali/bin-test_dali
+    login successful
+  Personne.nom=nom1
+  commentaires = commentaires de test
+  [TopLink Info]: 2006.11.09 07:06:31.009--ServerSession(31999426)--file:/C:
+    /Documents%20and%20Settings
+    /jumbo/workspace/TestDali/bin-test_dali
+    logout successful</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <p>L'exemple fonctionne correctement car la cl&eacute; &eacute;trang&egrave;re
+    existe. Il est n&eacute;cessaire de g&eacute;rer le cas si la cl&eacute; n'existe pas.</p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple : demander les informations de la personne ayant pour id 2</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>  ...
+         Personne personne = em.find(Personne.class, 2l);
+  ...</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <p>Exemple&nbsp;: 
+
+
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>R&eacute;sultat :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>  [TopLink Info]: 2006.11.10
+    05:17:15.523--ServerSession(31999426)--TopLink, version:
+    Oracle TopLink Essentials - 2006.4 (Build 060412)
+  [TopLink Info]: 2006.11.10
+    05:17:16.895--ServerSession(31999426)--file:/C:/Documents%20and%20Settings
+    /jumbo/workspace/TestDali/bin-test_dali
+    login successful
+  Personne.nom=nom2
+  Exception in thread &quot;main&quot; java.lang.NullPointerException
+        at com.jmdoudoux.test.dali.TestDali.main(TestDali.java:16)</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <p>Il suffit de tester si la cl&eacute; &eacute;trang&egrave;re est diff&eacute;rente de null.</p>
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>    Personne personne = em.find(Personne.class, 2l);
+    System.out.println(&quot;Personne.nom=&quot; + personne.getNom());
+    if (personne.getIdInfoPersonne() != null) {
+          System.out.println(&quot;commentaires = &quot;
+                     + personne.getIdInfoPersonne().getCommentaires());
+    }</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+<p>&nbsp;</p>
+</DIV>
+<!--PIED--><HR>
+<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="chap026.htm" ALT="26.  Les services web et Eclipse">
+<img src="FlecheG.gif" alt="26.  Les services web et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="partie6.htm" ALT="Partie 6 : le d&eacute;veloppement d'applications mobiles">
+<img src="FlecheD.gif" alt="Partie 6 : le d&eacute;veloppement d'applications mobiles" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+<td  rowspan="2" align="center" valign="middle">
+        <script language="JavaScript1.1">
+<!--
+hsh = new Date();
+hsd = document;
+//hsr = hsd.referrer.replace(/[<>]/g, '');
+hsr = parent.document.referrer.replace(/[<>]/g,  '');
+hsi = '<a href="http://www.xiti.com/xiti.asp?s=128624"';
+hsi += ' TARGET="_top"><img width="39" height="25" border=0 ';
+hsi += 'src="http://logv23.xiti.com/hit.xiti?s=128624';
+hsi += '&p=';
+hsi += '&hl=' + hsh.getHours() + 'x' + hsh.getMinutes() + 'x' + hsh.getSeconds();
+if(parseFloat(navigator.appVersion)>=4)
+{Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
+hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
+//-->
+</script>
+        <noscript>
+        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
+        </noscript>
+        <!--//-->
+      </td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+
+</BODY>
+</HTML>

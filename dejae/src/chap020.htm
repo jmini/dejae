@@ -1,0 +1,565 @@
+<html>
+<head>
+<title>Le d&eacute;veloppement avec J2EE</title>
+<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
+<meta name="description" content="">
+<meta name="keywords" content="java tutorial cours dej eclipse">
+<meta name="robots" content="all">
+<meta name="revisit-after" content="2 months">
+<meta http-equiv="Content-Language" content="fr-FX">
+<meta name="author" content="Jean Michel DOUDOUX">
+<link href="dej_style.css" rel="stylesheet" type="text/css">
+<body> 
+<!--ENTETE--> <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="partie5.htm" ALT="Partie 5 : le d&eacute;veloppement d'applications d'entreprise">
+<img src="FlecheG.gif" alt="Partie 5 : le d&eacute;veloppement d'applications d'entreprise" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="chap021.htm" ALT="21. XML et Eclipse">
+<img src="FlecheD.gif" alt="21. XML et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+<HR>
+
+<p>&nbsp;</p> 
+<h1><!--idrefpage value="j2ee" --><!--resumetitre value="Pr&eacute;sente des plug-ins pour faciliter le d&eacute;veloppement avec J2EE." --><!--nchpdeb--><a name="chap_20">20. <!--nchpfin-->   Le d&eacute;veloppement avec J2EE</a></h1> 
+<p>&nbsp;</p> 
+<!--chapitredeb-->
+<div align="right">
+  <table border="0" cellspacing="0" summary="titre">
+    <tr>
+      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td>
+<td width="50" valign="top"><img src="images/2.gif" alt="2" width="62" height="83" border="0"></td>
+<td width="50" valign="top"><img src="images/0.gif" alt="0" width="62" height="83" border="0"></td>
+    </tr>
+  </table>
+  <br>
+</div>
+<!--chapitrefin--> 
+<p align="justify">Eclipse ne propose pas par d&eacute;faut de plug-in permettant de faciliter le d&eacute;veloppement d'applications J2EE. Il existe cependant plusieurs plug-ins qui simplifient la mise en oeuvre de certaines taches : Struts, Tomcat, EJB, ... ou des plug-ins plus complet permettant la mise en oeuvre des principales API de J2EE. </p>
+<p align="justify">Le sous projet &quot;Eclipse Web Tools Platform&quot; a pour but de d&eacute;velopper des plug-ins pour le d&eacute;veloppement d'applications Web et J2EE. </p>
+<p align="justify">Le plug-in open source, nomm&eacute; Lomboz, propose des fonctionnalit&eacute;s pour faciliter le d&eacute;veloppement d'applications web (servlets et JSP), d'EJB et de services web. </p>
+<p align="justify">Ce chapitre va pr&eacute;senter les plug-ins suivants&nbsp;:</p>
+<ul>
+  <li>le plug-in Tomcat de Sysdeo pour la mise en oeuvre de Tomcat pour des applications web</li>
+  <li>le plug-in WTP d&eacute;velopp&eacute; en tant que sous projet d'Eclipse.
+  <li>le plug-in Lomboz</li>
+</ul>
+<p>Ces deux derniers plug-in proposent de nombreuses fonctionnalit&eacute;s pour d&eacute;velopper des applications J2EE avec utilisation possible de plusieurs serveurs d'applications.</p>
+<div align="justify"> 
+  <p>&nbsp;</p> 
+  <h2><!--nchpdeb--><a name="chap_20_1">20.1. <!--nchpfin-->     Le plug-in Tomcat de Sysdeo</a></h2> 
+  <p>La soci&eacute;t&eacute; Sysdeo propose un plug-in pour faciliter le d&eacute;veloppement d'applications utilisant Tomcat notamment en permettant le d&eacute;marrage et l'arr&ecirc;t de Tomcat, le packaging d'une application sous la forme d'un fichier .war et son d&eacute;ploiement dans Tomcat.</p>
+  <table border="1" cellspacing="0" cellpadding="4"> 
+    <tr> 
+      <td>&nbsp; </td> 
+      <td> <p>Version utilis&eacute;e dans cette section</p></td> 
+    </tr> 
+    <tr> 
+      <td> <p>Eclipse</p></td> 
+      <td> <p>2.1.2</p></td> 
+    </tr> 
+    <tr> 
+      <td> <p>J2RE</p></td> 
+      <td> <p>1.4.2_02</p></td> 
+    </tr> 
+    <tr> 
+      <td> <p>Plug-in Tomcat de Sysdeo</p></td> 
+      <td>2.2.1 et 3.0 </td> 
+    </tr> 
+  </table><br> 
+  <p>La page web du plug-in est consultable &agrave; l'url : <a href="http://www.sysdeo.com/eclipse/tomcatPluginFR.html">http://www.sysdeo.com/eclipse/tomcatPluginFR.html</a>.</p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_20_1_1">20.1.1. <!--nchpfin-->     Installation et param&eacute;trage</a> de la version 2.2.1</h3> 
+  <p>Il faut t&eacute;l&eacute;charger le fichier tomcatPluginV221.zip et d&eacute;compresser son contenu dans le r&eacute;pertoire plugins du r&eacute;pertoire d'installation d'Eclipse.</p>
+  <p>Il est possible d'ajouter un menu nomm&eacute; &laquo;&nbsp;Tomcat&nbsp;&raquo; et trois boutons dans la barre d'outils pour d&eacute;marrer, arr&ecirc;ter et red&eacute;marrer Tomcat&nbsp;: <img width=85 height=27
+src="images/j2ee001.png" >. Pour cela, il faut utiliser l'option &laquo;&nbsp;Personnaliser la perspective ...&nbsp;&raquo; du menu &laquo;&nbsp;Fenetre&nbsp;&raquo; et cocher l'option &laquo;&nbsp;Autre / Tomcat&nbsp;&raquo; dans les &eacute;l&eacute;ments disponibles.</p>
+  <p>Pour pouvoir utiliser les fonctionnalit&eacute;s du plug-in, il faut le configurer notamment pour lui pr&eacute;ciser ou se situe Tomcat. Cette configuration utilise plusieurs pages dans les pr&eacute;f&eacute;rences pour saisir les informations utiles.</p>
+  <p align="center"><img width=570 height=644
+src="images/j2ee002.png" ></p> 
+  <p>La premi&egrave;re page permet de saisir les informations principales notamment la version de Tomcat utilis&eacute;e et le r&eacute;pertoire de base de Tomcat.</p>
+  <p>Exemple avec Tomcat fourni avec le JWSDP 1.3</p>
+  <p align="center"><img width=407 height=106
+src="images/j2ee074.png"></p>
+  <p>Exemple avec Tomcat fourni avec Jboss 3.0.6</p>
+  <p align="center"><img width=406 height=104
+src="images/j2ee075.png"></p>
+  <p align="center"><img width=600 height=226
+src="images/j2ee076.png"></p>
+  <p align="left">La seconde vue permet de pr&eacute;ciser des param&egrave;tres pour la JVM dans laquelle va s'ex&eacute;cuter Tomcat.</p>
+  <p align="center"><img width=599 height=655
+src="images/j2ee077.png"></p>
+  <p>La troisi&egrave;me page permet de saisir les informations concernant le d&eacute;marrage de l'application de gestion de Tomcat. </p>
+  <p align="center"><img width=600 height=316
+src="images/j2ee078.png"></p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_20_1_2">20.1.2. <!--nchpfin-->     Installation et param&eacute;trage</a> de la version 3.0</h3> 
+  <p>Il faut t&eacute;l&eacute;charger le fichier tomcatPluginV3.zip sur le site de Sysdeo&nbsp;: <a href="http://www.sysdeo.com/eclipse/tomcatPluginFR.html">http://www.sysdeo.com/eclipse/tomcatPluginFR.html</a> et d&eacute;compresser son contenu dans le r&eacute;pertoire &quot;plugins&quot; du r&eacute;pertoire
+  d'installation d'Eclipse.</p>
+  <p>&nbsp;Il faut ensuite lancer Eclipse et configurer le plug-in&nbsp;: s&eacute;lectionnez le menu &laquo;&nbsp;Fen&ecirc;tre/Pr&eacute;f&eacute;rences&nbsp;&raquo;, puis l'option Tomcat dans l'arborescence.</p>
+  <p align="center"><img src="images/j2ee082.png" width="500" height="433"></p>
+  <p>Sur cette page, s&eacute;lectionnez la version de Tomcat utilis&eacute;e (version 5.x dans cette section) et s&eacute;lectionnez le r&eacute;pertoire de Tomcat.</p>
+  <p>S&eacute;lectionnez l'option &laquo;&nbsp;Tomcat/Param&egrave;trages de la JVM&nbsp;&raquo; et ajoutez dans la liste &quot;Classpath&quot; le fichier tools.jar qui se situe dans le r&eacute;pertoire lib du JDK.</p>
+  <p align="center"><img src="images/j2ee083.png" width="605" height="674"></p>
+  <p>Cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;</p>
+  <p>Sous la perspective &laquo;&nbsp;Java&nbsp;&raquo;, s&eacute;lectionnez l'option &laquo;&nbsp;Fen&ecirc;tre / Personnaliser la perspective&nbsp;&raquo; puis dans l'arborescence, s&eacute;lectionnez &laquo;&nbsp;Autres&nbsp;&raquo; et cochez la case &laquo;&nbsp;Tomcat&nbsp;&raquo;. Cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;&nbsp;:
+les trois boutons permettant respectivement de d&eacute;marrer, arr&ecirc;ter et red&eacute;marrer Tomcatcsont ajout&eacute;s dans la barre d'outils comme avec la version pr&eacute;c&eacute;dente du plug-in.<o:p></o:p></p>
+  <p>Cliquez sur le bouton de d&eacute;marrage de Tomcat&nbsp;: la console affiche les messages de d&eacute;marrage de l'application. Pour v&eacute;rifier le bon fonctionnement, il suffit d'ouvrir un navigateur &agrave; l'url&nbsp;: <a href="http://localhost:8080/">http://localhost:8080</a></p>
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_20_1_3">20.1.3. <!--nchpfin-->     Lancement et arr&ecirc;t de Tomcat</a></h3> 
+  <p>Pour lancer Tomcat, il suffit de cliquer sur le bouton <img width=23 height=22
+src="images/j2ee003.png" >&nbsp;de la barre d'outils ou d'utiliser l'option &laquo;&nbsp;D&eacute;marrer Tomcat&nbsp;&raquo; du menu &laquo;&nbsp;Tomcat&nbsp;&raquo;.&nbsp;&nbsp;&nbsp;&nbsp; </p>
+  <p>La perspective &laquo;&nbsp;Debug&nbsp;&raquo; s'affiche et les informations relatives au lancement de Tomcat s'affichent dans la vue &laquo;&nbsp;Console&nbsp;&raquo;.</p>
+  <p align="center"><img width=405 height=93
+src="images/j2ee004.png" ></p>
+  <p align="center"><img width=503 height=296
+src="images/j2ee079.png"></p>
+  <p>Pour v&eacute;rifier la bonne ex&eacute;cution de Tomcat, il suffit d'ouvrir un navigateur et de saisir l'url <a href="http://localhost/">http://localhost</a> avec le port pr&eacute;cis&eacute; dans la configuration dans Tomcat.</p>
+  <p align="center"><img border=0 width=561 height=273
+src="images/j2ee080.png"></p>
+  <p>Pour arr&ecirc;ter Tomcat, il suffit de cliquer sur l'icône <img border=0 width=23 height=23
+src="images/j2ee005.png" > ou de s&eacute;lectionner l'option «&nbsp;Arr&ecirc;ter Tomcat&nbsp;» du menu «&nbsp;Tomcat&nbsp;».</p>
+  <p>&nbsp;</p> 
+  <h3><!--nchpdeb--><a name="chap_20_1_4">20.1.4. <!--nchpfin-->     La cr&eacute;ation d'un projet Tomcat</a></h3> 
+  <p>Le plug-in permet la cr&eacute;ation d'un projet particulier pour d&eacute;velopper des applications web.</p> 
+  <p align="center"><img border=0 width=500 height=247
+src="images/j2ee006.png" ></p> 
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;»</p> 
+  <p align="center"><img border=0 width=500 height=264
+src="images/j2ee007.png" ></p> 
+  <p>Saisissez le nom du projet et cliquez sur le bouton «&nbsp;Suivant&nbsp;».</p> 
+  <p align="center"><img border=0 width=500 height=242
+src="images/j2ee008.png" ></p> 
+  <p>La page suivante de l'assistant permet de pr&eacute;ciser certains param&egrave;tres&nbsp;: le nom du contexte de l'application web (par d&eacute;faut, celui du projet), le r&eacute;pertoire racine de l'application et permettre au plug-in de modifier ou non le fichier server.xml de Tomcat.</p> 
+  <p>En cliquant sur le bouton «&nbsp;Fin&nbsp;», le projet est cr&eacute;&eacute;.</p> 
+  <p align="center"><img border=0 width=227 height=219
+src="images/j2ee009.png" > </p> 
+  <p>La structure du projet reprend celle d'une application web incluse dans un fichier .war. Le fait d'autoriser le plug-in &agrave; modifier le fichier server.xml provoque sa mise &agrave; jour pour ajouter un nouveau contexte&nbsp;:</p> 
+  <p>Exemple&nbsp;:</p> 
+  <p align="left">&lt;Context path=&quot;/test_web&quot; reloadable=&quot;true&quot; docBase=&quot;D:\java\eclipse\workspace\test_web&quot; workDir=&quot;D:\java\eclipse\workspace\test_web\work\org\apache\jsp&quot; /&gt;</p> 
+  <p>Si Tomcat &eacute;tait d&eacute;j&agrave; en cours d'ex&eacute;cution, il faut le relancer pour que les modifications soient prises en compte.</p> 
+  <p>&nbsp;</p> 
+  <h2><!--nchpdeb--><a name="chap_20_2">20.2. <!--nchpfin-->Le plug in WTP (Eclipse Web Tools Platform)</a></h2> 
+  <p>Le projet Eclipse Web Tools Platform (WTP) a pour but d'enrichir la plate-forme Eclipse avec des outils pour d&eacute;velopper des applications web en utilisant J2EE. Il inclut&nbsp;: </p> 
+  <ul type=disc> 
+    <li>Des &eacute;diteurs pour les langages de pages web (HTML, CSS, Javascript)</li> 
+    <li>Des &eacute;diteurs pour des documents XML et associ&eacute;s (XML, DTD, XSD et WSDL) </li> 
+    <li>Le support de projet J2EE via des assistants</li> 
+    <li>Le support des services web via des assistants</li> 
+    <li>Le support des bases de donn&eacute;es via SQL</li> 
+  </ul> 
+  <p>Le projet WTP est compos&eacute; de plusieurs sous projets&nbsp;: </p> 
+  <ul type=disc> 
+    <li><a
+     href="http://www.eclipse.org/webtools/wst/main.html">Web Standard Tools (WST)</a><br> 
+      Ce sous projet a pour but de d&eacute;velopper un socle pour le d&eacute;veloppement d'applications web sous Eclipse.</li> 
+    <li><a
+     href="http://www.eclipse.org/webtools/jst/main.html">J2EE Standard Tools (JST)</a><br> 
+      Ce sous projet a pour but de d&eacute;velopper des plug-ins pour faciliter le d&eacute;veloppement d'applications respectant la norme J2EE 1.4.</li> 
+    <li> Java Server Faces (JSF) <br>
+    Ce sous projet a pour but de d&eacute;velopper des plug-ins pour faciliter le d&eacute;veloppement d'application web utilisant les JSF </li>
+    <li>Dali <br>
+    Ce sous projet a pour but de d&eacute;velopper des plug-ins pour faciliter le mapping O/R avec l'API JPA</li>
+    <li>Ajax Toolkit Framework (ATF)</li>
+  </ul> 
+  <p>Le site officiel du projet est &agrave; l'url <a href="http://www.eclipse.org/webtools/">http://www.eclipse.org/webtools/</a></p> 
+  <p>Le plug-in supporte plusieurs conteneurs et serveurs d'applications&nbsp;: Tomcat (version 3.2 &agrave; 5.5), JBoss 3.2.3, JOnAS 4.1.4 et Weblogic 8.1.</p> 
+  <p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_20_2_1">20.2.1. <!--nchpfin-->Installation de la version 1.0M3</a></h3> 
+  <p>Il faut t&eacute;l&eacute;charger le fichier wtp-eclipse-prereqs-sdk-1.0M3-win32.zip et le d&eacute;compresser dans un r&eacute;pertoire du syst&egrave;me en suivant les liens sur la page <a href="http://www.eclipse.org/webtools/index.html">http://www.eclipse.org/webtools/index.html</a></p> 
+  <p>Attention, ce fichier poss&egrave;de une taille de 151Mo.</p> 
+  <p>Le r&eacute;pertoire Eclipse r&eacute;sultant de la d&eacute;compression est renomm&eacute; en eclipse31_wtp dans les exemples de ce chapitre et un sous r&eacute;pertoire workspace y est cr&eacute;&eacute; pour stocker les differents projets.</p> 
+  <p>Lancez Eclipse &agrave; partir du r&eacute;pertoire d&eacute;compress&eacute;.</p> 
+  <p align="center"><img border=0 width=438 height=203 src="images/wtp001.png" ></p> 
+  <p>Cliquez sur le bouton «&nbsp;Browse&nbsp;»</p> 
+  <p align="center"><img border=0 width=337 height=240 src="images/wtp002.png" ></p> 
+  <p>S&eacute;lectionnez le r&eacute;pertoire workspace cr&eacute;&eacute; et cliquez sur le bouton «&nbsp;OK&nbsp;», puis une nouvelle fois sur le bouton «&nbsp;OK&nbsp;» pour valider le workspace s&eacute;lectionn&eacute;.</p> 
+  <p>Au lancement d'Eclipse, un message informe du manque de certains plug-ins qui emp&ecirc;che l'utilisation des fonctionnalit&eacute;s concernant les «&nbsp;Web services&nbsp;»</p> 
+  <p align="center"><img border=0 width=600 height=338
+src="images/wtp003.png" ></p> 
+  <p>Cliquez sur le bouton «&nbsp;OK&nbsp;»</p> 
+  <p>Il est donc n&eacute;cessaire de t&eacute;l&eacute;charger les plug-ins manquants qui ne sont pas fournis dans le bundle.</p> 
+  <p>Cr&eacute;ez un r&eacute;pertoire temp dans le r&eacute;pertoire eclipse31_wtp et t&eacute;l&eacute;chargez dedans les fichiers dont l'url est indiqu&eacute;e dans le message.</p> 
+  <div align=center> 
+    <table border=1 cellspacing=0 cellpadding=4> 
+      <tr> 
+        <td width="221"> <p>Fichier</p></td> 
+        <td width="117"> <p align=center>Taille</p></td> 
+      </tr> 
+      <tr> 
+        <td> <p>axis-1_1.zip</p></td> 
+        <td> <p align=center>10.2 Mo</p></td> 
+      </tr> 
+      <tr> 
+        <td> <p>jakarta-tomcat-4.1.31.zip&nbsp;</p></td> 
+        <td> <p align=center>9.7 Mo</p></td> 
+      </tr> 
+      <tr> 
+        <td> <p>soap-bin-2.3.1.zip&nbsp;</p></td> 
+        <td> <p align=center>1,6 Mo</p></td> 
+      </tr> 
+      <tr> 
+        <td> <p>uddi4j-bin-2_0_2.zip </p></td> 
+        <td> <p align=center>1 Mo</p></td> 
+      </tr> 
+      <tr> 
+        <td> <p>wsil4j.jar </p></td> 
+        <td> <p align=center>78 Ko</p></td> 
+      </tr> 
+      <tr> 
+        <td> <p>jaf-1_0_2-upd.zip </p></td> 
+        <td> <p align=center>349 Ko</p></td> 
+      </tr> 
+      <tr> 
+        <td> <p>javamail-1_3_2.zip </p></td> 
+        <td> <p align=center>2.3 Mo</p></td> 
+      </tr> 
+      <tr> 
+        <td> <p>wsdl4j-bin-1.4.zip </p></td> 
+        <td> <p align=center>891 Ko</p></td> 
+      </tr> 
+    </table> <br>
+  </div> 
+  <p>Il faut d&eacute;compresser ces fichiers dans leur r&eacute;pertoire appropri&eacute; dans le sous r&eacute;pertoire plugins. Pour cela, le plus simple est d'utiliser un script Ant fourni par le projet (Attention, Ant doit &ecirc;tre install&eacute; et configur&eacute; sur le poste pour pouvoir utiliser ce script).</p> 
+  <p>Il faut t&eacute;l&eacute;charger le fichier &agrave; l'url <a
+href="http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.wtp.releng/fetchVendorContent.xml?content-type=text/xml&amp;cvsroot=WebTools_Project"><br>
+  http://dev.eclipse.org/viewcvs/index.cgi/~checkout~/org.eclipse.wtp.releng/fetchVendorContent.xml?<br>
+  content-type=text/xml&amp;cvsroot=WebTools_Project</a>, <br>
+  l'enregistrer dans le r&eacute;pertoire temp et l'ex&eacute;cuter en lui fournissant les param&egrave;tres indiqu&eacute; dans l'exemple ci-dessous : </p> 
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>C:\java\eclipse31_wtp\temp&gt;ant -DlocalDownloads=C:\java\eclipse31_wtp\temp -Dbui 
+ldDirectory=C:\java\eclipse31_wtp\plugins -f fetchVendorContent.xml 
+Buildfile: fetchVendorContent.xml 
+run: 
+extractAllBinary: 
+extractAll: 
+    [unzip] Expanding: C:\java\eclipse31_wtp\temp\axis-1_1.zip into C:\java\ecli 
+pse31_wtp\temp 
+    [unzip] Expanding: C:\java\eclipse31_wtp\temp\jakarta-tomcat-4.1.31.zip into 
+ C:\java\eclipse31_wtp\temp 
+    [unzip] Expanding: C:\java\eclipse31_wtp\temp\jaf-1_0_2-upd.zip into C:\java 
+\eclipse31_wtp\temp 
+    [unzip] Expanding: C:\java\eclipse31_wtp\temp\javamail-1_3_2.zip into C:\jav 
+a\eclipse31_wtp\temp 
+    [unzip] Expanding: C:\java\eclipse31_wtp\temp\soap-bin-2.3.1.zip into C:\jav 
+a\eclipse31_wtp\temp 
+    [unzip] Expanding: C:\java\eclipse31_wtp\temp\uddi4j-bin-2_0_2.zip into C:\j 
+ava\eclipse31_wtp\temp 
+    [unzip] Expanding: C:\java\eclipse31_wtp\temp\wsdl4j-bin-1.4.zip into C:\jav 
+a\eclipse31_wtp\temp 
+     [move] Moving 8 files to C:\java\eclipse31_wtp\temp\org.eclipse.wst.ws.apac 
+he.axis_1.0.0 
+     [move] Moving 1 files to C:\java\eclipse31_wtp\temp\org.eclipse.wst.ws.apac 
+he.axis_1.0.0 
+     [move] Moving 1 files to C:\java\eclipse31_wtp\temp\org.eclipse.wst.ws.apac 
+he.soap_1.0.0 
+     [move] Moving 1 files to C:\java\eclipse31_wtp\temp\org.eclipse.wst.ws.apac 
+he.soap_1.0.0 
+     [move] Moving 1 files to C:\java\eclipse31_wtp\temp\org.eclipse.wst.ws.apac 
+he.soap_1.0.0 
+     [copy] Copying 1 file to C:\java\eclipse31_wtp\temp\org.eclipse.wst.ws.apac 
+he.wsil_1.0.0 
+     [move] Moving 1 files to C:\java\eclipse31_wtp\temp\org.eclipse.wst.ws.uddi 
+4j_1.0.0 
+grabjarsxml: 
+copyJars: 
+copyJars2: 
+copyJars3: 
+     [copy] Copying 9 files to C:\java\eclipse31_wtp\plugins\org.eclipse.wst.ws. 
+apache.axis_1.0.0\lib 
+copyJars: 
+copyJars2: 
+copyJars3: 
+     [copy] Copying 3 files to C:\java\eclipse31_wtp\plugins\org.eclipse.wst.ws. 
+apache.soap_1.0.0\lib 
+copyJars: 
+copyJars2: 
+copyJars3: 
+     [copy] Copying 1 file to C:\java\eclipse31_wtp\plugins\org.eclipse.wst.ws.a 
+pache.wsil_1.0.0\lib 
+copyJars: 
+copyJars2: 
+copyJars3: 
+     [copy] Copying 1 file to C:\java\eclipse31_wtp\plugins\org.eclipse.wst.ws.u 
+ddi4j_1.0.0\lib 
+     [copy] Copying 2 files to C:\java\eclipse31_wtp\plugins\org.eclipse.wst.wsd 
+l_1.0.0\lib 
+extractAllSDK: 
+BUILD SUCCESSFUL 
+Total time: 17 seconds 
+C:\java\eclipse31_wtp\temp&gt;cd .. 
+C:\java\eclipse31_wtp&gt;eclipse -clean </code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+
+  <p>Il faut relancer Eclipser avec l'option –clean dans une bo&icirc;te de commande Dos</p> 
+<p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_20_2_2">20.2.2. <!--nchpfin-->Configuration de XDoclet</A></h3> 
+  <p>XDoclet doit &ecirc;tre install&eacute; sur le syst&egrave;me. Afin de permettre une utilisation de XDoclet par le plug-in, il faut le configuration dans les pr&eacute;f&eacute;rences.</p> 
+  <p align="center"><img border=0 width=521 height=247
+src="images/wtp004.png" ></p> 
+  <p>Il faut absolument cocher la case «&nbsp;Enable XDoclet Builder&nbsp;», s&eacute;lectionner la version &agrave; utiliser et s&eacute;lectionner le r&eacute;pertoire qui contient XDoclet sur le syst&egrave;me.</p> 
+<p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_20_2_3">20.2.3. <!--nchpfin-->Configuration d'un serveur</A></h3> 
+  <p>WTP supporte plusieurs conteneurs et serveurs d'applications&nbsp;: Tomcat, JBoss, JOnAS, ... Il est n&eacute;cessaire de configurer un ou plusieurs serveurs dans les pr&eacute;f&eacute;rences du WTP. La page principale du noeud Server des pr&eacute;f&eacute;rences permet de r&eacute;gler des param&egrave;tres g&eacute;n&eacute;raux concernant les serveurs.</p> 
+  <p align="center"><img border=0 width=611 height=375
+src="images/wtp005.png" ></p> 
+  <p>La page «&nbsp;Environnements d'ex&eacute;cution install&eacute;s &nbsp;» permet de configurer un ou plusieurs serveurs.</p> 
+  <p align="center"><img border=0 width=633 height=318
+src="images/wtp006.png" ></p> 
+  <p>Pour ajouter un nouveau serveur, il faut cliquer sur le bouton «&nbsp;Ajouter&nbsp;».</p> 
+  <p align="center"><img border=0 width=350 height=478
+src="images/wtp007.png" ></p> 
+  <p>Il existe trois grands types de serveurs&nbsp;: </p> 
+  <ul type=disc> 
+    <li>Apache&nbsp;: permet de s&eacute;lectionner le conteur Tomcat ainsi que sa version dans lequel il est possible de modifier dynamiquement des &eacute;l&eacute;ments de l'application sans red&eacute;ployer toute l'application packag&eacute;e</li> 
+    <li>Exemples g&eacute;n&eacute;riques (Generic Server runtime)&nbsp;: permet de s&eacute;lectionner JBoss, JOnAS, Websphere ou Weblogic dans lesquels l'application doit &ecirc;tre d&eacute;ploy&eacute;e sous la forme packag&eacute;e avant d'&ecirc;tre ex&eacute;cut&eacute;e</li> 
+    <li>De base / Biblioth&egrave;que d'ex&eacute;cution J2EE (Basic/J2EE Runtime Library) ne d&eacute;signe pas un conteneur ou un serveur d'application mais simplement un ensemble de biblioth&egrave;ques</li> 
+  </ul> 
+  <p>Pour Tomcat 5.0 par exemple, il faut s&eacute;lectionner «&nbsp;Apache/Apache Tomcat v5.0&nbsp;» et cliquer sur le bouton «&nbsp;Suivant&nbsp;».</p> 
+  <p align="center"><img border=0 width=344 height=274
+src="images/wtp008.png" ></p> 
+  <p>Cliquez sur le bouton «&nbsp;Parcourir&nbsp;» et s&eacute;lectionnez le r&eacute;pertoire qui contient Tomcat</p> 
+  <p align="center"><img border=0 width=412 height=298
+src="images/wtp009.png" ></p> 
+  <p>Pour utiliser Tomcat, un JDK est requis notamment pour permettre la compilation des JSP. Si aucun JDK n'est configur&eacute;, il faut cliquer sur le bouton «&nbsp;JRE install&eacute;s &nbsp;»</p> 
+  <p align="center"><img border=0 width=629 height=298
+src="images/wtp010.png" ></p> 
+  <p>Cliquez sur le bouton «&nbsp;Ajouter ... &nbsp;»</p> 
+  <p align="center"><img border=0 width=437 height=410
+src="images/wtp011.png" ></p> 
+  <p>Saisissez le nom du JRE et s&eacute;lectionnez le r&eacute;pertoire. Eclipse renseigne automatiquement les autres &eacute;l&eacute;ments requis mais il est possible de les modifier.</p> 
+  <p align="center"><img border=0 width=437 height=375
+src="images/wtp012.png" ></p> 
+  <p>Cliquez sur le bouton «&nbsp;OK&nbsp;» pour ajouter le nouveau JRE.</p> 
+  <p align="center"><img border=0 width=629 height=298
+src="images/wtp013.png" ></p> 
+  <p>Cliquez sur le bouton «&nbsp;OK&nbsp;»</p> 
+  <p align="center"><img border=0 width=412 height=298
+src="images/wtp014.png" ></p> 
+  <p>Il suffit alors de s&eacute;lectionner le nouveau JRE d&eacute;fini et de cliquer sur le bouton «&nbsp;Terminer&nbsp;».</p> 
+  <p align="center"><img border=0 width=633 height=318
+src="images/wtp015.png" ></p> 
+  <p>Le nouveau serveur est ajout&eacute;. Il est possible de le d&eacute;finir comme serveur par d&eacute;faut en cochant sa case &agrave; cocher et en cliquant sur le bouton «&nbsp;OK&nbsp;».</p> 
+  <p>Cliquez sur le bouton «&nbsp;Rechercher ... &nbsp;» pour demander la recherche des serveurs connus par le plug-in et install&eacute;s sur la machine.</p> 
+  <p align="center"><img border=0 width=319 height=254
+src="images/wtp016.png" ></p> 
+  <p>S&eacute;lectionnez le r&eacute;pertoire de d&eacute;part de la recherche et cliquez sur le bouton «&nbsp;OK&nbsp;»</p> 
+  <p align="center"><img border=0 width=450 height=182
+src="images/wtp017.png" ></p> 
+  <p>Les diff&eacute;rents serveurs trouv&eacute;s sont automatiquement ajout&eacute;s</p> 
+  <p align="center"><img border=0 width=633 height=318
+src="images/wtp018.png" ></p> 
+  <p>&nbsp;</p> 
+  <h2><!--nchpdeb--><a name="chap_20_3">20.3. <!--nchpfin-->Lomboz</a></h2> 
+  <p>Lomboz est un plug-in dont le but est de faciliter le d&eacute;veloppement d'applications J2EE 1.3. Initialement d&eacute;velopp&eacute; par la soci&eacute;t&eacute; ObjectLearn (<a href="http://www.objectlearn.com/">http://www.objectlearn.com/index.jsp</a>), son statut est pass&eacute; &agrave; open-source depuis l'int&eacute;gration du projet au consortium ObjectWeb, d&eacute;but 2004 (<a
+href="http://forge.objectweb.org/projects/lomboz">http://forge.objectweb.org/projects/lomboz</a>) .</p> 
+  <p>Ce plug-in utilise plusieurs outils open source pour mener &agrave; bien diff&eacute;rentes t&acirc;ches&nbsp;: Ant, Xdoclet, Axis, ... ce qui lui permet de couvrir le cyle de d&eacute;veloppement des applications J2EE&nbsp;: r&eacute;daction et g&eacute;n&eacute;ration du code, d&eacute;ploiement et d&eacute;bogage.</p> 
+  <p>Cette section va utiliser Lomboz avec JBoss et Tomcat.</p> 
+  <table border="1" cellspacing="0" cellpadding="4"> 
+    <tr> 
+      <td>&nbsp;</td> 
+      <td><p>Version utilis&eacute;e dans cette section</p></td> 
+    </tr> 
+    <tr> 
+      <td><p>Eclipse</p></td> 
+      <td><p>2.1.2</p></td> 
+    </tr> 
+    <tr> 
+      <td><p>J2RE</p></td> 
+      <td><p>1.4.2_02</p></td> 
+    </tr> 
+    <tr> 
+      <td>Lomboz</td> 
+      <td>2.1.2</td> 
+    </tr> 
+    <tr> 
+      <td>JBoss</td> 
+      <td>3.0.6</td> 
+    </tr> 
+    <tr> 
+      <td>Tomcat</td> 
+      <td>4.1.18</td> 
+    </tr> 
+  </table> 
+  <p>&nbsp;</p> 
+  <h3><!--nchpdeb--><a name="chap_20_3_1">20.3.1. <!--nchpfin-->     Installation et configuration</a></h3> 
+  <p>T&eacute;l&eacute;chargez le fichier lomboz.21_02[1].zip et le d&eacute;compresser dans le r&eacute;pertoire d'installation d'Eclipse. L'installation de Lomboz se fait comme pour les autres plug-ins en d&eacute;compressant l'archive dans le r&eacute;pertoire d'Eclipse.</p> 
+  <p>Pour configurer Lomboz, il faut utiliser l'option «&nbsp;Fen&ecirc;tre / Personnaliser la perspective ... &nbsp;»</p> 
+  <p align="center"><img border=0 width=419 height=366
+src="images/j2ee010.png" ></p> 
+  <p>Cliquez sur la case &agrave; cocher «&nbsp;Autre / Lomboz Actions&nbsp;» puis sur le bouton «&nbsp;OK&nbsp;». Un bouton suppl&eacute;mentaire appara&icirc;t dans la barre d'outils&nbsp;: <img border=0 width=22 height=23
+src="images/j2ee011.png" >. Il permet d'afficher la vue «&nbsp;Lomboz&nbsp;».</p> 
+  <p>Dans les pr&eacute;f&eacute;rences, s&eacute;lectionnez «&nbsp;Java / Nouveau projet&nbsp;», puis cliquez sur le bouton radio «&nbsp;Dossiers&nbsp;» en conservant les noms des dossiers «&nbsp;src&nbsp;» et «&nbsp;bin&nbsp;».</p> 
+  <p align="center"><img border=0 width=606 height=377
+src="images/j2ee012.png" ></p> 
+  <p>Toujours dans les pr&eacute;f&eacute;rences, il faut s&eacute;lectionner «&nbsp;Lomboz&nbsp;» et v&eacute;rifier que le chemin d&eacute;signant le fichier tools.jar pointe bien vers le fichier $JAVA_HOME/lib/tools.jar.</p> 
+  <p align="center"><img border=0 width=606 height=310
+src="images/j2ee013.png" ></p> 
+  <p>S&eacute;lectionnez «&nbsp;Lomboz / Server Definitions&nbsp;» puis s&eacute;lectionnez le ou les types de serveur utilis&eacute;s&nbsp;: dans l'exemple de cette section, «&nbsp;JBOSS 3.0&nbsp;» et «&nbsp;Apache Tomcat v4.1.0&nbsp;».</p> 
+  <p>Il faut donc s&eacute;lectionner le type «&nbsp;JBOSS 3.0&nbsp;» et modifier les propri&eacute;t&eacute;s pour refl&eacute;ter celle du syst&egrave;me utilis&eacute; notamment «&nbsp;Application server directory&nbsp;»  et «&nbsp;Classpath variable&nbsp;» qui doivent pointer vers le r&eacute;pertoire d'installation de JBoss. Il suffit ensuite de cliquer sur le bouton «&nbsp;Appliquer&nbsp;».</p> 
+  <p align="center"><img border=0 width=600 height=389
+src="images/j2ee014.png" ></p> 
+  <p>Pour s'assurer de la bonne configuration, il suffit de cliquer sur l'onglet de «&nbsp;Classpath&nbsp;» et de v&eacute;rifier qu'aucune biblioth&egrave;que n'est erron&eacute;e. </p> 
+  <p>Il faut s&eacute;lectionner le type de serveur «&nbsp;Apache Tomcat v4.1.0&nbsp;» et faire de m&ecirc;me.</p> 
+  <p>Pour valider les modifications, il suffit de cliquer sur le bouton «&nbsp;OK&nbsp;»</p> 
+  <p>&nbsp;</p> 
+  <h3><!--nchpdeb--><a name="chap_20_3_2">20.3.2. <!--nchpfin-->     Cr&eacute;ation d'un nouveau projet</a></h3> 
+  <p>Pour cr&eacute;er un nouveau projet «&nbsp;Lomboz&nbsp;», il suffit de cr&eacute;er un nouveau projet de type «&nbsp;Java / Lomboz J2EE Wizard / Lomboz J2EE Project&nbsp;»</p> 
+  <p align="center"><img border=0 width=500 height=257
+src="images/j2ee015.png" ></p> 
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;» et saisissez  le nom du projet</p> 
+  <p align="center"><img border=0 width=501 height=264
+src="images/j2ee016.png" ></p> 
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;» et s'assurer que les r&eacute;pertoires sources et de sortie sont d&eacute;sign&eacute;s respectivement par les r&eacute;pertoires &quot;src&quot; et &quot;bin&quot;.</p> 
+  <p align="center"><img border=0 width=501 height=371
+src="images/j2ee017.png" ></p> 
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;». Sur l'onglet&nbsp;«&nbsp;Web Modules&nbsp;», il faut ajouter un nouveau module.</p> 
+  <p align="center"><img border=0 width=501 height=264
+src="images/j2ee018.png" ></p> 
+  <p>Cliquez sur le bouton «&nbsp;Add&nbsp;... ».</p> 
+  <p align="center"><img border=0 width=399 height=152
+src="images/j2ee019.png" ></p> 
+  <p>Saisissez le nom et cliquez sur le bouton «&nbsp;OK&nbsp;».</p> 
+  <p>Sur l'onglet «&nbsp;EJB Modules&nbsp;», il est possible d'ajouter au projet un ou plusieurs modules qui vont contenir des EJB.</p> 
+  <p>Le principe pour ajouter un module EJB est identique &agrave; celui utilis&eacute; pour un module web&nbsp;: cliquer sur le bouton «&nbsp;Add&nbsp;», saisir le nom du module dans la bo&icirc;te de dialogue et cliquer sur le bouton «&nbsp;OK&nbsp;».</p> 
+  <p align="center"><img border=0 width=399 height=152
+src="images/j2ee020.png" ></p> 
+  <p>L'ajout d'autres modules web ou EJB est toujours possible apr&egrave;s la cr&eacute;ation du projet en utilisant l'assistant de cr&eacute;ation de nouvelles entit&eacute;s.</p> 
+  <p>Sur l'onglet «&nbsp;Targeted Servers&nbsp;», il faut s&eacute;lectionner le type de serveur &agrave; utiliser et cliquer sur le bouton “Add”. Dans l'exemple de cette section, il faut ajouter les serveurs  «&nbsp;JBOSS 3.0&nbsp;» et «&nbsp;Apache Tomcat v4.1.0&nbsp;».</p> 
+  <p align="center"><img border=0 width=501 height=330
+src="images/j2ee022.png" ></p> 
+  <p>Pour cr&eacute;er le projet, il suffit de cliquer sur le bouton «&nbsp;Fin&nbsp;».</p> 
+  <p align="center"><img border=0 width=441 height=160
+src="images/j2ee023.png" ></p> 
+  <p>Lors de l'affichage de ce message, il suffit de cliquer sur le bouton «&nbsp;Oui&nbsp;» pour ouvrir la perspective «&nbsp;Java&nbsp;».</p> 
+  <p>Des erreurs seront signal&eacute;es dans la vue «&nbsp;Taches&nbsp;» car le chemin d&eacute;sign&eacute; pour le fichier servlet.jar est erron&eacute;.</p> 
+  <p align="center"><img border=0 width=626 height=60
+src="images/j2ee024.png" ></p> 
+  <p>Pour corriger le probl&egrave;me, il faut modifier le chemin de la biblioth&egrave;que dans les propri&eacute;t&eacute;s du projet.</p> 
+  <p align="center"><img border=0 width=600 height=335
+src="images/j2ee025.png" ></p> 
+  <p>Il faut s&eacute;lectionner la ligne correspondant au fichier servlet.jar (celle contenant une petite icône attention jaune) et cliquer sur le bouton «&nbsp;Editer ...&nbsp;».</p> 
+  <p align="center"><img border=0 width=518 height=185
+src="images/j2ee026.png" ></p> 
+  <p>Pour faciliter la saisie du chemin il est possible de cliquer sur le bouton «&nbsp;Variable&nbsp;» pour s&eacute;lectionner «&nbsp;TOMCAT411&nbsp;» puis de cliquer sur le bouton «&nbsp;OK&nbsp;»</p> 
+  <p align="center"><img border=0 width=426 height=274
+src="images/j2ee027.png" ></p> 
+  <p>Pour faciliter la saisie du reste du chemin, il faut cliquer sur le bouton «&nbsp;Extension&nbsp;», s&eacute;lectionner le chemin du fichier servlet.jar et cliquer sur le bouton «&nbsp;OK&nbsp;».</p> 
+  <p align="center"><img border=0 width=346 height=350
+src="images/j2ee028.png" ></p> 
+  <p>La valeur associ&eacute;e &agrave; la variable doit avoir une valeur semblable &agrave; celle ci dessous : </p> 
+  <p align="center"><img border=0 width=432 height=151 src="images/j2ee029.png" ></p> 
+  <p>Il suffit de cliquer sur le bouton «&nbsp;OK&nbsp;» pour valider les modifications.</p>
+  <p>Cette correction n'est que temporaire : pour corriger le probl&egrave;me de fa&ccedil;on d&eacute;finitive, il faut modifier le fichier .server correspondant &agrave; celui du serveur utilis&eacute; dans le r&eacute;pertoire : </p>
+  <p>C:\java\eclipse\plugins\com.objectlearn.jdt.j2ee\servers </p>
+  <p>La ligne a modifier est celle permettant l'ajout du fichier servlet.jar. Une fois le fichier enregistr&eacute;, il faut relancer Eclipse. </p>
+  <p>Dans la vue package, sur le module EJB, s&eacute;lectionnez l'option &laquo;&nbsp;Lomboz J2EE/ Change default server&nbsp;&raquo; pour prendre en compte la modification puis cliquez sur le bouton &quot;Fin&quot;. </p>
+  <p align="center"><img src="images/j2ee081.png" width="501" height="291"></p>
+  <p>La structure du projet est la suivante dans la vue package&nbsp;: </p> 
+  <p align="center"><img border=0 width=600 height=202 src="images/j2ee030.png" ></p> 
+  <p>Les modules web et EJB contiennent d&eacute;j&agrave; quelques fichiers de configuration.</p> 
+  <table border=0 cellspacing=0 cellpadding=8 align="center"> 
+    <tr> 
+      <td width="50%"> <p align=center><img border=0 width=297 height=253 src="images/j2ee031.png" ></p></td> 
+      <td width="50%"> <p align=center><img border=0 width=297 height=238 src="images/j2ee032.png" ></p></td> 
+    </tr> 
+  </table> 
+</div>
+<!--PIED--><HR>
+<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="partie5.htm" ALT="Partie 5 : le d&eacute;veloppement d'applications d'entreprise">
+<img src="FlecheG.gif" alt="Partie 5 : le d&eacute;veloppement d'applications d'entreprise" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="chap021.htm" ALT="21. XML et Eclipse">
+<img src="FlecheD.gif" alt="21. XML et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+<td  rowspan="2" align="center" valign="middle">
+        <script language="JavaScript1.1">
+<!--
+hsh = new Date();
+hsd = document;
+//hsr = hsd.referrer.replace(/[<>]/g, '');
+hsr = parent.document.referrer.replace(/[<>]/g,  '');
+hsi = '<a href="http://www.xiti.com/xiti.asp?s=128624"';
+hsi += ' TARGET="_top"><img width="39" height="25" border=0 ';
+hsi += 'src="http://logv23.xiti.com/hit.xiti?s=128624';
+hsi += '&p=';
+hsi += '&hl=' + hsh.getHours() + 'x' + hsh.getMinutes() + 'x' + hsh.getSeconds();
+if(parseFloat(navigator.appVersion)>=4)
+{Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
+hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
+//-->
+</script>
+        <noscript>
+        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
+        </noscript>
+        <!--//-->
+      </td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+ 
+</body>
+</html>

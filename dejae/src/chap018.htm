@@ -1,0 +1,324 @@
+<HTML>
+<HEAD>
+<TITLE>Le plug-in TPTP (Test &amp; Performance Tools Platform)</TITLE>
+<META http-equiv="Content-type" content="text/html; charset=ISO-8859-1">
+<META name="description" content="">
+<META name="keywords" content="java tutorial cours dej eclipse">
+<META name="robots" content="all">
+<META name="revisit-after" content="2 months">
+<META http-equiv="Content-Language" content="fr-FX">
+<META name="author" content="Jean Michel DOUDOUX">
+<link href="dej_style.css" rel="stylesheet" type="text/css">
+<BODY>
+<!--ENTETE-->
+<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="chap017.htm" ALT="17. Le d&eacute;veloppement d'interfaces graphiques">
+<img src="FlecheG.gif" alt="17. Le d&eacute;veloppement d'interfaces graphiques" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="chap019.htm" ALT="19. Hibernate et Eclipse">
+<img src="FlecheD.gif" alt="19. Hibernate et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+<HR>
+
+<p>&nbsp;</p>
+<H1><!--idrefpage value="tptp" --><!--resumetitre value="pr&eacute;sente le plug-in TPTP (Test &amp; Performance Tools Platform) a pour but de proposer un framework permettant de fournir des services de mesures de performance et d'automatisation de tests." --><!--nchpdeb--><a name="chap_18">18. <!--nchpfin-->Le plug-in TPTP (Test &amp; Performance Tools Platform)</A></H1>
+<p>&nbsp;</p>
+<!--chapitredeb-->
+<div align="right">
+  <table border="0" cellspacing="0" summary="titre">
+    <tr>
+      <td width="270"><img src="images/chapitre.gif" alt="chapitre" width="347" height="100" border="0"></td>
+<td width="50" valign="top"><img src="images/1.gif" alt="1" width="62" height="83" border="0"></td>
+<td width="50" valign="top"><img src="images/8.gif" alt="8" width="62" height="83" border="0"></td>
+    </tr>
+  </table>
+  <br>
+</div>
+<!--chapitrefin-->
+<p>&nbsp;</p>
+<DIV ALIGN="justify"> 
+  <p>Le projet TPTP (Test &amp; Performance Tools Platform) a pour but de proposer un framework permettant de fournir des services de mesures de performance et d'automatisation de tests. </p> 
+  <p>Historiquement, le projet TPTP &eacute;tait diffus&eacute; sous le nom Hyades.</p> 
+  <p>Il se compose actuellement de 4 sous projets&nbsp;:</p> 
+  <ul type=disc> 
+    <li>TPTP Platform&nbsp;: il se compose du Coeur du projet TPTP et propose des services de bases communs aux autres sous projets </li> 
+    <li>Monitoring Tools&nbsp;: il propose des services pour collecter et analyser des informations concernant les ressources d'une application et du syst&egrave;me</li> 
+    <li>Testing Tools&nbsp;: il propose des services pour faciliter les tests</li> 
+    <li>Tracing and profiling tools : il propose des services pour collecter et analyser des informations concernant les performances d'une application</li> 
+  </ul> 
+  <p>La page du projet TPTP est &agrave; l'url&nbsp;: <a href="http://www.eclipse.org/tptp/">http://www.eclipse.org/tptp/</a></p> 
+  <p>La version mise en oeuvre dans ce chapitre est la 4.1</p> 
+<p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_18_1">18.1. <!--nchpfin-->  Installation</A></h2> 
+  <p>Il est possible d'installer le plug-in par l'outil de mise &agrave; jour de lgoiciels ou par un t&eacute;l&eacute;chargement et une d&eacute;compression des fichiers requis. Dans ce dernier cas, il faut t&eacute;l&eacute;charger sur le site du projet les fichiers&nbsp;: </p> 
+  <ul>
+    <li>tptp.runtime-TPTP-4.0.1-200510031151.zip&nbsp;: runtime du projet TPTP</li>
+    <li>NLpack1-tptp.runtime-TPTP-4.0.1-200510031151.zip&nbsp;: traductions du rutime du projet TPTP</li>
+    <li>tptpdc.win_ia32-TPTP-4.0.1-200510031151.zip : agent controller pour le syst&egrave;me Windows</li>
+    <li>rac-nl1-tptp.sdk-TPTP-4.0.1-200509281716.zip : traductions de l'agent controller</li>
+  </ul>
+  <p>L'installation de la partie runtime du plug-in se fait comme pour tout autre plug-in en d&eacute;compressant les archives.</p> 
+  <p>L'agent controller est un processus d&eacute;pendant du syst&egrave;me sur lequel il s'ex&eacute;cute pour assurer le lien entre la JVM et le plug in TPTP.</p> 
+  <p>Il faut d&eacute;compresser le fichier tptpdc.win_ia32-TPTP-4.0.1-200510031151.zip et rac-nl1-tptp.sdk-TPTP-4.0.1-200509281716.zip dans le r&eacute;pertoire d'installation Eclipse (il est recommand&eacute; de r&eacute;aliser cette d&eacute;compression dans un r&eacute;pertoire d&eacute;di&eacute; hors du r&eacute;pertoire d'installation d'Eclipse).</p> 
+  <p>Il faut ensuite ex&eacute;cuter le fichier SetConfig.bat contenu dans le r&eacute;pertoire bin d&eacute;compress&eacute; de l'agent controller.</p> 
+  <p>Il suffit de valider chacune des r&eacute;ponses par un appui sur la touche Entr&eacute;e sauf si la valeur propos&eacute;e ne convient pas.</p> 
+  <p>Il faut ajouter le chemin du r&eacute;pertoire bin dans la variable PATH du syst&egrave;me</p> 
+  <p align="center"><img border=0 width=359 height=139 src="images/tptp001.png"></p> 
+  <p>Il faut cr&eacute;er une nouvelle variable nomm&eacute;e RASERVER_HOME ayant pour valeur le chemin d'installation de l'agent controller</p> 
+  <p align="center"><img border=0 width=359 height=139 src="images/tptp002.png"></p> 
+<p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_18_2">18.2. <!--nchpfin-->Profiler une application</A></h2> 
+  <p>La classe ci-dessous est utilis&eacute;e dans cette section.</p> 
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+      <pre><code>public class TestTP { 
+
+  /** 
+   * @param args 
+   */ 
+  public static void main(String[] args) { 
+    StringBuffer b = new StringBuffer(); 
+    for(int i=0; i&lt;1000; i++) { 
+     b.append(&quot;texte &quot;); 
+    } 
+  } 
+
+} </code></pre></td>
+    </tr>
+  </table>
+  <br>
+  <p>Pour utiliser le plug-in TPTP, il est n&eacute;cessaire de lancer l'agent controller.  Le plus simple est d'utiliser l'option «&nbsp;Ex&eacute;cuter...&nbsp;» du menu d&eacute;marrer et de demander l'ex&eacute;cution de la commande raserver.</p> 
+  <p align="center"><img border=0 width=363 height=179 src="images/tptp003.png"></p> 
+  <p>Cliquer sur le bouton «&nbsp;OK&nbsp;» pour lancer l'agent controller.</p> 
+  <p align="center"><img border=0 width=332 height=107 src="images/tptp004.png"></p> 
+  <p>Pour cr&eacute;er une nouvelle configuration, s&eacute;lectionner l'option «&nbsp;Profiler en tant que / Profiler ...&nbsp;» du menu contextuel de la classe dans l'explorateur de packages</p> 
+  <p align="center"><img border=0 width=542 height=95 src="images/tptp005.png"></p> 
+  <p>La bo&icirc;te de dialogue «&nbsp;Profiler&nbsp;» s'ouvre</p> 
+  <p align="center"><img border=0 width=636 height=495 src="images/tptp006.png"></p> 
+  <p>S&eacute;lectionner «&nbsp;Application Java&nbsp;» et cliquer sur le bouton «&nbsp;Nouveau&nbsp;»</p> 
+  <p align="center"><img border=0 width=636 height=474 src="images/tptp007.png"></p> 
+  <p>Pour d&eacute;finir un profil, il faut cliquer sur l'onglet «&nbsp;Profilage&nbsp;»</p> 
+  <p align="center"><img border=0 width=650 height=500 src="images/tptp008.png"></p> 
+  <p>S&eacute;lectionner le jeu de profilage «&nbsp;Historique de l'ex&eacute;cution – D&eacute;tails graphiques complets&nbsp;»  et cliquer sur le bouton «&nbsp;Editer ...&nbsp;»</p> 
+  <p align="center"><img border=0 width=430 height=283 src="images/tptp009.png"></p> 
+  <p>Cliquer sur le bouton «&nbsp;Suivant&nbsp;»</p> 
+  <p align="center"><img border=0 width=608 height=451 src="images/tptp010.png"></p> 
+  <p>Cliquer sur le bouton «&nbsp;Suivant&nbsp;»</p> 
+  <p align="center"><img border=0 width=563 height=557 src="images/tptp011.png"></p> 
+  <p>Cliquer sur le bouton «&nbsp;Terminer&nbsp;» pour revenir &agrave; la bo&icirc;te de dialogue «&nbsp;Profiler&nbsp;».</p> 
+  <p>Si des modifications sont apport&eacute;es lors d'un clic sur le bouton Fermer, une boite de dialogue permet de demander la sauvegarde des modifications&nbsp;: </p> 
+  <p align="center"><img border=0 width=441 height=139 src="images/tptp012.png"></p> 
+  <p>Cliquer sur le bouton «&nbsp;Profiler&nbsp;».</p> 
+  <p align="center"><img border=0 width=441 height=160 src="images/tptp013.png"></p> 
+  <p>Cliquer sur «&nbsp;Oui&nbsp;»</p> 
+  <p>Le message ci-dessous est affich&eacute; si la communication avec l'agent Controller n'est pas possible.</p> 
+  <p align="center"><img border=0 width=443 height=235 src="images/tptp014.png"></p> 
+  <p>Dans ce cas, il est n&eacute;cessaire de lancer l'Agent Controller.</p> 
+  <p>La perspective «&nbsp;Profilage et journalisation&nbsp;» s'ouvre.</p> 
+  <p align="center"><img border=0 width=650 height=244 src="images/tptp015.png"></p> 
+  <p>Les traitements sont ex&eacute;cut&eacute;s pour permettre la collecte des donn&eacute;es&nbsp;:</p> 
+  <p align="center"><img border=0 width=316 height=53 src="images/tptp016.png"></p> 
+  <p>Une fois que toutes les donn&eacute;es sont collect&eacute;es, la tache «&nbsp;Profilage&nbsp;» est arr&ecirc;t&eacute;e&nbsp;:</p> 
+  <p align="center"><img border=0 width=282 height=57 src="images/tptp017.png"></p> 
+  <p>Pour afficher les r&eacute;sultats, il suffit de double cliquer sur «&nbsp;Analyse de la dur&eacute;e d'ex&eacute;cution&nbsp;». Par d&eacute;faut, ce sont les informations au niveau package qui sont affich&eacute;es.</p> 
+  <p align="center"><img border=0 width=594 height=278 src="images/tptp018.png"></p> 
+  <p>L'int&eacute;r&ecirc;t de ces donn&eacute;es de permettre de d&eacute;tecter des points faibles du code. Par exemple, voici les r&eacute;sultats du code &eacute;quivalent ci-dessous&nbsp;: </p> 
+  <table border="1" cellpadding="4" cellspacing="0" width="100%" align=center >
+    <tr bgcolor="#A6A5C2">
+      <td>Exemple :</td>
+    </tr>
+    <tr>
+      <td>
+        <pre><code>public class TestTP { 
+  /** 
+   * @param args 
+   */ 
+  public static void main(String[] args) { 
+    String s = new String(&quot;&quot;); 
+    for(int i=0; i&lt;1000; i++) { 
+      s = s + &quot;texte &quot;; 
+    } 
+  } 
+} 
+</code></pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <p align="center"><img border=0 width=595 height=343 src="images/tptp019.png"></p> 
+  <p>L'utilisation de l'objet StringBuffer est ainsi justifi&eacute;e&nbsp;: pour s'en convaincre il suffit de comparer le temps cumul&eacute; d'ex&eacute;cution des deux versions.</p> 
+  <p>Il faut cliquer sur le bouton <img border=0 width=24 height=23 src="images/tptp020.png"> pour que se soient les informations au niveau classe qui soient affich&eacute;es</p> 
+  <p align="center"><img border=0 width=650 height=216 src="images/tptp021.png"></p> 
+  <p>Il faut cliquer sur le bouton <img border=0 width=23 height=23 src="images/tptp022.png"> pour que se soient les informations au niveau m&eacute;thode qui soient affich&eacute;es.</p> 
+  <p align="center"><img border=0 width=650 height=147 src="images/tptp023.png"></p> 
+  <p>Il faut cliquer sur le bouton <img border=0 width=23 height=23 src="images/tptp022.png"> pour que se soient les informations au niveau instance qui soient affich&eacute;es.</p> 
+  <p align="center"><img border=0 width=594 height=214 src="images/tptp024.png"></p> 
+  <p>Le bouton <img border=0 width=23 height=23 src="images/tptp025.png"> permet de basculer sur la perspective «&nbsp;Java&nbsp;» pour afficher la source.</p> 
+  <p>Le bouton <img border=0 width=23 height=22 src="images/tptp026.png"> permet d'afficher les r&eacute;sultats sous forme de pourcentage.</p> 
+  <p>Le bouton <img border=0 width=23 height=22 src="images/tptp027.png"> permet de s&eacute;lectionner les informations qui sont affich&eacute;es.</p> 
+  <p align="center"><img border=0 width=538 height=273 src="images/tptp028.png"></p> 
+  <p>Le bouton <img border=0 width=23 height=22 src="images/tptp029.png"> permet d'exporter les r&eacute;sultats dans un fichier HTML.</p> 
+  <p>Il est possible d'obtenir d'autres vues en utilisant l'option «&nbsp;Ouvrir avec&nbsp;»</p> 
+  <p align="center"><img border=0 width=575 height=166 src="images/tptp030.png"></p> 
+  <p>L'option «&nbsp;Interactions de classes UML2&nbsp;» affiche sous la forme d'un diagramme de s&eacute;quences les &eacute;changes des traitements profil&eacute;s.</p> 
+  <p align="center"><img border=0 width=650 height=344 src="images/tptp031.png"></p> 
+  <p>En fonction de la configuration de profilage utilis&eacute;e, plusieurs vues sont propos&eacute;es.</p> 
+  <p align="center"><img border=0 width=252 height=183 src="images/tptp032.png"></p> 
+<p>&nbsp;</p>
+  <h2><!--nchpdeb--><a name="chap_18_3">18.3. <!--nchpfin-->Profiler une application Web</A></h2> 
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<table border="0" width="100%" cols="1">
+    <tr>
+      <td>
+        <div align="Center"><img src="images/construct4.gif" alt="en construction" width="144" height="50"><br>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div align="Center">Cette section sera d&eacute;velopp&eacute;e dans une version future de ce document</div>
+      </td>
+    </tr>
+  </table>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+  <h2><!--nchpdeb--><a name="chap_18_4">18.4. <!--nchpfin-->Les outils de tests</A></h2> 
+  <p>Le plug-in TPTP propose une s&eacute;rie d'outils permettant de r&eacute;aliser des tests d'une application&nbsp;: ces tests peuvent utiliser JUnit, concern&eacute; les performances d'une application Web ou &ecirc;tre manuel.</p> 
+<p>&nbsp;</p>
+  <h3><!--nchpdeb--><a name="chap_18_4_1">18.4.1. <!--nchpfin-->Les tests avec JUnit</A></h3> 
+  <p>Dans l'explorateur de package, s&eacute;lectionner un package et utiliser l'option «&nbsp;Nouveau / Autre ...&nbsp;» du menu contextuel</p> 
+  <p align="center"><img border=0 width=401 height=310 src="images/tptp033.png"></p> 
+  <p>Il faut s&eacute;lectionner «&nbsp;Test / Test JUnit TPTP&nbsp;» et cliquer sur le bouton «&nbsp;Suivant&nbsp;».</p> 
+  <p align="center"><img border=0 width=441 height=139 src="images/tptp034.png"></p> 
+  <p>Cliquez sur le bouton «&nbsp;Suivant&nbsp;».</p> 
+  <p align="center"><img border=0 width=473 height=393 src="images/tptp035.png"></p> 
+  <p>Il faut saisir le nom du test et cliquer et cliquer sur le bouton «&nbsp;Suivant&nbsp;».</p> 
+  <p align="center"><img border=0 width=345 height=319 src="images/tptp036.png"></p> 
+  <p>Cliquez sur le bouton «&nbsp;suivant&nbsp;»</p> 
+  <p align="center"><img border=0 width=371 height=211 src="images/tptp037.png"></p> 
+  <p>Saisissez la description du test et cliquez sur le bouton «&nbsp;Terminer&nbsp;».</p> 
+  <p>Une entit&eacute; avec l'extension .testsuite est cr&eacute;&eacute;e avec le nom fournie dans l'assistant.</p> 
+  <p align="center"><img border=0 width=322 height=163 src="images/tptp038.png"></p> 
+  <p>La vue «&nbsp;Test JUnit TPTP&nbsp;» s'ouvre.</p> 
+  <p align="center"><img border=0 width=650 height=417 src="images/tptp039.png"></p> 
+  <p>L'onglet «&nbsp;G&eacute;n&eacute;ralit&eacute;s&nbsp;» affiche des informations g&eacute;n&eacute;rales sur le test.</p> 
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<table border="0" width="100%" cols="1">
+    <tr>
+      <td>
+        <div align="Center"><img src="images/construct4.gif" alt="en construction" width="144" height="50"><br>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div align="Center">Cette section sera d&eacute;velopp&eacute;e dans une version future de ce document</div>
+      </td>
+    </tr>
+  </table>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+</DIV>
+<!--PIED--><HR>
+<table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2">
+<TBODY>
+<tr>
+<td rowspan="2" align="center" width="50">&nbsp;</td><td rowspan="2" align="center" width="50">
+<A HREF="chap017.htm" ALT="17. Le d&eacute;veloppement d'interfaces graphiques">
+<img src="FlecheG.gif" alt="17. Le d&eacute;veloppement d'interfaces graphiques" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" width="50">
+<A HREF="chap019.htm" ALT="19. Hibernate et Eclipse">
+<img src="FlecheD.gif" alt="19. Hibernate et Eclipse" align="left" border="0" hspace="0" width="31" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="javascript:window.print()">
+<img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="index.htm">
+<img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31">
+</a>
+</td>
+<td rowspan="2" align="center" >
+<a href="indexavecframes.htm"  target="_top">
+<img src="frame.png" alt="Consulter avec table des matières" align="middle" border="0" hspace="0" width="46" height="40">
+</a>
+</td>
+<td align="right">
+<font color="#FFFFFF" size="5"><b><i>Développons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td>
+<td  rowspan="2" align="center" valign="middle">
+        <script language="JavaScript1.1">
+<!--
+hsh = new Date();
+hsd = document;
+//hsr = hsd.referrer.replace(/[<>]/g, '');
+hsr = parent.document.referrer.replace(/[<>]/g,  '');
+hsi = '<a href="http://www.xiti.com/xiti.asp?s=128624"';
+hsi += ' TARGET="_top"><img width="39" height="25" border=0 ';
+hsi += 'src="http://logv23.xiti.com/hit.xiti?s=128624';
+hsi += '&p=';
+hsi += '&hl=' + hsh.getHours() + 'x' + hsh.getMinutes() + 'x' + hsh.getSeconds();
+if(parseFloat(navigator.appVersion)>=4)
+{Xiti_s=screen;hsi += '&r=' + Xiti_s.width + 'x' + Xiti_s.height + 'x' + Xiti_s.pixelDepth + 'x' + Xiti_s.colorDepth;}
+hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre audience"></a><\!--');
+//-->
+</script>
+        <noscript>
+        <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border=0 src="http://logv23.xiti.com/hit.xiti?s=128624&p=&" title="Mesurez votre audience"></a>
+        </noscript>
+        <!--//-->
+      </td>
+</tr>
+<tr>
+<td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td>
+</tr>
+</TBODY>
+</table>
+
+</BODY>
+</HTML>
+
+
+
+
+
+
