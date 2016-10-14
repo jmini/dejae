@@ -1,26 +1,26 @@
 <html>
  <head> 
   <title>Le d&eacute;veloppement d'interfaces graphiques</title> 
-  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1"> 
-  <meta name="description" content=""> 
-  <meta name="keywords" content="java tutorial cours dej eclipse"> 
-  <meta name="robots" content="all"> 
-  <meta name="revisit-after" content="2 months"> 
-  <meta http-equiv="Content-Language" content="fr-FX"> 
-  <meta name="author" content="Jean Michel DOUDOUX"> 
-  <link href="dej_style.css" rel="stylesheet" type="text/css"> 
- </head>
+  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" /> 
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="java tutorial cours dej eclipse" /> 
+  <meta name="robots" content="all" /> 
+  <meta name="revisit-after" content="2 months" /> 
+  <meta http-equiv="Content-Language" content="fr-FX" /> 
+  <meta name="author" content="Jean Michel DOUDOUX" /> 
+  <link href="dej_style.css" rel="stylesheet" type="text/css" /> 
+ </head> 
  <body> 
   <!--ENTETE--> 
   <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
    <tbody> 
     <tr> 
-     <td rowspan="2" align="center" width="50">&nbsp;</td>
-     <td rowspan="2" align="center" width="50"> <a href="chap016.htm" alt="16.  Des plug-ins pour le d&eacute;veloppement avec Java"> <img src="FlecheG.gif" alt="16.  Des plug-ins pour le d&eacute;veloppement avec Java" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center" width="50"> <a href="chap018.htm" alt="18. Le plug-in TPTP (Test &amp; Performance Tools Platform)"> <img src="FlecheD.gif" alt="18. Le plug-in TPTP (Test &amp; Performance Tools Platform)" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap016.htm" alt="16.  Des plug-ins pour le d&eacute;veloppement avec Java"> <img src="FlecheG.gif" alt="16.  Des plug-ins pour le d&eacute;veloppement avec Java" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap018.htm" alt="18. Le plug-in TPTP (Test &amp; Performance Tools Platform)"> <img src="FlecheD.gif" alt="18. Le plug-in TPTP (Test &amp; Performance Tools Platform)" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40" /> </a> </td> 
      <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
     </tr> 
     <tr> 
@@ -28,91 +28,93 @@
     </tr> 
    </tbody> 
   </table> 
-  <hr> 
+  <hr /> 
   <p>&nbsp;</p> 
-  <h1>
-   <!--idrefpage value="ihm" -->
-   <!--resumetitre value="pr&eacute;sente plusieurs plug-ins pour faciliter le d&eacute;veloppement d'applications graphiques utilisant AWT, Swing ou SWT." -->
+  <h1> 
+   <!--idrefpage value="ihm" --> 
+   <!--resumetitre value="pr&eacute;sente plusieurs plug-ins pour faciliter le d&eacute;veloppement d'applications graphiques utilisant AWT, Swing ou SWT." --> 
    <!--nchpdeb--><a name="chap_17">17. 
     <!--nchpfin-->Le d&eacute;veloppement d'interfaces graphiques</a></h1> 
   <p>&nbsp;</p> 
   <p>&nbsp;</p> 
   <div align="justify"> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_17_1">17.1. 
      <!--nchpfin-->Eclipse et SWT</a></h2> 
    <p>Eclipse est d&eacute;velopp&eacute; en utilisant SWT comme API pour le d&eacute;veloppement de son interface graphique pour l'utilisateur. Pour le d&eacute;veloppement de plug-ins, l'utilisation de SWT est donc fortement recommand&eacute;e mais il est aussi possible d'utiliser Eclipse et SWT pour le d&eacute;veloppement des applications standalone. </p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_17_1_1">17.1.1. 
      <!--nchpfin-->Configurer Eclipse pour d&eacute;velopper des applications SWT</a></h3> 
-   <p>Sans plug-ins, il est possible de d&eacute;velopper des applications graphiques utilisant SWT avec Eclipse. Bien s&ucirc;re, l'inconv&eacute;nient majeur est de devoir &eacute;crire tout le code "&agrave; la main ".</p> 
+   <p>Sans plug-ins, il est possible de d&eacute;velopper des applications graphiques utilisant SWT avec Eclipse. Bien s&ucirc;re, l'inconv&eacute;nient majeur est de devoir &eacute;crire tout le code &quot;&agrave; la main &quot;.</p> 
    <p>Pour le d&eacute;veloppement d'applications SWT, il est n&eacute;cessaire de configurer certains &eacute;l&eacute;ments notamment le classpath. Dans cette section, la version de SWT utilis&eacute;e est la 2.1.</p> 
    <p>Pour utiliser SWT dans un projet, il faut ajouter dans son classpath le fichier swt.jar. Dans les propri&eacute;t&eacute;s du projet, s&eacute;lectionnez &laquo;&nbsp;Chemin de compilation Java&nbsp;&raquo; et cliquez sur le bouton &laquo;&nbsp;Ajouter des fichiers jar externes ... &nbsp;&raquo;. </p> 
    <p>Une bo&icirc;te de dialogue permet de s&eacute;lectionner le fichier swt.jar. Ce fichier est d&eacute;pendant du syst&egrave;me d'exploitation sur lequel l'application va s'ex&eacute;cuter. Par exemple sous Windows, ce fichier se trouve dans le sous r&eacute;pertoire plugins\org.eclipse.swt.win32_2.1.0\ws\win32\ du r&eacute;pertoire d'installation d'Eclipse. Cliquez sur le bouton &laquo;&nbsp;Ok&nbsp;&raquo; pour valider les modifications et recompiler le projet.</p> 
    <p>Pour pouvoir ex&eacute;cuter le projet, il faut que l'application puisse acc&eacute;der &agrave; une biblioth&egrave;que native particuli&egrave;re qui sous Windows se nomme swt-win32-2135.dll. Ce fichier se trouve dans le sous r&eacute;pertoire plugins\org.eclipse.swt.win32_2.1.2\os\win32\x86 du r&eacute;pertoire d'installation d'Eclipse. Le nom et le chemin de cette biblioth&egrave;que d&eacute;pend de la version de SWT qui est utilis&eacute;e.</p> 
    <p>Il y a plusieurs solutions possibles pour mettre ce fichier &agrave; disposition d'une application&nbsp;:</p> 
    <ol start="1" type="1"> 
-    <li>pr&eacute;cisez le chemin de la biblioth&egrave;que dans les param&egrave;tres de la machine virtuelle lors de l'ex&eacute;cution<br> Pour cela choisissez, &laquo;&nbsp;Ex&eacute;cuter ... &nbsp;&raquo; pour ouvrir la bo&icirc;te de dialogue de configuration d'ex&eacute;cution. Sur l'onglet &laquo;&nbsp;Arguments ... &nbsp;&raquo;, saisir <br> -Djava.library.path="chemin_complet_du_fichier" et cliquez sur le bouton &laquo;&nbsp;Appliquer&nbsp;&raquo; puis sur le bouton &laquo;&nbsp;Ex&eacute;cuter&nbsp;&raquo;<br> <br> <img width="591" height="75" src="images/gui008.png"><br><br> L'inconv&eacute;nient de cette m&eacute;thode est que cette configuration doit &ecirc;tre effectu&eacute;e pour chaque configuration de lancement.<br> <br> </li> 
-    <li>Ajouter le r&eacute;pertoire qui contient la biblioth&egrave;que &agrave; la variable PATH sous Windows ou LD_LIBRAY_PATH sous Unix.<br> <br> </li> 
-    <li>Il est possible de copier la biblioth&egrave;que dans un r&eacute;pertoire contenu dans la variable java.library.path. L'inconv&eacute;nient de cette m&eacute;thode est qu'il faut recopier la biblioth&egrave;que &agrave; chaque nouvelle version de SWT utilis&eacute;e.<br> <br> </li> 
-    <li>Il est possible de copier la biblioth&egrave;que dans le r&eacute;pertoire racine de l'application. L'inconv&eacute;nient de cette m&eacute;thode est qu'il faut recopier la biblioth&egrave;que dans chaque projet qui utilise SWT.<br> <br> </li> 
+    <li>pr&eacute;cisez le chemin de la biblioth&egrave;que dans les param&egrave;tres de la machine virtuelle lors de l'ex&eacute;cution<br /> Pour cela choisissez, &laquo;&nbsp;Ex&eacute;cuter ... &nbsp;&raquo; pour ouvrir la bo&icirc;te de dialogue de configuration d'ex&eacute;cution. Sur l'onglet &laquo;&nbsp;Arguments ... &nbsp;&raquo;, saisir <br /> -Djava.library.path=&quot;chemin_complet_du_fichier&quot; et cliquez sur le bouton &laquo;&nbsp;Appliquer&nbsp;&raquo; puis sur le bouton &laquo;&nbsp;Ex&eacute;cuter&nbsp;&raquo;<br /> <br /> <img width="591" height="75" src="images/gui008.png" /><br /><br /> L'inconv&eacute;nient de cette m&eacute;thode est que cette configuration doit &ecirc;tre effectu&eacute;e pour chaque configuration de lancement.<br /> <br /> </li> 
+    <li>Ajouter le r&eacute;pertoire qui contient la biblioth&egrave;que &agrave; la variable PATH sous Windows ou LD_LIBRAY_PATH sous Unix.<br /> <br /> </li> 
+    <li>Il est possible de copier la biblioth&egrave;que dans un r&eacute;pertoire contenu dans la variable java.library.path. L'inconv&eacute;nient de cette m&eacute;thode est qu'il faut recopier la biblioth&egrave;que &agrave; chaque nouvelle version de SWT utilis&eacute;e.<br /> <br /> </li> 
+    <li>Il est possible de copier la biblioth&egrave;que dans le r&eacute;pertoire racine de l'application. L'inconv&eacute;nient de cette m&eacute;thode est qu'il faut recopier la biblioth&egrave;que dans chaque projet qui utilise SWT.<br /> <br /> </li> 
    </ol> 
    <p>Lors de l'ex&eacute;cution, si la biblioth&egrave;que ne peut &ecirc;tre acc&eacute;d&eacute;e par l'application, une exception est lev&eacute;e.</p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
      </tr> 
      <tr> 
       <td> <pre><code>java.lang.UnsatisfiedLinkError: no swt-win32-2135 in java.library.path </code></pre> </td> 
      </tr> 
-    </tbody>
-   </table>
-   <br> 
+    </tbody> 
+   </table> 
+   <br /> 
    <p>Pour une utilisation sous Linux, la configuration est similaire. Il est cependant n&eacute;cessaire d'ajouter dans le classpath une biblioth&egrave;que suppl&eacute;mentaire nomm&eacute;e swt-pi.jar. Ce fichier ce trouve au m&ecirc;me endroit que le fichier swt.jar dans le r&eacute;pertoire eclipse/plugins/org.eclipse.swt.gtk_3.0.0/gs/gtk/</p> 
    <p>Si ce fichier n'est pas inclus dans le classpath, une exception est lev&eacute;e lors de l'ex&eacute;cution : </p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
      </tr> 
      <tr> 
-      <td> <pre><code>Exception in thread "main" java.lang.NoClassDefFoundError: org/eclipse/swt/internal/gtk
+      <td> <pre><code>Exception in thread &quot;main&quot; java.lang.NoClassDefFoundError: org/eclipse/swt/internal/gtk
 /OS
 	at org.eclipse.swt.internal.Converter.wcsToMbcs(Converter.java:63)
 	at org.eclipse.swt.internal.Converter.wcsToMbcs(Converter.java:54)
 	at org.eclipse.swt.widgets.Display.
+         
+         
          <clinit>
-          (Display.java:118) at com.jmd.test.swt.TestSWT.main(TestSWT.java:9)
+           (Display.java:118) at com.jmd.test.swt.TestSWT.main(TestSWT.java:9) 
          </clinit></code></pre> </td> 
      </tr> 
-    </tbody>
-   </table>
-   <br> 
+    </tbody> 
+   </table> 
+   <br /> 
    <p>Sous Linux , il faut que l'application puisse acc&eacute;der &agrave; aux biblioth&egrave;ques natives qui se situe dans le r&eacute;pertoire eclipse/plugins/org.eclipse.swt.gtk_3.0.0/os/linux/x86</p> 
-   <p>Le plus simple de mettre &agrave; jour la variable d'environnement LD_PATH du syst&egrave;me ou d'utiliser l'option de la JVM lors de l'ex&eacute;cution ( en adaptant le chemin d'Eclipse) :<br> -Djava.library.path="/home/java/eclipse/plugins/org.eclipse.swt.gtk_3.0.0/os/linux/x86. </p> 
+   <p>Le plus simple de mettre &agrave; jour la variable d'environnement LD_PATH du syst&egrave;me ou d'utiliser l'option de la JVM lors de l'ex&eacute;cution ( en adaptant le chemin d'Eclipse) :<br /> -Djava.library.path=&quot;/home/java/eclipse/plugins/org.eclipse.swt.gtk_3.0.0/os/linux/x86. </p> 
    <p>Si ces biblioth&egrave;ques ne peuvent &ecirc;tre trouv&eacute;es lors de l'ex&eacute;cution, une exception est lev&eacute;e.</p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
      </tr> 
      <tr> 
-      <td> <pre><code>Exception in thread "main" java.lang.UnsatisfiedLinkError: no swt-pi-gtk-3062 
+      <td> <pre><code>Exception in thread &quot;main&quot; java.lang.UnsatisfiedLinkError: no swt-pi-gtk-3062 
   in java.library.path
 	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1517)
 	at java.lang.Runtime.loadLibrary0(Runtime.java:788)
 	at java.lang.System.loadLibrary(System.java:834)</code></pre> </td> 
      </tr> 
-    </tbody>
+    </tbody> 
    </table> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_17_1_2">17.1.2. 
      <!--nchpfin-->Un exemple tr&egrave;s simple</a></h3> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
      </tr> 
@@ -126,7 +128,7 @@ public class TestSWT2 {
 &nbsp; public static void main(String[] args) { 
 &nbsp;&nbsp;&nbsp; Display display = new Display(); 
 &nbsp;&nbsp;&nbsp; Shell shell = new Shell(display); 
-&nbsp;&nbsp;&nbsp; shell.setText("Test"); 
+&nbsp;&nbsp;&nbsp; shell.setText(&quot;Test&quot;); 
 
 &nbsp;&nbsp;&nbsp; Composite composite = new Composite(shell, SWT.NONE); 
 &nbsp;&nbsp;&nbsp; Color couleur = new Color(display,131,133,131); 
@@ -134,15 +136,15 @@ public class TestSWT2 {
 
 &nbsp;&nbsp;&nbsp; Label label = new Label(composite, SWT.NONE); 
 &nbsp;&nbsp;&nbsp; label.setBackground(couleur); 
-&nbsp;&nbsp;&nbsp; label.setText("Saisir la valeur"); 
+&nbsp;&nbsp;&nbsp; label.setText(&quot;Saisir la valeur&quot;); 
 &nbsp;&nbsp;&nbsp; label.setBounds(10, 10, 100, 25); 
 
 &nbsp;&nbsp;&nbsp; Text text = new Text(composite, SWT.BORDER); 
-&nbsp;&nbsp;&nbsp; text.setText("mon texte"); 
+&nbsp;&nbsp;&nbsp; text.setText(&quot;mon texte&quot;); 
 &nbsp;&nbsp;&nbsp; text.setBounds(10, 30, 100, 25); 
 
 &nbsp;&nbsp;&nbsp; Button button = new Button(composite, SWT.BORDER); 
-&nbsp;&nbsp;&nbsp; button.setText("Valider"); 
+&nbsp;&nbsp;&nbsp; button.setText(&quot;Valider&quot;); 
 &nbsp;&nbsp;&nbsp; button.setBounds(10, 60, 100, 25); 
 &nbsp;&nbsp;&nbsp; composite.setSize(140,140); 
 
@@ -158,18 +160,18 @@ public class TestSWT2 {
 &nbsp; } 
 } </code></pre> </td> 
      </tr> 
-    </tbody>
-   </table>
-   <br> 
+    </tbody> 
+   </table> 
+   <br /> 
    <p>Si l'environnement est correctement configur&eacute; comme expliqu&eacute; dans la section pr&eacute;c&eacute;dente, l'ex&eacute;cution de l'application se fait comme tout autre application.</p> 
-   <p align="center"><img width="148" height="167" src="images/gui009.png"></p> 
+   <p align="center"><img width="148" height="167" src="images/gui009.png" /></p> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_17_2">17.2. 
      <!--nchpfin-->Le plug-in Eclipse V4all</a></h2> 
    <p>V4All est un projet open source qui a pour but de d&eacute;velopper un plug-in pour Eclipse permettant le d&eacute;veloppement d'interfaces graphiques avec Swing ou SWT.</p> 
    <table border="1" cellspacing="0" cellpadding="4" width="50%"> 
-    <tbody>
+    <tbody> 
      <tr> 
       <td>&nbsp; </td> 
       <td> <p>Version utilis&eacute;e dans cette section</p></td> 
@@ -186,10 +188,10 @@ public class TestSWT2 {
       <td> <p>V4All</p></td> 
       <td> <p>2.1.1.9.</p></td> 
      </tr> 
-    </tbody>
+    </tbody> 
    </table> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_17_2_1">17.2.1. 
      <!--nchpfin--> Installation</a></h3> 
    <p>V4All requi&egrave;re l'installation du plug-in GEF (Graphical Editing Framework) en ex&eacute;cutant les &eacute;tapes suivantes :</p> 
@@ -207,16 +209,16 @@ public class TestSWT2 {
     <li>cliquez sur le bouton &laquo;&nbsp;Oui&nbsp;&raquo; lors de la demande de relance de l'application.</li> 
    </ul> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_17_2_2">17.2.2. 
      <!--nchpfin--> Utilisation</a></h3> 
    <p>Pour utiliser V4all, il faut cr&eacute;er ou utiliser un projet Java existant, puis il faut cr&eacute;er un nouveau projet de type &laquo;&nbsp;V4E Editor&nbsp;&raquo;.</p> 
-   <p align="center"><img border="0" width="500" height="234" src="images/gui001.png"></p> 
+   <p align="center"><img border="0" width="500" height="234" src="images/gui001.png" /></p> 
    <p>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.</p> 
-   <p align="center"><img border="0" width="500" height="458" src="images/gui002.png"></p> 
+   <p align="center"><img border="0" width="500" height="458" src="images/gui002.png" /></p> 
    <p>Un assistant permet de s&eacute;lectionner le projet Java qui va contenir le code, de saisir le nom du fichier qui va contenir les informations, et de s&eacute;lectionner l'API &agrave; utiliser</p> 
    <p>Il suffit de cliquer sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo; pour que la perspective d&eacute;di&eacute;e &agrave; V4All s'affiche.</p> 
-   <p align="center"><img border="0" width="500" height="375" src="images/gui003.png"></p> 
+   <p align="center"><img border="0" width="500" height="375" src="images/gui003.png" /></p> 
    <p>V4All propose son propre &eacute;diteur pour r&eacute;aliser de mani&egrave;re WYSIWYG des interfaces graphiques. </p> 
    <p>Cet &eacute;diteur se compose de deux parties&nbsp;:</p> 
    <ul type="disc"> 
@@ -224,13 +226,13 @@ public class TestSWT2 {
     <li>une zone de travail sur laquelle les composants sont d&eacute;pos&eacute;s par cliquer/glisser</li> 
    </ul> 
    <p>Par d&eacute;faut, chacun des &eacute;l&eacute;ments de la barre est ouvert, ce qui les rend peux visibles. Pour ouvrir un seul &eacute;l&eacute;ment, il suffit de double cliquer sur son titre.</p> 
-   <p align="center"><img border="0" width="397" height="450" src="images/gui004.png"></p> 
+   <p align="center"><img border="0" width="397" height="450" src="images/gui004.png" /></p> 
    <p>L'apparence de la barre peut &ecirc;tre configur&eacute;e pour faciliter son utilisation&nbsp;: le menu contextuel de la barre propose plusieurs options int&eacute;ressantes&nbsp;: </p> 
-   <p align="center"><img border="0" width="214" height="113" src="images/gui005.png"></p> 
+   <p align="center"><img border="0" width="214" height="113" src="images/gui005.png" /></p> 
    <p>L'utilisation de l'option &laquo;&nbsp;Use large Icons&nbsp;&raquo; am&eacute;liore la visibilit&eacute; des ic&ocirc;nes.</p> 
    <p>L'option &laquo;&nbsp;Layout&nbsp;&raquo; permet de s&eacute;lectionner le mode d'affichage des composants&nbsp;: l'utilisation de l'option &laquo;&nbsp;Details&nbsp;&raquo; permet d'avoir un libell&eacute; associ&eacute; &agrave; l'ic&ocirc;ne.</p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_17_2_3">17.2.3. 
      <!--nchpfin-->Un exemple simple</a></h3> 
    <p>Il faut cr&eacute;er un nouveau projet V4All.</p> 
@@ -238,19 +240,19 @@ public class TestSWT2 {
    <p>Il faut faire un cliquer/glisser du composant Frame sur la zone d'&eacute;dition</p> 
    <p>A partir de ce moment, il est possible de demander la g&eacute;n&eacute;ration du code et son ex&eacute;cution en utilisant l'option &laquo;&nbsp;Run&nbsp;&raquo; du menu contextuel &laquo;&nbsp;Code generation And Run&nbsp;&raquo;.</p> 
    <p>L'application se lance et la fen&ecirc;tre d&eacute;finie s'affiche&nbsp;: elle est d&eacute;j&agrave; fonctionnelle et il suffit de cliquer sur le bouton de fermeture pour arr&ecirc;ter l'application.</p> 
-   <p align="center"><img border="0" width="500" height="266" src="images/gui006.png"></p> 
+   <p align="center"><img border="0" width="500" height="266" src="images/gui006.png" /></p> 
    <p>Pour ajouter un bouton, il suffit de faire un cliquer/glisser du composant sur la Frame&nbsp;: le conteneur qui va recevoir le composant change de couleur.</p> 
-   <p align="center"><img border="0" width="228" height="95" src="images/gui007.png"></p> 
-   <p>Chaque composant poss&egrave;de de nombreuses propri&eacute;t&eacute;s qu'il est possible de modifier dans la vue "Propri&eacute;t&eacute;s". Cette vue affiche les propri&eacute;t&eacute;s du composant s&eacute;lectionn&eacute; dans l'&eacute;diteur.</p> 
+   <p align="center"><img border="0" width="228" height="95" src="images/gui007.png" /></p> 
+   <p>Chaque composant poss&egrave;de de nombreuses propri&eacute;t&eacute;s qu'il est possible de modifier dans la vue &quot;Propri&eacute;t&eacute;s&quot;. Cette vue affiche les propri&eacute;t&eacute;s du composant s&eacute;lectionn&eacute; dans l'&eacute;diteur.</p> 
    <p>Pour un bouton, il est par exemple possible de modifier le nom du composant avec la propri&eacute;t&eacute; &laquo;&nbsp;Basic / Bean Name&nbsp;&raquo;, le texte du bouton avec &laquo;&nbsp;Component / Text&nbsp;&raquo;, ... </p> 
    <p>Il faut proc&eacute;der de la m&ecirc;me fa&ccedil;on pour ajouter une zone de texte (un composant de type TextField).</p> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_17_3">17.3. 
      <!--nchpfin-->Eclipse VE</a></h2> 
    <p>VE (Visual Editor) est un framework dont le but est de faciliter le d&eacute;veloppement de plug-in permettant la r&eacute;alisation d'interfaces graphiques. M&ecirc;me si VE est propos&eacute; avec une impl&eacute;mentation de r&eacute;f&eacute;rence proposant la conception d'interfaces graphiques reposant sur SWT, Swing ou AWT, le but du framework est de pouvoir proposer &agrave; terme la conception d'interfaces graphiques reposant sur d'autres biblioth&egrave;ques, pas n&eacute;cessairement d&eacute;velopp&eacute;es en ou pour Java.</p> 
    <table border="1" cellspacing="0" cellpadding="4" width="50%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr> 
       <td>Produit</td> 
       <td>Version utilis&eacute;e dans cette section</td> 
@@ -271,13 +273,13 @@ public class TestSWT2 {
       <td>Eclipse VE NLPack1 runtime </td> 
       <td>1.1.0.1 </td> 
      </tr> 
-    </tbody>
-   </table>
-   <br> 
+    </tbody> 
+   </table> 
+   <br /> 
    <p>Le site officiel du plug-in VE est &agrave; l'url <a href="http://www.eclipse.org/vep/">http://www.eclipse.org/vep/</a>. </p> 
    <p>Plusieurs versions du plug-in ont &eacute;t&eacute; diffus&eacute;es : </p> 
    <table width="50%" border="1" cellspacing="0" cellpadding="4" align="center"> 
-    <tbody>
+    <tbody> 
      <tr> 
       <td>Version</td> 
       <td>Date</td> 
@@ -306,10 +308,10 @@ public class TestSWT2 {
       <td>0.5 </td> 
       <td>D&eacute;cembre 2003</td> 
      </tr> 
-    </tbody>
+    </tbody> 
    </table> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_17_3_1">17.3.1. 
      <!--nchpfin-->Installation</a></h3> 
    <p>La version 1.1.0.1 du plug-in VE n&eacute;cessite plusieurs pr&eacute;-requis pour fonctionner : </p> 
@@ -320,22 +322,22 @@ public class TestSWT2 {
    </ul> 
    <p>Il faut t&eacute;l&eacute;charger les fichiers VE-runtime-1.1.0.1.zip et NLpack1-VE-runtime-1.1.0.1.zip &agrave; partir du site officiel du plug-in et d&eacute;compresser le contenu de ces deux archives dans un r&eacute;pertoire du syst&egrave;me. Il suffit alors de copier les r&eacute;pertoires features et plugins d&eacute;compress&eacute;s dans le r&eacute;pertoire d'installation d'Eclipse. </p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_17_3_2">17.3.2. 
      <!--nchpfin-->Mise en oeuvre et pr&eacute;sentation rapide</a></h3> 
    <p>Dans un projet Java existant, il faut cr&eacute;er une nouvelle entit&eacute; de type &laquo;Java / Classe Visuelle&raquo;.</p> 
-   <p align="center"><img src="images/gui032.png" width="340" height="325"></p> 
+   <p align="center"><img src="images/gui032.png" width="340" height="325" /></p> 
    <p>La premi&egrave;re page de l'assistant permet de fournir des informations sur la classe Java qui sera g&eacute;n&eacute;r&eacute;e.</p> 
-   <p align="center"><img width="654" height="530" src="images/gui011.png"></p> 
+   <p align="center"><img width="654" height="530" src="images/gui011.png" /></p> 
    <p>Il faut saisir le nom de la classe et renseigner les informations utiles (packages, style, super classe), puis cliquer sur le bouton &laquo;&nbsp;Terminer&nbsp;&raquo;.</p> 
    <p>L'assistant a g&eacute;n&eacute;r&eacute; une classe Java qui s'ouvre dans un &eacute;diteur particulier, l' &laquo;Editeur Visuel&raquo;. Le lancement de cet &eacute;diteur n&eacute;cessite le lancement d'une machine virtuelle d&eacute;di&eacute;e. </p> 
-   <p align="center"><img src="images/gui033.png" width="442" height="212"></p> 
-   <p>Il est possible d'&eacute;diter cette classe avec l'&eacute;diteur de code Java ou gr&acirc;ce au plug-in VE de l'&eacute;diter avec l' "Editeur Visuel".</p> 
-   <p align="center"><img width="543" height="97" src="images/gui012.png"></p> 
+   <p align="center"><img src="images/gui033.png" width="442" height="212" /></p> 
+   <p>Il est possible d'&eacute;diter cette classe avec l'&eacute;diteur de code Java ou gr&acirc;ce au plug-in VE de l'&eacute;diter avec l' &quot;Editeur Visuel&quot;.</p> 
+   <p align="center"><img width="543" height="97" src="images/gui012.png" /></p> 
    <p>Lors du lancement de cet &eacute;diteur visuel, si l'erreur ci dessous s'affiche, c&#x91;est que la version du plug-in GEF requise n'est pas install&eacute;e avec Eclipse.</p> 
-   <p align="center"><img width="441" height="168" src="images/gui013.png"></p> 
+   <p align="center"><img width="441" height="168" src="images/gui013.png" /></p> 
    <p>L'&eacute;diteur se charge et s'adapte en fonction du code de la classe en cours d'&eacute;dition.</p> 
-   <p align="center"><img width="451" height="421" src="images/gui014.png"></p> 
+   <p align="center"><img width="451" height="421" src="images/gui014.png" /></p> 
    <p>L'&eacute;diteur se compose de trois parties&nbsp;:</p> 
    <ul type="circle"> 
     <li>En haut, un &eacute;diteur Wysiwyg du composant en cours de d&eacute;veloppement</li> 
@@ -343,47 +345,47 @@ public class TestSWT2 {
     <li>A droite une barre de menu r&eacute;tractable qui permet de s&eacute;lectionner les composants &agrave; utiliser, regroup&eacute;s par th&egrave;mes </li> 
    </ul> 
    <p>Une fois le chargement termin&eacute;, l'&eacute;diteur Wysiwyg affiche le rendu le composant en cours d'&eacute;dition.</p> 
-   <p align="center"><img src="images/gui034.png" width="435" height="287"> </p> 
+   <p align="center"><img src="images/gui034.png" width="435" height="287" /> </p> 
    <p>La s&eacute;lection d'un composant dans l'&eacute;diteur Wysiwyg affiche le code correspondant dans l'&eacute;diteur de code.</p> 
-   <p align="center"><img width="395" height="434" src="images/gui015.png"></p> 
+   <p align="center"><img width="395" height="434" src="images/gui015.png" /></p> 
    <p>La vue &laquo;&nbsp;Propri&eacute;t&eacute;s&nbsp;&raquo; affiche les propri&eacute;t&eacute;s du composant actuellement s&eacute;lectionn&eacute; dans l'&eacute;diteur.</p> 
-   <p align="center"><img width="395" height="223" src="images/gui016.png"></p> 
+   <p align="center"><img width="395" height="223" src="images/gui016.png" /></p> 
    <p>La vue &laquo;&nbsp;Beans Java&nbsp;&raquo; affiche sous la forme d'une arborescence les diff&eacute;rents &eacute;l&eacute;ments qui constituent le composant en cours de d&eacute;veloppement.</p> 
-   <p align="center"><img width="243" height="72" src="images/gui017.png"></p> 
+   <p align="center"><img width="243" height="72" src="images/gui017.png" /></p> 
    <p>La s&eacute;lection d'un &eacute;l&eacute;ment dans l'arborescence s&eacute;lectionne le composant dans l'&eacute;diteur Wysiwyg et ces propri&eacute;t&eacute;s sont affich&eacute;es dans la vue &laquo;&nbsp;Propri&eacute;t&eacute;s&nbsp;&raquo;.</p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_17_3_3">17.3.3. 
      <!--nchpfin-->L'ajout d'&eacute;l&eacute;ments</a></h3> 
    <p>Pour ajouter un nouvel &eacute;l&eacute;ment dans le composant en cours de d&eacute;veloppement, il faut afficher la palette en laissant le curseur de la souris sur la barre de menu r&eacute;tractable.</p> 
-   <p align="center"><img src="images/gui035.png" width="436" height="512"> </p> 
+   <p align="center"><img src="images/gui035.png" width="436" height="512" /> </p> 
    <p>Il suffit alors de cliquer sur le composant dans la palette </p> 
-   <p align="center"><img src="images/gui036.png" width="486" height="175"></p> 
+   <p align="center"><img src="images/gui036.png" width="486" height="175" /></p> 
    <p>puis de cliquer &agrave; sa position sur le composant.</p> 
-   <p align="center"><img width="389" height="297" src="images/gui018.png"></p> 
+   <p align="center"><img width="389" height="297" src="images/gui018.png" /></p> 
    <p>La localisation du nouvel &eacute;l&eacute;ment est facilit&eacute;e par l'affichage des zones du gestionnaire de positionnement du composant survol&eacute;es par la souris (dans l'exemple ci dessus un BorderLayout).</p> 
    <p>Une fois le composant ajout&eacute;, une bo&icirc;te de dialogue permet de saisir le nom du nouveau composant.</p> 
-   <p align="center"><img src="images/gui037.png" width="308" height="204"> </p> 
+   <p align="center"><img src="images/gui037.png" width="308" height="204" /> </p> 
    <p>Le code correspondant au composant est ajout&eacute; et le composant s'affiche.</p> 
-   <p align="center"><img src="images/gui038.png" width="371" height="361"> </p> 
+   <p align="center"><img src="images/gui038.png" width="371" height="361" /> </p> 
    <p>Les propri&eacute;t&eacute;s peuvent &ecirc;tre mises &agrave; jour, par exemple&nbsp;: </p> 
-   <p align="center"><img width="399" height="537" src="images/gui020.png"></p> 
+   <p align="center"><img width="399" height="537" src="images/gui020.png" /></p> 
    <p>L'ajout d'un autre composant est tout aussi facile&nbsp;: par exemple, ajouter un composant JLabel dans la partie North du gestionnaire de positionnement. Ces propri&eacute;t&eacute;s peuvent aussi &ecirc;tre modifi&eacute;es en fonction des besoins : </p> 
-   <p align="center"><img src="images/gui039.png" width="325" height="266"></p> 
+   <p align="center"><img src="images/gui039.png" width="325" height="266" /></p> 
    <p>L'&eacute;diteur Wisywig affiche le r&eacute;sultat &nbsp;: </p> 
-   <p align="center"><img width="353" height="257" src="images/gui021.png"></p> 
+   <p align="center"><img width="353" height="257" src="images/gui021.png" /></p> 
    <p>L'ajout d'un conteneur ce fait de la m&ecirc;me fa&ccedil;on que celle d'un composant. Dans les propri&eacute;t&eacute;s, il est possible de modifier le gestionnaire de positionnement d&eacute;fini par d&eacute;faut pour ce conteneur en modifiant sa propri&eacute;t&eacute; layout.</p> 
-   <p align="center"><img width="421" height="266" src="images/gui022.png"></p> 
+   <p align="center"><img width="421" height="266" src="images/gui022.png" /></p> 
    <p>Il est possible de d&eacute;placer un composant d'un conteneur vers un autre. Il suffit de faire un cliquer/glisser du composant vers le nouveau conteneur.</p> 
    <p>Exemple&nbsp;: d&eacute;placement du bouton dans la partie East du gestionnaire de positionnement BorderLayout</p> 
-   <p align="center"><img width="356" height="231" src="images/gui023.png"></p> 
-   <p align="center"><img width="355" height="220" src="images/gui024.png"></p> 
+   <p align="center"><img width="356" height="231" src="images/gui023.png" /></p> 
+   <p align="center"><img width="355" height="220" src="images/gui024.png" /></p> 
    <p>Exemple&nbsp;: d&eacute;placement du bouton dans le panneau ins&eacute;r&eacute; dans la partie South</p> 
-   <p align="center"><img width="354" height="224" src="images/gui025.png"></p> 
-   <p align="center"><img width="356" height="208" src="images/gui026.png"></p> 
+   <p align="center"><img width="354" height="224" src="images/gui025.png" /></p> 
+   <p align="center"><img width="356" height="208" src="images/gui026.png" /></p> 
    <p>La mise en forme des composants est tr&egrave;s intuitive et tr&egrave;s facile d'emploi notamment gr&acirc;ce &agrave; un affichage particuli&egrave;rement pratique des gestionnaires de positionnement de chacun des conteneurs.</p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_17_3_4">17.3.4. 
      <!--nchpfin-->La gestion des &eacute;v&eacute;nements</a></h3> 
    <p>Pour ajouter la gestion d'un &eacute;v&eacute;nement particulier d'un composant, il faut utiliser l'option &laquo;&nbsp;Ev&eacute;nements&nbsp;&raquo; du menu contextuel de ce composant.</p> 
@@ -393,14 +395,14 @@ public class TestSWT2 {
     <li>Utiliser l'option &laquo;&nbsp;Ev&eacute;nements&nbsp;&raquo; de son menu contextuel</li> 
     <li>Et s&eacute;lectionner l'option &laquo;&nbsp;actionPerformed&nbsp;&raquo;</li> 
    </ul> 
-   <p align="center"><img src="images/gui040.png" width="405" height="110"></p> 
+   <p align="center"><img src="images/gui040.png" width="405" height="110" /></p> 
    <p>Le morceau de code correspondant est automatiquement g&eacute;n&eacute;r&eacute;.</p> 
-   <p align="center"><img width="650" height="144" src="images/gui027.png"></p> 
+   <p align="center"><img width="650" height="144" src="images/gui027.png" /></p> 
    <p>Une t&acirc;che de type &laquo;&nbsp;A faire&nbsp;&raquo; (TODO) est cr&eacute;&eacute;e pour rappeler au d&eacute;veloppeur que cette m&eacute;thode a &eacute;t&eacute; g&eacute;n&eacute;r&eacute;e automatiquement et qu'il faut la compl&eacute;ter avec le code ad&eacute;quat.</p> 
    <p>Il est par exemple possible de remplacer l'affichage du nom de la m&eacute;thode sur la sortie standard par une demande de l'arr&ecirc;t de l'application.</p> 
-   <p align="center"><img width="649" height="139" src="images/gui028.png"></p> 
+   <p align="center"><img width="649" height="139" src="images/gui028.png" /></p> 
    <p>Pour pouvoir d&eacute;finir un gestionnaire pour un des autres gestionnaires d'&eacute;v&eacute;nements, il suffit d'utiliser l'option &laquo;&nbsp;Ev&eacute;nements / Ajouter des &eacute;v&eacute;nements&nbsp;&raquo; du menu contextuel. Une boite de dialogue permet alors de s&eacute;lectionner l'&eacute;v&eacute;nement d&eacute;sir&eacute;.</p> 
-   <p align="center"><img width="568" height="303" src="images/gui029.png"></p> 
+   <p align="center"><img width="568" height="303" src="images/gui029.png" /></p> 
    <p>Il suffit alors de s&eacute;lectionner&nbsp;:</p> 
    <ul type="circle"> 
     <li>soit un type d'&eacute;v&eacute;nement (par exemple Touche)&nbsp;: dans ce cas les trois m&eacute;thodes correspondant aux trois &eacute;v&eacute;nements du listener correspondant seront g&eacute;n&eacute;r&eacute;es</li> 
@@ -408,15 +410,15 @@ public class TestSWT2 {
    </ul> 
    <p>Un fois qu'un gestionnaire est d&eacute;fini, une petite ic&ocirc;ne en forme de lunette appara&icirc;t en haut &agrave; gauche du gestionnaire.</p> 
    <p>Si le gestionnaire d'&eacute;v&eacute;nement est d&eacute;j&agrave; partiellement impl&eacute;ment&eacute; pour un &eacute;v&eacute;nement particulier, alors lors de la s&eacute;lection d'un autre &eacute;v&eacute;nement, VE propose d'utiliser le gestionnaire existant.</p> 
-   <p align="center"><img width="575" height="304" src="images/gui030.png"></p> 
+   <p align="center"><img width="575" height="304" src="images/gui030.png" /></p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_17_3_5">17.3.5. 
      <!--nchpfin-->Ex&eacute;cution</a></h3> 
    <p>Si l'application contient une m&eacute;thode main(), il suffit de demander l'ex&eacute;cution de cette classe.</p> 
    <p>Dans l'exemple ci dessous, la classe ne poss&egrave;de pas de m&eacute;thode main(). Il suffit d'&eacute;crire une classe qui va instancier un objet de type du composant cr&eacute;&eacute; et qui va l'afficher</p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple :</td> 
      </tr> 
@@ -428,28 +430,28 @@ public class TestSWT2 {
   }
 }</code></pre> </td> 
      </tr> 
-    </tbody>
+    </tbody> 
    </table> 
-   <br> 
-   <p align="center"><img width="300" height="150" src="images/gui031.png"></p> 
+   <br /> 
+   <p align="center"><img width="300" height="150" src="images/gui031.png" /></p> 
    <p>Un clic sur le bouton &laquo;&nbsp;Quitter&nbsp;&raquo; ferme l'application.</p> 
    <p>Il est aussi possible de demander l'ex&eacute;cution sous le contr&ocirc;le du d&eacute;bogueur comme pour une toute autre application.</p> 
-   <p>Dans les Pr&eacute;f&eacute;rences, il est possible de modifier certains param&egrave;tres du plug-in en s&eacute;lectionnant dans l'arborescence "Java/Editeur Visuel". </p> 
-   <p align="center"><img src="images/gui041.png" width="600" height="466"> </p> 
+   <p>Dans les Pr&eacute;f&eacute;rences, il est possible de modifier certains param&egrave;tres du plug-in en s&eacute;lectionnant dans l'arborescence &quot;Java/Editeur Visuel&quot;. </p> 
+   <p align="center"><img src="images/gui041.png" width="600" height="466" /> </p> 
    <p>&nbsp;</p> 
    <p>&nbsp;</p> 
   </div> 
-  <!--PIED-->
-  <hr> 
+  <!--PIED--> 
+  <hr /> 
   <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
    <tbody> 
     <tr> 
-     <td rowspan="2" align="center" width="50">&nbsp;</td>
-     <td rowspan="2" align="center" width="50"> <a href="chap016.htm" alt="16.  Des plug-ins pour le d&eacute;veloppement avec Java"> <img src="FlecheG.gif" alt="16.  Des plug-ins pour le d&eacute;veloppement avec Java" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center" width="50"> <a href="chap018.htm" alt="18. Le plug-in TPTP (Test &amp; Performance Tools Platform)"> <img src="FlecheD.gif" alt="18. Le plug-in TPTP (Test &amp; Performance Tools Platform)" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap016.htm" alt="16.  Des plug-ins pour le d&eacute;veloppement avec Java"> <img src="FlecheG.gif" alt="16.  Des plug-ins pour le d&eacute;veloppement avec Java" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap018.htm" alt="18. Le plug-in TPTP (Test &amp; Performance Tools Platform)"> <img src="FlecheD.gif" alt="18. Le plug-in TPTP (Test &amp; Performance Tools Platform)" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40" /> </a> </td> 
      <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
      <td rowspan="2" align="center" valign="middle"> <script language="JavaScript1.1">
 <!--
@@ -468,7 +470,7 @@ hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre aud
 //-->
 </script> 
       <noscript> 
-       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience"></a> 
+       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience" /></a> 
       </noscript> 
       <!--//--> </td> 
     </tr> 
@@ -476,6 +478,6 @@ hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre aud
      <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
     </tr> 
    </tbody> 
-  </table>   
+  </table>  
  </body>
 </html>

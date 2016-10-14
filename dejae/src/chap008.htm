@@ -1,26 +1,26 @@
 <html>
  <head> 
   <title>Deboguer du code java</title> 
-  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1"> 
-  <meta name="description" content=""> 
-  <meta name="keywords" content="java tutorial cours dej eclipse"> 
-  <meta name="robots" content="all"> 
-  <meta name="revisit-after" content="2 months"> 
-  <meta http-equiv="Content-Language" content="fr-FX"> 
-  <meta name="author" content="Jean Michel DOUDOUX"> 
-  <link href="dej_style.css" rel="stylesheet" type="text/css"> 
- </head>
+  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" /> 
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="java tutorial cours dej eclipse" /> 
+  <meta name="robots" content="all" /> 
+  <meta name="revisit-after" content="2 months" /> 
+  <meta http-equiv="Content-Language" content="fr-FX" /> 
+  <meta name="author" content="Jean Michel DOUDOUX" /> 
+  <link href="dej_style.css" rel="stylesheet" type="text/css" /> 
+ </head> 
  <body> 
   <!--ENTETE--> 
   <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
    <tbody> 
     <tr> 
-     <td rowspan="2" align="center" width="50">&nbsp;</td>
-     <td rowspan="2" align="center" width="50"> <a href="chap007.htm" alt="7.   Le Java Development Tooling (JDT)"> <img src="FlecheG.gif" alt="7.   Le Java Development Tooling (JDT)" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center" width="50"> <a href="chap009.htm" alt="9. Le refactoring"> <img src="FlecheD.gif" alt="9. Le refactoring" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap007.htm" alt="7.   Le Java Development Tooling (JDT)"> <img src="FlecheG.gif" alt="7.   Le Java Development Tooling (JDT)" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap009.htm" alt="9. Le refactoring"> <img src="FlecheD.gif" alt="9. Le refactoring" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40" /> </a> </td> 
      <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
     </tr> 
     <tr> 
@@ -28,248 +28,246 @@
     </tr> 
    </tbody> 
   </table> 
-  <hr> 
+  <hr /> 
   <p>&nbsp;</p> 
-  <h1>
-   <!--idrefpage value="deboguer" -->
-   <!--resumetitre value="d&eacute;taille la perspective D&eacute;bogage d&eacute;di&eacute;e &agrave; la recherche et &agrave; la correction des bugs." -->
+  <h1> 
+   <!--idrefpage value="deboguer" --> 
+   <!--resumetitre value="d&eacute;taille la perspective D&eacute;bogage d&eacute;di&eacute;e &agrave; la recherche et &agrave; la correction des bugs." --> 
    <!--nchpdeb--><a name="chap_8">8. 
     <!--nchpfin-->D&eacute;boguer du code Java</a></h1> 
   <p>&nbsp;</p> 
   <p>&nbsp;</p> 
   <p>&nbsp;</p> 
   <div align="justify"> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_8_1">8.1. 
-     <!--nchpfin--> La perspective "Debogage"</a></h2> 
-   <p>Pour d&eacute;boguer du code Java, Eclipse propose une perspective d&eacute;di&eacute;e&nbsp;: la perspective "D&eacute;bogage".</p> 
-   <p>Celle ci est automatiquement affich&eacute;e lorsqu'une application est lanc&eacute;e sous le contr&ocirc;le du d&eacute;bogueur en utilisant le bouton <img width="36" height="22" src="images/debug001.png"> &nbsp;de la barre d'outils. Son principe de fonctionnement est identique au bouton d'ex&eacute;cution situ&eacute; juste &agrave; c&ocirc;t&eacute; de lui.</p> 
-   <p align="center"> <img width="400" height="276" src="images/debug002.png"> &nbsp;</p> 
-   <p>Par d&eacute;faut, la perspective "D&eacute;bogage" affiche quelques vues aussi pr&eacute;sentes dans la perspective Java (les vues "Structure" et "Console") ainsi que l'&eacute;diteur de code Java.</p> 
+     <!--nchpfin--> La perspective &quot;Debogage&quot;</a></h2> 
+   <p>Pour d&eacute;boguer du code Java, Eclipse propose une perspective d&eacute;di&eacute;e&nbsp;: la perspective &quot;D&eacute;bogage&quot;.</p> 
+   <p>Celle ci est automatiquement affich&eacute;e lorsqu'une application est lanc&eacute;e sous le contr&ocirc;le du d&eacute;bogueur en utilisant le bouton <img width="36" height="22" src="images/debug001.png" /> &nbsp;de la barre d'outils. Son principe de fonctionnement est identique au bouton d'ex&eacute;cution situ&eacute; juste &agrave; c&ocirc;t&eacute; de lui.</p> 
+   <p align="center"> <img width="400" height="276" src="images/debug002.png" /> &nbsp;</p> 
+   <p>Par d&eacute;faut, la perspective &quot;D&eacute;bogage&quot; affiche quelques vues aussi pr&eacute;sentes dans la perspective Java (les vues &quot;Structure&quot; et &quot;Console&quot;) ainsi que l'&eacute;diteur de code Java.</p> 
    <p>Elle affiche aussi plusieurs vues particuli&egrave;rement d&eacute;di&eacute;es au d&eacute;bogage.</p> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_8_2">8.2. 
      <!--nchpfin-->Les vues sp&eacute;cifiques au d&eacute;bogage</a></h2> 
    <p>Les vues sp&eacute;cifiques au d&eacute;bogage sont : </p> 
    <ul type="disc"> 
-    <li style="text-align:justify;">la vue "D&eacute;bogage" : affiche sous la forme d'une arborescence, les diff&eacute;rents processus en cours d'ex&eacute;cution ou termin&eacute;s</li> 
-    <li>la vue "Variables"&nbsp;: affiche les variables utilis&eacute;es dans les traitements en cours de d&eacute;bogage </li> 
-    <li style="text-align:justify;">la vue "Points d'arr&ecirc;ts"&nbsp;: affiche la liste des points d'arr&ecirc;ts d&eacute;finis dans l'espace de travail</li> 
-    <li style="text-align:justify;">la vue "Expressions"&nbsp;: permet d'inspecter une expression en fonction du contexte des donn&eacute;es en cours d'ex&eacute;cution </li> 
-    <li style="text-align:justify;">la vue "Affichage"&nbsp;: permet d'afficher le r&eacute;sultat de l'&eacute;valuation d'une expression </li> 
+    <li style="text-align:justify;">la vue &quot;D&eacute;bogage&quot; : affiche sous la forme d'une arborescence, les diff&eacute;rents processus en cours d'ex&eacute;cution ou termin&eacute;s</li> 
+    <li>la vue &quot;Variables&quot;&nbsp;: affiche les variables utilis&eacute;es dans les traitements en cours de d&eacute;bogage </li> 
+    <li style="text-align:justify;">la vue &quot;Points d'arr&ecirc;ts&quot;&nbsp;: affiche la liste des points d'arr&ecirc;ts d&eacute;finis dans l'espace de travail</li> 
+    <li style="text-align:justify;">la vue &quot;Expressions&quot;&nbsp;: permet d'inspecter une expression en fonction du contexte des donn&eacute;es en cours d'ex&eacute;cution </li> 
+    <li style="text-align:justify;">la vue &quot;Affichage&quot;&nbsp;: permet d'afficher le r&eacute;sultat de l'&eacute;valuation d'une expression </li> 
    </ul> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_8_2_1">8.2.1. 
-     <!--nchpfin--> La vue "D&eacute;bogage"</a></h3> 
+     <!--nchpfin--> La vue &quot;D&eacute;bogage&quot;</a></h3> 
    <p>Cette vue affiche sous la forme d'une arborescence, les diff&eacute;rents processus en cours d'ex&eacute;cution ou termin&eacute;s.</p> 
-   <p align="center"><img src="images/debug012.png" width="557" height="191"></p> 
+   <p align="center"><img src="images/debug012.png" width="557" height="191" /></p> 
    <p>Cette vue poss&egrave;de plusieurs ic&ocirc;nes qui permettent d'agir sur les &eacute;l&eacute;ments affich&eacute;s.</p> 
    <table border="1" cellspacing="0" cellpadding="4" width="100%"> 
-    <tbody>
+    <tbody> 
      <tr> 
       <td> <p align="center">Ic&ocirc;ne</p></td> 
       <td> <p>R&ocirc;le</p></td> 
      </tr> 
      <tr> 
-      <td> <p align="center"> <img width="23" height="22" src="images/debug003.png"> </p></td> 
+      <td> <p align="center"> <img width="23" height="22" src="images/debug003.png" /> </p></td> 
       <td> <p>Reprendre l'ex&eacute;cution pr&eacute;c&eacute;demment interrompue</p> </td> 
      </tr> 
      <tr> 
-      <td> <p align="center"> <img width="23" height="23" src="images/debug004.png"> </p></td> 
+      <td> <p align="center"> <img width="23" height="23" src="images/debug004.png" /> </p></td> 
       <td> <p>Interrompre l'ex&eacute;cution du processus</p></td> 
      </tr> 
      <tr> 
-      <td> <p align="center"> <img width="23" height="22" src="images/debug005.png"> </p></td> 
+      <td> <p align="center"> <img width="23" height="22" src="images/debug005.png" /> </p></td> 
       <td> <p>Demande de mettre fin au processus</p></td> 
      </tr> 
      <tr> 
-      <td> <p align="center"> <img width="23" height="22" src="images/debug006.png"> </p></td> 
+      <td> <p align="center"> <img width="23" height="22" src="images/debug006.png" /> </p></td> 
       <td> <p>Enl&egrave;ve de la liste tous les processus qui sont termin&eacute;s</p></td> 
      </tr> 
      <tr> 
-      <td>
-       <div align="center">
-        <img src="images/debug013.png" width="23" height="22"> 
+      <td> 
+       <div align="center"> 
+        <img src="images/debug013.png" width="23" height="22" /> 
        </div></td> 
       <td>&nbsp; </td> 
      </tr> 
      <tr> 
-      <td>
-       <div align="center">
-        <img src="images/debug014.png" width="23" height="22"> 
+      <td> 
+       <div align="center"> 
+        <img src="images/debug014.png" width="23" height="22" /> 
        </div></td> 
       <td>Ex&eacute;cute la ligne courante et arr&ecirc;te l'ex&eacute;cution sur la premi&egrave;re ligne de code incluse dans la premi&egrave;re m&eacute;thode de la ligne courante (raccourci : F5) </td> 
      </tr> 
      <tr> 
-      <td>
-       <div align="center">
-        <img src="images/debug015.png" width="23" height="22"> 
+      <td> 
+       <div align="center"> 
+        <img src="images/debug015.png" width="23" height="22" /> 
        </div></td> 
       <td>Ex&eacute;cute la ligne courante et arr&ecirc;te l'ex&eacute;cution avant la ligne suivante (raccourci : F6) </td> 
      </tr> 
      <tr> 
-      <td>
-       <div align="center">
-        <img src="images/debug016.png" width="23" height="22"> 
+      <td> 
+       <div align="center"> 
+        <img src="images/debug016.png" width="23" height="22" /> 
        </div></td> 
       <td>Ex&eacute;cute le code de la ligne courante jusqu'&agrave; la prochaine instruction return de la m&eacute;thode (raccourci : F7) </td> 
      </tr> 
      <tr> 
-      <td> <p align="center"> <img width="23" height="22" src="images/debug007.png"> </p></td> 
+      <td> <p align="center"> <img width="23" height="22" src="images/debug007.png" /> </p></td> 
       <td> <p>Affiche ou non le nom pleinement qualifi&eacute;s des objets</p></td> 
      </tr> 
-    </tbody>
+    </tbody> 
    </table> 
-   <br> 
+   <br /> 
    <p>L'ex&eacute;cution d'un processus est automatiquement suspendu dans les cas suivants&nbsp;:</p> 
    <ul type="disc"> 
     <li style="text-align:justify;">un point d'arr&ecirc;t est rencontr&eacute;</li> 
     <li style="text-align:justify;">une exception non captur&eacute;e est propag&eacute;e jusqu'au sommet de la pile d'appel</li> 
    </ul> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_8_2_2">8.2.2. 
-     <!--nchpfin--> La vue "Variables"</a></h3> 
+     <!--nchpfin--> La vue &quot;Variables&quot;</a></h3> 
    <p>Cette vue permet de visualiser les valeurs des variables utilis&eacute;es dans les traitements en cours de d&eacute;bogage. Ces valeurs peuvent &ecirc;tre unique si la variable est de type primitive ou former une arborescense contenant chacun des champs si la variable est un objet.</p> 
-   <p align="center"> <img width="297" height="162" src="images/debug008.png"> </p> 
-   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
-    <tbody>
-     <tr> 
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td> 
-      <td><p> La liste des &eacute;l&eacute;ments d'une collection est affich&eacute;e dans la vue &laquo;&nbsp;Variable&nbsp;&raquo; si la variable inspect&eacute;e est une collection. </p> <p align="center"><img src="images/debug039.png" width="404" height="161"></p> <p align="justify"> Le bouton <img src="images/debug040.png" width="23" height="22"> permet d'afficher le contenu des &eacute;l&eacute;ments de la collections. </p> <p align="center"><img src="images/debug041.png" width="352" height="186"></p> </td> 
-     </tr> 
-    </tbody>
-   </table> 
+   <p align="center"> <img width="297" height="162" src="images/debug008.png" /> </p> 
+   <div class="eclipse30"> 
+    <p> La liste des &eacute;l&eacute;ments d'une collection est affich&eacute;e dans la vue &laquo;&nbsp;Variable&nbsp;&raquo; si la variable inspect&eacute;e est une collection. </p> 
+    <p align="center"><img src="images/debug039.png" width="404" height="161" /></p> 
+    <p align="justify"> Le bouton <img src="images/debug040.png" width="23" height="22" /> permet d'afficher le contenu des &eacute;l&eacute;ments de la collections. </p> 
+    <p align="center"><img src="images/debug041.png" width="352" height="186" /></p> 
+   </div> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_8_2_3">8.2.3. 
-     <!--nchpfin--> La vue "Points d'arr&ecirc;ts"</a></h3> 
+     <!--nchpfin--> La vue &quot;Points d'arr&ecirc;ts&quot;</a></h3> 
    <p>Cette vue permet de recenser tous les points d'arr&ecirc;ts d&eacute;finis dans l'espace de travail.</p> 
-   <p align="center"><img src="images/debug017.png" width="311" height="88"></p> 
-   <p>Un double clic sur un des points d'arr&ecirc;ts permet d'ouvrir l'&eacute;diteur de code directement sur la ligne ou le point d'arr&ecirc;t est d&eacute;fini. Cette action est identique &agrave; l'utilisation de l'option "Acc&eacute;der au fichier" du menu contextuel ou &agrave; un clic sur le bouton <img src="images/debug026.png" width="23" height="22"> de la barre de titre de la vue.</p> 
+   <p align="center"><img src="images/debug017.png" width="311" height="88" /></p> 
+   <p>Un double clic sur un des points d'arr&ecirc;ts permet d'ouvrir l'&eacute;diteur de code directement sur la ligne ou le point d'arr&ecirc;t est d&eacute;fini. Cette action est identique &agrave; l'utilisation de l'option &quot;Acc&eacute;der au fichier&quot; du menu contextuel ou &agrave; un clic sur le bouton <img src="images/debug026.png" width="23" height="22" /> de la barre de titre de la vue.</p> 
    <p>Il est possible gr&acirc;ce au menu contextuel de contr&ocirc;ler les points d'arr&ecirc;ts.</p> 
-   <p>L'option "Nombres d'occurences" permet de pr&eacute;ciser le nombre fois ou le point d'arr&ecirc;t ex&eacute;cut&eacute; sera ignor&eacute; avant qu'il n'int&eacute;rrompe l'ex&eacute;cution. Ceci est particuli&egrave;rement pratique lorsque l'on d&eacute;bogue du code contenu dans une boucle et que l'on connait l'it&eacute;ration qui pose probl&egrave;me.</p> 
-   <p>Lors du clic sur l'option "Nombres d'occurences", une bo&icirc;te de dialogue permet de pr&eacute;ciser le nombre de passage sur le point d'arr&ecirc;t &agrave; ignorer.</p> 
-   <p align="center"><img src="images/debug018.png" width="399" height="134"></p> 
-   <p>Ce nombre est indiqu&eacute; dans la vue "Points d'arr&ecirc;ts", pr&eacute;c&eacute;d&eacute; du libell&eacute; "nombre d'acc&egrave;s".</p> 
-   <p align="center"><img src="images/debug019.png" width="360" height="105"></p> 
-   <p>Il est possible d'activer ou de d&eacute;sactiver le point d'arr&ecirc;t s&eacute;lectionn&eacute; respectivement grace &agrave; l'option <img src="images/debug022.png" width="14" height="14"> "Activer" ou <img src="images/debug025.png" width="14" height="14"> "D&eacute;sactiver".</p> 
-   <p>L'option "Supprimer" permet de supprimer le point d'arr&ecirc;t s&eacute;lectionn&eacute;. Il est aussi possible d'utiliser le bouton <img src="images/debug020.png" width="23" height="22"> de la barre de titre de la vue.</p> 
-   <p>L'option "Supprimer tout" permet de supprimer tous les points d'arr&ecirc;ts d&eacute;finis. Il est aussi possible d'utiliser le bouton <img src="images/debug021.png" width="23" height="22"> de la barre de titre de la vue.</p> 
-   <p>L'option "Propri&eacute;t&eacute;s ..." permet d'ouvrir une bo&icirc;te de dialogue pour r&eacute;gler les diff&eacute;rents param&egrave;tres du point d'arr&ecirc;t s&eacute;lectionn&eacute;. </p> 
-   <p align="center"><img src="images/debug027.png" width="500" height="422"></p> 
-   <p>Un de ces param&egrave;tres les plus int&eacute;ressants est la possibilit&eacute; de mettre une condition d'activation du point d'arr&ecirc;t. Il suffit pour cela de cocher la case "Activer la condition" et de la saisir dans la zone de texte pr&eacute;vue &agrave; cet effet. Dans cette zone de texte, l'assistant de compl&eacute;tion de code est utilisable.</p> 
-   <p align="center"><img src="images/debug028.png" width="570" height="212"></p> 
-   <p>Dans cette vue, il est aussi possible de demander l'arr&ecirc;t de l'ex&eacute;cution non pas &agrave; l'ex&eacute;cution d'une ligne de code mais &agrave; la lever d'une exception particuli&egrave;re. Pour cela, il suffit de cliquer sur le bouton <img src="images/debug029.png" width="23" height="22">.</p> 
+   <p>L'option &quot;Nombres d'occurences&quot; permet de pr&eacute;ciser le nombre fois ou le point d'arr&ecirc;t ex&eacute;cut&eacute; sera ignor&eacute; avant qu'il n'int&eacute;rrompe l'ex&eacute;cution. Ceci est particuli&egrave;rement pratique lorsque l'on d&eacute;bogue du code contenu dans une boucle et que l'on connait l'it&eacute;ration qui pose probl&egrave;me.</p> 
+   <p>Lors du clic sur l'option &quot;Nombres d'occurences&quot;, une bo&icirc;te de dialogue permet de pr&eacute;ciser le nombre de passage sur le point d'arr&ecirc;t &agrave; ignorer.</p> 
+   <p align="center"><img src="images/debug018.png" width="399" height="134" /></p> 
+   <p>Ce nombre est indiqu&eacute; dans la vue &quot;Points d'arr&ecirc;ts&quot;, pr&eacute;c&eacute;d&eacute; du libell&eacute; &quot;nombre d'acc&egrave;s&quot;.</p> 
+   <p align="center"><img src="images/debug019.png" width="360" height="105" /></p> 
+   <p>Il est possible d'activer ou de d&eacute;sactiver le point d'arr&ecirc;t s&eacute;lectionn&eacute; respectivement grace &agrave; l'option <img src="images/debug022.png" width="14" height="14" /> &quot;Activer&quot; ou <img src="images/debug025.png" width="14" height="14" /> &quot;D&eacute;sactiver&quot;.</p> 
+   <p>L'option &quot;Supprimer&quot; permet de supprimer le point d'arr&ecirc;t s&eacute;lectionn&eacute;. Il est aussi possible d'utiliser le bouton <img src="images/debug020.png" width="23" height="22" /> de la barre de titre de la vue.</p> 
+   <p>L'option &quot;Supprimer tout&quot; permet de supprimer tous les points d'arr&ecirc;ts d&eacute;finis. Il est aussi possible d'utiliser le bouton <img src="images/debug021.png" width="23" height="22" /> de la barre de titre de la vue.</p> 
+   <p>L'option &quot;Propri&eacute;t&eacute;s ...&quot; permet d'ouvrir une bo&icirc;te de dialogue pour r&eacute;gler les diff&eacute;rents param&egrave;tres du point d'arr&ecirc;t s&eacute;lectionn&eacute;. </p> 
+   <p align="center"><img src="images/debug027.png" width="500" height="422" /></p> 
+   <p>Un de ces param&egrave;tres les plus int&eacute;ressants est la possibilit&eacute; de mettre une condition d'activation du point d'arr&ecirc;t. Il suffit pour cela de cocher la case &quot;Activer la condition&quot; et de la saisir dans la zone de texte pr&eacute;vue &agrave; cet effet. Dans cette zone de texte, l'assistant de compl&eacute;tion de code est utilisable.</p> 
+   <p align="center"><img src="images/debug028.png" width="570" height="212" /></p> 
+   <p>Dans cette vue, il est aussi possible de demander l'arr&ecirc;t de l'ex&eacute;cution non pas &agrave; l'ex&eacute;cution d'une ligne de code mais &agrave; la lever d'une exception particuli&egrave;re. Pour cela, il suffit de cliquer sur le bouton <img src="images/debug029.png" width="23" height="22" />.</p> 
    <p>Une bo&icirc;te de dialogue permet de s&eacute;lectionner l'exception concern&eacute;e.</p> 
-   <p align="center"><img src="images/debug030.png" width="341" height="269"></p> 
-   <p align="justify">Le nouveau point d'arr&ecirc;t est affich&eacute; dans la vue "Point d'arr&ecirc;ts".</p> 
-   <p align="center"><img src="images/debug031.png" width="357" height="118"></p> 
+   <p align="center"><img src="images/debug030.png" width="341" height="269" /></p> 
+   <p align="justify">Le nouveau point d'arr&ecirc;t est affich&eacute; dans la vue &quot;Point d'arr&ecirc;ts&quot;.</p> 
+   <p align="center"><img src="images/debug031.png" width="357" height="118" /></p> 
    <p>Il est possible de pr&eacute;ciser si l'arr&ecirc;t se fait sur une exception intercept&eacute;e, non intercept&eacute; ou dans les deux cas. Ce type de point d'arr&ecirc;t poss&egrave;de les m&ecirc;mes propri&eacute;t&eacute;s que les points d'arr&ecirc;ts li&eacute;s &agrave; une ligne de code.</p> 
-   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
-    <tbody>
-     <tr> 
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td> 
-      <td><p>Une case &agrave; cocher devant chaque point d'arr&ecirc;t permet d'activer ou non un point d'arr&ecirc;t.</p> <p align="center"><img src="images/debug042.png" width="424" height="97"></p> <p>Le bouton <img src="images/debug044.png" width="23" height="22"> permet de demander la d&eacute;sactivation de tous les points d'arr&ecirc;ts enregistr&eacute;s dans l'espace de travail.</p> <p align="center"><img src="images/debug045.png" width="422" height="101"> </p></td> 
-     </tr> 
-    </tbody>
-   </table> 
+   <div class="eclipse30"> 
+    <p>Une case &agrave; cocher devant chaque point d'arr&ecirc;t permet d'activer ou non un point d'arr&ecirc;t.</p> 
+    <p align="center"><img src="images/debug042.png" width="424" height="97" /></p> 
+    <p>Le bouton <img src="images/debug044.png" width="23" height="22" /> permet de demander la d&eacute;sactivation de tous les points d'arr&ecirc;ts enregistr&eacute;s dans l'espace de travail.</p> 
+    <p align="center"><img src="images/debug045.png" width="422" height="101" /> </p> 
+   </div> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_8_2_4">8.2.4. 
-     <!--nchpfin--> La vue "Expressions"</a></h3> 
-   <p>La vue "Expressions" permet d'inspecter la valeur d'une expression selon les valeurs des variables dans les traitements en cours de d&eacute;bogage.</p> 
-   <p align="center"><img src="images/debug032.png" width="358" height="129"></p> 
-   <p>Pour ajouter une nouvelle expression, il suffit d'utiliser l'option <img src="images/debug033.png" width="21" height="19"> "Ajouter une expression de contr&ocirc;le Java" du menu contextuel.</p> 
+     <!--nchpfin--> La vue &quot;Expressions&quot;</a></h3> 
+   <p>La vue &quot;Expressions&quot; permet d'inspecter la valeur d'une expression selon les valeurs des variables dans les traitements en cours de d&eacute;bogage.</p> 
+   <p align="center"><img src="images/debug032.png" width="358" height="129" /></p> 
+   <p>Pour ajouter une nouvelle expression, il suffit d'utiliser l'option <img src="images/debug033.png" width="21" height="19" /> &quot;Ajouter une expression de contr&ocirc;le Java&quot; du menu contextuel.</p> 
    <p>Une boite de dialogue permet de saisir l'expression.</p> 
-   <p align="center"><img src="images/debug034.png" width="438" height="180"></p> 
-   <p>La vue "Expressions" affiche le r&eacute;sultat de l'&eacute;valuation en tenant compte du contexte d'ex&eacute;cution.</p> 
-   <p align="center"><img src="images/debug035.png" width="358" height="140"></p> 
-   <p>L'option "R&eacute;&eacute;valuer l'expression de contr&ocirc;le" permet de recalculer la valeur de l'expression.</p> 
-   <p>L'option "Editer l'expression de contr&ocirc;le" permet de modifier l'expression.</p> 
+   <p align="center"><img src="images/debug034.png" width="438" height="180" /></p> 
+   <p>La vue &quot;Expressions&quot; affiche le r&eacute;sultat de l'&eacute;valuation en tenant compte du contexte d'ex&eacute;cution.</p> 
+   <p align="center"><img src="images/debug035.png" width="358" height="140" /></p> 
+   <p>L'option &quot;R&eacute;&eacute;valuer l'expression de contr&ocirc;le&quot; permet de recalculer la valeur de l'expression.</p> 
+   <p>L'option &quot;Editer l'expression de contr&ocirc;le&quot; permet de modifier l'expression.</p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_8_2_5">8.2.5. 
-     <!--nchpfin--> La vue "Affichage"</a></h3> 
-   <p>La vue "Affichage" permet d'afficher le r&eacute;sultat de l'&eacute;valuation d'une expression.</p> 
-   <p>La valeur de l'expression &agrave; afficher peut avoir plusieurs origines. Le plus pratique est de s&eacute;lectionner un morceau de code dans l'&eacute;diteur et d'utiliser l'option "Afficher" du menu contextuel. Le r&eacute;sultat de l'&eacute;valuation est affich&eacute; dans la vue "Affichage".</p> 
-   <p align="center"><img src="images/debug036.png" width="358" height="129"></p> 
-   <p>Il est aussi possible d'ajouter directement une expression dans la vue en utilisant l'option "Assistant de contenu" du menu contextuel.</p> 
-   <p align="center"><img src="images/debug037.png" width="360" height="147"></p> 
+     <!--nchpfin--> La vue &quot;Affichage&quot;</a></h3> 
+   <p>La vue &quot;Affichage&quot; permet d'afficher le r&eacute;sultat de l'&eacute;valuation d'une expression.</p> 
+   <p>La valeur de l'expression &agrave; afficher peut avoir plusieurs origines. Le plus pratique est de s&eacute;lectionner un morceau de code dans l'&eacute;diteur et d'utiliser l'option &quot;Afficher&quot; du menu contextuel. Le r&eacute;sultat de l'&eacute;valuation est affich&eacute; dans la vue &quot;Affichage&quot;.</p> 
+   <p align="center"><img src="images/debug036.png" width="358" height="129" /></p> 
+   <p>Il est aussi possible d'ajouter directement une expression dans la vue en utilisant l'option &quot;Assistant de contenu&quot; du menu contextuel.</p> 
+   <p align="center"><img src="images/debug037.png" width="360" height="147" /></p> 
    <p>Il faut s&eacute;lectionner le membre ou la variable concern&eacute;. </p> 
    <p>Pour obtenir des informations sur sa valeur, il suffit de s&eacute;lectionner l'expression dans la vue. Diverses actions sont alors disponibles avec les boutons dans la barre de titre de la vue ou dans les options du menu contextuel : </p> 
   </div> 
   <ul> 
    <li> 
     <div align="justify">
-     inspecter : ex&eacute;cution et &eacute;valuation dans la vue "Expressions"
+      inspecter : ex&eacute;cution et &eacute;valuation dans la vue &quot;Expressions&quot; 
     </div> </li> 
    <li> 
     <div align="justify">
-      afficher : afficher le r&eacute;sultat dans la vue "Affichage"
+      afficher : afficher le r&eacute;sultat dans la vue &quot;Affichage&quot; 
     </div> </li> 
    <li> 
     <div align="justify">
-      ex&eacute;cuter : ex&eacute;cuter l'expression s&eacute;lectionn&eacute;e. Il est ainsi possible de modifier la valeur d'une variable
+      ex&eacute;cuter : ex&eacute;cuter l'expression s&eacute;lectionn&eacute;e. Il est ainsi possible de modifier la valeur d'une variable 
     </div> </li> 
   </ul> 
   <div align="justify"> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_8_3">8.3. 
      <!--nchpfin-->Mise en oeuvre du d&eacute;bogueur</a></h2> 
    <p>La mise en oeuvre du d&eacute;bogueur reste comparable &agrave; celle propos&eacute;e par d'autres IDE : mise en place d'un point d'arr&ecirc;t, ex&eacute;cution plus ou moins rapide dans le d&eacute;bogueur pour arriver &agrave; cibler le probl&egrave;me.</p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_8_3_1">8.3.1. 
      <!--nchpfin-->Mettre en place un point d'ar&ecirc;t</a></h3> 
    <p>Pour placer un point d'arr&ecirc;t, il suffit dans l'&eacute;diteur de double cliquer dans la barre de gauche pour faire appara&icirc;tre une ic&ocirc;ne ronde bleue.</p> 
-   <p align="center"> <img width="418" height="189" src="images/debug009.png"> </p> 
+   <p align="center"> <img width="418" height="189" src="images/debug009.png" /> </p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_8_3_2">8.3.2. 
      <!--nchpfin-->Ex&eacute;cution dans le d&eacute;bogueur</a></h3> 
-   <p>Pour lancer l'ex&eacute;cution dans le d&eacute;bogueur, il faut ouvrir le menu en cliquant sur fl&egrave;che du bouton <img width="36" height="22" src="images/debug001.png"> </p> 
+   <p>Pour lancer l'ex&eacute;cution dans le d&eacute;bogueur, il faut ouvrir le menu en cliquant sur fl&egrave;che du bouton <img width="36" height="22" src="images/debug001.png" /> </p> 
    <p>Un menu d&eacute;roulant propose de d&eacute;boguer les derni&egrave;res applications ex&eacute;cut&eacute;es ou de lancer le d&eacute;bogage de la source courante en proposant deux options de menu&nbsp;: </p> 
-   <p align="center"> <img width="347" height="96" src="images/debug010.png"> </p> 
+   <p align="center"> <img width="347" height="96" src="images/debug010.png" /> </p> 
    <p>Le plus simple pour lancer le d&eacute;bogage d'une application est de s&eacute;lectionner l'option &laquo;&nbsp;D&eacute;boguer en tant que / Application Java&nbsp;&raquo;</p> 
-   <p>L'option "D&eacute;boguer ... " permet de fournir des param&egrave;tres pr&eacute;cis en vue de l'ex&eacute;cution d'une application sous le d&eacute;bogueur. Un assistant permet de s&eacute;lectionner la classe et de pr&eacute;ciser les param&egrave;tres.</p> 
-   <p align="center"> <img width="600" height="367" src="images/debug011.png"> </p> 
+   <p>L'option &quot;D&eacute;boguer ... &quot; permet de fournir des param&egrave;tres pr&eacute;cis en vue de l'ex&eacute;cution d'une application sous le d&eacute;bogueur. Un assistant permet de s&eacute;lectionner la classe et de pr&eacute;ciser les param&egrave;tres.</p> 
+   <p align="center"> <img width="600" height="367" src="images/debug011.png" /> </p> 
    <p>Il ne reste plus qu'&agrave; mettre en oeuvre les diff&eacute;rentes fonctionnalit&eacute;s propos&eacute;es par les vues de la perpective pour d&eacute;boguer le code. </p> 
-   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
-    <tbody>
-     <tr> 
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td> 
-      <td><p>Lors d'une demande d'inspection d'une variable dans l'&eacute;diteur affichant le code, une bulle d'aide affiche les valeurs de la variable. </p> <p align="center"><img src="images/debug038.png" width="429" height="185"></p> <p>Pour acc&eacute;der &agrave; la vue expression, il suffit de r&eacute;utiliser la combinaison de touche Ctrl+Maj+I. </p> <p>Dans la fen&ecirc;tre affichant le code, l'inspection d'une variable ouvre une bulle d'aide qui affiche en popup les informations sur la collection </p> <p align="center"><img src="images/debug043.png" width="423" height="184"></p></td> 
-     </tr> 
-    </tbody>
-   </table> 
+   <div class="eclipse30"> 
+    <p>Lors d'une demande d'inspection d'une variable dans l'&eacute;diteur affichant le code, une bulle d'aide affiche les valeurs de la variable. </p> 
+    <p align="center"><img src="images/debug038.png" width="429" height="185" /></p> 
+    <p>Pour acc&eacute;der &agrave; la vue expression, il suffit de r&eacute;utiliser la combinaison de touche Ctrl+Maj+I. </p> 
+    <p>Dans la fen&ecirc;tre affichant le code, l'inspection d'une variable ouvre une bulle d'aide qui affiche en popup les informations sur la collection </p> 
+    <p align="center"><img src="images/debug043.png" width="423" height="184" /></p> 
+   </div> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_8_3_3">8.3.3. 
      <!--nchpfin-->Exportation / Importation des points d'arr&ecirc;t</a></h3> 
-   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
-    <tbody>
-     <tr> 
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse32.png" width="64" height="32" align="center"></td> 
-      <td> <p>Il est possible d'exporter dans un fichier les points d'arr&ecirc;ts en utilisant l'option Exporter du menu principal &laquo;&nbsp;Fichier&nbsp;&raquo;. S&eacute;lectionnez &laquo;&nbsp;G&eacute;n&eacute;ral&nbsp;/ Points d'arr&ecirc;t&nbsp;&raquo;</p> <p align="center"><img width="388" height="321" src="images/debug046.png"></p> <p>Cliquez sur le bouton &laquo;&nbsp;Suivant&raquo;</p> <p align="center"><img width="386" height="338" src="images/debug047.png"></p> <p>Il faut s&eacute;lectionner les points d'arr&ecirc;ts &agrave; inclure dans le fichier, saisir le nom du fichier et cliquer sur le bouton &laquo;&nbsp;Terminer&nbsp;&raquo;</p> <p>L'importation se fait en utilisant l'option &laquo;&nbsp;Importation&nbsp;&raquo; du menu principal Fichier</p> <p>Il suffit de s&eacute;lectionner &laquo;&nbsp;G&eacute;n&eacute;ral / Points d'arr&ecirc;t&nbsp;&raquo;</p> <p align="center"><img width="399" height="322" src="images/debug048.png"></p> <p>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;</p></td> 
-     </tr> 
-    </tbody>
-   </table> 
+   <div class="eclipse32"> 
+    <p>Il est possible d'exporter dans un fichier les points d'arr&ecirc;ts en utilisant l'option Exporter du menu principal &laquo;&nbsp;Fichier&nbsp;&raquo;. S&eacute;lectionnez &laquo;&nbsp;G&eacute;n&eacute;ral&nbsp;/ Points d'arr&ecirc;t&nbsp;&raquo;</p> 
+    <p align="center"><img width="388" height="321" src="images/debug046.png" /></p> 
+    <p>Cliquez sur le bouton &laquo;&nbsp;Suivant&raquo;</p> 
+    <p align="center"><img width="386" height="338" src="images/debug047.png" /></p> 
+    <p>Il faut s&eacute;lectionner les points d'arr&ecirc;ts &agrave; inclure dans le fichier, saisir le nom du fichier et cliquer sur le bouton &laquo;&nbsp;Terminer&nbsp;&raquo;</p> 
+    <p>L'importation se fait en utilisant l'option &laquo;&nbsp;Importation&nbsp;&raquo; du menu principal Fichier</p> 
+    <p>Il suffit de s&eacute;lectionner &laquo;&nbsp;G&eacute;n&eacute;ral / Points d'arr&ecirc;t&nbsp;&raquo;</p> 
+    <p align="center"><img width="399" height="322" src="images/debug048.png" /></p> 
+    <p>Cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;</p> 
+   </div> 
   </div> 
-  <!--PIED-->
-  <hr> 
+  <!--PIED--> 
+  <hr /> 
   <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
    <tbody> 
     <tr> 
-     <td rowspan="2" align="center" width="50">&nbsp;</td>
-     <td rowspan="2" align="center" width="50"> <a href="chap007.htm" alt="7.   Le Java Development Tooling (JDT)"> <img src="FlecheG.gif" alt="7.   Le Java Development Tooling (JDT)" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center" width="50"> <a href="chap009.htm" alt="9. Le refactoring"> <img src="FlecheD.gif" alt="9. Le refactoring" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap007.htm" alt="7.   Le Java Development Tooling (JDT)"> <img src="FlecheG.gif" alt="7.   Le Java Development Tooling (JDT)" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap009.htm" alt="9. Le refactoring"> <img src="FlecheD.gif" alt="9. Le refactoring" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40" /> </a> </td> 
      <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
      <td rowspan="2" align="center" valign="middle"> <script language="JavaScript1.1">
 <!--
@@ -288,7 +286,7 @@ hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre aud
 //-->
 </script> 
       <noscript> 
-       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience"></a> 
+       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience" /></a> 
       </noscript> 
       <!--//--> </td> 
     </tr> 
@@ -296,6 +294,6 @@ hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre aud
      <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
     </tr> 
    </tbody> 
-  </table>   
+  </table>  
  </body>
 </html>

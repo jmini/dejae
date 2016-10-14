@@ -1,26 +1,26 @@
 <html>
  <head> 
   <title>XML et Eclipse</title> 
-  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1"> 
-  <meta name="description" content=""> 
-  <meta name="keywords" content="java tutorial cours dej eclipse"> 
-  <meta name="robots" content="all"> 
-  <meta name="revisit-after" content="2 months"> 
-  <meta http-equiv="Content-Language" content="fr-FX"> 
-  <meta name="author" content="Jean Michel DOUDOUX"> 
-  <link href="dej_style.css" rel="stylesheet" type="text/css"> 
- </head>
+  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" /> 
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="java tutorial cours dej eclipse" /> 
+  <meta name="robots" content="all" /> 
+  <meta name="revisit-after" content="2 months" /> 
+  <meta http-equiv="Content-Language" content="fr-FX" /> 
+  <meta name="author" content="Jean Michel DOUDOUX" /> 
+  <link href="dej_style.css" rel="stylesheet" type="text/css" /> 
+ </head> 
  <body> 
   <!--ENTETE--> 
   <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
    <tbody> 
     <tr> 
-     <td rowspan="2" align="center" width="50">&nbsp;</td>
-     <td rowspan="2" align="center" width="50"> <a href="chap020.htm" alt="20.    Le d&eacute;veloppement avec J2EE"> <img src="FlecheG.gif" alt="20.    Le d&eacute;veloppement avec J2EE" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center" width="50"> <a href="chap022.htm" alt="22. Le d&eacute;veloppement d'applications web"> <img src="FlecheD.gif" alt="22. Le d&eacute;veloppement d'applications web" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap020.htm" alt="20.    Le d&eacute;veloppement avec J2EE"> <img src="FlecheG.gif" alt="20.    Le d&eacute;veloppement avec J2EE" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap022.htm" alt="22. Le d&eacute;veloppement d'applications web"> <img src="FlecheD.gif" alt="22. Le d&eacute;veloppement d'applications web" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40" /> </a> </td> 
      <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
     </tr> 
     <tr> 
@@ -28,11 +28,11 @@
     </tr> 
    </tbody> 
   </table> 
-  <hr> 
+  <hr /> 
   <p>&nbsp;</p> 
-  <h1>
-   <!--idrefpage value="jaxb" -->
-   <!--resumetitre value="d&eacute;taille l'utilisation de plug-ins facilitant la mise en oeuvre de XML avec Eclipse." -->
+  <h1> 
+   <!--idrefpage value="jaxb" --> 
+   <!--resumetitre value="d&eacute;taille l'utilisation de plug-ins facilitant la mise en oeuvre de XML avec Eclipse." --> 
    <!--nchpdeb--><a name="chap_21">21. 
     <!--nchpfin-->XML et Eclipse</a></h1> 
   <p>&nbsp;</p> 
@@ -47,25 +47,25 @@
    </ul> 
    <!--listesectionfin--> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_21_1">21.1. 
      <!--nchpfin-->JAXB et Eclipse</a></h2> 
    <p>JAXB est l'acronyme de Java Architecture for XML Binding. Le but de l'API et des sp&eacute;cifications JAXB est de faciliter la manipulation d'un document XML en g&eacute;n&eacute;rant un ensemble de classes qui fournissent un niveau d'abstraction plus &eacute;lev&eacute; que l'utilisation de JAXP (SAX ou DOM). Avec ces deux API, toute la logique de traitements des donn&eacute;es contenues dans le document est &agrave; &eacute;crire.</p> 
    <p>JAXB au contraire fournit un outil qui analyse un sch&eacute;ma XML et g&eacute;n&egrave;re &agrave; partir de ce dernier un ensemble de classes qui vont encapsuler les traitements de manipulation du document.</p> 
    <p>Pour pouvoir utiliser JAXB, il est n&eacute;cessaire d'installer le Java Web Services Developer Pack 1.3. Dans le cas de l'utilisation d'un JDK 1.4, attention de bien suivre les instructions fournies &agrave; la fin de l'installation.</p> 
-   <p align="center"><img width="600" height="315" src="images/jaxb001.png"></p> 
-   <p>Il est aussi n&eacute;cessaire de d&eacute;finir deux variables d'environnement syst&egrave;me (sous Windows 2000&nbsp;: menu "Param&egrave;tres / Panneau de configuration / Syst&egrave;me", s&eacute;lectionner l'onglet "avanc&eacute;", puis cliquer sur le bouton "variables d'environnement" )&nbsp;: </p> 
+   <p align="center"><img width="600" height="315" src="images/jaxb001.png" /></p> 
+   <p>Il est aussi n&eacute;cessaire de d&eacute;finir deux variables d'environnement syst&egrave;me (sous Windows 2000&nbsp;: menu &quot;Param&egrave;tres / Panneau de configuration / Syst&egrave;me&quot;, s&eacute;lectionner l'onglet &quot;avanc&eacute;&quot;, puis cliquer sur le bouton &quot;variables d'environnement&quot; )&nbsp;: </p> 
    <p>JAVA_HOME&nbsp;dont la valeur doit correspondre au r&eacute;pertoire d'installation du JDK&nbsp;:</p> 
-   <p align="center"><img width="362" height="123" src="images/jaxb002.png"></p> 
+   <p align="center"><img width="362" height="123" src="images/jaxb002.png" /></p> 
    <p>JAXB_HOME dont la valeur doit correspondre au r&eacute;pertoire dans lequel le JWSDP est install&eacute;&nbsp;:</p> 
-   <p align="center"><img width="362" height="124" src="images/jaxb003.png"></p> 
+   <p align="center"><img width="362" height="124" src="images/jaxb003.png" /></p> 
    <p>Il existe deux moyens d'utiliser JAXB avec Eclipse&nbsp;: </p> 
    <ul type="circle"> 
     <li>Cr&eacute;er et configurer une t&acirc;che d'ex&eacute;cution qui va lancer la g&eacute;n&eacute;ration des classes Java via l'outil de JAXB</li> 
     <li>Ex&eacute;cuter Ant fourni avec le JWSDP en tant qu'outil externe dans Eclipse</li> 
    </ul> 
    <table border="1" cellspacing="0" cellpadding="4"> 
-    <tbody>
+    <tbody> 
      <tr> 
       <td>&nbsp; </td> 
       <td><p>Version utilis&eacute;e dans cette section</p></td> 
@@ -82,10 +82,10 @@
       <td><p>JAXB</p></td> 
       <td>1.3</td> 
      </tr> 
-    </tbody>
+    </tbody> 
    </table> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_21_1_1">21.1.1. 
      <!--nchpfin-->Cr&eacute;er et configurer une t&acirc;che d'ex&eacute;cution pour JAXB</a></h3> 
    <p>Il faut cr&eacute;er un nouveau projet, par exemple nomm&eacute; test_jaxb et modifier son chemin de compilation (dans les propri&eacute;t&eacute;s du projet) pour ajouter plusieurs fichiers .jar&nbsp;:</p> 
@@ -93,44 +93,44 @@
     <li>Les fichiers jar ajout&eacute;s dans le r&eacute;pertoire JAVA_HOME\jre\lib\endorsed lors de l'installation du JWSDP</li> 
     <li>Les fichiers jar contenus dans le r&eacute;pertoire JAXB_HOME\jaxb\lib</li> 
    </ul> 
-   <p align="center"><img width="600" height="380" src="images/jaxb004.png"></p> 
+   <p align="center"><img width="600" height="380" src="images/jaxb004.png" /></p> 
    <p>Il faut ensuite cr&eacute;er une nouvelle t&acirc;che d'ex&eacute;cution en utilisant l'option du menu &laquo;&nbsp;Ex&eacute;cuter/Ex&eacute;cuter ...&nbsp;&raquo; et en cliquant sur le bouton &#x93;Nouveau&#x94;.</p> 
-   <p align="center"><img width="600" height="399" src="images/jaxb005.png"></p> 
+   <p align="center"><img width="600" height="399" src="images/jaxb005.png" /></p> 
    <p>Il faut changer le nom, par exemple &laquo;&nbsp;G&eacute;n&eacute;ration des classes JAXB&nbsp;&raquo; et saisir dans le champ Classe Main la valeur &laquo;&nbsp;LauncherBootstrap&nbsp;&raquo;.</p> 
-   <p>Sur l'onglet &laquo;&nbsp;Arguments&nbsp;&raquo;, dans la zone de saisie "Arguments de programme" saisir (bibliotheque.xsd est le nom du fichier qui contient le sch&eacute;ma du document XML) &nbsp;: </p> 
+   <p>Sur l'onglet &laquo;&nbsp;Arguments&nbsp;&raquo;, dans la zone de saisie &quot;Arguments de programme&quot; saisir (bibliotheque.xsd est le nom du fichier qui contient le sch&eacute;ma du document XML) &nbsp;: </p> 
    <p>-verbose xjc bibliotheque.xsd -p com.moi.test.jaxb</p> 
-   <p align="center"> <img width="600" height="461" src="images/jaxb006.png"> </p> 
+   <p align="center"> <img width="600" height="461" src="images/jaxb006.png" /> </p> 
    <p>Sur l'onglet &laquo;&nbsp;Chemin d'acc&egrave;s aux classes&nbsp;&raquo;, d&eacute;cochez &laquo;&nbsp;Utiliser le chemin d'acc&egrave;s aux classes par d&eacute;faut&nbsp;&raquo; puis cliquez sur le bouton &laquo;&nbsp;Avanc&eacute;es&nbsp;&raquo;</p> 
-   <p align="center"> <img width="323" height="202" src="images/jaxb007.png"> </p> 
-   <p>Cliquez sur le bouton &laquo;&nbsp;Ajouter un dossier externe&nbsp;&raquo; puis sur le bouton "Ok" </p> 
-   <p align="center"> <img width="326" height="265" src="images/jaxb008.png"> </p> 
+   <p align="center"> <img width="323" height="202" src="images/jaxb007.png" /> </p> 
+   <p>Cliquez sur le bouton &laquo;&nbsp;Ajouter un dossier externe&nbsp;&raquo; puis sur le bouton &quot;Ok&quot; </p> 
+   <p align="center"> <img width="326" height="265" src="images/jaxb008.png" /> </p> 
    <p>Selectionnez le repertoire %JWSDP%/jwsdp-shared/bin et cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo;</p> 
    <p>Cliquez sur le bouton &laquo;&nbsp;Fermer&nbsp;&raquo;</p> 
-   <p align="center"> <img width="441" height="139" src="images/jaxb009.png"> </p> 
+   <p align="center"> <img width="441" height="139" src="images/jaxb009.png" /> </p> 
    <p>Cliquez sur le bouton &laquo;&nbsp;Oui&nbsp;&raquo;</p> 
    <p>Il faut aussi ajouter le fichier tools.jar pr&eacute;sent dans le r&eacute;pertoire lib du JDK : </p> 
-   <p align="center"> <img width="600" height="480" src="images/jaxb010.png"> </p> 
+   <p align="center"> <img width="600" height="480" src="images/jaxb010.png" /> </p> 
    <p>Si ce fichier n'est pas ajout&eacute;, une exception est lev&eacute;e lors de l'ex&eacute;cution : </p> 
    <p style="text-autospace:none"><span style="color:red;
-background:white;">file:C:/java/jwsdp-1.3/jwsdp-shared/bin/launcher.xml:329: java.io.IOException: Could not find Java(TM) 2 SDK classes. This application cannot run using the Java(TM) 2 JRE. It requires the full SDK.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; at org.apache.commons.launcher.LaunchTask.execute(LaunchTask.java:728)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; at org.apache.tools.ant.Task.perform(Task.java:341)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; at org.apache.tools.ant.Target.execute(Target.java:309)</span></p> 
+background:white;">file:C:/java/jwsdp-1.3/jwsdp-shared/bin/launcher.xml:329: java.io.IOException: Could not find Java(TM) 2 SDK classes. This application cannot run using the Java(TM) 2 JRE. It requires the full SDK.<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; at org.apache.commons.launcher.LaunchTask.execute(LaunchTask.java:728)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; at org.apache.tools.ant.Task.perform(Task.java:341)<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; at org.apache.tools.ant.Target.execute(Target.java:309)</span></p> 
    <p>La configuration est maintenant termin&eacute;e, il faut un sch&eacute;ma qui d&eacute;crit le document XML directement &agrave; la racine du projet, par exemple bibliotheque.xsd.</p> 
-   <p align="center"> <img width="174" height="175" src="images/jaxb011.png"> </p> 
+   <p align="center"> <img width="174" height="175" src="images/jaxb011.png" /> </p> 
    <p>Pour lancer la g&eacute;n&eacute;ration des classes Java par JAXB, il faut utiliser l'option du menu &laquo;&nbsp;Ex&eacute;cuter/Ex&eacute;cuter ...&nbsp;&raquo; et s&eacute;lectionner &laquo;&nbsp;Application Java/Generation de classe JAXB&nbsp;&raquo;</p> 
-   <p align="center"> <img width="560" height="375" src="images/jaxb012.png"> </p> 
+   <p align="center"> <img width="560" height="375" src="images/jaxb012.png" /> </p> 
    <p>La bo&icirc;te de dialogue r&eacute;affiche les param&egrave;tres pr&eacute;c&eacute;demment enregistr&eacute;s : il suffit de cliquer sur le bouton &laquo;&nbsp;Ex&eacute;cuter&nbsp;&raquo;.</p> 
    <p>Les messages issus des traitements sont affich&eacute;s dans la console.</p> 
-   <p align="center"> <img width="429" height="266" src="images/jaxb013.png"> </p> 
+   <p align="center"> <img width="429" height="266" src="images/jaxb013.png" /> </p> 
    <p>Dans la vue &laquo;&nbsp;Packages&nbsp;&raquo;, s&eacute;lectionner le projet test_jaxb et utiliser l'option &laquo;&nbsp;R&eacute;g&eacute;n&eacute;rer&nbsp;&raquo; du menu contextuel pour rafra&icirc;chir le contenu du projet et voir les fichiers g&eacute;n&eacute;r&eacute;s lors des traitements. </p> 
-   <p align="center"> <img width="248" height="384" src="images/jaxb014.png"> </p> 
+   <p align="center"> <img width="248" height="384" src="images/jaxb014.png" /> </p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_21_1_2">21.1.2. 
      <!--nchpfin-->Ex&eacute;cuter Ant en tant qu'outil externe</a></h3> 
    <p>L'ex&eacute;cution de JAXB se fait normalement en utilisant une tache Ant d&eacute;di&eacute;e. </p> 
-   <p align="center"><img width="584" height="347" src="images/jaxb015.png"> </p> 
+   <p align="center"><img width="584" height="347" src="images/jaxb015.png" /> </p> 
    <p>Malheureusement, il y a une incompatibilit&eacute; entre la version de Ant fournie avec Eclipse et celle requise par JAXB. L'ex&eacute;cution d'un build.xml en utilisant Ant fourni avec Eclipse &eacute;choue syst&eacute;matiquement&nbsp;: </p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>R&eacute;sultat de l'ex&eacute;cution : </td> 
      </tr> 
@@ -138,7 +138,7 @@ background:white;">file:C:/java/jwsdp-1.3/jwsdp-shared/bin/launcher.xml:329: jav
       <td> <pre><code><span style="color:blue;
 background:white;">Buildfile: C:\java\eclipse\workspace\test_jaxb\build.xml</span> 
   <span style="color:blue;
-background:white;">compile:</span><br> 
+background:white;">compile:</span><br /> 
   <span style="color:#FF6400;
 background:white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [echo] Compiling the schema external binding file...</span> 
   <span style="color:blue;
@@ -152,54 +152,54 @@ background:white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [xjc] </span
   <span style="color:red; background:white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [xjc] BUILD FAILED: file:C:/java/eclipse/workspace/test_jaxb/build.xml:31: unable to parse the schema. Error messages should have been provided</span> 
   </code><p><code><span style="color:blue;background:white;">Total time: 5 seconds</span></code></p></pre> </td> 
      </tr> 
-    </tbody>
-   </table>
-   <br> 
+    </tbody> 
+   </table> 
+   <br /> 
    <p>Pour r&eacute;soudre ce probl&egrave;me et utiliser Ant, il faut l'ex&eacute;cuter en tant qu'outil externe.</p> 
    <p>Il faut d&eacute;finir le fichier build.xml qui va contenir les diff&eacute;rents traitements &agrave; ex&eacute;cuter par Ant.</p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>R&eacute;sultat de l'ex&eacute;cution : </td> 
      </tr> 
      <tr> 
-      <td> <pre><code>&lt;?xml version="1.0"?&gt;
-&lt;project basedir="." default="compile"&gt;
-  &lt;property name="jwsdp.home" value="C:\java\jwsdp-1.3" /&gt;
-  &lt;property name="java.home" value="C:\java\j2sdk1.4.2_02" /&gt;
+      <td> <pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;project basedir=&quot;.&quot; default=&quot;compile&quot;&gt;
+  &lt;property name=&quot;jwsdp.home&quot; value=&quot;C:\java\jwsdp-1.3&quot; /&gt;
+  &lt;property name=&quot;java.home&quot; value=&quot;C:\java\j2sdk1.4.2_02&quot; /&gt;
 
-  &lt;path id="classpath"&gt;
-    &lt;pathelement path="." /&gt;
-    &lt;fileset dir="${java.home}" includes="jre/lib/endorsed/*.jar" /&gt;
-    &lt;fileset dir="${jwsdp.home}" includes="jaxb/lib/*.jar" /&gt;
-    &lt;fileset dir="${jwsdp.home}" includes="jwsdp-shared/lib/*.jar" /&gt;
-    &lt;fileset dir="${jwsdp.home}" includes="jaxp/lib/**/*.jar" /&gt;
+  &lt;path id=&quot;classpath&quot;&gt;
+    &lt;pathelement path=&quot;.&quot; /&gt;
+    &lt;fileset dir=&quot;${java.home}&quot; includes=&quot;jre/lib/endorsed/*.jar&quot; /&gt;
+    &lt;fileset dir=&quot;${jwsdp.home}&quot; includes=&quot;jaxb/lib/*.jar&quot; /&gt;
+    &lt;fileset dir=&quot;${jwsdp.home}&quot; includes=&quot;jwsdp-shared/lib/*.jar&quot; /&gt;
+    &lt;fileset dir=&quot;${jwsdp.home}&quot; includes=&quot;jaxp/lib/**/*.jar&quot; /&gt;
   &lt;/path&gt;
 
-  &lt;taskdef name="xjc" classname="com.sun.tools.xjc.XJCTask"&gt;
-    &lt;classpath refid="classpath" /&gt;
+  &lt;taskdef name=&quot;xjc&quot; classname=&quot;com.sun.tools.xjc.XJCTask&quot;&gt;
+    &lt;classpath refid=&quot;classpath&quot; /&gt;
   &lt;/taskdef&gt;
 
-  &lt;target name="compile"&gt;
-    &lt;echo message="Generation des classes Java a partir du schema ..."/&gt;
-    &lt;xjc schema="bibliotheque.xsd" target="./src" package="com.moi.test.jaxb"/&gt;
-    &lt;echo message="Compilation des sources ..."/&gt;
-    &lt;javac srcdir="./src" destdir="." debug="on"&gt;
-      &lt;classpath refid="classpath" /&gt;
+  &lt;target name=&quot;compile&quot;&gt;
+    &lt;echo message=&quot;Generation des classes Java a partir du schema ...&quot;/&gt;
+    &lt;xjc schema=&quot;bibliotheque.xsd&quot; target=&quot;./src&quot; package=&quot;com.moi.test.jaxb&quot;/&gt;
+    &lt;echo message=&quot;Compilation des sources ...&quot;/&gt;
+    &lt;javac srcdir=&quot;./src&quot; destdir=&quot;.&quot; debug=&quot;on&quot;&gt;
+      &lt;classpath refid=&quot;classpath&quot; /&gt;
     &lt;/javac&gt;
   &lt;/target&gt;
   
 &lt;/project&gt;</code></pre> </td> 
      </tr> 
-    </tbody>
-   </table>
-   <br> 
+    </tbody> 
+   </table> 
+   <br /> 
    <p>Il faut utiliser l'option du menu &laquo;&nbsp;Ex&eacute;cuter/ Outils externes/Outils externes ...&nbsp;&raquo; et cliquer sur le bouton &laquo;&nbsp;Nouveau&nbsp;&raquo;.</p> 
-   <p align="center"> <img width="653" height="513" src="images/jaxb016.png"> </p> 
+   <p align="center"> <img width="653" height="513" src="images/jaxb016.png" /> </p> 
    <p>Sur l'onglet &laquo;&nbsp;Principal&nbsp;&raquo;, il suffit de s&eacute;lectionner l'emplacement du fichier ant.bat fourni avec le JWSDP, puis de cliquer sur le bouton &laquo;&nbsp;Appliquer&nbsp;&raquo;, puis sur le bouton &laquo;&nbsp;Ex&eacute;cuter&nbsp;&raquo;.</p> 
    <p>Les informations g&eacute;n&eacute;r&eacute;es par Ant au cours de l'ex&eacute;cution sont affich&eacute;es dans la console.</p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>R&eacute;sultat de l'ex&eacute;cution : </td> 
      </tr> 
@@ -216,81 +216,81 @@ compile:
 BUILD SUCCESSFUL
 Total time: 1 minute 4 seconds</code></pre> </td> 
      </tr> 
-    </tbody>
-   </table>
-   <br> 
+    </tbody> 
+   </table> 
+   <br /> 
    <p>Pour voir les fichiers g&eacute;n&eacute;r&eacute;s par JAXB lors de ces traitements, il suffit d'utiliser l'option &laquo;&nbsp;R&eacute;g&eacute;n&eacute;rer&nbsp;&raquo; du menu contextuel du projet dans la vue &laquo;&nbsp;Packages&nbsp;&raquo;.</p> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_21_2">21.2. 
      <!--nchpfin-->Le plug-in WTP pour utiliser XML</a></h2> 
    <p>Le plug-in WTP facilite la manipulation de documents XML.</p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_21_2_1">21.2.1. 
      <!--nchpfin-->Cr&eacute;er un nouveau document XML</a></h3> 
    <p>Il faut cr&eacute;er une nouvelle entit&eacute; de type XML/XML</p> 
-   <p align="center"><img border="0" width="346" height="306" src="images/wtp054.png"></p> 
+   <p align="center"><img border="0" width="346" height="306" src="images/wtp054.png" /></p> 
    <p>Cliquez sur le bouton &laquo; Suivant&nbsp;&raquo;</p> 
-   <p align="center"><img border="0" width="387" height="229" src="images/wtp055.png"></p> 
+   <p align="center"><img border="0" width="387" height="229" src="images/wtp055.png" /></p> 
    <p>S&eacute;lectionnez &laquo;&nbsp;Cr&eacute;er un fichier XML &agrave; partir de rien&nbsp;&raquo; puis cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;</p> 
-   <p align="center"><img border="0" width="340" height="420" src="images/wtp056.png"></p> 
+   <p align="center"><img border="0" width="340" height="420" src="images/wtp056.png" /></p> 
    <p>S&eacute;lectionnez le r&eacute;pertoire qui va contenir le fichier, saisissez son nom et cliquez sur le bouton &laquo;&nbsp;Terminer&nbsp;&raquo;</p> 
    <p>L'&eacute;diteur de documents XML s'ouvre avec le nouveau document cr&eacute;&eacute;.</p> 
-   <p align="center"><img border="0" width="425" height="117" src="images/wtp057.png"></p> 
+   <p align="center"><img border="0" width="425" height="117" src="images/wtp057.png" /></p> 
    <p>L'&eacute;diteur propose une coloration syntaxique du code.</p> 
    <p>La syntaxe du code XML est v&eacute;rifi&eacute;e au fur et &agrave; mesure de la saisie</p> 
-   <p align="center"><img border="0" width="425" height="163" src="images/wtp058.png"></p> 
+   <p align="center"><img border="0" width="425" height="163" src="images/wtp058.png" /></p> 
    <p>L'assistant de code permet de faciliter la saisie du code du document.</p> 
-   <p align="center"><img border="0" width="425" height="144" src="images/wtp059.png"></p> 
+   <p align="center"><img border="0" width="425" height="144" src="images/wtp059.png" /></p> 
    <p>La vue &laquo;&nbsp;Properties&nbsp;&raquo; permet d'afficher les attributs du tag sur lequel est positionn&eacute; le curseur dans l'&eacute;diteur de code</p> 
-   <p align="center"><img border="0" width="393" height="303" src="images/wtp060.png"></p> 
+   <p align="center"><img border="0" width="393" height="303" src="images/wtp060.png" /></p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_21_2_2">21.2.2. 
      <!--nchpfin-->La cr&eacute;ation d'une DTD</a></h3> 
    <p>Il faut cr&eacute;er une nouvelle entit&eacute; du type &laquo;&nbsp;XML/Fichier DTD&nbsp;&raquo;.</p> 
-   <p align="center"><img border="0" width="350" height="310" src="images/wtp061.png"></p> 
-   <p>Cliquez sur le bouton "Suivant" puis s&eacute;lectionnez le r&eacute;pertoire qui va contenir le fichier et saisissez son nom </p> 
-   <p align="center"><img border="0" width="337" height="419" src="images/wtp062.png"></p> 
+   <p align="center"><img border="0" width="350" height="310" src="images/wtp061.png" /></p> 
+   <p>Cliquez sur le bouton &quot;Suivant&quot; puis s&eacute;lectionnez le r&eacute;pertoire qui va contenir le fichier et saisissez son nom </p> 
+   <p align="center"><img border="0" width="337" height="419" src="images/wtp062.png" /></p> 
    <p>Cliquez sur le bouton &laquo;&nbsp;Terminer&nbsp;&raquo; pour g&eacute;n&eacute;rer le fichier et l'ouvrir dans l'&eacute;diteur.</p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_21_2_3">21.2.3. 
      <!--nchpfin-->La cr&eacute;ation d'un sch&eacute;ma </a></h3> 
    <p>Il faut cr&eacute;er une nouvelle entit&eacute; du type &laquo;&nbsp;XML/Sch&eacute;ma XML &nbsp;&raquo;.</p> 
-   <p align="center"><img src="images/wtp086.png" width="339" height="298"></p> 
-   <p>Cliquez sur le bouton "Suivant".</p> 
-   <p align="center"><img src="images/wtp087.png" width="340" height="418"></p> 
-   <p>Saisissez le nom du fichier .xsd et cliquez sur le bouton "Terminer.</p> 
-   <p align="center"><img border="0" width="467" height="162" src="images/wtp063.png"></p> 
-   <p>L'onglet "Graphique" permet d'offir une vision graphique du contenu du document. </p> 
-   <p align="center"><img border="0" width="505" height="357" src="images/wtp064.png"></p> 
+   <p align="center"><img src="images/wtp086.png" width="339" height="298" /></p> 
+   <p>Cliquez sur le bouton &quot;Suivant&quot;.</p> 
+   <p align="center"><img src="images/wtp087.png" width="340" height="418" /></p> 
+   <p>Saisissez le nom du fichier .xsd et cliquez sur le bouton &quot;Terminer.</p> 
+   <p align="center"><img border="0" width="467" height="162" src="images/wtp063.png" /></p> 
+   <p>L'onglet &quot;Graphique&quot; permet d'offir une vision graphique du contenu du document. </p> 
+   <p align="center"><img border="0" width="505" height="357" src="images/wtp064.png" /></p> 
    <p>La vue propri&eacute;t&eacute;s permet d'affiche des informations sur le sch&eacute;ma.</p> 
-   <p align="center"><img src="images/wtp088.png" width="604" height="172"> </p> 
-   <p>En cliquant sur le bouton "Option avanc&eacute;es", une bo&icirc;te de dialogue s'ouvre en affichant des informations sur le sch&eacute;ma.</p> 
-   <p align="center"><img src="images/wtp089.png" width="508" height="269"> </p> 
+   <p align="center"><img src="images/wtp088.png" width="604" height="172" /> </p> 
+   <p>En cliquant sur le bouton &quot;Option avanc&eacute;es&quot;, une bo&icirc;te de dialogue s'ouvre en affichant des informations sur le sch&eacute;ma.</p> 
+   <p align="center"><img src="images/wtp089.png" width="508" height="269" /> </p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_21_2_4">21.2.4. 
      <!--nchpfin-->Les pr&eacute;f&eacute;rences</a></h3> 
    <p>Pour acc&eacute;der aux pr&eacute;f&eacute;rences concernant les fichiers XML, il est possible d'utiliser l'option &laquo;&nbsp;Pr&eacute;f&eacute;rences ... &nbsp;&raquo; du menu &laquo;&nbsp;Fen&ecirc;tre&nbsp;&raquo; ou d'utiliser l'option &laquo;&nbsp;Pr&eacute;f&eacute;rence&nbsp;&raquo; du menu contextuel de l'&eacute;diteur de code XML.</p> 
-   <p align="center"><img border="0" width="590" height="334" src="images/wtp065.png"></p> 
+   <p align="center"><img border="0" width="590" height="334" src="images/wtp065.png" /></p> 
    <p>Cette page permet de s&eacute;lectionner le caract&egrave;re de fin de ligne des documents et la norme d'encodage par d&eacute;faut des documents.</p> 
-   <p align="center"><img border="0" width="618" height="437" src="images/wtp066.png"></p> 
+   <p align="center"><img border="0" width="618" height="437" src="images/wtp066.png" /></p> 
    <p>Cette page permet de configurer certaines r&egrave;gles pour le formatage du code source des documents XML.</p> 
-   <p align="center"><img border="0" width="600" height="334" src="images/wtp067.png"></p> 
+   <p align="center"><img border="0" width="600" height="334" src="images/wtp067.png" /></p> 
    <p>Cette page permet de pr&eacute;ciser les couleurs de chaque &eacute;l&eacute;ments qui peuvent composer un document XML.</p> 
-   <p align="center"><img border="0" width="600" height="420" src="images/wtp068.png"></p> 
+   <p align="center"><img border="0" width="600" height="420" src="images/wtp068.png" /></p> 
    <p>Cette page permet de g&eacute;rer des mod&egrave;les r&eacute;utilisables lors de l'&eacute;dition de documents XML.</p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_21_2_5">21.2.5. 
      <!--nchpfin-->Cr&eacute;ation d'un document XML &agrave; partir d'une DTD</a></h3> 
    <p>L'assistant de cr&eacute;ation d'un document XML propose de le faire &agrave; partir d'une DTD afin de faciliter sa r&eacute;daction</p> 
    <p>Le fichier test.dtd ci-dessous est utilis&eacute; dans les exemples de cette section.</p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple :</td> 
      </tr> 
@@ -301,58 +301,58 @@ Total time: 1 minute 4 seconds</code></pre> </td>
 &lt;!ELEMENT auteur (#PCDATA)&gt; 
 &lt;!ELEMENT parution (#PCDATA)&gt;</code></pre> </td> 
      </tr> 
-    </tbody>
+    </tbody> 
    </table> 
-   <br> 
+   <br /> 
    <p>Il faut cr&eacute;ez une nouvelle entit&eacute; de type XML/XML</p> 
-   <p align="center"><img border="0" width="386" height="225" src="images/wtp069.png"></p> 
+   <p align="center"><img border="0" width="386" height="225" src="images/wtp069.png" /></p> 
    <p>S&eacute;lectionnez &laquo;&nbsp;Cr&eacute;er un fichier XML &agrave; partir d'un fichier DTD&nbsp;&raquo; et cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.</p> 
-   <p align="center"><img border="0" width="384" height="418" src="images/wtp070.png"></p> 
+   <p align="center"><img border="0" width="384" height="418" src="images/wtp070.png" /></p> 
    <p>S&eacute;lectionnez le r&eacute;pertoire qui va contenir le fichier, saisissez son nom et cliquez sur le bouton&nbsp; &laquo;&nbsp;Suivant&nbsp;&raquo;</p> 
-   <p align="center"><img border="0" width="337" height="352" src="images/wtp071.png"></p> 
+   <p align="center"><img border="0" width="337" height="352" src="images/wtp071.png" /></p> 
    <p>S&eacute;lectionnez la dtd &agrave; utiliser et cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;</p> 
-   <p align="center"><img border="0" width="338" height="397" src="images/wtp072.png"></p> 
+   <p align="center"><img border="0" width="338" height="397" src="images/wtp072.png" /></p> 
    <p>S&eacute;lectionnez l'&eacute;l&eacute;ment racine et les options d&eacute;sir&eacute;es puis cliquez sur le bouton &laquo;&nbsp;Terminer&nbsp;&raquo;.</p> 
    <p>L'&eacute;diteur de code s'ouvre avec le document XML g&eacute;n&eacute;r&eacute;</p> 
-   <p align="center"><img border="0" width="438" height="220" src="images/wtp073.png"></p> 
+   <p align="center"><img border="0" width="438" height="220" src="images/wtp073.png" /></p> 
    <p>L'onglet concepteur permet de fournir une vue arbrescente du contenu du document. </p> 
-   <p align="center"><img src="images/wtp090.png" width="438" height="179"></p> 
+   <p align="center"><img src="images/wtp090.png" width="438" height="179" /></p> 
    <p>L'assistant de code propose uniquement les tags d&eacute;finis dans la dtd.</p> 
-   <p align="center"><img border="0" width="439" height="225" src="images/wtp074.png"></p> 
+   <p align="center"><img border="0" width="439" height="225" src="images/wtp074.png" /></p> 
    <p>Le document est dynamiquement v&eacute;rifi&eacute; au fur et &agrave; mesure de la saisie du code du document</p> 
    <blockquote> 
-    <p align="center"><img border="0" width="438" height="223" src="images/wtp075.png"></p> 
+    <p align="center"><img border="0" width="438" height="223" src="images/wtp075.png" /></p> 
    </blockquote> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_21_2_6">21.2.6. 
      <!--nchpfin-->La validation des documents</a></h3> 
    <p>Le plug in WTP propose des fonctionnalit&eacute;s pour valider les documents de type XML, DTD et XML Schema. </p> 
    <p>Cette validation peut &ecirc;tre implicite (lors de la sauvegarde d'un document) ou explicite (&agrave; la demande de l'utilisateur d'Eclipse).</p> 
    <p>La validation explicite peut &ecirc;tre demand&eacute;e en utilisant l'option &laquo;&nbsp;Valider le fichier XXX &nbsp;&raquo; du menu contextuel associ&eacute; &agrave; un document de type XML, DTD et XML Schema.</p> 
    <p>Si le document est valide, un message en informe l'utilisateur.</p> 
-   <p align="center"><img border="0" width="441" height="109" src="images/wtp076.png"></p> 
+   <p align="center"><img border="0" width="441" height="109" src="images/wtp076.png" /></p> 
    <p>Si le document est invalide, un message d'erreur en informe aussi l'utilisateur.</p> 
-   <p align="center"><img border="0" width="441" height="109" src="images/wtp077.png"></p> 
+   <p align="center"><img border="0" width="441" height="109" src="images/wtp077.png" /></p> 
    <p>Les erreurs des documents non valides sont signal&eacute;es dans l'&eacute;diteur de code</p> 
-   <p align="center"><img border="0" width="438" height="158" src="images/wtp078.png"></p> 
+   <p align="center"><img border="0" width="438" height="158" src="images/wtp078.png" /></p> 
    <p>Ces erreurs sont aussi incluses dans la vue &laquo;&nbsp;Erreurs&nbsp;&raquo; au m&ecirc;me titre que les erreurs dans du code Java.</p> 
-   <p align="center"><img border="0" width="603" height="114" src="images/wtp079.png"></p> 
+   <p align="center"><img border="0" width="603" height="114" src="images/wtp079.png" /></p> 
    <p>Il est possible de modifier le mode de fonctionnement de la validation automatique lors de l'enregistrement des documents d'un projet en utilisant les pr&eacute;f&eacute;rences li&eacute;es au projet. </p> 
-   <p align="center"><img border="0" width="600" height="414" src="images/wtp080.png"></p> 
+   <p align="center"><img border="0" width="600" height="414" src="images/wtp080.png" /></p> 
    <p>Il suffit de cocher la case &laquo;&nbsp;Remplacer les pr&eacute;f&eacute;rences de validation &nbsp;&raquo;, de modifier les options voulues et de cliquez sur le bouton &laquo;&nbsp;OK&nbsp;&raquo; pour valider les options.</p> 
   </div> 
-  <!--PIED-->
-  <hr> 
+  <!--PIED--> 
+  <hr /> 
   <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
    <tbody> 
     <tr> 
-     <td rowspan="2" align="center" width="50">&nbsp;</td>
-     <td rowspan="2" align="center" width="50"> <a href="chap020.htm" alt="20.    Le d&eacute;veloppement avec J2EE"> <img src="FlecheG.gif" alt="20.    Le d&eacute;veloppement avec J2EE" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center" width="50"> <a href="chap022.htm" alt="22. Le d&eacute;veloppement d'applications web"> <img src="FlecheD.gif" alt="22. Le d&eacute;veloppement d'applications web" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap020.htm" alt="20.    Le d&eacute;veloppement avec J2EE"> <img src="FlecheG.gif" alt="20.    Le d&eacute;veloppement avec J2EE" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap022.htm" alt="22. Le d&eacute;veloppement d'applications web"> <img src="FlecheD.gif" alt="22. Le d&eacute;veloppement d'applications web" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40" /> </a> </td> 
      <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
      <td rowspan="2" align="center" valign="middle"> <script language="JavaScript1.1">
 <!--
@@ -371,7 +371,7 @@ hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre aud
 //-->
 </script> 
       <noscript> 
-       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience"></a> 
+       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience" /></a> 
       </noscript> 
       <!--//--> </td> 
     </tr> 
@@ -379,6 +379,6 @@ hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre aud
      <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
     </tr> 
    </tbody> 
-  </table>   
+  </table>  
  </body>
 </html>

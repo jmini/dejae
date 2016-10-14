@@ -1,26 +1,26 @@
 <html>
  <head> 
   <title>Java Server Faces et Eclipse</title> 
-  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1"> 
-  <meta name="description" content=""> 
-  <meta name="keywords" content="java tutorial cours dej eclipse"> 
-  <meta name="robots" content="all"> 
-  <meta name="revisit-after" content="2 months"> 
-  <meta http-equiv="Content-Language" content="fr-FX"> 
-  <meta name="author" content="Jean Michel DOUDOUX"> 
-  <link href="dej_style.css" rel="stylesheet" type="text/css"> 
- </head>
+  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" /> 
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="java tutorial cours dej eclipse" /> 
+  <meta name="robots" content="all" /> 
+  <meta name="revisit-after" content="2 months" /> 
+  <meta http-equiv="Content-Language" content="fr-FX" /> 
+  <meta name="author" content="Jean Michel DOUDOUX" /> 
+  <link href="dej_style.css" rel="stylesheet" type="text/css" /> 
+ </head> 
  <body> 
   <!--ENTETE--> 
   <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
    <tbody> 
     <tr> 
-     <td rowspan="2" align="center" width="50">&nbsp;</td>
-     <td rowspan="2" align="center" width="50"> <a href="chap023.htm" alt="23.  Struts et Eclipse"> <img src="FlecheG.gif" alt="23.  Struts et Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center" width="50"> <a href="chap025.htm" alt="25.  EJB et Eclipse"> <img src="FlecheD.gif" alt="25.  EJB et Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap023.htm" alt="23.  Struts et Eclipse"> <img src="FlecheG.gif" alt="23.  Struts et Eclipse" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap025.htm" alt="25.  EJB et Eclipse"> <img src="FlecheD.gif" alt="25.  EJB et Eclipse" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40" /> </a> </td> 
      <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
     </tr> 
     <tr> 
@@ -28,11 +28,11 @@
     </tr> 
    </tbody> 
   </table> 
-  <hr> 
+  <hr /> 
   <p>&nbsp;</p> 
-  <h1>
-   <!--idrefpage value="jsf" -->
-   <!--resumetitre value="d&eacute;taille au travers d'un exemple l'utilisation d'Eclipse pour d&eacute;velopper une application web utilisant JSF." -->
+  <h1> 
+   <!--idrefpage value="jsf" --> 
+   <!--resumetitre value="d&eacute;taille au travers d'un exemple l'utilisation d'Eclipse pour d&eacute;velopper une application web utilisant JSF." --> 
    <!--nchpdeb--><a name="chap_24">24. 
     <!--nchpfin--> Java Server Faces et Eclipse</a></h1> 
   <p>&nbsp;</p> 
@@ -47,13 +47,13 @@
    </ul> 
    <!--listesectionfin--> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_24_1">24.1. 
      <!--nchpfin--> Utilisation de JSF sans plug-in d&eacute;di&eacute;</a></h2> 
-   <p>En attendant un plug-in fonctionnel d&eacute;di&eacute; &agrave; l'utilisation de JSF dans Eclipse, il est possible de d&eacute;velopper une application Web utilisant JSF avec Eclipse. Cependant, toutes les op&eacute;rations doivent &ecirc;tre r&eacute;alis&eacute;es "&agrave; la main".</p> 
+   <p>En attendant un plug-in fonctionnel d&eacute;di&eacute; &agrave; l'utilisation de JSF dans Eclipse, il est possible de d&eacute;velopper une application Web utilisant JSF avec Eclipse. Cependant, toutes les op&eacute;rations doivent &ecirc;tre r&eacute;alis&eacute;es &quot;&agrave; la main&quot;.</p> 
    <p style="text-align:justify">Cette section va d&eacute;velopper une petite application constitu&eacute;e de deux pages. La premi&egrave;re va demander le nom de l'utilisateur et la seconde afficher un message de bienvenue en mettant&nbsp; en oeuvre les outils suivants&nbsp;sous Windows : </p> 
    <table border="1" cellspacing="0" cellpadding="4"> 
-    <tbody>
+    <tbody> 
      <tr> 
       <td valign="top"> <p>Outil</p></td> 
       <td valign="top"> <p>Version</p></td> 
@@ -84,34 +84,34 @@
       <td valign="top"> <p>1.1_01</p></td> 
       <td valign="top">&nbsp; </td> 
      </tr> 
-    </tbody>
+    </tbody> 
    </table> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_24_1_1">24.1.1. 
      <!--nchpfin--> Cr&eacute;ation du projet</a></h3> 
    <p>Il faut cr&eacute;er un nouveau projet de type&nbsp; &laquo;&nbsp;Java / Projet Tomcat&nbsp;&raquo;.</p> 
-   <p align="center"><img width="512" height="265" src="images/jsf001.png"></p> 
+   <p align="center"><img width="512" height="265" src="images/jsf001.png" /></p> 
    <p>Saisissez le nom du projet, par exemple test_JSF et cliquez sur le bouton &laquo;&nbsp;Suivant&nbsp;&raquo;.</p> 
-   <p align="center"><img width="512" height="235" src="images/jsf002.png"></p> 
+   <p align="center"><img width="512" height="235" src="images/jsf002.png" /></p> 
    <p>Cliquez sur le bouton &laquo;&nbsp;Fin&nbsp;&raquo;. L'assistant va cr&eacute;er un nouveau projet poss&eacute;dant une structure de r&eacute;pertoire typique pour une application Web.</p> 
-   <p align="center"><img width="190" height="173" src="images/jsf003.png"></p> 
+   <p align="center"><img width="190" height="173" src="images/jsf003.png" /></p> 
    <p>Il faut ensuite copier les fichiers n&eacute;cessaires &agrave; une utilisation de JSF dans l'application web.</p> 
    <p>Il suffit &agrave; partir d'un explorateur de fichier de faire un cliquer/glisser des fichiers *.jar du r&eacute;pertoire lib de l'impl&eacute;mentation de r&eacute;f&eacute;rence vers le r&eacute;pertoire WEB-INF/lib du projet. Attention, il est aussi n&eacute;cessaire d'ajouter les fichier jstl.jar et standard.jar qui contiennent l'impl&eacute;mentation de la JSTL.</p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_24_1_2">24.1.2. 
      <!--nchpfin--> Cr&eacute;ation des &eacute;l&eacute;ments qui composent l'application</a></h3> 
    <p>Il faut cr&eacute;er une nouvelle entit&eacute; de type &laquo;&nbsp;Simple / Fichier&nbsp;&raquo; &agrave; la racine du projet et la nommer index.htm</p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
      </tr> 
      <tr> 
       <td> <pre><code>&lt;html&gt; 
 &lt;head&gt; 
-&nbsp; &lt;meta http-equiv="Refresh" content= "0; URL=login.faces"/&gt; 
+&nbsp; &lt;meta http-equiv=&quot;Refresh&quot; content= &quot;0; URL=login.faces&quot;/&gt; 
 &nbsp; &lt;title&gt;Demarrage de l'application&lt;/title&gt; 
 &lt;/head&gt; 
 &lt;body&gt; 
@@ -119,19 +119,19 @@
 &lt;/body&gt; 
 &lt;/html&gt;</code></pre> </td> 
      </tr> 
-    </tbody>
-   </table>
-   <br> 
+    </tbody> 
+   </table> 
+   <br /> 
    <p>Il faut cr&eacute;er une nouvelle entit&eacute; de type &laquo;&nbsp;Simple / Fichier&nbsp;&raquo; &agrave; la racine du projet et la nommer login.jsp</p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
      </tr> 
      <tr> 
       <td> <pre><code>&lt;html&gt; 
-&lt;%@ taglib uri="http://java.sun.com/jsf/core" prefix="f" %&gt; 
-&lt;%@ taglib uri="http://java.sun.com/jsf/html" prefix="h" %&gt; 
+&lt;%@ taglib uri=&quot;http://java.sun.com/jsf/core&quot; prefix=&quot;f&quot; %&gt; 
+&lt;%@ taglib uri=&quot;http://java.sun.com/jsf/html&quot; prefix=&quot;h&quot; %&gt; 
 &lt;f:view&gt; 
 &lt;head&gt; 
 &nbsp; &lt;title&gt;Application de tests avec JSF&lt;/title&gt; 
@@ -142,14 +142,14 @@
 &nbsp;&nbsp;&nbsp; &lt;table&gt; 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;tr&gt; 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Nom : &lt;/td&gt; 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;&lt;h:inputText value="#{login.nom}"/&gt;&lt;/td&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;&lt;h:inputText value=&quot;#{login.nom}&quot;/&gt;&lt;/td&gt; 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/tr&gt; 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;tr&gt; 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Mot de passe :&lt;/td&gt; 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;&lt;h:inputSecret value="#{login.mdp}"/&gt;&lt;/td&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;&lt;h:inputSecret value=&quot;#{login.mdp}&quot;/&gt;&lt;/td&gt; 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/tr&gt; 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;tr&gt; 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td colspan="2"&gt;&lt;h:commandButton value="Login" action="login"/&gt;&lt;/td&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;td colspan=&quot;2&quot;&gt;&lt;h:commandButton value=&quot;Login&quot; action=&quot;login&quot;/&gt;&lt;/td&gt; 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/tr&gt; 
 &nbsp;&nbsp;&nbsp; &lt;/table&gt; 
 &nbsp; &lt;/h:form&gt; 
@@ -157,12 +157,12 @@
 &lt;/f:view&gt; 
 &lt;/html&gt;</code></pre> </td> 
      </tr> 
-    </tbody>
-   </table>
-   <br> 
+    </tbody> 
+   </table> 
+   <br /> 
    <p>Il faut cr&eacute;er une nouvelle classe nomm&eacute;e com.jmd.test.jsf.LoginBean</p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
      </tr> 
@@ -190,46 +190,46 @@ public class LoginBean {
 &nbsp; } 
 }</code></pre> </td> 
      </tr> 
-    </tbody>
-   </table>
-   <br> 
+    </tbody> 
+   </table> 
+   <br /> 
    <p>Il faut cr&eacute;er une nouvelle entit&eacute; de type &laquo;&nbsp;Simple / Fichier&nbsp;&raquo; &agrave; la racine du projet et la nommer accueil.jsp</p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
      </tr> 
      <tr> 
       <td> <pre><code>&lt;html&gt;
-&lt;%@ taglib uri="http://java.sun.com/jsf/core" prefix="f" %&gt;
-&lt;%@ taglib uri="http://java.sun.com/jsf/html" prefix="h" %&gt;
+&lt;%@ taglib uri=&quot;http://java.sun.com/jsf/core&quot; prefix=&quot;f&quot; %&gt;
+&lt;%@ taglib uri=&quot;http://java.sun.com/jsf/html&quot; prefix=&quot;h&quot; %&gt;
 &lt;f:view&gt;
 &lt;head&gt;
   &lt;title&gt;Page d'accueil de l'application&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
   &lt;h:form&gt;
-    &lt;h3&gt;Bienvenue &lt;h:outputText value="#{login.nom}"/&gt;,&lt;/h3&gt;
+    &lt;h3&gt;Bienvenue &lt;h:outputText value=&quot;#{login.nom}&quot;/&gt;,&lt;/h3&gt;
   &lt;/h:form&gt;
 &lt;/body&gt;
 &lt;/f:view&gt;
 &lt;/html&gt;
 </code></pre> </td> 
      </tr> 
-    </tbody>
-   </table>
-   <br> 
+    </tbody> 
+   </table> 
+   <br /> 
    <p>Il faut cr&eacute;er une nouvelle entit&eacute; de type &laquo;&nbsp;Simple / Fichier&nbsp;&raquo; dans le r&eacute;pertoire /WEB-INF et la nommer faces-config.xml</p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
      </tr> 
      <tr> 
-      <td> <pre><code>&lt;?xml version="1.0"?&gt; 
+      <td> <pre><code>&lt;?xml version=&quot;1.0&quot;?&gt; 
 &lt;!DOCTYPE faces-config PUBLIC 
-"-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.0//EN" 
-"http://java.sun.com/dtd/web-facesconfig_1_0.dtd"&gt; 
+&quot;-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.0//EN&quot; 
+&quot;http://java.sun.com/dtd/web-facesconfig_1_0.dtd&quot;&gt; 
 &lt;faces-config&gt; 
 &nbsp; &lt;navigation-rule&gt; 
 &nbsp;&nbsp;&nbsp; &lt;from-view-id&gt;/login.jsp&lt;/from-view-id&gt; 
@@ -245,20 +245,20 @@ public class LoginBean {
 &nbsp; &lt;/managed-bean&gt; 
 &lt;/faces-config&gt;</code></pre> </td> 
      </tr> 
-    </tbody>
-   </table>
-   <br> 
+    </tbody> 
+   </table> 
+   <br /> 
    <p>Il faut cr&eacute;er une nouvelle entit&eacute; de type &laquo;&nbsp;Simple / Fichier&nbsp;&raquo; dans le r&eacute;pertoire /WEB-INF et la nommer web.xml</p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
      </tr> 
      <tr> 
-      <td> <pre><code>&lt;?xml version="1.0"?&gt;
+      <td> <pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;!DOCTYPE web-app PUBLIC
-"-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
-"http://java.sun.com/dtd/web-app_2_3.dtd"&gt;
+&quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN&quot;
+&quot;http://java.sun.com/dtd/web-app_2_3.dtd&quot;&gt;
 &lt;web-app&gt;
 &nbsp; &lt;servlet&gt;
 &nbsp;&nbsp;&nbsp; &lt;servlet-name&gt;Faces Servlet&lt;/servlet-name&gt;
@@ -274,36 +274,36 @@ public class LoginBean {
 &nbsp; &lt;/welcome-file-list&gt;
 &lt;/web-app&gt;</code></pre> </td> 
      </tr> 
-    </tbody>
-   </table>
-   <br> 
+    </tbody> 
+   </table> 
+   <br /> 
    <p>Les &eacute;l&eacute;ments qui composent le projet sont donc les suivants&nbsp;: </p> 
-   <p align="center"><img width="254" height="483" src="images/jsf004.png"></p> 
+   <p align="center"><img width="254" height="483" src="images/jsf004.png" /></p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_24_1_3">24.1.3. 
      <!--nchpfin--> Ex&eacute;cution de l'application</a></h3> 
-   <p>Il suffit alors de d&eacute;marrer Tomcat en cliquant sur le bouton <img width="23" height="22" src="images/jsf005.png">.</p> 
+   <p>Il suffit alors de d&eacute;marrer Tomcat en cliquant sur le bouton <img width="23" height="22" src="images/jsf005.png" />.</p> 
    <p>Une fois Tomcat d&eacute;marr&eacute;, ouvrir un navigateur et taper l'url <a href="http://localhost:8089/test_JSF/">http://localhost:8089/test_JSF/</a> (en rempla&ccedil;ant le port 8089 par celui d&eacute;fini dans Tomcat).</p> 
-   <p align="center"><img border="0" width="560" height="149" src="images/jsf006.png"></p> 
+   <p align="center"><img border="0" width="560" height="149" src="images/jsf006.png" /></p> 
    <p>Une fois l'application d&eacute;marr&eacute;e, la page de login s'affiche</p> 
-   <p align="center"><img border="0" width="560" height="219" src="images/jsf007.png"></p> 
+   <p align="center"><img border="0" width="560" height="219" src="images/jsf007.png" /></p> 
    <p>Il faut saisir un nom par exemple test et cliquer sur le bouton &laquo;&nbsp;Login&nbsp;&raquo;.</p> 
-   <p align="center"><img border="0" width="560" height="185" src="images/jsf008.png"></p> 
+   <p align="center"><img border="0" width="560" height="185" src="images/jsf008.png" /></p> 
    <p>Cet exemple ne met pas en valeur la puissance de Java Server Faces mais propose simplement de mettre en oeuvre le minimum pour d&eacute;velopper des applications utilisant JSF avec Eclipse. </p> 
    <p>&nbsp;</p> 
   </div> 
-  <!--PIED-->
-  <hr> 
+  <!--PIED--> 
+  <hr /> 
   <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
    <tbody> 
     <tr> 
-     <td rowspan="2" align="center" width="50">&nbsp;</td>
-     <td rowspan="2" align="center" width="50"> <a href="chap023.htm" alt="23.  Struts et Eclipse"> <img src="FlecheG.gif" alt="23.  Struts et Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center" width="50"> <a href="chap025.htm" alt="25.  EJB et Eclipse"> <img src="FlecheD.gif" alt="25.  EJB et Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap023.htm" alt="23.  Struts et Eclipse"> <img src="FlecheG.gif" alt="23.  Struts et Eclipse" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap025.htm" alt="25.  EJB et Eclipse"> <img src="FlecheD.gif" alt="25.  EJB et Eclipse" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40" /> </a> </td> 
      <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
      <td rowspan="2" align="center" valign="middle"> <script language="JavaScript1.1">
 <!--
@@ -322,7 +322,7 @@ hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre aud
 //-->
 </script> 
       <noscript> 
-       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience"></a> 
+       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience" /></a> 
       </noscript> 
       <!--//--> </td> 
     </tr> 
@@ -330,6 +330,6 @@ hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre aud
      <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
     </tr> 
    </tbody> 
-  </table>   
+  </table>  
  </body>
 </html>

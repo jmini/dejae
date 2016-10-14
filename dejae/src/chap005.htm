@@ -1,26 +1,26 @@
 <html>
  <head> 
   <title>Les fonctions pratiques du workbench d'Eclipse</title> 
-  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1"> 
-  <meta name="description" content=""> 
-  <meta name="keywords" content="java tutorial cours dej eclipse"> 
-  <meta name="robots" content="all"> 
-  <meta name="revisit-after" content="2 months"> 
-  <meta http-equiv="Content-Language" content="fr-FX"> 
-  <meta name="author" content="Jean Michel DOUDOUX"> 
-  <link href="dej_style.css" rel="stylesheet" type="text/css"> 
- </head>
+  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" /> 
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="java tutorial cours dej eclipse" /> 
+  <meta name="robots" content="all" /> 
+  <meta name="revisit-after" content="2 months" /> 
+  <meta http-equiv="Content-Language" content="fr-FX" /> 
+  <meta name="author" content="Jean Michel DOUDOUX" /> 
+  <link href="dej_style.css" rel="stylesheet" type="text/css" /> 
+ </head> 
  <body> 
   <!--ENTETE--> 
   <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
    <tbody> 
     <tr> 
-     <td rowspan="2" align="center" width="50">&nbsp;</td>
-     <td rowspan="2" align="center" width="50"> <a href="chap004.htm" alt="4.   L'espace de travail (Workspace)"> <img src="FlecheG.gif" alt="4.   L'espace de travail (Workspace)" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center" width="50"> <a href="chap006.htm" alt="6.  L'aide dans Eclipse"> <img src="FlecheD.gif" alt="6.  L'aide dans Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap004.htm" alt="4.   L'espace de travail (Workspace)"> <img src="FlecheG.gif" alt="4.   L'espace de travail (Workspace)" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap006.htm" alt="6.  L'aide dans Eclipse"> <img src="FlecheD.gif" alt="6.  L'aide dans Eclipse" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40" /> </a> </td> 
      <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
     </tr> 
     <tr> 
@@ -28,11 +28,11 @@
     </tr> 
    </tbody> 
   </table> 
-  <hr> 
+  <hr /> 
   <p>&nbsp;</p> 
-  <h1>
-   <!--idrefpage value="pratiquewb" -->
-   <!--resumetitre value="d&eacute;taille certaines fonctions avanc&eacute;es du plan de travail : la recherche, la gestion des t&acirc;ches et des signets et la comparaison d'&eacute;l&eacute;ments " -->
+  <h1> 
+   <!--idrefpage value="pratiquewb" --> 
+   <!--resumetitre value="d&eacute;taille certaines fonctions avanc&eacute;es du plan de travail : la recherche, la gestion des t&acirc;ches et des signets et la comparaison d'&eacute;l&eacute;ments " --> 
    <!--nchpdeb--><a name="chap_5">5. 
     <!--nchpfin--> Les fonctions pratiques du plan de travail</a></h1> 
   <p>&nbsp;</p> 
@@ -46,153 +46,148 @@
     <li>de comparer des &eacute;l&eacute;ments</li> 
    </ul> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_5_1">5.1. 
      <!--nchpfin--> La fonction de recherche</a></h2> 
    <p>Cette fonction de recherche permet d'obtenir une liste d'&eacute;l&eacute;ments qui contiennent une cha&icirc;ne d&eacute;sign&eacute;e par un motif.</p> 
    <p>Elle peut se faire dans tous les fichiers, dans les fichiers source Java ou dans l'aide en ligne.</p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_5_1_1">5.1.1. 
      <!--nchpfin--> La recherche dans les fichiers</a></h3> 
-   <p>Pour effectuer une recherche, il faut cliquer sur l'&icirc;cone <img src="images/fwbench001.png" width="23" height="23"> de la barre d'outils du plan de travail. Une bo&icirc;te de dialogue permet de saisir les crit&egrave;res de recherche.</p> 
-   <p align="center"><img src="images/fwbench002.png" width="400" height="311"></p> 
-   <p>L'onglet "Recherche d'un fichier" permet de faire une recherche de fichiers contenant un texte respectant un motif. Ce motif peut &ecirc;tre saisi ou s&eacute;lectionn&eacute; dans la liste d&eacute;roulante &agrave; partir des pr&eacute;c&eacute;dents motifs recherch&eacute;s. Il est possible de saisir les caract&egrave;res recherch&eacute;s et d'utiliser trois caract&egrave;res dont la signification est particuli&egrave;re :</p> 
+   <p>Pour effectuer une recherche, il faut cliquer sur l'&icirc;cone <img src="images/fwbench001.png" width="23" height="23" /> de la barre d'outils du plan de travail. Une bo&icirc;te de dialogue permet de saisir les crit&egrave;res de recherche.</p> 
+   <p align="center"><img src="images/fwbench002.png" width="400" height="311" /></p> 
+   <p>L'onglet &quot;Recherche d'un fichier&quot; permet de faire une recherche de fichiers contenant un texte respectant un motif. Ce motif peut &ecirc;tre saisi ou s&eacute;lectionn&eacute; dans la liste d&eacute;roulante &agrave; partir des pr&eacute;c&eacute;dents motifs recherch&eacute;s. Il est possible de saisir les caract&egrave;res recherch&eacute;s et d'utiliser trois caract&egrave;res dont la signification est particuli&egrave;re :</p> 
    <ul> 
     <li> * : repr&eacute;sente z&eacute;ro ou plusieurs caract&egrave;res quelconques </li> 
     <li>? : repr&eacute;sente un caract&egrave;re quelconque</li> 
     <li>\ : permet de d&eacute;sp&eacute;cialiser le caract&egrave;re *, ? et \</li> 
    </ul> 
-   <p>Il est possible de vouloir tenir compte de la casse en cochant la case "Respect maj/min".</p> 
-   <p>Il est aussi possible de restreindre la recherche &agrave; certains fichiers en pr&eacute;cisant un motif particulier. Un clic sur le bouton "Parcourir" ouvre une boite de dialogue qui permet de s&eacute;lectionner un ou plusieurs types pr&eacute;d&eacute;finis.</p> 
-   <p align="center"><img src="images/fwbench003.png" width="343" height="323"> </p> 
-   <p>Pour lancer la recherche, il suffit de cliquer sur le bouton "Rechercher". </p> 
-   <p align="center"><img src="images/fwbench004.png" width="400" height="311"></p> 
-   <p>Une barre de progression indique l'&eacute;volution de la recherche et le nombre de fois ou le motif est trouv&eacute;. Un clic sur le bouton "Annuler" permet d'interrompre la recherche.</p> 
-   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
-    <tbody>
-     <tr> 
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td> 
-      <td><p> Il est possible d'utiliser les expressions r&eacute;guli&egrave;res pour effectuer une recherche. Pour cela, il faut cocher la caser correspondante dans la bo&icirc;te de dialogue. </p> <p align="center"><img src="images/fwbench025.png" width="412" height="353"></p> <p>Dans la zone de saisie du mot &agrave; rechercher, l'appui sur la combinaison de touches Ctrl+espace ouvre un assistant qui facilite la saisie d'une expression r&eacute;guli&egrave;re. </p> <p align="center"><img src="images/fwbench026.png" width="414" height="353"></p></td> 
-     </tr> 
-    </tbody>
-   </table> 
+   <p>Il est possible de vouloir tenir compte de la casse en cochant la case &quot;Respect maj/min&quot;.</p> 
+   <p>Il est aussi possible de restreindre la recherche &agrave; certains fichiers en pr&eacute;cisant un motif particulier. Un clic sur le bouton &quot;Parcourir&quot; ouvre une boite de dialogue qui permet de s&eacute;lectionner un ou plusieurs types pr&eacute;d&eacute;finis.</p> 
+   <p align="center"><img src="images/fwbench003.png" width="343" height="323" /> </p> 
+   <p>Pour lancer la recherche, il suffit de cliquer sur le bouton &quot;Rechercher&quot;. </p> 
+   <p align="center"><img src="images/fwbench004.png" width="400" height="311" /></p> 
+   <p>Une barre de progression indique l'&eacute;volution de la recherche et le nombre de fois ou le motif est trouv&eacute;. Un clic sur le bouton &quot;Annuler&quot; permet d'interrompre la recherche.</p> 
+   <div class="eclipse30"> 
+    <p> Il est possible d'utiliser les expressions r&eacute;guli&egrave;res pour effectuer une recherche. Pour cela, il faut cocher la caser correspondante dans la bo&icirc;te de dialogue. </p> 
+    <p align="center"><img src="images/fwbench025.png" width="412" height="353" /></p> 
+    <p>Dans la zone de saisie du mot &agrave; rechercher, l'appui sur la combinaison de touches Ctrl+espace ouvre un assistant qui facilite la saisie d'une expression r&eacute;guli&egrave;re. </p> 
+    <p align="center"><img src="images/fwbench026.png" width="414" height="353" /></p> 
+   </div> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_5_1_2">5.1.2. 
      <!--nchpfin--> L'exploitation des r&eacute;sultats de recherche</a></h3> 
-   <p>Une fois la recherche termin&eacute;e, la vue "Recherche" affiche les &eacute;l&eacute;ments contenant le motif et le nombre de fois ou le motif a &eacute;t&eacute; trouv&eacute; dans chaque &eacute;l&eacute;ment.</p> 
-   <p align="center"><img src="images/fwbench005.png" width="400" height="153"></p> 
-   <p>Le bouton <img src="images/fwbench006.png" width="23" height="22"> permet de passer &agrave; l'occurence suivante quelque soit l'&eacute;l&eacute;ment qui la contienne. Lors du changement de l'&eacute;l&eacute;ment qui contient l'occurence, celui ci est ouvert dans l'&eacute;diteur.</p> 
-   <p>Il est possible de supprimer une ou plusieurs occurences dans la vue "Recherche". Le menu contextuel propose plusieurs options en fonction de la situation actuelle : </p> 
+   <p>Une fois la recherche termin&eacute;e, la vue &quot;Recherche&quot; affiche les &eacute;l&eacute;ments contenant le motif et le nombre de fois ou le motif a &eacute;t&eacute; trouv&eacute; dans chaque &eacute;l&eacute;ment.</p> 
+   <p align="center"><img src="images/fwbench005.png" width="400" height="153" /></p> 
+   <p>Le bouton <img src="images/fwbench006.png" width="23" height="22" /> permet de passer &agrave; l'occurence suivante quelque soit l'&eacute;l&eacute;ment qui la contienne. Lors du changement de l'&eacute;l&eacute;ment qui contient l'occurence, celui ci est ouvert dans l'&eacute;diteur.</p> 
+   <p>Il est possible de supprimer une ou plusieurs occurences dans la vue &quot;Recherche&quot;. Le menu contextuel propose plusieurs options en fonction de la situation actuelle : </p> 
    <ul> 
-    <li> "Supprimer l'occurence s&eacute;lectionn&eacute;e" : cette option permet de supprimer l'occurence courante de l'&eacute;l&eacute;ment en cours</li> 
-    <li>"Supprimer les occurences en cours" : permet de supprimer toute les occurences de l'&eacute;l&eacute;ment et l'&eacute;lement de la liste</li> 
-    <li>"Supprimer toutes les occurences" : permet de supprimer tous les &eacute;l&eacute;ments</li> 
+    <li> &quot;Supprimer l'occurence s&eacute;lectionn&eacute;e&quot; : cette option permet de supprimer l'occurence courante de l'&eacute;l&eacute;ment en cours</li> 
+    <li>&quot;Supprimer les occurences en cours&quot; : permet de supprimer toute les occurences de l'&eacute;l&eacute;ment et l'&eacute;lement de la liste</li> 
+    <li>&quot;Supprimer toutes les occurences&quot; : permet de supprimer tous les &eacute;l&eacute;ments</li> 
    </ul> 
-   <p>La vue "Recherche" affiche le r&eacute;sultat de la recherche courante mais elle m&eacute;morise aussi les pr&eacute;c&eacute;dentes recherches. Pour afficher les r&eacute;sultats des pr&eacute;c&eacute;dentes recherches, il suffit de s&eacute;lectioner la recherche en utilisant le bouton <img src="images/fwbench007.png" width="36" height="22">. Un menu affiche la liste des pr&eacute;c&eacute;dents motifs de recherche et le nombre d'occurences trouv&eacute;es. La recherche courante est coch&eacute;e.</p> 
-   <p align="center"><img src="images/fwbench008.png" width="400" height="154"></p> 
-   <p>Il est toujours possible de r&eacute;it&eacute;rer la recherche en utilisant l'option "Nouvelle recherche" du menu contextuel de la vue.</p> 
-   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
-    <tbody>
-     <tr> 
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td> 
-      <td><p>La vue &laquo;&nbsp;Recherche&nbsp;&raquo; propose deux fa&ccedil;ons d'afficher les r&eacute;sultats d'une recherche&nbsp;: </p> 
-       <ul> 
-        <li>arborescence (par d&eacute;faut) <br> <br> <img src="images/fwbench028.png" width="427" height="209"> </li> 
-        <li> tableau <br> <br> <img src="images/fwbench029.png" width="461" height="142"> </li> 
-       </ul> <p> Le bouton <img src="images/fwbench030.png" width="23" height="22"> ouvre un menu d&eacute;roulant qui permet de s&eacute;lectionner le mode d'affichage </p> <p align="center"><img src="images/fwbench031.png" width="177" height="50"></p></td> 
-     </tr> 
-    </tbody>
-   </table> 
+   <p>La vue &quot;Recherche&quot; affiche le r&eacute;sultat de la recherche courante mais elle m&eacute;morise aussi les pr&eacute;c&eacute;dentes recherches. Pour afficher les r&eacute;sultats des pr&eacute;c&eacute;dentes recherches, il suffit de s&eacute;lectioner la recherche en utilisant le bouton <img src="images/fwbench007.png" width="36" height="22" />. Un menu affiche la liste des pr&eacute;c&eacute;dents motifs de recherche et le nombre d'occurences trouv&eacute;es. La recherche courante est coch&eacute;e.</p> 
+   <p align="center"><img src="images/fwbench008.png" width="400" height="154" /></p> 
+   <p>Il est toujours possible de r&eacute;it&eacute;rer la recherche en utilisant l'option &quot;Nouvelle recherche&quot; du menu contextuel de la vue.</p> 
+   <div class="eclipse30"> 
+    <p>La vue &laquo;&nbsp;Recherche&nbsp;&raquo; propose deux fa&ccedil;ons d'afficher les r&eacute;sultats d'une recherche&nbsp;: </p> 
+    <ul> 
+     <li>arborescence (par d&eacute;faut) <br /> <br /> <img src="images/fwbench028.png" width="427" height="209" /> </li> 
+     <li> tableau <br /> <br /> <img src="images/fwbench029.png" width="461" height="142" /> </li> 
+    </ul> 
+    <p> Le bouton <img src="images/fwbench030.png" width="23" height="22" /> ouvre un menu d&eacute;roulant qui permet de s&eacute;lectionner le mode d'affichage </p> 
+    <p align="center"><img src="images/fwbench031.png" width="177" height="50" /></p> 
+   </div> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_5_2">5.2. 
      <!--nchpfin--> La liste des t&acirc;ches</a></h2> 
-   <p>La vue "T&acirc;ches" affiche et permet de g&eacute;rer une liste de t&acirc;ches &agrave; faire. Ces t&acirc;ches peuvent &ecirc;tre de plusieurs types : </p> 
+   <p>La vue &quot;T&acirc;ches&quot; affiche et permet de g&eacute;rer une liste de t&acirc;ches &agrave; faire. Ces t&acirc;ches peuvent &ecirc;tre de plusieurs types : </p> 
    <ul> 
     <li> des actions &agrave; r&eacute;aliser </li> 
     <li>des erreurs de compilation &agrave; corriger </li> 
     <li>des points d'arr&ecirc;t pour le d&eacute;bogage</li> 
    </ul> 
    <p>Ces t&acirc;ches peuvent &ecirc;tre ou non associ&eacute;es &agrave; un &eacute;l&eacute;ment de l'espace de travail. Par exemple, une erreur de compilation est associ&eacute;e &agrave; un fichier source.</p> 
-   <p>Lorsqu'une t&acirc;che est associ&eacute;e &agrave; un &eacute;lement, le nom de cet &eacute;l&eacute;ment apparait dans la colonne "Ressource" et sa localisation dans l'espace de travai dans la colonne "Dans le dossier". </p> 
-   <p align="center"><img src="images/fwbench009.png" width="500" height="101"></p> 
-   <p align="left">Il est possible d'acc&eacute;der &agrave; l'&eacute;l&eacute;ment associ&eacute; &agrave; la t&acirc;che en double cliquant sur la t&acirc;che ou en s&eacute;lectionnant l'option "Acc&eacute;der &agrave;" du menu contextuel de la t&acirc;che. L'&eacute;l&eacute;ment est ouvert dans l'&eacute;diteur avec le curseur positionn&eacute; sur la ligne associ&eacute;e &agrave; la t&acirc;che.</p> 
+   <p>Lorsqu'une t&acirc;che est associ&eacute;e &agrave; un &eacute;lement, le nom de cet &eacute;l&eacute;ment apparait dans la colonne &quot;Ressource&quot; et sa localisation dans l'espace de travai dans la colonne &quot;Dans le dossier&quot;. </p> 
+   <p align="center"><img src="images/fwbench009.png" width="500" height="101" /></p> 
+   <p align="left">Il est possible d'acc&eacute;der &agrave; l'&eacute;l&eacute;ment associ&eacute; &agrave; la t&acirc;che en double cliquant sur la t&acirc;che ou en s&eacute;lectionnant l'option &quot;Acc&eacute;der &agrave;&quot; du menu contextuel de la t&acirc;che. L'&eacute;l&eacute;ment est ouvert dans l'&eacute;diteur avec le curseur positionn&eacute; sur la ligne associ&eacute;e &agrave; la t&acirc;che.</p> 
    <p align="left">&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_5_2_1">5.2.1. 
      <!--nchpfin--> La cr&eacute;ation d'une t&acirc;che</a></h3> 
-   <p>Pour cr&eacute;er une t&acirc;che qui ne soit pas associ&eacute;e &agrave; un &eacute;l&eacute;ment, il suffit de cliquer sur le bouton <img src="images/fwbench010.png" width="23" height="22"> de la vue.</p> 
+   <p>Pour cr&eacute;er une t&acirc;che qui ne soit pas associ&eacute;e &agrave; un &eacute;l&eacute;ment, il suffit de cliquer sur le bouton <img src="images/fwbench010.png" width="23" height="22" /> de la vue.</p> 
    <p>Une bo&icirc;te de dialogue permet de saisir la description et la priorit&eacute; de la nouvelle t&acirc;che.</p> 
-   <p align="center"><img src="images/fwbench011.png" width="403" height="247"></p> 
-   <p>Un clic sur le bouton "OK" cr&eacute;e la nouvelle t&acirc;che.</p> 
-   <p align="CENTER"><img src="images/fwbench012.png" width="500" height="101"></p> 
+   <p align="center"><img src="images/fwbench011.png" width="403" height="247" /></p> 
+   <p>Un clic sur le bouton &quot;OK&quot; cr&eacute;e la nouvelle t&acirc;che.</p> 
+   <p align="CENTER"><img src="images/fwbench012.png" width="500" height="101" /></p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_5_2_2">5.2.2. 
      <!--nchpfin--> La cr&eacute;ation d'une t&acirc;che associ&eacute;e &agrave; un &eacute;l&eacute;ment</a></h3> 
-   <p>La cr&eacute;ation d'une t&acirc;che associ&eacute;e &agrave; un &eacute;lement ne se fait pas dans la vue "T&acirc;ches" mais directement dans un &eacute;diteur qui contient l'&eacute;l&eacute;ment. La t&acirc;che est associ&eacute;e &agrave; une ligne de l'&eacute;l&eacute;ment.</p> 
-   <p>Dans la barre &agrave; gauche de l'&eacute;diteur, le menu contextuel contient l'option "Ajouter une t&acirc;che ..."</p> 
-   <p align="center"><img src="images/fwbench013.png" width="235" height="86"></p> 
+   <p>La cr&eacute;ation d'une t&acirc;che associ&eacute;e &agrave; un &eacute;lement ne se fait pas dans la vue &quot;T&acirc;ches&quot; mais directement dans un &eacute;diteur qui contient l'&eacute;l&eacute;ment. La t&acirc;che est associ&eacute;e &agrave; une ligne de l'&eacute;l&eacute;ment.</p> 
+   <p>Dans la barre &agrave; gauche de l'&eacute;diteur, le menu contextuel contient l'option &quot;Ajouter une t&acirc;che ...&quot;</p> 
+   <p align="center"><img src="images/fwbench013.png" width="235" height="86" /></p> 
    <p>Une boite de dialogue demande de saisir la description de la t&acirc;che et de s&eacute;lectionner la priorit&eacute;.</p> 
-   <p align="center"><img src="images/fwbench014.png" width="402" height="247"></p> 
-   <p>Un clic sur le bouton "OK" cr&eacute;e la t&acirc;che et une marque particuli&egrave;re apparait sur la ligne concern&eacute;e dans la barre de gauche de l'&eacute;diteur.</p> 
-   <p align="center"><img src="images/fwbench024.png" width="400" height="161"></p> 
+   <p align="center"><img src="images/fwbench014.png" width="402" height="247" /></p> 
+   <p>Un clic sur le bouton &quot;OK&quot; cr&eacute;e la t&acirc;che et une marque particuli&egrave;re apparait sur la ligne concern&eacute;e dans la barre de gauche de l'&eacute;diteur.</p> 
+   <p align="center"><img src="images/fwbench024.png" width="400" height="161" /></p> 
    <p>Cette marque reste associ&eacute;e &agrave; la ligne m&ecirc;me si la position de la ligne dans le fichier change (par ajout ou suppression de lignes dans la ressource).</p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_5_2_3">5.2.3. 
      <!--nchpfin--> La suppression d'une tache associ&eacute;e &agrave; un &eacute;l&eacute;ment</a></h3> 
-   <p>Il suffit de s&eacute;lectionner l'option "Supprimer une t&acirc;che" du menu contextuel associ&eacute; &agrave; la marque de la t&acirc;che. La marque disparait et la t&acirc;che est supprim&eacute;e de la liste.</p> 
+   <p>Il suffit de s&eacute;lectionner l'option &quot;Supprimer une t&acirc;che&quot; du menu contextuel associ&eacute; &agrave; la marque de la t&acirc;che. La marque disparait et la t&acirc;che est supprim&eacute;e de la liste.</p> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_5_3">5.3. 
      <!--nchpfin--> La liste des signets</a></h2> 
-   <p>Les signets (bookmarks) permettent de maintenir une liste d'&eacute;l&eacute;ments particuliers dans le but est de permettre d'y acc&eacute;der rapidement. Pour afficher la vue "Signets", il faut s&eacute;lectionner l'option "Afficher la vue / Signets" du menu "Fen&ecirc;tre" du plan de travail.</p> 
-   <p align="center"><img src="images/fwbench015.png" width="297" height="88"></p> 
-   <p align="left">A partir de la vue "Signets", pour ouvrir un &eacute;l&eacute;ment dans l'&eacute;diteur, il y a trois possibilit&eacute;s : </p> 
+   <p>Les signets (bookmarks) permettent de maintenir une liste d'&eacute;l&eacute;ments particuliers dans le but est de permettre d'y acc&eacute;der rapidement. Pour afficher la vue &quot;Signets&quot;, il faut s&eacute;lectionner l'option &quot;Afficher la vue / Signets&quot; du menu &quot;Fen&ecirc;tre&quot; du plan de travail.</p> 
+   <p align="center"><img src="images/fwbench015.png" width="297" height="88" /></p> 
+   <p align="left">A partir de la vue &quot;Signets&quot;, pour ouvrir un &eacute;l&eacute;ment dans l'&eacute;diteur, il y a trois possibilit&eacute;s : </p> 
    <ul> 
     <li> double cliquer sur le signet </li> 
-    <li>s&eacute;lectionner l'option "Acc&eacute;der &agrave;" du menu contextuel associ&eacute; au signet</li> 
-    <li>cliquer sur le bouton <img src="images/fwbench016.png" width="23" height="22"> une fois le signet s&eacute;lectionn&eacute;</li> 
+    <li>s&eacute;lectionner l'option &quot;Acc&eacute;der &agrave;&quot; du menu contextuel associ&eacute; au signet</li> 
+    <li>cliquer sur le bouton <img src="images/fwbench016.png" width="23" height="22" /> une fois le signet s&eacute;lectionn&eacute;</li> 
    </ul> 
-   <p align="left">Il est aussi possible &agrave; partir d'un signet de s&eacute;lectionner l'&eacute;l&eacute;ment dans la vue "Navigateur" en utilisant l'option "Afficher dans le navigateur" du menu contextuel.</p> 
+   <p align="left">Il est aussi possible &agrave; partir d'un signet de s&eacute;lectionner l'&eacute;l&eacute;ment dans la vue &quot;Navigateur&quot; en utilisant l'option &quot;Afficher dans le navigateur&quot; du menu contextuel.</p> 
    <p align="left">&nbsp; </p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_5_3_1">5.3.1. 
      <!--nchpfin--> La cr&eacute;ation d'un signet</a></h3> 
    <p>Un signet peut concerner un &eacute;l&eacute;ment (un fichier) ou plus pr&eacute;cisement une composante de cet &eacute;l&eacute;ment (une position particuli&egrave;re dans le fichier). </p> 
-   <p>Pour cr&eacute;er un signet sur un &eacute;lement, il suffit de le s&eacute;lectionner dans la vue "Navigateur" et de s&eacute;lectionner l'option "Ajouter un signet" du menu contextuel.</p> 
-   <p>Pour cr&eacute;er un signet sur une ligne de l'&eacute;l&eacute;ment, il suffit de positionner le curseur sur la ligne d&eacute;sir&eacute;e dans l'&eacute;diteur et de s&eacute;lectionner l'option "Ajouter un signet" du menu contextuel de la barre de gauche de l'&eacute;diteur.</p> 
-   <p align="center"><img src="images/fwbench013.png" width="235" height="86"></p> 
+   <p>Pour cr&eacute;er un signet sur un &eacute;lement, il suffit de le s&eacute;lectionner dans la vue &quot;Navigateur&quot; et de s&eacute;lectionner l'option &quot;Ajouter un signet&quot; du menu contextuel.</p> 
+   <p>Pour cr&eacute;er un signet sur une ligne de l'&eacute;l&eacute;ment, il suffit de positionner le curseur sur la ligne d&eacute;sir&eacute;e dans l'&eacute;diteur et de s&eacute;lectionner l'option &quot;Ajouter un signet&quot; du menu contextuel de la barre de gauche de l'&eacute;diteur.</p> 
+   <p align="center"><img src="images/fwbench013.png" width="235" height="86" /></p> 
    <p>Une boite de dialogue demande de saisir la description.</p> 
-   <p align="center"><img src="images/fwbench017.png" width="399" height="125"></p> 
+   <p align="center"><img src="images/fwbench017.png" width="399" height="125" /></p> 
    <p align="left">Le signet est ajout&eacute; dans la liste des signets et une marque est affich&eacute;e dans la barre de gauche de l'&eacute;diteur sur la ligne concern&eacute;e.</p> 
-   <p align="center"><img src="images/fwbench018.png" width="273" height="74"></p> 
+   <p align="center"><img src="images/fwbench018.png" width="273" height="74" /></p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_5_3_2">5.3.2. 
      <!--nchpfin--> La suppression d'un signet</a></h3> 
    <p>Pour supprimer un signet, il y a trois possibilit&eacute;s :</p> 
    <ul> 
-    <li> dans la vue "Signets", s&eacute;lectionner le signet et cliquer sur le bouton <img src="images/fwbench019.png" width="23" height="22"> </li> 
-    <li>dans la vue "Signets", s&eacute;lectionner le signet et l'option "Supprimer" du menu contextuel associ&eacute; au signet</li> 
-    <li>dans l'&eacute;diteur, s&eacute;lectionner l'option "Supprimer un signet" du menu contextuel associ&eacute; &agrave; l'ic&ocirc;ne du signet dans la barre de gauche </li> 
+    <li> dans la vue &quot;Signets&quot;, s&eacute;lectionner le signet et cliquer sur le bouton <img src="images/fwbench019.png" width="23" height="22" /> </li> 
+    <li>dans la vue &quot;Signets&quot;, s&eacute;lectionner le signet et l'option &quot;Supprimer&quot; du menu contextuel associ&eacute; au signet</li> 
+    <li>dans l'&eacute;diteur, s&eacute;lectionner l'option &quot;Supprimer un signet&quot; du menu contextuel associ&eacute; &agrave; l'ic&ocirc;ne du signet dans la barre de gauche </li> 
    </ul> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_5_4">5.4. 
      <!--nchpfin--> La comparaison d'&eacute;l&eacute;ments</a></h2> 
-   <p>Le plan de travail dispose d'un outil pratique pour comparer le contenu de deux &eacute;l&eacute;ments. Pour r&eacute;aliser cette comparaison, il faut s&eacute;lectionner ces deux &eacute;l&eacute;ments en maintenant la touche Ctrl enfonc&eacute;e dans la vue "Navigateur" et s&eacute;lectionner l'option "Comparer / R&eacute;ciproquement" du menu contextuel.</p> 
+   <p>Le plan de travail dispose d'un outil pratique pour comparer le contenu de deux &eacute;l&eacute;ments. Pour r&eacute;aliser cette comparaison, il faut s&eacute;lectionner ces deux &eacute;l&eacute;ments en maintenant la touche Ctrl enfonc&eacute;e dans la vue &quot;Navigateur&quot; et s&eacute;lectionner l'option &quot;Comparer / R&eacute;ciproquement&quot; du menu contextuel.</p> 
    <p>Si les deux fichiers sont identiques, une bo&icirc;te de dialogue s'affiche :</p> 
-   <p align="center"><img src="images/fwbench020.png" width="436" height="112"></p> 
+   <p align="center"><img src="images/fwbench020.png" width="436" height="112" /></p> 
    <p>Si les deux fichiers poss&egrave;dent des diff&eacute;rences, un &eacute;diteur particulier s'ouvre. Cet &eacute;diteur sp&eacute;cial pour les comparaisons, affiche chaque ligne des deux fichiers dans deux colonnes. Une colonne centrale permet de voir de fa&ccedil;on graphique les diff&eacute;rences gr&acirc;ce &agrave; des lignes. </p> 
-   <p align="center"><img src="images/fwbench021.png" width="400" height="126"> </p> 
+   <p align="center"><img src="images/fwbench021.png" width="400" height="126" /> </p> 
    <p align="JUSTIFY">Dans la barre centrale, les lignes en gris fonc&eacute; sont identiques, les lignes en blanc sont des diff&eacute;rences entre les deux fichiers.</p> 
-   <p align="CENTER"><img src="images/fwbench022.png" width="400" height="122"></p> 
+   <p align="CENTER"><img src="images/fwbench022.png" width="400" height="122" /></p> 
    <p align="left">La vue de comparaison de fichier contient une barre d'outils qui permet de naviguer dans les diff&eacute;rences et de les reporter pour effectuer une synchronisation s&eacute;lective.</p> 
-   <p align="center"><img src="images/fwbench023.png" width="147" height="22"></p> 
+   <p align="center"><img src="images/fwbench023.png" width="147" height="22" /></p> 
    <p align="left">La fl&egrave;che vers le haut et le bas permet de naviguer dans les diff&eacute;rences respectivement la suivante et la pr&eacute;c&eacute;dente. Les quatre premiers boutons permettent respectivement : </p> 
    <ul> 
     <li> de copier tout le document de gauche dans le document de droite</li> 
@@ -201,29 +196,29 @@
     <li>de reporter la diff&eacute;rence courante de droite dans le document de gauche</li> 
    </ul> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_5_5">5.5. 
      <!--nchpfin-->La vue &laquo;&nbsp;Explorateur de projets&nbsp;&raquo;</a></h2> 
-   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
-    <tbody>
-     <tr> 
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse32.png" width="64" height="32" align="center"></td> 
-      <td><p>La vue explorateur de projets affiche le contenu des projets de fa&ccedil;on hi&eacute;rarchique en fonction du type de projet.</p> <p>Pour l'afficher, il faut utiliser l'option &laquo;&nbsp;afficher la vue / autres&nbsp;&raquo; du menu principal de la fen&ecirc;tre.</p> <p align="center"><img width="242" height="210" src="images/fwbench032.png"></p> <p>Il faut s&eacute;lectionner l'&eacute;l&eacute;ment &laquo;&nbsp;Explorateur de projets&nbsp;&raquo; dans &laquo;&nbsp;G&eacute;n&eacute;ralit&eacute;s&nbsp;&raquo;.</p> <p>Exemple&nbsp;avec un projet Java</p> <p align="center"><img width="409" height="226" src="images/fwbench033.png"></p> </td> 
-     </tr> 
-    </tbody>
-   </table> 
+   <div class="eclipse32"> 
+    <p>La vue explorateur de projets affiche le contenu des projets de fa&ccedil;on hi&eacute;rarchique en fonction du type de projet.</p> 
+    <p>Pour l'afficher, il faut utiliser l'option &laquo;&nbsp;afficher la vue / autres&nbsp;&raquo; du menu principal de la fen&ecirc;tre.</p> 
+    <p align="center"><img width="242" height="210" src="images/fwbench032.png" /></p> 
+    <p>Il faut s&eacute;lectionner l'&eacute;l&eacute;ment &laquo;&nbsp;Explorateur de projets&nbsp;&raquo; dans &laquo;&nbsp;G&eacute;n&eacute;ralit&eacute;s&nbsp;&raquo;.</p> 
+    <p>Exemple&nbsp;avec un projet Java</p> 
+    <p align="center"><img width="409" height="226" src="images/fwbench033.png" /></p> 
+   </div> 
   </div> 
-  <!--PIED-->
-  <hr> 
+  <!--PIED--> 
+  <hr /> 
   <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
    <tbody> 
     <tr> 
-     <td rowspan="2" align="center" width="50">&nbsp;</td>
-     <td rowspan="2" align="center" width="50"> <a href="chap004.htm" alt="4.   L'espace de travail (Workspace)"> <img src="FlecheG.gif" alt="4.   L'espace de travail (Workspace)" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center" width="50"> <a href="chap006.htm" alt="6.  L'aide dans Eclipse"> <img src="FlecheD.gif" alt="6.  L'aide dans Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap004.htm" alt="4.   L'espace de travail (Workspace)"> <img src="FlecheG.gif" alt="4.   L'espace de travail (Workspace)" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap006.htm" alt="6.  L'aide dans Eclipse"> <img src="FlecheD.gif" alt="6.  L'aide dans Eclipse" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40" /> </a> </td> 
      <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
      <td rowspan="2" align="center" valign="middle"> <script language="JavaScript1.1">
 <!--
@@ -242,7 +237,7 @@ hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre aud
 //-->
 </script> 
       <noscript> 
-       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience"></a> 
+       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience" /></a> 
       </noscript> 
       <!--//--> </td> 
     </tr> 
@@ -250,6 +245,6 @@ hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre aud
      <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
     </tr> 
    </tbody> 
-  </table>   
+  </table>  
  </body>
 </html>

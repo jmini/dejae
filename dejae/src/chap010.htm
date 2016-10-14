@@ -1,26 +1,26 @@
 <html>
  <head> 
   <title>Ant et Eclipse</title> 
-  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1"> 
-  <meta name="description" content=""> 
-  <meta name="keywords" content="java tutorial cours dej eclipse ant"> 
-  <meta name="robots" content="all"> 
-  <meta name="revisit-after" content="2 months"> 
-  <meta http-equiv="Content-Language" content="fr-FX"> 
-  <meta name="author" content="Jean Michel DOUDOUX"> 
-  <link href="dej_style.css" rel="stylesheet" type="text/css"> 
+  <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" /> 
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="java tutorial cours dej eclipse ant" /> 
+  <meta name="robots" content="all" /> 
+  <meta name="revisit-after" content="2 months" /> 
+  <meta http-equiv="Content-Language" content="fr-FX" /> 
+  <meta name="author" content="Jean Michel DOUDOUX" /> 
+  <link href="dej_style.css" rel="stylesheet" type="text/css" /> 
  </head> 
  <body> 
   <!--ENTETE--> 
   <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
    <tbody> 
     <tr> 
-     <td rowspan="2" align="center" width="50">&nbsp;</td>
-     <td rowspan="2" align="center" width="50"> <a href="chap009.htm" alt="9. Le refactoring"> <img src="FlecheG.gif" alt="9. Le refactoring" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center" width="50"> <a href="chap011.htm" alt="11. JUnit et Eclipse"> <img src="FlecheD.gif" alt="11. JUnit et Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap009.htm" alt="9. Le refactoring"> <img src="FlecheG.gif" alt="9. Le refactoring" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap011.htm" alt="11. JUnit et Eclipse"> <img src="FlecheD.gif" alt="11. JUnit et Eclipse" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40" /> </a> </td> 
      <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
     </tr> 
     <tr> 
@@ -28,91 +28,97 @@
     </tr> 
    </tbody> 
   </table> 
-  <hr> 
+  <hr /> 
   <p>&nbsp;</p> 
-  <h1>
-   <!--idrefpage value="ant" -->
-   <!--resumetitre value="pr&eacute;sente l'utilisation de l'outil Ant avec Eclipse" -->
+  <h1> 
+   <!--idrefpage value="ant" --> 
+   <!--resumetitre value="pr&eacute;sente l'utilisation de l'outil Ant avec Eclipse" --> 
    <!--nchpdeb--><a name="chap_10">10. 
     <!--nchpfin-->Ant et Eclipse</a></h1> 
   <p>&nbsp;</p> 
   <div align="justify"> 
    <p>Ant est un projet du groupe Apache-Jakarta. Son but est de fournir un outil &eacute;crit en Java pour permettre la construction d'applications (compilation, ex&eacute;cution de taches post et pr&eacute; compilation ... ). Ces processus de construction sont tr&egrave;s importants car ils permettent d'automatiser des op&eacute;rations r&eacute;p&eacute;titives tout au long du cycle de vie de l'application (d&eacute;veloppement, tests, recette, mise en production ... ). </p> 
    <p>Ant pourrait &ecirc;tre compar&eacute; au c&eacute;l&egrave;bre outil make sous Unix. Il a &eacute;t&eacute; d&eacute;velopp&eacute; pour fournir un outil de construction ind&eacute;pendant de toute plate-forme car &eacute;crit avec et pour Java. Il repose sur un fichier de configuration XML qui d&eacute;crit les diff&eacute;rentes t&acirc;ches qui devront &ecirc;tre ex&eacute;cut&eacute;es par l'outil. Ant fournit un certain nombre de t&acirc;ches courantes qui sont cod&eacute;es sous forme d'objets d&eacute;velopp&eacute;s en Java. </p> 
-   <p> Le fichier de configuration contient un ensemble de cibles (target). Chaque cible contient une ou plusieurs t&acirc;ches. Chaque cible peut avoir une d&eacute;pendance envers une ou plusieurs autres cibles pour pouvoir &ecirc;tre ex&eacute;cut&eacute;e. </p>
+   <p> Le fichier de configuration contient un ensemble de cibles (target). Chaque cible contient une ou plusieurs t&acirc;ches. Chaque cible peut avoir une d&eacute;pendance envers une ou plusieurs autres cibles pour pouvoir &ecirc;tre ex&eacute;cut&eacute;e. </p> 
    <p>Pour obtenir plus de d&eacute;tails sur l'utilisation de Ant, il est possible de consulter la documentation de la version courante &agrave; l'url suivante : <a href="http://jakarta.apache.org/ant/manual/index.html">http://jakarta.apache.org/ant/manual/index.html</a></p> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_10_1">10.1. 
      <!--nchpfin--> Structure du projet</a></h2> 
    <p>Pour utiliser Ant, il faut organiser diff&eacute;remment la structure du projet si celui-ci utilise la structure par d&eacute;faut d'un projet Java. Par d&eacute;faut, les fichiers sources .java et leurs homologues compil&eacute;s .class sont dans le m&ecirc;me r&eacute;pertoire &agrave; la racine du projet.</p> 
-   <p>Il faut mettre les sources dans un r&eacute;pertoire et les fichiers .class dans un autre. Ce changement peut &ecirc;tre fait dans l'onglet "Source" des propri&eacute;t&eacute;s du projet.</p> 
-   <p align="center"><img alt="" width="595" height="309" src="images/ant002.png"> </p> 
-   <p>Cliquez sur le bouton "Ajouter un dossier ".</p> 
-   <p align="center"> <img alt="" width="346" height="144" src="images/ant003.png">+</p> 
-   <p>Cliquez sur le bouton "Cr&eacute;er un dossier ". </p> 
-   <p align="center"><img alt="" width="326" height="121" src="images/ant004.png"> </p> 
-   <p align="left">Il faut saisir le nom du r&eacute;pertoire qui va contenir les sources (par exemple src) et cliquer sur le bouton "OK".</p> 
-   <p align="center"><img alt="" width="346" height="158" src="images/ant005.png"></p> 
-   <p>Cliquez sur le bouton "OK".</p> 
-   <p align="center"><img alt="" width="441" height="111" src="images/ant006.png"> </p> 
-   <p>En cliquant sur "Oui", Eclipse va automatiquement cr&eacute;er un r&eacute;pertoire bin qui va contenir le r&eacute;sultat des compilations des sources.</p> 
-   <p align="center"><img alt="" width="400" height="215" src="images/ant007.png"> </p> 
-   <p>Cliquez sur le bouton "OK".</p> 
-   <p align="center"><img alt="" width="441" height="146" src="images/ant008.png"> </p> 
-   <p>Cliquez sur le bouton "Yes".</p> 
-   <p>Il faut ensuite d&eacute;placer les fichiers .java existant dans le r&eacute;pertoire src en effectuant un copier/coller dans la vue "Navigateur".</p> 
+   <p>Il faut mettre les sources dans un r&eacute;pertoire et les fichiers .class dans un autre. Ce changement peut &ecirc;tre fait dans l'onglet &quot;Source&quot; des propri&eacute;t&eacute;s du projet.</p> 
+   <p align="center"><img alt="" width="595" height="309" src="images/ant002.png" /> </p> 
+   <p>Cliquez sur le bouton &quot;Ajouter un dossier &quot;.</p> 
+   <p align="center"> <img alt="" width="346" height="144" src="images/ant003.png" />+</p> 
+   <p>Cliquez sur le bouton &quot;Cr&eacute;er un dossier &quot;. </p> 
+   <p align="center"><img alt="" width="326" height="121" src="images/ant004.png" /> </p> 
+   <p align="left">Il faut saisir le nom du r&eacute;pertoire qui va contenir les sources (par exemple src) et cliquer sur le bouton &quot;OK&quot;.</p> 
+   <p align="center"><img alt="" width="346" height="158" src="images/ant005.png" /></p> 
+   <p>Cliquez sur le bouton &quot;OK&quot;.</p> 
+   <p align="center"><img alt="" width="441" height="111" src="images/ant006.png" /> </p> 
+   <p>En cliquant sur &quot;Oui&quot;, Eclipse va automatiquement cr&eacute;er un r&eacute;pertoire bin qui va contenir le r&eacute;sultat des compilations des sources.</p> 
+   <p align="center"><img alt="" width="400" height="215" src="images/ant007.png" /> </p> 
+   <p>Cliquez sur le bouton &quot;OK&quot;.</p> 
+   <p align="center"><img alt="" width="441" height="146" src="images/ant008.png" /> </p> 
+   <p>Cliquez sur le bouton &quot;Yes&quot;.</p> 
+   <p>Il faut ensuite d&eacute;placer les fichiers .java existant dans le r&eacute;pertoire src en effectuant un copier/coller dans la vue &quot;Navigateur&quot;.</p> 
    <p>Il faut ensuite cr&eacute;er un r&eacute;pertoire build contenant deux sous dossiers : lib et doc. Ces dossiers vont contenir respectivement les fichiers de distribution g&eacute;n&eacute;r&eacute;s (.jar, .war, .ear selon le type d'application) et la documentation des classes au format Javadoc.</p> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_10_2">10.2. 
      <!--nchpfin--> Cr&eacute;ation du fichier build.xml</a></h2> 
    <p>Les ordres de g&eacute;n&eacute;rations sont fournis &agrave; Ant sous la forme d'un fichier au format xml nomm&eacute; build.xml. Il faut cr&eacute;er ce nouveau fichier &agrave; la racine du projet.</p> 
-   <p align="center"><img alt="" width="174" height="193" src="images/ant009.png"> </p> 
+   <p align="center"><img alt="" width="174" height="193" src="images/ant009.png" /> </p> 
    <p>Le fichier est automatiquement reconnu comme &eacute;tant un fichier de configuration pour Ant : une ic&ocirc;ne particuli&egrave;re contenant une fourmi est associ&eacute;e au fichier.</p> 
    <p>Il suffit ensuite d'&eacute;diter le fichier pour ins&eacute;rer les param&egrave;tres d'ex&eacute;cution.</p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple : afficher un message</td> 
      </tr> 
      <tr> 
       <td> <pre><code>
-&lt;?xml version="1.0"?&gt;
-&lt;project name="TestAnt1" default="bonjour"&gt;
-  &lt;target name="bonjour"&gt;
-    &lt;echo message="Premier test avec Ant!"/&gt;
+&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;project name=&quot;TestAnt1&quot; default=&quot;bonjour&quot;&gt;
+  &lt;target name=&quot;bonjour&quot;&gt;
+    &lt;echo message=&quot;Premier test avec Ant!&quot;/&gt;
   &lt;/target&gt;
 &lt;/project&gt;</code></pre> </td> 
      </tr> 
-    </tbody>
+    </tbody> 
    </table> 
-   <br> 
+   <br /> 
    <p>Un &eacute;diteur particulier est d&eacute;di&eacute; &agrave; l'&eacute;dition du fichier build.xml de Ant. Il propose notamment un ach&egrave;vement du code pour les tags en utilisant la combinaison de touches Ctrl + espace. </p> 
-   <p align="center"><img alt="" width="400" height="148" src="images/ant010.png"> </p> 
+   <p align="center"><img alt="" width="400" height="148" src="images/ant010.png" /> </p> 
    <p>La vue structure affiche l'arborescence du fichier.</p> 
-   <p align="center"><img width="178" height="109" src="images/ant011.png"> </p> 
+   <p align="center"><img width="178" height="109" src="images/ant011.png" /> </p> 
    <p>Une fois le contenu du fichier saisi, il suffit de l'enregistrer.</p> 
-   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
-    <tbody>
-     <tr> 
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse30.png" width="64" height="32" align="center"></td> 
-      <td><p> Les erreurs dans le fichier de configuration sont signal&eacute;es dans l'&eacute;diteur avec possibilit&eacute; d'obtenir une bulle d'aide pr&eacute;cisant le probl&egrave;me en laissant le curseur de la souris sur la petite ic&ocirc;nes rouge avec une croix blanche. </p> <p align="center"><img src="images/ant015.png" width="554" height="51"></p> <p> A la sauvegarde du fichier de configuration, les erreurs persistantes sont signal&eacute;es dans la vue &laquo;&nbsp;Erreurs&nbsp;&raquo; </p> <p align="center"><img src="images/ant016.png" width="532" height="113"></p> <p>L'&eacute;diteur de fichier de configuration de Ant propose une compl&eacute;tion de code avec une bulle d'aide qui permet de fournir des informations sur l'entit&eacute; s&eacute;lectionn&eacute;e. </p> <p align="center"><img src="images/ant017.png" width="580" height="161"></p> <p>L'&eacute;diteur propose des mod&egrave;les de code utilisable via la combinaison de touches Ctrl+espace. </p> <p>Par exemple, &agrave; la cr&eacute;ation d'un fichier build.xml vide, il est possible de demander l'insertion d'un mod&egrave;le contenant deux cibles. Une bulle d'aide fournit un aper&ccedil;u du code qui sera ins&eacute;r&eacute;. </p> <p align="center"><img src="images/ant018.png" width="455" height="97"></p> <p> Il existe aussi des mod&egrave;les pour de nombreuses t&acirc;ches Ant. </p> <p align="center"><img src="images/ant019.png" width="580" height="72"></p> <p>L'&eacute;diteur de fichier de configuration d'Ant peut formater le code source XML du fichier de configuration en s&eacute;lectionnant l'option &laquo;&nbsp;Formater&nbsp;&raquo; du menu contextuel ou en utilisant la combinaison de touches Ctrl+Maj+F. </p> L&#x91;ex&eacute;cution de Ant se fait par d&eacute;faut dans une machine virtuelle d&eacute;di&eacute;e et non plus dans la machine virtuelle dans laquelle Eclipse s'ex&eacute;cute.</td> 
-     </tr> 
-    </tbody>
-   </table> 
+   <div class="eclipse30"> 
+    <p> Les erreurs dans le fichier de configuration sont signal&eacute;es dans l'&eacute;diteur avec possibilit&eacute; d'obtenir une bulle d'aide pr&eacute;cisant le probl&egrave;me en laissant le curseur de la souris sur la petite ic&ocirc;nes rouge avec une croix blanche. </p> 
+    <p align="center"><img src="images/ant015.png" width="554" height="51" /></p> 
+    <p> A la sauvegarde du fichier de configuration, les erreurs persistantes sont signal&eacute;es dans la vue &laquo;&nbsp;Erreurs&nbsp;&raquo; </p> 
+    <p align="center"><img src="images/ant016.png" width="532" height="113" /></p> 
+    <p>L'&eacute;diteur de fichier de configuration de Ant propose une compl&eacute;tion de code avec une bulle d'aide qui permet de fournir des informations sur l'entit&eacute; s&eacute;lectionn&eacute;e. </p> 
+    <p align="center"><img src="images/ant017.png" width="580" height="161" /></p> 
+    <p>L'&eacute;diteur propose des mod&egrave;les de code utilisable via la combinaison de touches Ctrl+espace. </p> 
+    <p>Par exemple, &agrave; la cr&eacute;ation d'un fichier build.xml vide, il est possible de demander l'insertion d'un mod&egrave;le contenant deux cibles. Une bulle d'aide fournit un aper&ccedil;u du code qui sera ins&eacute;r&eacute;. </p> 
+    <p align="center"><img src="images/ant018.png" width="455" height="97" /></p> 
+    <p> Il existe aussi des mod&egrave;les pour de nombreuses t&acirc;ches Ant. </p> 
+    <p align="center"><img src="images/ant019.png" width="580" height="72" /></p> 
+    <p>L'&eacute;diteur de fichier de configuration d'Ant peut formater le code source XML du fichier de configuration en s&eacute;lectionnant l'option &laquo;&nbsp;Formater&nbsp;&raquo; du menu contextuel ou en utilisant la combinaison de touches Ctrl+Maj+F. </p> L&#x91;ex&eacute;cution de Ant se fait par d&eacute;faut dans une machine virtuelle d&eacute;di&eacute;e et non plus dans la machine virtuelle dans laquelle Eclipse s'ex&eacute;cute. 
+   </div> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_10_3">10.3. 
      <!--nchpfin--> Ex&eacute;cuter Ant</a></h2> 
-   <p>Pour ex&eacute;cuter Ant avec un fichier build.xml, il suffit dans la vue "Navigateur" ou "Packages" de s&eacute;lectionner ce fichier build.xml et d'utiliser l'option "Ex&eacute;cuter Ant" du menu contextuel.</p> 
+   <p>Pour ex&eacute;cuter Ant avec un fichier build.xml, il suffit dans la vue &quot;Navigateur&quot; ou &quot;Packages&quot; de s&eacute;lectionner ce fichier build.xml et d'utiliser l'option &quot;Ex&eacute;cuter Ant&quot; du menu contextuel.</p> 
    <p>Une boite de dialogue s'ouvre. Elle permet de modifier quelques param&egrave;tres externes &agrave; Ant et de lancer l'ex&eacute;cution.</p> 
-   <p align="center"><img alt="" width="515" height="449" src="images/ant012.png"> </p> 
+   <p align="center"><img alt="" width="515" height="449" src="images/ant012.png" /> </p> 
    <p>Par d&eacute;faut, la t&acirc;che d&eacute;finie par d&eacute;faut dans le fichier build.xml est s&eacute;lectionn&eacute;e.</p> 
-   <p>Pour lancer l'ex&eacute;cution, il suffit de cliquer sur le bouton "Ex&eacute;cuter".</p> 
-   <p>Le r&eacute;sultat de l'ex&eacute;cution s'affiche dans la vue "Console"</p> 
+   <p>Pour lancer l'ex&eacute;cution, il suffit de cliquer sur le bouton &quot;Ex&eacute;cuter&quot;.</p> 
+   <p>Le r&eacute;sultat de l'ex&eacute;cution s'affiche dans la vue &quot;Console&quot;</p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
      </tr> 
@@ -125,43 +131,43 @@ bonjour:
 BUILD SUCCESSFUL
 Total time: 401 milliseconds</code></pre> </td> 
      </tr> 
-    </tbody>
+    </tbody> 
    </table> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_10_4">10.4. 
      <!--nchpfin--> Les param&egrave;tres</a></h2> 
    <p>Dans les pr&eacute;f&eacute;rences, il est possible de pr&eacute;ciser des param&egrave;tres par d&eacute;faut utilis&eacute;s lors de l'&eacute;dition d'un fichier ant ou de son ex&eacute;cution.</p> 
-   <p align="center"><img alt="" width="600" height="484" src="images/ant001.png"></p> 
+   <p align="center"><img alt="" width="600" height="484" src="images/ant001.png" /></p> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_10_5">10.5. 
      <!--nchpfin--> R&eacute;solution des probl&egrave;mes</a></h2> 
    <p>Plusieurs probl&egrave;mes peuvent survenir lors de l'utilisation de Ant. Voici une solution pour quelques uns d'entre eux.</p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_10_5_1">10.5.1. 
      <!--nchpfin--> Utilisation de caract&egrave;res accentu&eacute;s</a></h3> 
-   <p align="center"> <img src="images/ant013.png" alt="" width="589" height="128"> </p> 
+   <p align="center"> <img src="images/ant013.png" alt="" width="589" height="128" /> </p> 
    <p>Il faut ajouter l'attribut encoding avec le jeux de caract&egrave;res utilis&eacute;s dans le prologue du fichier build.xml.</p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
      </tr> 
      <tr> 
       <td> <pre><code>
-&lt;?xml version="1.0" encoding="ISO-8859-1" ?&gt;</code></pre> </td> 
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot; ?&gt;</code></pre> </td> 
      </tr> 
-    </tbody>
+    </tbody> 
    </table> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_10_5_2">10.5.2. 
      <!--nchpfin--> Impossible de lancer la tache javadoc</a></h3> 
    <p>&nbsp;</p> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
      </tr> 
@@ -175,23 +181,23 @@ doc:
 &nbsp;&nbsp;&nbsp;&nbsp; [javadoc] Generating Javadoc
 &nbsp;&nbsp;&nbsp;&nbsp; [javadoc] Javadoc execution
 &nbsp;&nbsp;&nbsp;&nbsp; [javadoc] BUILD FAILED: file:I:/eclipse/workspace/test_junit/build.xml:37: 
-&nbsp;&nbsp;&nbsp;&nbsp; Javadoc failed: java.io.IOException: CreateProcess: javadoc.exe -d "I:\eclipse 
-&nbsp;&nbsp;&nbsp;&nbsp;\workspace\test_junit\build\doc" -use -package -classpath "I:\eclipse\s
-&nbsp;&nbsp;&nbsp;&nbsp; tartup.jar;I:\eclipse\workspace\test_junit\junit.jar" -version
-     -author "I:\eclipse\workspace\test_junit\src\MaClasse.java" "I:\eclipse
-    \workspace\test_junit\src\MaClasse2.java" error=2
+&nbsp;&nbsp;&nbsp;&nbsp; Javadoc failed: java.io.IOException: CreateProcess: javadoc.exe -d &quot;I:\eclipse 
+&nbsp;&nbsp;&nbsp;&nbsp;\workspace\test_junit\build\doc&quot; -use -package -classpath &quot;I:\eclipse\s
+&nbsp;&nbsp;&nbsp;&nbsp; tartup.jar;I:\eclipse\workspace\test_junit\junit.jar&quot; -version
+     -author &quot;I:\eclipse\workspace\test_junit\src\MaClasse.java&quot; &quot;I:\eclipse
+    \workspace\test_junit\src\MaClasse2.java&quot; error=2
 Total time: 681 milliseconds</code></pre> </td> 
      </tr> 
-    </tbody>
+    </tbody> 
    </table> 
-   <br> 
+   <br /> 
    <p>Il faut v&eacute;rifier la pr&eacute;sence de l'outil dans les r&eacute;pertoires d&eacute;sign&eacute;s par la variable d'environnement PATH du syst&egrave;me d'exploitation. Dans le cas de Javadoc sous Windows, il faut s'assurer que le r&eacute;pertoire %JAVA_HOME%\bin soit ins&eacute;r&eacute; dans la variable PATH. Si cette derni&egrave;re doit &ecirc;tre modifi&eacute;e, il faut arr&ecirc;ter et relancer Eclipse apr&egrave;s la modification pour que celle ci soit prise en compte.</p> 
    <p>&nbsp;</p> 
-   <h3>
+   <h3> 
     <!--nchpdeb--><a name="chap_10_5_3">10.5.3. 
      <!--nchpfin--> Impossible d'utiliser la t&acirc;che JUnit</a></h3> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
      </tr> 
@@ -206,85 +212,85 @@ test:
  Could not create task or type of type: junit.
 Ant could not find the task or a class this task relies upon.</code></pre> </td> 
      </tr> 
-    </tbody>
+    </tbody> 
    </table> 
-   <br> 
-   <p>Dans les pr&eacute;f&eacute;rences, il faut rajouter le fichier junit.jar dans l'onglet "Classpath" de l'arborescence "Ant/Runtime"</p> 
-   <p align="center"> <img alt="" width="600" height="166" src="images/ant014.png"> </p> 
+   <br /> 
+   <p>Dans les pr&eacute;f&eacute;rences, il faut rajouter le fichier junit.jar dans l'onglet &quot;Classpath&quot; de l'arborescence &quot;Ant/Runtime&quot;</p> 
+   <p align="center"> <img alt="" width="600" height="166" src="images/ant014.png" /> </p> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_10_6">10.6. 
      <!--nchpfin--> Un exemple complet</a></h2> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>Exemple : </td> 
      </tr> 
      <tr> 
       <td> <pre><code>
-&lt;?xml version="1.0" encoding="ISO-8859-1" ?&gt;
-&lt;project name="TestAnt1" default="all"&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot; ?&gt;
+&lt;project name=&quot;TestAnt1&quot; default=&quot;all&quot;&gt;
 &nbsp; &lt;description&gt;
 &nbsp;&nbsp;&nbsp; G&eacute;n&eacute;ration de l'application
 &nbsp; &lt;/description&gt;
 
-&nbsp; &lt;property name="bin" location="bin"/&gt;
-&nbsp; &lt;property name="src" location="src"/&gt;
-&nbsp; &lt;property name="build" location="build"/&gt;
-&nbsp; &lt;property name="doc" location="${build}/doc"/&gt;
-&nbsp; &lt;property name="lib" location="${build}/lib"/&gt;
-&nbsp; &lt;property name="junit_path" value="junit.jar"/&gt;
+&nbsp; &lt;property name=&quot;bin&quot; location=&quot;bin&quot;/&gt;
+&nbsp; &lt;property name=&quot;src&quot; location=&quot;src&quot;/&gt;
+&nbsp; &lt;property name=&quot;build&quot; location=&quot;build&quot;/&gt;
+&nbsp; &lt;property name=&quot;doc&quot; location=&quot;${build}/doc&quot;/&gt;
+&nbsp; &lt;property name=&quot;lib&quot; location=&quot;${build}/lib&quot;/&gt;
+&nbsp; &lt;property name=&quot;junit_path&quot; value=&quot;junit.jar&quot;/&gt;
 
-&nbsp; &lt;target name="init" description="Initialisation"&gt;
+&nbsp; &lt;target name=&quot;init&quot; description=&quot;Initialisation&quot;&gt;
 &nbsp;&nbsp;&nbsp; &lt;tstamp/&gt;
-&nbsp;&nbsp;&nbsp; &lt;buildnumber file="numerobuild.txt" /&gt;
-&nbsp;&nbsp;&nbsp; &lt;echo message="Generation numero : ${build.number} du ${TODAY}"/&gt;
+&nbsp;&nbsp;&nbsp; &lt;buildnumber file=&quot;numerobuild.txt&quot; /&gt;
+&nbsp;&nbsp;&nbsp; &lt;echo message=&quot;Generation numero : ${build.number} du ${TODAY}&quot;/&gt;
 &nbsp; &lt;/target&gt;
 
-&nbsp; &lt;target name="compil" depends="init" description="Compilation"&gt;
-&nbsp;&nbsp;&nbsp; &lt;javac srcdir="${src}" destdir="${bin}"&gt;
+&nbsp; &lt;target name=&quot;compil&quot; depends=&quot;init&quot; description=&quot;Compilation&quot;&gt;
+&nbsp;&nbsp;&nbsp; &lt;javac srcdir=&quot;${src}&quot; destdir=&quot;${bin}&quot;&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;classpath&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pathelement path="${java.class.path}"/&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pathelement location="${junit_path}"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pathelement path=&quot;${java.class.path}&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pathelement location=&quot;${junit_path}&quot;/&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/classpath&gt;
 &nbsp;&nbsp;&nbsp; &lt;/javac&gt;
 &nbsp; &lt;/target&gt;
 
-&nbsp; &lt;target name="all" depends="init, compil, test, doc" 
-    description="Generation complete"&gt;
-&nbsp;&nbsp;&nbsp; &lt;echo message="Generation complete."/&gt;
+&nbsp; &lt;target name=&quot;all&quot; depends=&quot;init, compil, test, doc&quot; 
+    description=&quot;Generation complete&quot;&gt;
+&nbsp;&nbsp;&nbsp; &lt;echo message=&quot;Generation complete.&quot;/&gt;
 &nbsp; &lt;/target&gt;
-&nbsp; &lt;target name="doc" depends="compil" description="Generation documentation"&gt;
-&nbsp;&nbsp;&nbsp; &lt;javadoc destdir="${doc}" author="true" version="true" use="true" 
-      package="true"&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;fileset dir = "${src}"&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;include name="**/*.java"/&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;exclude name="**/*Test*"/&gt;
+&nbsp; &lt;target name=&quot;doc&quot; depends=&quot;compil&quot; description=&quot;Generation documentation&quot;&gt;
+&nbsp;&nbsp;&nbsp; &lt;javadoc destdir=&quot;${doc}&quot; author=&quot;true&quot; version=&quot;true&quot; use=&quot;true&quot; 
+      package=&quot;true&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;fileset dir = &quot;${src}&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;include name=&quot;**/*.java&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;exclude name=&quot;**/*Test*&quot;/&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/fileset&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;classpath&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pathelement path="${java.class.path}"/&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pathelement location="${junit_path}"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pathelement path=&quot;${java.class.path}&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pathelement location=&quot;${junit_path}&quot;/&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/classpath&gt;
 &nbsp;&nbsp;&nbsp; &lt;/javadoc&gt;
 &nbsp; &lt;/target&gt;
 
-&nbsp; &lt;target name="test" depends="compil" description="Executer tests avec JUnit"&gt;
-&nbsp;&nbsp;&nbsp; &lt;junit fork="yes" haltonerror="true" printsummary="on"&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;formatter type="plain" usefile="false" /&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;test name="ExecuterLesTests"/&gt;
+&nbsp; &lt;target name=&quot;test&quot; depends=&quot;compil&quot; description=&quot;Executer tests avec JUnit&quot;&gt;
+&nbsp;&nbsp;&nbsp; &lt;junit fork=&quot;yes&quot; haltonerror=&quot;true&quot; printsummary=&quot;on&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;formatter type=&quot;plain&quot; usefile=&quot;false&quot; /&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;test name=&quot;ExecuterLesTests&quot;/&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;classpath&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pathelement location="${bin}"/&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pathelement location="${junit_path}"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pathelement location=&quot;${bin}&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;pathelement location=&quot;${junit_path}&quot;/&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/classpath&gt;
 &nbsp;&nbsp;&nbsp; &lt;/junit&gt;
 &nbsp; &lt;/target&gt;
 &lt;/project&gt;</code></pre> </td> 
      </tr> 
-    </tbody>
+    </tbody> 
    </table> 
-   <br> 
+   <br /> 
    <table border="1" cellpadding="4" cellspacing="0" width="100%" align="center"> 
-    <tbody>
+    <tbody> 
      <tr bgcolor="#A6A5C2"> 
       <td>R&eacute;sultat de l'ex&eacute;cution : </td> 
      </tr> 
@@ -319,58 +325,70 @@ all:
 BUILD SUCCESSFUL
 Total time: 4 seconds</code></pre> </td> 
      </tr> 
-    </tbody>
+    </tbody> 
    </table> 
-   <br> 
+   <br /> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_10_7">10.7. 
      <!--nchpfin-->L'&eacute;diteur de fichiers Ant</a></h2> 
-   <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
-    <tbody>
-     <tr> 
-      <td width="74" valign="top" bgcolor="#EEEEEE" align="center"><img src="images/eclipse31.png" width="64" height="32" hspace="5"></td> 
-      <td> <p>Eclipse 3.1 propose un &eacute;diteur d&eacute;di&eacute; &agrave; la mise &agrave; jour de script Ant. Cet &eacute;diteur est utilis&eacute; est par d&eacute;faut utilis&eacute; pour &eacute;diter les scripts Ant. Il propose des fonctionnalit&eacute;s qui facilitent leur r&eacute;daction.</p> <p>Dans un fichier build.xml vide, il est possible de demander la cr&eacute;ation un fichier xml type avec deux targets en utilisant la combinaison de touches Ctrl+espace</p> <p align="center"><img width="422" height="490" src="images/ant020.png" v:shapes="_x0000_i1066"></p> <p>Chaque partie qui compose le fichier build.xml est marqu&eacute;e avec une petite ic&ocirc;ne <img width="9" height="9" src="images/ant021.png" v:shapes="_x0000_i1067">&nbsp;dans la partie gauche. Chacune de ces ic&ocirc;nes permet de masquer la partie qu'elle d&eacute;signe. Lorsque le curseur passe au dessus de cette partie, une ligne d&eacute;signe la partie.</p> <p align="center"><img width="423" height="265" src="images/ant022.png" v:shapes="_x0000_i1068"></p> <p>Un clic sur l'ic&ocirc;ne permet de masquer la partie concern&eacute;e.</p> <p align="center"><img width="422" height="137" src="images/ant023.png" v:shapes="_x0000_i1069"></p> <p>L'ic&ocirc;ne se transforme en un petit signe plus&nbsp;: <img width="9" height="9" src="images/ant024.png" v:shapes="_x0000_i1070">. En cliquant, sur cette ic&ocirc;ne, la partie masqu&eacute;e est de nouveau affich&eacute;e. En laissant le curseur de la souris sur cette ic&ocirc;ne, la partie masqu&eacute;e est affich&eacute;e dans une bulle d'aide.</p> <p align="center"><img width="454" height="210" src="images/ant025.png" v:shapes="_x0000_i1071">&nbsp;</p> <p>Il est possible d'obtenir de l'aide &agrave; partir de l'&eacute;diteur. Il suffit de s&eacute;lectionner un tag et d'appuyer sur la combinaison de touches Shift + F2. </p> <p align="center"><img width="407" height="57" src="images/ant026.png" v:shapes="_x0000_i1072"></p> <p>Attention, une connexion <span class="SpellE">internet</span> est n&eacute;cessaire pour utilis&eacute; en oeuvre cette fonctionnalit&eacute;. Le navigateur interne s'ouvre avec une aide en ligne concernant le tag.</p> <p align="center"><img width="580" height="286" src="images/ant027.png" v:shapes="_x0000_i1073"></p> <p>Cette documentation permet d'obtenir un descriptif du tag, un d&eacute;tail de ces param&egrave;tres et des exemples.</p> <p>L'&eacute;diteur est capable de synchroniser les modifications apport&eacute;es &agrave; un &eacute;l&eacute;ment&nbsp;: pour cela il faut positionner le curseur sur l'&eacute;l&eacute;ment et d'utiliser l'option &laquo;&nbsp;Renommer dans le fichier&nbsp;&raquo; du menu contextuel.</p> <p align="center"><img width="525" height="316" src="images/ant028.png" v:shapes="_x0000_i1074"></p> <p>Toutes les occurrences sont marqu&eacute;es par un cadre. La modification de l'&eacute;l&eacute;ment entra&icirc;ne automatiquement la modification de toutes ces utilisations dans le fichier. </p> <p>L'option &laquo;&nbsp;Formater&nbsp;&raquo; du menu contextuel permet de mettre en forme le code source du script Ant.</p> </td> 
-     </tr> 
-    </tbody>
-   </table>
-   <br> 
+   <div class="eclipse31"> 
+    <p>Eclipse 3.1 propose un &eacute;diteur d&eacute;di&eacute; &agrave; la mise &agrave; jour de script Ant. Cet &eacute;diteur est utilis&eacute; est par d&eacute;faut utilis&eacute; pour &eacute;diter les scripts Ant. Il propose des fonctionnalit&eacute;s qui facilitent leur r&eacute;daction.</p> 
+    <p>Dans un fichier build.xml vide, il est possible de demander la cr&eacute;ation un fichier xml type avec deux targets en utilisant la combinaison de touches Ctrl+espace</p> 
+    <p align="center"><img width="422" height="490" src="images/ant020.png" v:shapes="_x0000_i1066" /></p> 
+    <p>Chaque partie qui compose le fichier build.xml est marqu&eacute;e avec une petite ic&ocirc;ne <img width="9" height="9" src="images/ant021.png" v:shapes="_x0000_i1067" />&nbsp;dans la partie gauche. Chacune de ces ic&ocirc;nes permet de masquer la partie qu'elle d&eacute;signe. Lorsque le curseur passe au dessus de cette partie, une ligne d&eacute;signe la partie.</p> 
+    <p align="center"><img width="423" height="265" src="images/ant022.png" v:shapes="_x0000_i1068" /></p> 
+    <p>Un clic sur l'ic&ocirc;ne permet de masquer la partie concern&eacute;e.</p> 
+    <p align="center"><img width="422" height="137" src="images/ant023.png" v:shapes="_x0000_i1069" /></p> 
+    <p>L'ic&ocirc;ne se transforme en un petit signe plus&nbsp;: <img width="9" height="9" src="images/ant024.png" v:shapes="_x0000_i1070" />. En cliquant, sur cette ic&ocirc;ne, la partie masqu&eacute;e est de nouveau affich&eacute;e. En laissant le curseur de la souris sur cette ic&ocirc;ne, la partie masqu&eacute;e est affich&eacute;e dans une bulle d'aide.</p> 
+    <p align="center"><img width="454" height="210" src="images/ant025.png" v:shapes="_x0000_i1071" />&nbsp;</p> 
+    <p>Il est possible d'obtenir de l'aide &agrave; partir de l'&eacute;diteur. Il suffit de s&eacute;lectionner un tag et d'appuyer sur la combinaison de touches Shift + F2. </p> 
+    <p align="center"><img width="407" height="57" src="images/ant026.png" v:shapes="_x0000_i1072" /></p> 
+    <p>Attention, une connexion <span class="SpellE">internet</span> est n&eacute;cessaire pour utilis&eacute; en oeuvre cette fonctionnalit&eacute;. Le navigateur interne s'ouvre avec une aide en ligne concernant le tag.</p> 
+    <p align="center"><img width="580" height="286" src="images/ant027.png" v:shapes="_x0000_i1073" /></p> 
+    <p>Cette documentation permet d'obtenir un descriptif du tag, un d&eacute;tail de ces param&egrave;tres et des exemples.</p> 
+    <p>L'&eacute;diteur est capable de synchroniser les modifications apport&eacute;es &agrave; un &eacute;l&eacute;ment&nbsp;: pour cela il faut positionner le curseur sur l'&eacute;l&eacute;ment et d'utiliser l'option &laquo;&nbsp;Renommer dans le fichier&nbsp;&raquo; du menu contextuel.</p> 
+    <p align="center"><img width="525" height="316" src="images/ant028.png" v:shapes="_x0000_i1074" /></p> 
+    <p>Toutes les occurrences sont marqu&eacute;es par un cadre. La modification de l'&eacute;l&eacute;ment entra&icirc;ne automatiquement la modification de toutes ces utilisations dans le fichier. </p> 
+    <p>L'option &laquo;&nbsp;Formater&nbsp;&raquo; du menu contextuel permet de mettre en forme le code source du script Ant.</p> 
+   </div> 
+   <br /> 
    <p>&nbsp;</p> 
-   <h2>
+   <h2> 
     <!--nchpdeb--><a name="chap_10_8">10.8. 
      <!--nchpfin-->Le d&eacute;bogage de fichiers Ant</a></h2> 
    <p>&nbsp;</p> 
    <table border="0" width="100%" cols="1"> 
-    <tbody>
+    <tbody> 
      <tr> 
       <td> 
-       <div align="Center">
-        <img src="images/construct4.gif" alt="en construction" width="144" height="50">
-        <br> 
+       <div align="Center"> 
+        <img src="images/construct4.gif" alt="en construction" width="144" height="50" /> 
+        <br /> 
        </div> </td> 
      </tr> 
      <tr> 
       <td> 
        <div align="Center">
-        Cette section sera d&eacute;velopp&eacute;e dans une version future de ce document
+         Cette section sera d&eacute;velopp&eacute;e dans une version future de ce document 
        </div> </td> 
      </tr> 
-    </tbody>
+    </tbody> 
    </table> 
    <p>&nbsp;</p> 
    <p>&nbsp;</p> 
   </div> 
-  <!--PIED-->
-  <hr> 
+  <!--PIED--> 
+  <hr /> 
   <table border="0" cellpadding="2" cellspacing="0" width="100%" bgcolor="#7B7BC2"> 
    <tbody> 
     <tr> 
-     <td rowspan="2" align="center" width="50">&nbsp;</td>
-     <td rowspan="2" align="center" width="50"> <a href="chap009.htm" alt="9. Le refactoring"> <img src="FlecheG.gif" alt="9. Le refactoring" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center" width="50"> <a href="chap011.htm" alt="11. JUnit et Eclipse"> <img src="FlecheD.gif" alt="11. JUnit et Eclipse" align="left" border="0" hspace="0" width="31" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31"> </a> </td> 
-     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40"> </a> </td> 
+     <td rowspan="2" align="center" width="50">&nbsp;</td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap009.htm" alt="9. Le refactoring"> <img src="FlecheG.gif" alt="9. Le refactoring" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center" width="50"> <a href="chap011.htm" alt="11. JUnit et Eclipse"> <img src="FlecheD.gif" alt="11. JUnit et Eclipse" align="left" border="0" hspace="0" width="31" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="javascript:window.print()"> <img src="imprimer.gif" width="46" height="40" align="middle" alt="Imprimer" border="0" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="index.htm"> <img src="index.gif" alt="Sommaire" align="middle" border="0" hspace="0" width="34" height="31" /> </a> </td> 
+     <td rowspan="2" align="center"> <a href="indexavecframes.htm" target="_top"> <img src="frame.png" alt="Consulter avec table des mati&egrave;res" align="middle" border="0" hspace="0" width="46" height="40" /> </a> </td> 
      <td align="right"> <font color="#FFFFFF" size="5"><b><i>D&eacute;veloppons en Java avec Eclipse&nbsp;&nbsp;</i></b></font><font color="#FFFFFF" size="-2"> v 0.80&nbsp;&nbsp;</font></td> 
      <td rowspan="2" align="center" valign="middle"> <script language="JavaScript1.1">
 <!--
@@ -389,7 +407,7 @@ hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre aud
 //-->
 </script> 
       <noscript> 
-       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience"></a> 
+       <a href="http://www.xiti.com/xiti.asp?s=128624" target="_top"><img width="39" height="25" border="0" src="http://logv23.xiti.com/hit.xiti?s=128624&amp;p=&amp;" title="Mesurez votre audience" /></a> 
       </noscript> 
       <!--//--> </td> 
     </tr> 
@@ -397,6 +415,6 @@ hsd.writeln(hsi + '&ref=' + hsr.replace(/&/g, '$') + '" title="Mesurez votre aud
      <td align="right"><font color="#FFFFFF" size="-2">Copyright (C) 2003-2007 Jean-Michel DOUDOUX &nbsp;&nbsp;</font></td> 
     </tr> 
    </tbody> 
-  </table>   
+  </table>  
  </body>
 </html>
